@@ -1,4 +1,4 @@
-# Contributions à UnitedCTF 2023
+# Contributions à UnitedCTF 2024
 
 Tout d'abord, merci de vouloir contribuer pour faire de cet événement un moment mémorable.
 
@@ -11,13 +11,13 @@ Tout d'abord, merci de vouloir contribuer pour faire de cet événement un momen
 2. Cloner le dépôt forké
 
 ```bash
-git clone https://github.com/${your_username}/UnitedCTF2023
+git clone https://github.com/${your_username}/UnitedCTF2024
 ```
 
 3. Configurer le dépôt distant (upstream)
 
 ```bash
-git remote add upstream https://github.com/UnitedCTF/UnitedCTF2023.git
+git remote add upstream https://github.com/UnitedCTF/UnitedCTF2024.git
 ```
 
 4. Assurez-vous de récupérer les dernières modifications de l'upstream

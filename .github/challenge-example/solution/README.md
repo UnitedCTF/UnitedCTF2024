@@ -2,7 +2,7 @@
 
 ## Write-up
 
-Eplain the intended approach of solving the challenge.
+Explain the intended approach of solving the challenge.
 
 ## Flag
 

@@ -9,7 +9,7 @@ _(X à X)_
 **X -** QA terminé.
 
 ## Règles de bienséance
-- utilisez et mettez à jour le [tableau Kanban / Projects](https://github.com/orgs/UnitedCTF/projects/1/views/2) lorsque vous créez des défis
+- utilisez et mettez à jour le [tableau Kanban / Projects](https://github.com/orgs/UnitedCTF/projects/2/views/1) lorsque vous créez des défis
 - faites un fork du répertoire pour créer votre défi
 - faites une Pull Request vers la branche *main* lorsque votre défi est terminé
 - attendez que la branche soit approuvée et révisée par au moins deux personnes avant de la pousser sur *main*
