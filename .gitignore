@@ -1,0 +1,10 @@
+# Ignore editors
+.idea
+.vscode
+
+.gdb_history
+
+# Macos files
+.DS_Store
+
+node_modules
