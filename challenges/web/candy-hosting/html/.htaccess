@@ -1,0 +1,4 @@
+php_flag output_buffering off
+php_value upload_max_filesize 1M
+php_value post_max_size 2M
+php_value display_startup_errors 0
