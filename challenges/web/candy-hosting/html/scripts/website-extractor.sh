@@ -65,9 +65,24 @@ else
   echo " [+] Website has already been validated, skipping!"
 fi
 
-echo "[*] Extracting website to '$OUT_FOLDER' ..."
+echo "[*] Extracting website to '${OUT_FOLDER#"${OUT_FOLDER_PREFIX}"}' ..."
 mkdir -p "$OUT_FOLDER"
 tar xzvf "$TARGZ" -C "$OUT_FOLDER" | \
   while read line; do echo " [+] $line"; done
+
+CANDY_INJECTION="<script src=\"/assets/js/candify.js\"></script>"
+echo "[*] Adding special effects ..."
+while read HTML_FILE; do
+  echo " [+] Injecting '${HTML_FILE#"${OUT_FOLDER_PREFIX}"}''s page"
+  if grep "<head>" "${HTML_FILE}" >/dev/null; then
+    sed -i "s#<head>#<head>${CANDY_INJECTION}#" "${HTML_FILE}"
+  elif grep "<body>" "${HTML_FILE}" >/dev/null; then
+    sed -i "s#<body>#<body>${CANDY_INJECTION}#" "${HTML_FILE}"
+  elif grep "<html>" "${HTML_FILE}" >/dev/null; then
+    sed -i "s#<html>#<html>${CANDY_INJECTION}#" "${HTML_FILE}"
+  else
+    sed -i "s#^#${CANDY_INJECTION}#" "${HTML_FILE}"
+  fi
+done < <(find "${OUT_FOLDER}" -type f -iname "*.html")
 
 echo "[*] Done!"
