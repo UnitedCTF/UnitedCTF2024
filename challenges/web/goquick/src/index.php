@@ -27,6 +27,7 @@ require "jobs.php";
         <h1>Bienvenue au système GoQuick!</h1>
         <br>
         <h2>Voici les temps d'attentes courants:</h2>
+        <p><em>Les temps d'attentes sont mis à jour aux 15 secondes...</em></p>
         <br>
         <table>
             <thead>
