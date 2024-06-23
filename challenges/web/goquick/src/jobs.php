@@ -1,7 +1,7 @@
 <?php
 define("JOBS_FOLDER", "jobs/");
 define("IP_REGEX", "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}");
-define("URL_REGEX", "^https?:\/\/(" . IP_REGEX . "|[A-Za-z][\w-]*(\.[A-Za-z][\w-]*)*)(?::\d{1,5})?(?:\/.*|$)");
+define("URL_REGEX", "^https?:\/\/(" . IP_REGEX . "|[\w-]+(\.[\w-]+)*)(?::\d{1,5})?(?:\/.*|$)");
 
 function register_job($old_id, $url) {
     if(isset($old_id)) {
