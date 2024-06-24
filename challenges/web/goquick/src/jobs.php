@@ -62,7 +62,7 @@ function process_jobs() {
         }
 
         $output = array();
-        exec("curl -sS4gd @data/rides.json -m 1 --max-redirs 0 --proto =http,https " . escapeshellarg($url), $output);
+        exec("curl -sS4gd @data/rides.json -m 1 --max-redirs 0 --proto =http,https --dns-servers 1.1.1.1 " . escapeshellarg($url), $output);
 
         $output = join("\n", $output);
         if(strlen($output) > 256) $output = substr($output, 0, 256) . "...";
