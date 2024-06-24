@@ -73,7 +73,7 @@ require "jobs.php";
         <br>
         <a href="/maintenance.php">Maintenance</a>
         <br>
-        <a href="/assets/source.zip">Code source</a>
+        <a href="/source.php">Code source</a>
     </main>
 </body>
 </html>
