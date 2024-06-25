@@ -1,0 +1,22 @@
+services:
+  reverse-proxy:
+    image: traefik:v3.0
+    command:
+      - --api.insecure=true
+      - --providers.swarm
+      - --providers.swarm.network=traefik-public
+      - --providers.swarm.exposedByDefault=false
+      - --providers.swarm.refreshSeconds=5
+    ports:
+      # The HTTP port
+      - "80:80"
+      # The Web UI (enabled by --api.insecure=true)
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

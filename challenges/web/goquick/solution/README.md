@@ -34,7 +34,7 @@ if(preg_match("/^" . IP_REGEX . "$/", $matches[1])) {
 } else {
     $output = array();
     // première requête DNS ici
-    exec("dig @1.1.1.1 +short A " . escapeshellarg($matches[1]), $output);
+    exec("dig +short A " . escapeshellarg($matches[1]), $output);
     if(count($output) == 0) {
         // ...
     } else if($output[0] == "127.0.0.1") {
