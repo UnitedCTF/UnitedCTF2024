@@ -4,7 +4,7 @@
 
 ## Description (français)
 
-
+Je me suis fait mon propre algorithme de chiffrage dans un [petit language obscure](https://razetime.github.io/ngn-k-tutorial/). Personne ne sera jamais capable de tout le comprendre!
 
 ## Description (english)
 
