@@ -2,11 +2,14 @@ import random
 import re
 import os
 
+REGEX_VALIDATION = r"^[^0 \t\v\n\r]*[1-9]\d*$"
 ERROR_FORMAT = '\nVous ne m\'avez pas écouté! Votre réponse doit être une séquence de 10 nombres séparés par des virgules, sans espaces.\nPar exemple: 1,2,3,4,5,6,7,8,9,10... Revenez quand vous aurez compris!'
 ERROR_WRONG = '\nOops, cette séquence n\'est pas celle que j\'avais en tête. Meilleure chance la prochaine fois!'
 
 def parse_numbers(val):
-    return [int(x) for x in val.split(',') if re.match(r"^[^0 \t\v\n\r]*[1-9]\d*$", x)]
+    if any([not re.match(REGEX_VALIDATION, x) for x in val.split(',')]):
+        return None
+    return [int(x) for x in val.split(',') if re.match(REGEX_VALIDATION, x)]
 
 def rotate_logical_right(val):
     b = val & 1
@@ -25,7 +28,7 @@ print('\nCommençons avec quelque chose de simple...')
 print(f'Niveau 1: {sequence[:10]}')
 response = parse_numbers(input('Que dites-vous? > '))
 
-if len(response) != 10:
+if response:
     print(ERROR_FORMAT)
     exit()
 
