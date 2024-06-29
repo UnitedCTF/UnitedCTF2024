@@ -5,12 +5,12 @@ import socket
 import time
 import datetime
 
-REGEX_VALIDATION = r"^[^0 \t\v\n\r]*[1-9]\d*$"
+REGEX_VALIDATION = r"^[^0 \t\v\n\r]*(?:[1-9]\d*|0)$"
 
 def parse_numbers(val):
-    if any([not re.match(REGEX_VALIDATION, x) for x in val.split(',')]):
+    if not all([re.match(REGEX_VALIDATION, x) for x in val.split(',')]):
         return None
-    return [int(x) for x in val.split(',') if re.match(REGEX_VALIDATION, x)]
+    return [int(x) for x in val.split(',')]
 
 # Intro
 print('Ah, si vite de retour! J\'ai remanié le jeu depuis la dernière fois...')
@@ -22,7 +22,7 @@ print(f'\nCette fois, il n\'y a qu\'un niveau, mais faites vite! Je n\'ai pas to
 response = input('Que dites-vous? > ')
 response_sequence = parse_numbers(response)
 
-if not response_sequence:
+if not response_sequence or len(response_sequence) != 10:
     print("\nAttention! Votre séquence doit contenir 10 nombres valides. Revenez quand vous aurez compris!")
     exit()
 
