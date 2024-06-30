@@ -18,7 +18,7 @@ print('Je vais choisir 10 nombres au pur hasard, vous devrez les deviner sans au
 print('Pour rendre les choses plus justes, vous avez accès à la logique derrière mes choix. (voir CTFd)')
 
 # Input & validation
-print(f'\nCette fois, il n\'y a qu\'un niveau, mais faites vite! Je n\'ai pas toute la journée à attendre, il est déjà {datetime.datetime.now()}')
+print(f'\nCette fois, il n\'y a qu\'un niveau, mais faites vite! Je n\'ai pas toute la journée à attendre...')
 response = input('Que dites-vous? > ')
 response_sequence = parse_numbers(response)
 
