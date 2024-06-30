@@ -3,7 +3,6 @@ import re
 import os
 import socket
 import time
-import datetime
 
 REGEX_VALIDATION = r"^[^0 \t\v\n\r]*(?:[1-9]\d*|0)$"
 
@@ -19,8 +18,12 @@ print('Pour rendre les choses plus justes, vous avez accès à la logique derri�
 
 # Input & validation
 print(f'\nCette fois, il n\'y a qu\'un niveau, mais faites vite! Je n\'ai pas toute la journée à attendre...')
-response = input('Que dites-vous? > ')
+time_before, response = time.time(), input('Que dites-vous? > ')
 response_sequence = parse_numbers(response)
+
+if time.time() - time_before >= 10:
+    print('\nZzzzzzz... Vous avez pris trop de temps.')
+    exit()
 
 if not response_sequence or len(response_sequence) != 10:
     print("\nAttention! Votre séquence doit contenir 10 nombres valides. Revenez quand vous aurez compris!")
