@@ -1,0 +1,24 @@
+name: Guess My Numbers (Reloaded)
+author: Linkster78
+category: Misc
+
+description: |-
+  ## Description (fr)
+
+  Satisfait d'avoir relevé le défi du charlatan, vous continuez votre journée remplie d'émotions fortes.<br>
+  Cependant, il ne vous oublie pas et à la fin de la journée, il vous intercepte près de la sortie et exige une revanche.
+
+  ## Description (en)
+
+  Satisfied to have taken up the charlatan's challenge, you continue your day filled with strong emotions.<br>
+  However, he doesn't forget about you and at the end of the day, he intercepts you near the exit and demands a rematch.
+
+flags:
+- flag-UnP3uD3M4n1pu7ati0nDeRNG
+
+tags:
+- misc
+- quirk
+
+files:
+- ./src/server2.py
