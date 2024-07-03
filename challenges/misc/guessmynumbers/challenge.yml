@@ -1,0 +1,23 @@
+name: Guess My Numbers
+author: Linkster78
+category: Misc
+
+description: |-
+  ## Description (fr)
+
+  Alors que vous vous promenez dans le parc, un charlatan vous interpelle et vous propose un défi simple.
+  
+  *"Devinez les dix prochains nombres dans une série de séquences et gagnez! C'est un jeu d'enfant!"*
+
+  ## Description (en)
+
+  As you were walking in the park, a charlatan calls out to you and offers you a simple challenge.
+  
+  *"Guess the next ten numbers in a series of sequences and win! It's child's play!"*
+
+flags:
+- flag-L3sM4th5C3s7F4c1l3
+
+tags:
+- misc
+- programming
