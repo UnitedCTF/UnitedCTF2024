@@ -41,17 +41,17 @@ Ce défi doit:
 ## Personnes responsables
 | Rôle | Nom de la personne responsable |
 | ------------- | ------------- |
-| Infrastructure | Julien Champoux |
-| Commandites  | Jules Barbier |
-| Communication  | Sebastien Beaudet |
+| Infrastructure | Julien Champoux @linkster78 |
+| Commandites  | Jules Barbier, @youllou |
+| Communication  | Sebastien Beaudet, @mkuroni |
 | Assurance Qualité (QA)  | _Responsabilité partagée_ |
-| Récompenses | Jacty Saenz |
-| Admin Github UnitedCTF | Vincent Laferrière |
+| Récompenses | Jacty Saenz, @jactymilena |
+| Admin Github UnitedCTF | Vincent Laferrière, @kptcheesewhiz |
 
 ## Personnes contact
 | Université | Nom de la personne responsable |
 | ------------- | ------------- |
-| UdeS | Benjamin Courchesne |
-| ÉTS | Jules Barbier |
-| Polytechnique | Étienne Perron |
-| Concordia | Constance Prevot |
+| UdeS | Benjamin Courchesne, @capucinoxx |
+| ÉTS | Jules Barbier, @youllou |
+| Polytechnique | Étienne Perron, @bigboy_87 |
+| Concordia | Constance Prevot, @otaphoque |

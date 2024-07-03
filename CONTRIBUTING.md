@@ -6,7 +6,7 @@
 ## Organisation & requis
 - Les défis devraient être créés sous l'arborescence `challenges/<catégorie>/<nom du défi>`
 - Chaque défi devrait contenir:
-    - Un README.md avec le nom de l'auteur, une description en français et en anglais.
+    - Un README.md avec le nom de l'auteur, une description en français et en anglais, sans oublier le flag (faites un double-check pour s'assurer qu'il est identique).
     - Un document similaire pour décrire la solution de l'auteur avec des étapes. Si la solution peut être automatisée, un script de vérification automatique serait grandement apprécié.
     - Un `Dockerfile` pour le défi avec une directive `EXPOSE` pour clairement identifier le port qui doit être exposé par l'infrastructure. Si le challenge nécessite plusieurs conteneurs, fournissez un `docker-compose.yml` avec les services nécessaires.
 
