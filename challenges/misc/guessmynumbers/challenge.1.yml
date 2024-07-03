@@ -22,3 +22,6 @@ tags:
 
 files:
 - ./src/server2.py
+
+requirements:
+- Guess My Numbers
