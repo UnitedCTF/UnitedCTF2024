@@ -1,0 +1,27 @@
+name: Cybear Security 3
+author: mkuroni
+category: Misc
+
+description: |-
+  ## Description (fr)
+
+  Super, un peigne à sourcils ... Tu es à deux doigts du gros prix !<br>
+  (Le format est flag- suivi de ce que tu trouveras en minuscules)
+
+  ## Description (en)
+
+  Cool, an eyebrow comb ... The prize is at your fingertips !<br>
+  (The format is flag- followed by what you will find in lowercase)
+
+flags:
+- flag-c0un71ngd07s
+
+tags:
+- misc
+- accessibility
+
+files:
+- ./lvl3.svg
+
+requirements:
+- Cybear Security 2
