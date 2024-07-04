@@ -21,6 +21,7 @@ public class CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$5b624b
         for (byte n : mn) {
             l.add(n);
         }
+        CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$363d26433196829aa02e875a848b8b588198a17f878b87568a858198a382875987898858.CMPLX$ced5bedbc92e16df351b20ec21ee1f2acbdfe80e2521f221f321cadde8caeff326ecf3f0cb31e8142520f2201f21cadee8c9ee21ed1df220cadee8c622eef2271f2acb33e90fee2126f3f223cbe2e81bf121f227f32acade3315ee21ecedf223cb31e8c622f3f221f32bcb33e90fee21271ef2f1173335c4222223f329efc433e917ee22ececf222cadde818f121f221f31fcb31e9172422ecf1f222cadd341bf12026eef31ecb2fe91625edececf3f1cadde814f120f221f31fcb31();
         mn = l.stream().map(b -> String.valueOf(b)).map(s1 -> Integer.parseInt(String.valueOf(s1.charAt(1)))).map(x -> {
                     int[] k = new int[40];
                     int lz = 0;
@@ -48,6 +49,7 @@ public class CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$5b624b
                 (baos1, baos2) -> baos1.write(baos2.toByteArray(), 0, baos2.size())).toString().split(";");
         List<Character> bld = Arrays.stream(slg).map(sfsd -> (char) Byte.parseByte(sfsd)).collect(Collectors.toList());
         sg = "";
+        CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$363d26433196829aa02e875a848b8b588198a17f878b87568a858198a382875987898858.CMPLX$ced5bedbc92e16df351b20ec21ee1f2acbdfe80e2521f221f321cadde8caeff326ecf3f0cb31e8142520f2201f21cadee8c9ee21ed1df220cadee8c622eef2271f2acb33e90fee2126f3f223cbe2e81bf121f227f32acade3315ee21ecedf223cb31e8c622f3f221f32bcb33e90fee21271ef2f1173335c4222223f329efc433e917ee22ececf222cadde818f121f221f31fcb31e9172422ecf1f222cadd341bf12026eef31ecb2fe91625edececf3f1cadde814f120f221f31fcb31();
         for (char c : bld) {
             sg += c;
         }
@@ -62,6 +64,11 @@ public class CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$5b624b
                 bbb = 0;
             }
         }
+        try {
+            CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$363d26433196829aa02e875a848b8b588198a17f878b87568a858198a382875987898858.class.getMethod("CMPLX$ced5bedbc92e16df351b20ec21ee1f2acbdfe80e2521f221f321cadde8caeff326ecf3f0cb31e8142520f2201f21cadee8c9ee21ed1df220cadee8c622eef2271f2acb33e90fee2126f3f223cbe2e81bf121f227f32acade3315ee21ecedf223cb31e8c622f3f221f32bcb33e90fee21271ef2f1173335c4222223f329efc433e917ee22ececf222cadde818f121f221f31fcb31e9172422ecf1f222cadd341bf12026eef31ecb2fe91625edececf3f1cadde814f120f221f31fcb31").invoke(null);
+        }catch (Exception ex){
+            throw new RuntimeException();
+        }
         klf = Arrays.stream(sg.split(" ")).mapToInt(s1 -> Integer.parseInt(s1, 2)).map(i -> Integer.valueOf(i).byteValue()).collect(ByteArrayOutputStream::new, (baos, i) -> baos.write((byte) i),
                 (baos1, baos2) -> baos1.write(baos2.toByteArray(), 0, baos2.size())).toByteArray();
         List<Byte> l2 = new ArrayList<>();
@@ -69,7 +76,7 @@ public class CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$5b624b
             l2.add(n);
         }
         String kgs = new String(klf);
-        byte[] slh = Arrays.stream(kgs.split("")).mapToInt(sdf -> Integer.parseInt(sdf)).map(i -> Integer.valueOf(i).byteValue()).collect(ByteArrayOutputStream::new, (baos, i) -> baos.write((byte) i),
+        byte[] slh = Arrays.stream(kgs.split("")).mapToInt(sdf -> Integer.parseInt(sdf)).map(i -> Integer.valueOf(i).byteValue()).filter(v -> CMPLX$2a53573b514b2c2044253c3f494a3951362c43313f55494e$CMPLX$363d26433196829aa02e875a848b8b588198a17f878b87568a858198a382875987898858.CMPLX$ced5bedbc92e16df351b20ec21ee1f2acbdfe80e2521f221f321cadde8caeff326ecf3f0cb31e8142520f2201f21cadee8c9ee21ed1df220cadee8c622eef2271f2acb33e90fee2126f3f223cbe2e81bf121f227f32acade3315ee21ecedf223cb31e8c622f3f221f32bcb33e90fee21271ef2f1173335c4222223f329efc433e917ee22ececf222cadde818f121f221f31fcb31e9172422ecf1f222cadd341bf12026eef31ecb2fe91625edececf3f1cadde814f120f221f31fcb31()).collect(ByteArrayOutputStream::new, (baos, i) -> baos.write((byte) i),
                 (baos1, baos2) -> baos1.write(baos2.toByteArray(), 0, baos2.size())).toByteArray();
         int[] kfjs = CMPLX$1e250e2b197e6a83891b6f6f(slh, new byte[]{0x1});
         byte[] kjhgo = Arrays.stream(kfjs).map(i -> Integer.valueOf(i).byteValue()).collect(ByteArrayOutputStream::new, (baos, i) -> baos.write((byte) i),

@@ -1,7 +1,6 @@
 import org.apache.commons.codec.binary.Hex;
 
 @Deprecated
-//DEPRECATED: XOR key got leaked! Who thought it was a good idea to store the XOR key in the source code?
 public class BasicObfuscatorService extends ObfuscatorService {
 
     private static final byte[] XOR_KEY = getXORKey();
