@@ -4,7 +4,7 @@
 - Faites un fork du répertoire pour travailler sur votre défi.
 
 ## Organisation & requis
-- Les défis devraient être créés sous l'arborescence `challenges/<catégorie>/<nom du défi>`
+- Les défis devraient être créés sous l'arborescence `challenges/<catégorie>/<nom du défi>` avec les noms de dossiers en kebab case (soit `[a-z-]+`, lettres minuscules et tirets).
 - Chaque défi devrait contenir:
     - Un README.md avec le nom de l'auteur, une description en français et en anglais, sans oublier le flag (faites un double-check pour s'assurer qu'il est identique).
     - Un fichier `<nom du défi>.yml` contenant des détails sur le défi selon la [spécification ctfcli](https://github.com/CTFd/ctfcli/blob/master/ctfcli/spec/challenge-example.yml). Pas besoin de tout remplir, il faut seulement:
