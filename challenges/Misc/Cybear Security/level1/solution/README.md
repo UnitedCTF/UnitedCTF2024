@@ -1,39 +1,30 @@
-#CYBEAR SECURITY Lv1
+# CYBEAR SECURITY Lv1
 
-##Write-up (français)
-Pour réussir ce défi, on commence par détecter le Braille sur le panneau (en haut à gauche).
+## Write-up (français)
 
-Ensuite, si on ne sait pas comment le lire, une petite recherche de "cheatsheet" ou de charte Braille comme braille_cheatsheet.jpg permet d'analyser le message. 
+Le "flag-" n'est pas un bon début pour ce défi. L'indice est le Braille en haut à gauche.
 
-L'indicateur "⠼" informe la présence de nombres. On traduit chaque nombre pour voir qu'ils se trouvent entre 1 et 16, soit, le nombre de ballons.
+Si on traduit:
+⠗⠑⠙ => red (rouge)         ⠕⠗⠁⠝⠛⠑ => orange (orange)
+⠽⠑⠇⠇⠕⠺ => yellow (jaune)  ⠃⠇⠥⠑ => blue (bleu)
 
-⠼⠁⠑=15 ⠼⠋=6 ⠼⠓=8 ⠼⠃=2 ⠼⠁=1 ⠼⠑=5
-⠼⠁⠃=12 ⠼⠁=10 ⠼⠁⠉=13 ⠼⠊=9 ⠼⠁⠙=14
-⠼⠙=4 ⠼⠁⠋=16 ⠼⠁⠁=11 ⠼⠛=7 ⠼⠉=3
+Si on prend l'ordre de couleur rouge-orange-jaune-bleu et qu'on note le contenu des ballons respectifs,
+on obtient:
 
-Chaque nombre correspond à une position de ballon. Il ne reste plus qu'à noter les caractères des ballons selon l'ordre du Braille (en minuscules, tel qu'indiqué dans la description du défi):
+s7 (rouge) 1c (orange) k3 (jaune) r (bleu)
 
-15=y 6=0 8=u 2=f 1=3 5=l
-12=t 10=7 13=h 9=3 14=4
-4=n 16=s 11=w 7=3 3=r
+flag-s71ck3r
 
-(y0uf3lt7h34nsw3r)
+## Write-up (english)
 
-##Write-up (english)
-To do this challenge, you first need to notice the Braille writing in the upper left corner.
+The "flag-" is misleading. To begin this challenge you need to analyse the Braille in the upper left corner.
 
-Then, if you can't read Braille, you can search online for a Braille "cheatsheet" or "chart" to find something like the braille_cheatsheet.jpg to analyze the message.
+Once translated:
+⠗⠑⠙ => red         ⠕⠗⠁⠝⠛⠑ => orange
+⠽⠑⠇⠇⠕⠺ => yellow  ⠃⠇⠥⠑ => blue
 
-The "⠼" indicator tells you that the Braille is a bunch of numbers. We can now use our chosen reference to translate our Braille as such :
+If we take the color order red-orange-yellow-blue and we note down the characters from the respectively colored balloons, we get:
 
-⠼⠁⠑=15 ⠼⠋=6 ⠼⠓=8 ⠼⠃=2 ⠼⠁=1 ⠼⠑=5
-⠼⠁⠃=12 ⠼⠁=10 ⠼⠁⠉=13 ⠼⠊=9 ⠼⠁⠙=14
-⠼⠙=4 ⠼⠁⠋=16 ⠼⠁⠁=11 ⠼⠛=7 ⠼⠉=3
+s7 (red) 1c (orange) k3 (yellow) r (blue)
 
-We notice that each number is different and they go from 1 to 16. 16 is the exact number of balloons shown, indicating that each number corresponds to a balloon position. We finally take our noted numbers and replace each with a character from the corresponding balloon (in lowercase).
-
-15=y 6=0 8=u 2=f 1=3 5=l
-12=t 10=7 13=h 9=3 14=4
-4=n 16=s 11=w 7=3 3=r
-
-(y0uf3lt7h34nsw3r)
+flag-s71ck3r
