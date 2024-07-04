@@ -1,16 +1,8 @@
 import java.io.ByteArrayOutputStream;
 import java.util.*;
-import java.util.stream.Stream;
 
-public class FLAG {
-    public void printFlag() {
-        String s = Main.basicObfuscatorService.invokeMethodFromObfuscatedClass(X42617369634f626675736361746f7253657276696365$X25030f014430.class, "get", String.class, null, "flag");
-        System.out.println(dec(s));
-
-    }
-
-
-    private String dec(String s){
+public class FUPDEC {
+    public static String decryptorThingyFunction(String s){
         byte[] sx = HexFormat.of().parseHex(s);
         Base64.Decoder e = Base64.getDecoder();
         byte[] mn = Arrays.stream(new String(e.decode(sx)).split(" ")).map(Byte::parseByte).mapToInt(m -> m).map(i -> Integer.valueOf(i).byteValue()).collect(ByteArrayOutputStream::new, (baos, i) -> baos.write((byte) i),
@@ -86,15 +78,14 @@ public class FLAG {
                 (baos1, baos2) -> baos1.write(baos2.toByteArray(), 0, baos2.size())).toByteArray();
         return new String(e.decode(klglphl));
     }
-    private byte[] key() {
+    private static byte[] key() {
         return "rotatethat".getBytes();
     }
-    private int[] xor(byte[] text, byte[] key) {
+    private static int[] xor(byte[] text, byte[] key) {
         int[] res = new int[text.length];
         for (int i = 0; i < text.length; i++) {
             res[i] = text[i] ^ key[i % key.length];
         }
         return res;
     }
-
 }
