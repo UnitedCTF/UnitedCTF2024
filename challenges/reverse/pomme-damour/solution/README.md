@@ -253,7 +253,7 @@ r7 = 0;
 r5.call(r6, r7);
 ```
 
-Which can be simplified to the following javascript code:
+The compiled code can be simplified to the following javascript code:
 
 ```javascript
 if (process.argv.length !== 3) {
@@ -441,7 +441,7 @@ By XOR'ing each byte of the array by `0x137` and putting it in a file, we get th
 000004b0: 0b0a 0a0a 0a0a 0a0a                      ........
 ```
 
-The constant pool is situated at the start of the bytecode. We can see some known strings of the constant pool such as `process`, `argv` and `exit`. The array is defined between the `exit` and the `TextEncoder` as defined by the constant pool. We can search for the pattern `00? 00 ?00 ?1c` (28) to identify the begining of the array:
+The constant pool is situated at the start of the bytecode. We can see some known strings of the constant pool such as `process`, `argv` and `exit`. The array is located between the `exit` and the `TextEncoder` as defined by the constant pool. We can search for the pattern `00? 00 ?00 ?1c` (28) to identify the begining of the array:
 
 ```sh
 00000080: 0ec9 0400 0000 6578 6974 0000 0000 010c  ......exit......
