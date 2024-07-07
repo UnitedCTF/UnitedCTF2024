@@ -19,6 +19,9 @@ extra:
 flags: 
   - flag-javascriptbytecodeisfun
 
+hints:
+  - You do not have to reverse the whole binary, it is a copy of the NodeJS binary with additional data that is delimited by special markers.
+
 # Run 'npm run build' to generate the challenge
 files:
   - bin/challenge
