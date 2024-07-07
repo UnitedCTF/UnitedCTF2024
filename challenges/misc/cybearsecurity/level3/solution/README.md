@@ -1,4 +1,4 @@
-# CYBEAR SECURITY Lv3
+# Cybear Security 3
 
 ## Write-up (français)
 

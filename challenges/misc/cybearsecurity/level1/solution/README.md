@@ -1,4 +1,4 @@
-# CYBEAR SECURITY Lv1
+# Cybear Security 1
 
 ## Write-up (français)
 

@@ -1,4 +1,4 @@
-# Cybear Security Lv1
+# Cybear Security 1
 
 **`Auteur:`** [mkuroni](https://github.com/mkuroni)
 

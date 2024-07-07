@@ -1,4 +1,4 @@
-# CYBEAR SECURITY Lv2
+# Cybear Security 2
 
 ## Write-up (français)
 Pour réussir ce défi, on commence par détecter le Braille sur le panneau (en haut à gauche).

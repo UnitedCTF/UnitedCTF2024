@@ -1,4 +1,4 @@
-# Cybear Security Lv2
+# Cybear Security 2
 
 **`Auteur:`** [mkuroni](https://github.com/mkuroni)
 
