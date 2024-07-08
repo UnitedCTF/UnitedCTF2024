@@ -2,7 +2,7 @@
 
 ## Write-up
 
-There is no filter, but `require` is not defined in the `eval` context. You can access the `require` function by calling `process.mainModule.require` instead.
+There is no filter 😉
 
 ## Flag
 

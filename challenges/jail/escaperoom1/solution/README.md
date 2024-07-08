@@ -2,7 +2,7 @@
 
 ## Write-up
 
-To bypass the filter, we can split the strings into two part and append them together using a `+` such as `"require" => "req"+"uire"`.
+To bypass the filter, we can split the filters strings into two parts, re-append them together using a `+` and eval it. 
 
 ## Flag
 

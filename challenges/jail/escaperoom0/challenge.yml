@@ -5,10 +5,12 @@ description: |-
   ## Description (français)
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. Ça ne peut pas être si difficile?
+  NOTE: Le flag est dans le fichier `./flag.txt`
 
   ## Description (english)
 
   A room, a terminal, a locked door asking for a secret code... How hard can it be?
+  NOTE: The flag is in the `./flag.txt` file
 
 type: dynamic
 extra:

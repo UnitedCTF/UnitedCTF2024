@@ -21,6 +21,9 @@ connection_info: nc challenges.unitedctf.ca 1236
 flags: 
   - flag-1e4011697d0ea15fc6a3cf37baaf2d5f
 
+hints:
+  - The `require` function is not part of the `global` context, it is a scoped variable which becomes undefined when called in different contexts. Try to find where is it always defined.
+
 tags:
   - jail
 

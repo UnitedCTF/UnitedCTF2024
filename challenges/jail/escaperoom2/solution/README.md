@@ -3,6 +3,7 @@
 ## Write-up
 
 To bypass the filter, we can use [JSFuck](https://jsfuck.com/) which encodes Javascript/NodeJS into a mix of `!+[]()`.
+To keep `require` defined, we have to use `process.mainModule.require` instead.
 
 The payload is:
 

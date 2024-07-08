@@ -7,7 +7,7 @@ setTimeout(() => process.exit(0), 5 * 60 * 1000);
       input: process.stdin,
     });
 
-    process.mainModule.require = require = () => {
+    process.mainModule.__proto__.require = require = () => {
       throw new Error("ILLEGAL INPUT DETECTED!");
     };
     process.stdout.write("> ");

