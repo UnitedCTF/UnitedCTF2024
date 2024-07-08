@@ -1,0 +1,28 @@
+name: "Escape room 1"
+author: "KptCheeseWhiz"
+category: jail
+description: |-
+  ## Description (fr)
+
+  Une pièce, un terminal, une porte barrée demandant un code secret.. et des mots bannis. Ça ne peut pas être si difficile?
+
+  ## Description (en)
+
+  A room, a terminal, a locked door asking for a secret code... and banned words. How hard can it be?
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+connection_info: nc challenges.unitedctf.ca 1235
+
+flags: 
+  - flag-d57e8c186abd5f61b7a3d657af06341d
+
+tags:
+  - jail
+
+requirements:
+  - "Escape room 0"

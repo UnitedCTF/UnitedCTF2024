@@ -1,0 +1,30 @@
+name: "Escape room 3"
+author: "KptCheeseWhiz"
+category: jail
+description: |-
+  ## Description (fr)
+
+  Une pièce, un terminal, une porte barrée demandant un code secret.. et certaines fonctions bloquées. Ça ne peut pas être si difficile?
+
+  ## Description (en)
+
+  A room, a terminal, a locked door requiring a secret code... and certain functions blocked. How hard can it be?
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+connection_info: nc challenges.unitedctf.ca 1237
+
+flags: 
+  - flag-1310d81cb545ee06af252f9191af473b
+
+tags:
+  - jail
+
+requirements:
+  - "Escape room 0"
+  - "Escape room 1"
+  - "Escape room 2"
