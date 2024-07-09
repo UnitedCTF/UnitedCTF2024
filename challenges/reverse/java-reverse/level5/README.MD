@@ -11,3 +11,5 @@ It's a little worrying that the key for basic obfuscation is so easy to find. Fo
 
 Use the JavaReverse 2 challenge file for this challenge.
 ## [Solution](./Solution/WRITEUP.MD)
+## FLAG
+`flag-WhyW0uldY0uM4keObfusc47i0nRever5able`

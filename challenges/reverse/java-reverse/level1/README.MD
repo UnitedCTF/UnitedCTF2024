@@ -10,3 +10,6 @@ With the expansion of the amusement park, we are no longer able to manage all th
 
 Your mission is to test it and discover any potential bugs. Can you rise to the challenge and help us improve our ride management system?
 ## [Solution](./Solution/WRITEUP.MD)
+
+### FLAG
+`flag-DontPrintTheStackTrace`

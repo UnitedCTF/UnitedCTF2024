@@ -10,3 +10,5 @@ Krusty informs us that the software is designed to facilitate the addition of ri
 
 Use the JavaReverse 2 challenge file for this challenge.
 ## [Solution](./Solution/WRITEUP.MD)
+## FLAG
+`flag-CarefulW1thRef1ec7i0n`

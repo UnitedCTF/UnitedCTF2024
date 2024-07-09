@@ -11,3 +11,5 @@ Now that we have access, we can finally use the software. Krusty tells us that w
 
 Use the JavaReverse 2 challenge file for this challenge.
 ## [Solution](./Solution/WRITEUP.MD)
+## FLAG
+`flag-WhatD1dW3SayAb0UTSecr3Ts?`

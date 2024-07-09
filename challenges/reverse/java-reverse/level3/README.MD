@@ -10,3 +10,5 @@ It turns out that Krusty doesn't remember where he wrote down the software passw
 
 Use the JavaReverse 2 challenge file for this challenge.
 ## [Solution](./Solution/WRITEUP.MD)
+## FLAG
+`flag-JARFil3sAreJus7ZipArch1v3s`
