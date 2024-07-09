@@ -121,7 +121,7 @@ En choisissant l'option 1, nous pouvons créer un manège. Le programme nous dem
 
 ![Opt1](WRITEUP3.PNG)
 
-Nous pouvons entrer un nom pour le manège notre classe `'FLAGCLASS'` 
+Nous pouvons entrer un nom pour le manège et entrer notre classe `'FLAGCLASS'` 
 
 ![FlagClass](WRITEUP4.PNG)
 Si nous choisissant de nouveau l'option 2 et que nous choisissons le manège que nous avons créé, nous pouvons voir que nous pouvons appeller les méthodes de l'objet:
@@ -249,7 +249,7 @@ By choosing option 1, we can create a ride. The program asks us to enter the nam
 
 ![Opt1](WRITEUP3.PNG)
 
-We can enter a name for the ride our class `FLAGCLASS` 
+We can enter a name for the ride and enter our class `FLAGCLASS` 
 
 ![FlagClass](WRITEUP4.PNG)
 
