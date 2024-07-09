@@ -52,7 +52,7 @@ private void X362997998c298c975e9388289e9b90305ba68c965a2b9e995a308b975e9688289b
 }
 ```
 
-Comme on ne peux pas retrouver les noms de classes et fonctions original du à l'obfuscation, il est difficile de comprendre ce qu'il se passe. 
+Comme on ne peux pas retrouver les noms de classes et fonctions original dû a l'obfuscation, il est difficile de comprendre ce qu'il se passe. 
 
 
 ```java
