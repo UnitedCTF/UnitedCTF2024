@@ -1,0 +1,31 @@
+name: "Escape room 4"
+author: "KptCheeseWhiz"
+category: jail
+description: |-
+  ## Description (fr)
+
+  Une pièce, un terminal, une porte barrée demandant un code secret.. et les fonctions sont désactivées. Ça ne peut pas être si difficile?
+
+  ## Description (en)
+
+  A room, a terminal, a locked door asking for a secret code... and the functions are disabled. How hard can it be?
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+connection_info: nc challenges.unitedctf.ca 1238
+
+flags: 
+  - flag-108a55858ba2f0a498fb14666bab109f
+
+tags:
+  - jail
+
+requirements:
+  - "Escape room 0"
+  - "Escape room 1"
+  - "Escape room 2"
+  - "Escape room 3"
