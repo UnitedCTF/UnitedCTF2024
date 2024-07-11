@@ -1,0 +1,15 @@
+name: WordStego 1
+author: Atlantis11656
+category: Steganography
+
+description: |-
+
+flags:
+    - 
+   
+tags:
+    - steg
+    - word
+
+files:
+    - document.docx

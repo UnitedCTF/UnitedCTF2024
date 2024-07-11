@@ -1,0 +1,14 @@
+name: WordStego 6
+author: Atlantis11656
+category: Steganography
+
+description: |-
+
+flags:
+    - 
+   
+tags:
+    - steg
+    - word
+
+requirements: WordStego 1

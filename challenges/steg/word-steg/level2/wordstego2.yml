@@ -1,0 +1,15 @@
+name: WordStego 2
+author: Atlantis11656
+category: Steganography
+
+description: |-
+
+flags:
+    - 
+   
+tags:
+    - steg
+    - word
+    - beginner
+
+requirements: WordStego 1
