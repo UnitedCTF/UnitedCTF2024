@@ -1,15 +1,14 @@
-name: WordStego 1
+name: WordStego 2
 author: Atlantis11656
 category: Steganography
 
 description: |-
 
 flags:
-    - flag-welcometothenewworld
+    - flag-UF0und7heTr3asuR3M4p
    
 tags:
     - steg
     - word
 
-files:
-    - document.docx
+requirements: WordStego 1

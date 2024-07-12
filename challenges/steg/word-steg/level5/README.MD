@@ -1,4 +1,4 @@
-# WordStego 1
+# WordStego 5
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
 ## Description (Français)
@@ -8,4 +8,4 @@
 ## [Solution](./Solution/WRITEUP.MD)
 
 ### FLAG
-`flag-welcometothenewworld`
+`flag-4REy0uLo5t0rSom37hing?`
