@@ -4,23 +4,21 @@ _(vendredi 13 au vendredi 20 septembre)_
 **Compétition interuniversitaire pour les débutant(e)s sur la cybersécurité et la programmation.**
 
 ## Dates butoirs
-**X -** Challenges terminés et prêts pour le QA.
+**31 août -** Challenges terminés et prêts pour le QA.
 
-**X -** QA terminé.
+**8 septembre -** QA terminé.
 
 ## Règles de bienséance
-- Utilisez et mettez à jour le [tableau Kanban / Projects](https://github.com/orgs/UnitedCTF/projects/2/views/1) lorsque vous créez des défis
-- Si vous avez des idées de challenges mais pas le temps ou les ressources, alors laissez-là dans la boîte à idées
-- Faites un fork du répertoire pour créer votre défi
-- Faites une Pull Request vers la branche *main* lorsque votre défi est terminé
-- Attendez que la branche soit approuvée et révisée par au moins deux personnes avant de la pousser sur *main*
+- Utilisez et mettez à jour le [tableau Kanban / Projects](https://github.com/orgs/UnitedCTF/projects/2/views/1) lorsque vous créez des défis.
+- Si vous avez des idées de challenges mais pas le temps ou les ressources, alors laissez-les dans la boîte à idées.
+- Consultez les [directives de contribution](CONTRIBUTING.md).
 
 ## Thème
 
-_TODO_
+Parc d'attractions 🎢🎡
 
 ## Format du flag
-flag-DuT3xt3Dr0l3P0urD3cr1r3M0nFl4g
+Format: `flag-\w+`, par exemple: `flag-DuT3xt3Dr0l3P0urD3cr1r3M0nFl4g`
 
 ## Format du défi
 Chaque défi ou suite de défis devra contenir:
@@ -33,7 +31,7 @@ Tous les éléments du défi devront être écrits en français et en anglais, d
 
 ### Défi d'introduction
 Ce défi doit:
-- présenter l'outil à utiliser pour compléeter les autres défis
+- présenter l'outil à utiliser pour compléter les autres défis
 - représenter la première ou les premières étapes à réaliser pour le défi
 *(ex: comment se connecter au serveur pour un défi où l'on se connecte au serveur, reçoit une équation mathématique à résoudre puis envoie la réponse pour obtenir le flag)*
 - donner des ressources pour réaliser les défis
@@ -43,24 +41,17 @@ Ce défi doit:
 ## Personnes responsables
 | Rôle | Nom de la personne responsable |
 | ------------- | ------------- |
-| Infrastructure | X |
-| Commandites  | X  |
-| Communication  | X |
-| Assurance Qualité (QA)  | X |
-| Récompenses | X |
-| Admin Github UnitedCTF | X |
+| Infrastructure | Julien Champoux @linkster78 |
+| Commandites  | Jules Barbier, @youllou |
+| Communication  | Sebastien Beaudet, @mkuroni |
+| Assurance Qualité (QA)  | _Responsabilité partagée_ |
+| Récompenses | Jacty Saenz, @jactymilena |
+| Admin Github UnitedCTF | Vincent Laferrière, @kptcheesewhiz |
 
 ## Personnes contact
 | Université | Nom de la personne responsable |
 | ------------- | ------------- |
-| UdeS | X |
-| ÉTS | X |
-| UQAC | X |
-| Polytechnique | X |
-| ULaval | X |
-| Concordia | X |
-| Cégep Saint-Jean-sur-Richelieu | X |
-| UQAM | X |
-| McGill | X |
-| UdeM | X |
-| ? | X |
+| UdeS | Benjamin Courchesne, @capucinoxx |
+| ÉTS | Jules Barbier, @youllou |
+| Polytechnique | Étienne Perron, @bigboy_87 |
+| Concordia | Constance Prevot, @otaphoque |
