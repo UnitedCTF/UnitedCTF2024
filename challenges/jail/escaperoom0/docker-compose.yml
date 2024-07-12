@@ -1,0 +1,9 @@
+services:
+  jail-escaperoom0:
+    build:
+      context: .
+    container_name: jail-escaperoom0
+    hostname: jail-escaperoom0
+    restart: unless-stopped
+    ports:
+      - "1234:1234"

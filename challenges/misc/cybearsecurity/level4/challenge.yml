@@ -1,0 +1,27 @@
+name: Cybear Security 4
+author: mkuroni
+category: Misc
+
+description: |-
+  ## Description (fr)
+
+  On te propose un quitte ou double pour une édition limitée de ta peluche qui brille dans le noir !<br>Le jeu n'est pas un problème pour toi. Tu peux t'arrêter quand tu veux.<br>Tu tentes le tout pour le toutou !<br>
+  (Le format est flag- suivi de ce que tu trouveras en minuscules)
+
+  ## Description (en)
+
+  They offer a double or nothing for a limited edition of your plushie that glows in the dark !<br>Gambling is not one of your problems. You can stop whenever you want to.<br>You push for the plush !<br>
+  (The format is flag- followed by what you will find in lowercase)
+
+flags:
+- flag-mycy834rs3cur1ty
+
+tags:
+- misc
+- accessibility
+
+files:
+- ./lvl4.svg
+
+requirements:
+- Cybear Security 3

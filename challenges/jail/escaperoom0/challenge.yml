@@ -1,0 +1,27 @@
+name: "Escape room 0"
+author: "KptCheeseWhiz"
+category: jail
+description: |-
+  ## Description (fr)
+
+  Une pièce, un terminal, une porte barrée demandant un code secret.. Ça ne peut pas être si difficile?
+  NOTE: Le flag est dans le fichier `./flag.txt`
+
+  ## Description (en)
+
+  A room, a terminal, a locked door asking for a secret code... How hard can it be?
+  NOTE: The flag is in the `./flag.txt` file
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+connection_info: nc challenges.unitedctf.ca 1234
+
+flags: 
+  - flag-6e9e2e450d06b87f7bf73cb0a4d4c75d
+
+tags:
+  - jail
