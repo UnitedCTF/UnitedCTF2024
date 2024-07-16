@@ -1,0 +1,20 @@
+name: GoQuick
+author: Linkster78
+category: Web
+
+description: |-
+  ## Description (fr)
+
+  Êtes-vous tannés de vous rendre jusqu'à un manège juste pour constater qu'il y a une file interminable?<br>
+  Visitez le nouveau système GoQuick pour consulter les temps d'attentes à partir de navigateur préféré!
+
+  ## Description (en)
+
+  Are you tired of making your way to a ride only to be met with a seemingly never-ending line?<br>
+  Visit the new GoQuick system to view the waiting times of your favorite rides, all from the comfort of your favorite browser!
+
+flags:
+- flag-C3tteL1gn3DAtt3nt3EstR1d1cul3m3n7L0ngu3
+
+tags:
+- web
