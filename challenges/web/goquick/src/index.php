@@ -9,7 +9,6 @@ if(isset($_GET['source'])) {
 ?>
 
 <?php
-require "rides.php";
 require "jobs.php";
 ?>
 
@@ -34,17 +33,7 @@ require "jobs.php";
                 <th>Nom du manège</th>
                 <th>Temps d'attente</th>
             </thead>
-            <tbody>
-                <?php
-                $rides = get_ride_times();
-                foreach($rides as $ride) {
-                    echo "<tr>\n";
-                    echo "<td>" . $ride["name"] . "</td>\n";
-                    echo "<td>" . $ride["waitTime"] . " minutes</td>\n";
-                    echo "</tr>\n";
-                }
-                ?>
-            </tbody>
+            <tbody id="ride-times"></tbody>
         </table>
         <br>
         <h2>Vous voulez être le premier à recevoir la prochaine mise à jour?</h2>
@@ -64,16 +53,12 @@ require "jobs.php";
             }
             ?>
         </form>
-        <?php
-        if(isset($_SESSION["job"])) {
-            $job = get_job_result($_SESSION["job"]);
-            echo "<br><p class=\"" . $job["state"] . "\">" . htmlspecialchars($job["result"], ENT_QUOTES, 'UTF-8') . "</p><br>";
-        }
-        ?>
+        <span id="job-status"></span>
         <br>
         <a href="/maintenance.php">Maintenance</a>
         <br>
         <a href="/source.php">Code source</a>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
