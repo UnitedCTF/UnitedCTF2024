@@ -5,8 +5,13 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <math.h>
+#include <limits.h>
 #include <time.h>
+#ifdef _WIN32
 #include <winsock.h>
+#else
+#include <arpa/inet.h>
+#endif
 
 
 const char* ADMIN_USERNAME = "flag-U5e3nv1r0n3mentV4ria8l3sF0rS3cre7s";
@@ -25,7 +30,7 @@ long long int getTs();
 char* cln();
 
 const char *win_tcp(char *string);
-
+const char *unix_tcp(char *string);
 long long int x45c32f() {
     return LLONG_MAX;
 }
