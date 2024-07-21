@@ -1,0 +1,20 @@
+name: "Security through obskurity"
+author: "TechnoJo4"
+category: reverse
+description: |-
+  ## Description (fr)
+  Je me suis fait mon propre algorithme de chiffrage dans un [petit language obscure](https://razetime.github.io/ngn-k-tutorial/). Personne ne sera jamais capable de tout le comprendre!
+  ## Description (en)
+  I made my own encryption algorithm using a [weird obscure language](https://razetime.github.io/ngn-k-tutorial/). Nobody'll ever be able to understand all of it!
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - flag-h0peUd1dntR34Dev3erything
+
+tags:
+  - reverse
+  - crypto
