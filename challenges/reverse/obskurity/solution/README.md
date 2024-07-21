@@ -23,15 +23,19 @@ On peut donc dire que `s@e[x;y]` chiffre un charactère `y` du plaintext en conn
 La dernière partie de notre algorithme de "chiffrage" est donc `s`. Comme indiqué plus haut, vous n'êtes pas censé essayer de comprendre cette partie. Si vous essayez d'évaluer `s`, et peut-être `#s`, vous verrez qu'il s'agit d'une liste de 256 éléments contenant les entiers de 0 à 255. C'est une permutation, ou en d'autres termes, une boîte de substitution (S-box). Pour déchiffrer, on a pas besoin de savoir comment `s` a été calculé, on doit simplement inverser la permutation.
 
 Si on veut, on peut maintenant décrire mathématiquement notre algorithme (on en a vraiment pas besoin pour un algorithme si simple, mais c'est bonne pratique néanmoins) :
+
 $$e_i = S(m_i \oplus e_{i-1})$$
 
 Et trouver la valeur de $m$ en fonction de $e$:
-$$\begin{align*}
-m_i &= m_i \oplus 0
-\\&= m_i \oplus (e_{i-1} \oplus e_{i-1})
-\\&= S^{-1}(S(m_i \oplus e_{i-1})) \oplus e_{i-1}
-\\&= S^{-1}(e_i) \oplus e_{i-1}
-\end{align*}$$
+
+$$
+\begin{align*}
+m_i &= m_i \oplus 0 \\
+    &= m_i \oplus (e_{i-1} \oplus e_{i-1}) \\
+    &= S^{-1}(S(m_i \oplus e_{i-1})) \oplus e_{i-1} \\
+    &= S^{-1}(e_i) \oplus e_{i-1}
+\end{align*}
+$$
 
 Tout ce que reste est d'écrire le script de déchiffrage. Si t'en as assez du K, il y a une solution en Python [ici](decrypt.py), mais faisons-le en K pour le plaisir.
 
@@ -68,15 +72,19 @@ Thus, we can say that knowing `x`, the last character of the ciphertext, `s@e[x;
 The last part of our "encryption" algorithm then is `s`. As aforementioned, you aren't supposed to try to understand this part. If you try and evaluate `s`, and maybe `#s`, you'll see it's a 256-element list containing the integers from 0 to 255. It's a permutation, or in other words, a **substitution box**. To decrypt then, we won't need to know how `s` was calculated, we'll simply need to invert the permutation.
 
 We can finally mathematically describe our algorithm as follows (we really don't need to for such a simple algorithm, but it's good practice regardless):
+
 $$e_i = S(m_i \oplus e_{i-1})$$
 
 And solving for our plaintext $m$ as a function of $e$:
-$$\begin{align*}
-m_i &= m_i \oplus 0
-\\&= m_i \oplus (e_{i-1} \oplus e_{i-1})
-\\&= S^{-1}(S(m_i \oplus e_{i-1})) \oplus e_{i-1}
-\\&= S^{-1}(e_i) \oplus e_{i-1}
-\end{align*}$$
+
+$$
+\begin{align*}
+m_i &= m_i \oplus 0 \\
+    &= m_i \oplus (e_{i-1} \oplus e_{i-1}) \\
+    &= S^{-1}(S(m_i \oplus e_{i-1})) \oplus e_{i-1} \\
+    &= S^{-1}(e_i) \oplus e_{i-1}
+\end{align*}
+$$
 
 All that's left is to write the decryption script. If you're boring there's a python solution [here](decrypt.py), but let's solve it in K for the hell of it.
 
