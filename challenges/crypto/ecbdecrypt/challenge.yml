@@ -1,0 +1,21 @@
+name: TBD
+author: TechnoJo4
+category: crypto
+
+description: |-
+  ## Description (fr)
+
+  Je t'ai seulement donné une fonction de chiffrage. Tu seras pas capable de déchiffrer, correct?
+
+  ## Description (en)
+
+  I've only given you an encryption function. You won't be able to decrypt the flag, right?
+
+flags:
+- flag-th3ecbp3ngu1nsaysh3ll0
+
+files:
+- ./challenge.py
+
+tags:
+- crypto

@@ -1,0 +1,21 @@
+name: TBD 2
+author: TechnoJo4
+category: crypto
+
+description: |-
+  ## Description (fr)
+
+  Je t'ai seulement donné un chiffrage. Tu seras pas capable de déchiffrer, correct?
+
+  ## Description (en)
+
+  I've only given you one encryption. You won't be able to decrypt the flag, right?
+
+flags:
+- flag-d0ntl1m1ty0urs3lf
+
+files:
+- ./challenge2.py
+
+tags:
+- crypto
