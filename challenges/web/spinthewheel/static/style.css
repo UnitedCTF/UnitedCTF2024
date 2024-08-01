@@ -99,7 +99,7 @@ body {
     border-radius: .5rem;
 }
 
-button {
+#spin-btn {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 
@@ -113,9 +113,13 @@ button {
     border-radius: .5rem;
 }
 
-button:hover {
+#spin-btn:hover {
     background-color: #45258f;
     cursor: pointer;
+}
+
+#spin-btn:disabled {
+    background-color: #616161;
 }
 
 a {

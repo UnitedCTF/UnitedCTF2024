@@ -6,22 +6,23 @@ import time
 import random
 
 
-SPIN_INTERVAL: int = 7 * 24 * 60 * 60
-PRIZE_VALUES: List[int] = [0, 5, 0, 10, 0, 7, 0, 0, 2, 0, -30, 0]
-FLAG_PRICE: int = 1000
+PRIZE_VALUES: List[int] = [-1, 5, 0, 10, -1, 20, 0, 0, 2, -1, 3, 0]
+FLAG_PRICE: int = 10000
 
 
 app = Flask(__name__)
 app.secret_key = '255da035eddf51f1ecd98487f620a9ff'
 
-database: Dict[str, int] = {}
+
+# TODO
+# add README, SOLUTION, CTFd
+# disable piton après clic
 
 
 def create_session():
     uid = uuid.uuid4()
     session['uid'] = uid
-    session['last_spin'] = 0
-    database[uid] = 0
+    session['balance'] = 0
 
 
 def session_required(f):
@@ -36,35 +37,24 @@ def session_required(f):
 @app.get('/')
 @session_required
 def roulette_view():
-    uid = session['uid']   
-    can_spin = time.time() - session['last_spin'] >= SPIN_INTERVAL
-    balance = database[uid]
-    return render_template('wheel.html', can_spin=can_spin, balance=balance)
+    return render_template('wheel.html', balance=session['balance'])
 
 
 @app.post('/spin')
 @session_required
-def roulette_spin():
-    if time.time() - session['last_spin'] < SPIN_INTERVAL:
-        return {'error': 'spin_already_used'}, 400
-
-    uid = session['uid']    
+def roulette_spin(): 
     wheel_choice = random.randrange(0, len(PRIZE_VALUES))
 
-    balance = database[uid]
-    balance += PRIZE_VALUES[wheel_choice]
-    database[uid] = balance
+    if PRIZE_VALUES[wheel_choice] == -1:
+        session['balance'] = 0
+    else:
+        session['balance'] += PRIZE_VALUES[wheel_choice]
 
-    session['last_spin'] = time.time()
-
-    return {'wheel_choice': wheel_choice, 'new_balance': database[uid]}
+    return {'wheel_choice': wheel_choice, 'new_balance': session['balance']}
 
 
 @app.get('/redeem')
 @session_required
 def redeem_flag():
-    uid = session['uid']
-    balance = database[uid]
-
-    flag = balance >= 1000
+    flag = session['balance'] >= FLAG_PRICE
     return render_template('redeem.html', flag=flag)
