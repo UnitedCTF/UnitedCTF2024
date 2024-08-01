@@ -2,7 +2,6 @@ from functools import wraps
 from typing import Dict, List
 from flask import Flask, render_template, session
 import uuid
-import time
 import random
 
 
@@ -12,11 +11,6 @@ FLAG_PRICE: int = 10000
 
 app = Flask(__name__)
 app.secret_key = '255da035eddf51f1ecd98487f620a9ff'
-
-
-# TODO
-# add README, SOLUTION, CTFd
-# disable piton après clic
 
 
 def create_session():
