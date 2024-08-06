@@ -13,19 +13,19 @@ allDicts = [dictLvl0, dictLvl1, dictLvl2]
 flag = ""
 
 for level in range(3):
-	io = remote(HOST,PORT)
-	io.sendafter(b") : ",f"{level}\n".encode('utf-8'))
+	io = remote(HOST,PORT) # Connexion au serveur
+	io.sendafter(b") : ",f"{level}\n".encode('utf-8')) # Envoi du niveau de difficulté
 	for _ in range(5):
-		received = io.recvuntilS(b">> ")
-		leetQuote = re.search(r"(Leet Quote: )(.+)", received).group(2)
+		received = io.recvuntilS(b">> ") # Attente de la phrase leet speakée
+		leetQuote = re.search(r"(Leet Quote: )(.+)", received).group(2) # Lecture de la phrase leet speakée
 		originalQuote = leetQuote
 		for leetChar in allDicts[level]:
-			originalQuote = originalQuote.replace(leetChar,allDicts[level][leetChar])
-		print(leetQuote)
-		print(originalQuote)
-		io.sendline(originalQuote.encode('utf-8'))
+			originalQuote = originalQuote.replace(leetChar,allDicts[level][leetChar]) # Traduction de la phrase leet speakée
+		print(f'Leet: "{leetQuote}"')
+		print(f'Plaintext: "{originalQuote}"')
+		io.sendline(originalQuote.encode('utf-8')) # Envoi de la phrase traduite
 	io.recvline()
-	received = io.recvlineS()
+	received = io.recvlineS() # Réception d'une partie du flag
 	flag += re.search(r"(flag: )(.+)", received).group(2)
 	io.close()
 
