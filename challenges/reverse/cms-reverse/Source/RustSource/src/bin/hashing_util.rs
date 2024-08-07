@@ -5,6 +5,5 @@ pub fn compare_hash(plain:&String, hash:&String) -> bool{
     hasher.update(plain.as_bytes());
     let result = hasher.finalize();
     let result_str = format!("{:x}",result);
-    println!("Comparing {} to {}",result_str,hash.clone());
     result_str == hash.clone()
 }

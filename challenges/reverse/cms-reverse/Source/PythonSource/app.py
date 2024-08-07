@@ -4,13 +4,9 @@ from typing import Annotated
 import base64
 from hashlib import sha256
 import time
+import os
 app = FastAPI(docs_url=None, redoc_url=None)
 
-SERVER_ID = "cce13886a4e64875800f6ee80d5a7dfa"
-FLAG3 = "FLAG3"
-FLAG4 = "FLAG4"
-FLAG5 = "FLAG5"
-TIME_BUFFER_NS = 6_000_000_000
 @app.get("/74ba5d54-a5a7-4390-a1a1-4fdde2e66a05")
 def getHash():
     return Response(sha256(bytes(SERVER_ID,"utf-8")).hexdigest(), media_type="text/plain")
@@ -50,6 +46,11 @@ def validateFlag4(timestamp: Annotated[str, Form()], key: Annotated[str, Form()]
     except:
         return Response("Bad request", media_type="text/plain", status_code=400)
 
+PORT = int(os.getenv("PORT", 9860))
+SERVER_ID = os.getenv("SERVER_ID","")
+FLAG3 = os.getenv("FLAG3","")
+FLAG4 = os.getenv("FLAG4","")
+TIME_BUFFER_NS = int(os.getenv("TIME_BUFFER_NS", 1_000_000_000))
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=9860)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)

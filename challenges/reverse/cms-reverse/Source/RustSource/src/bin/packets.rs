@@ -165,10 +165,8 @@ impl Packet{
     }
 
     async fn init_hash(cache:&mut HashMap<String,String>){
-        println!("Init hash");
         match do_get_request("74ba5d54-a5a7-4390-a1a1-4fdde2e66a05").await{
           Ok(response) => {
-              println!("Server id hash: {}",response);
               cache.insert(SERVER_ID_HASH_KEY.to_string(),response);
           },
             Err(err) => panic!("{}",err)
