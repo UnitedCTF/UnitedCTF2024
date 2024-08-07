@@ -21,5 +21,8 @@ connection_info: https://challenges.unitedctf.ca:8080
 flags: 
   - flag-684385ac3cefd18c73705c87ab7ff6ae
 
+files:
+  - source.zip
+
 tags:
   - web
