@@ -9,8 +9,8 @@ RUN apt-get update && \
 
 COPY src/run.sh run.sh
 COPY src/app.py app.py
-COPY banner.txt banner.txt
-COPY fortune-cookies.txt fortune-cookies.txt
+COPY ressources/banner.txt banner.txt
+COPY ressources/fortune-cookies.txt fortune-cookies.txt
 
 EXPOSE 1337
 
