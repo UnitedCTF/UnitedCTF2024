@@ -29,4 +29,4 @@ for level in range(3):
 	flag += re.search(r"(flag: )(.+)", received).group(2)
 	io.close()
 
-print(flag)
+print(f"\nFlag: {flag}")
