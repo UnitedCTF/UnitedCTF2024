@@ -3,9 +3,16 @@ author: "TechnoJo4"
 category: reverse
 description: |-
   ## Description (fr)
+
   Je me suis fait mon propre algorithme de chiffrage dans un [petit language obscure](https://razetime.github.io/ngn-k-tutorial/). Personne ne sera jamais capable de tout le comprendre!
+
+  [Interpréteur en ligne](https://ngn.codeberg.page/k#eJwljctugzAQRfd8RRwWzCSuDFZIYUaR+AV2lgBFcUOzYcGjCyPL+fZa7fbonHstValmQ/C+oeKRrHrflO0zySt511RiP4sq8ERedryn+bDfXUg20uXFw8wLkmMwALbXn3g6zTzz1M1cDMhdS4s34CJwvA8YVHHQhwsbaDn6ddRbjLiPdzotkv+5s1VZtvFGALmcUdS19FaZBmRMapSxdLgqEmXIFmyELq9J7rdm/DsJ/fF7erw+1vH5+PoZn8fkF+P6P3w=)
+
   ## Description (en)
+
   I made my own encryption algorithm using a [weird obscure language](https://razetime.github.io/ngn-k-tutorial/). Nobody'll ever be able to understand all of it!
+
+  [Online interpreter](https://ngn.codeberg.page/k#eJwljctugzAQRfd8RRwWzCSuDFZIYUaR+AV2lgBFcUOzYcGjCyPL+fZa7fbonHstValmQ/C+oeKRrHrflO0zySt511RiP4sq8ERedryn+bDfXUg20uXFw8wLkmMwALbXn3g6zTzz1M1cDMhdS4s34CJwvA8YVHHQhwsbaDn6ddRbjLiPdzotkv+5s1VZtvFGALmcUdS19FaZBmRMapSxdLgqEmXIFmyELq9J7rdm/DsJ/fF7erw+1vH5+PoZn8fkF+P6P3w=)
 type: dynamic
 extra:
   initial: 500
