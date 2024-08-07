@@ -4,7 +4,7 @@
 
 ## Description (français)
 
-Dans une petite allée sombre du parc vous tombez sur un vieil automate de voyance. Intrigué·e, vous insérez un jeton pour savoir ce que vous réserve l'avenir. Mais là c'est la douche froide ! La réponse de cette machine est incompréhensible. Cependant, votre instinct informatique détecte une forme de logique dans les messages de l'automate et vous vous retroussez les manches pour comprendre ce qu'il raconte.
+Dans une petite allée sombre du parc, vous tombez sur un vieil automate de voyance. Intrigué·e, vous insérez un jeton pour savoir ce que vous réserve l'avenir. Mais là c'est la douche froide ! La réponse de cette machine est incompréhensible. Cependant, votre instinct informatique détecte une forme de logique dans les messages de l'automate et vous vous retroussez les manches pour comprendre ce qu'il raconte.
 
 ## Description (english)
 

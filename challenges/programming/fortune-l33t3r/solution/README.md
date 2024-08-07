@@ -95,4 +95,4 @@ for level in range(3):
 
 ## Flag
 
-`flag-L3sM4th5C3s7F4c1l3`
+`flag-7h3Fu7ur31sY0ur5`
