@@ -4,16 +4,21 @@ use const_format::formatcp;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::{TcpListener, TcpStream};
 use tokio::sync::Mutex;
-use crate::bin::http_handler::do_post_request;
-use crate::bin::packets::{CLNPacket, FPacket, Packet};
+use crate::bin::http_handler::{do_get_request, do_post_request};
+use crate::bin::packets::{ FPacket, Packet};
 
 const PORT:u32 = 11954;
 const URL:&'static str = formatcp!("127.0.0.1:{}",PORT);
+const FLAG:&'static str = "flag-H3yD0ntL0okH3re";
+
 pub struct TCPHandler{
     cache:Mutex<Box<HashMap<String,String>>>
 }
 impl TCPHandler{
     pub fn new() -> TCPHandler{
+        if FLAG.len() != 20{
+            panic!("huh??");
+        }
         TCPHandler{
             cache:Mutex::new(Box::new(HashMap::new()))
         }
@@ -61,12 +66,15 @@ impl TCPHandler{
             return "Invalid Server ID".to_string().into_bytes()
         }
         match packet {
-            Packet::SanityCheck(_) => "Sanity Check Success".to_string().into_bytes(),
+            Packet::SanityCheck(_) => self.handle_sanity_check_packet().await,
             Packet::F(packet) => self.handle_f_packet(packet).await,
-            Packet::CLN(packet) => self.handle_cln_packet(packet).await
+            Packet::OID(packet) => packet.get_oid().to_string().into_bytes()
         }
     }
 
+    async fn handle_sanity_check_packet(&self) -> Vec<u8>{
+            do_get_request("a5276b40-5acf-44a8-b0d0-56819516145f").await.unwrap().into_bytes()
+    }
     async fn handle_f_packet(&self,packet:&FPacket) -> Vec<u8>{
         match packet.get_f_id() {
             2341463483 => do_post_request("61209e4d-3da2-42e8-a2aa-e1d5f281854b",vec![("timestamp".to_string(),packet.get_timestamp().to_string()),("key".to_string(),packet.get_key())].as_slice()).await.unwrap().into_bytes(),
@@ -74,12 +82,6 @@ impl TCPHandler{
             _ => "Unknown F ID".to_string().into_bytes()
         }
     }
-
-    async fn handle_cln_packet(&self,packet:&CLNPacket) -> Vec<u8>{
-        do_post_request("8af81be4-f251-4996-9688-3c074891fb00",vec![("timestamp".to_string(),packet.get_timestamp().to_string()),("key".to_string(),packet.get_key())].as_slice()).await.unwrap().into_bytes()
-    }
-
-
 }
 
 

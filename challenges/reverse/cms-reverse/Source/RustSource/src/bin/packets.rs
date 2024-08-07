@@ -3,58 +3,51 @@ use base64::Engine;
 use base64::prelude::BASE64_STANDARD;
 use crate::bin::hashing_util;
 use crate::bin::http_handler::do_get_request;
-use crate::bin::packets::Packet::{CLN, F, SanityCheck};
+use crate::bin::packets::Packet::{ F, OID, SanityCheck};
 
 const SERVER_ID_HASH_KEY:&'static str = "SERVER_ID_HASH";
 //1 byte for packet type, 32 bytes for server id
 const MIN_PACKET_SIZE:u8 = 33;
-pub struct CLNPacket{
+
+pub struct OIDPacket{
     server_id:String,
-    timestamp:u64,
-    cln: String
+    oid_request:u8
 }
-impl Identified<'_> for CLNPacket{
+
+impl Identified<'_> for OIDPacket{
     fn get_id(&self) -> &String{
         &self.server_id
     }
 }
 
-impl CLNPacket{
-    pub fn new(server_id:String,timestamp:u64,cln:String) -> CLNPacket{
-        CLNPacket{
+impl OIDPacket{
+    pub fn new(server_id:String,oid_request:u8) -> OIDPacket{
+        OIDPacket{
             server_id,
-            timestamp,
-            cln
+            oid_request
         }
     }
 
-    pub fn get_timestamp(&self) -> u64{
-        self.timestamp
+    pub fn get_oid_request(&self) -> u8{
+        self.oid_request
     }
 
-    pub fn get_cln(&self) -> &String{
-        &self.cln
-    }
-
-    pub fn get_key(&self) -> String{
-        let b64 = BASE64_STANDARD.encode(format!("{}@{}",self.server_id,self.cln).as_bytes());
-        let mut bytes = Vec::new();
-        for (i,byte) in b64.bytes().enumerate(){
-            bytes.push(byte ^ self.timestamp.to_le_bytes()[i % 8]);
+    pub fn get_oid(&self) -> String{
+        match self.oid_request {
+            231 => "952809757913927".to_string(),
+            122 => "204800000000000".to_string(),
+            43 => "3670344486987776".to_string(),
+            _ => "0".to_string()
         }
-        let b64 = BASE64_STANDARD.encode(&bytes);
-        let mut bytes2 = Vec::new();
-        let sid_chars = self.server_id.bytes().collect::<Vec<u8>>();
-        for (i,byte) in b64.bytes().enumerate(){
-            bytes2.push(byte ^ sid_chars[i % sid_chars.len()]);
-        }
-        BASE64_STANDARD.encode(&bytes2)
     }
 }
+
+
+
 pub struct FPacket{
     server_id:String,
     timestamp:u64,
-    f_id:u32
+    f_id:u64
 }
 
 impl Identified<'_> for FPacket{
@@ -64,7 +57,7 @@ impl Identified<'_> for FPacket{
 }
 
 impl FPacket{
-    pub fn new(server_id:String,timestamp:u64,f_id:u32) -> FPacket{
+    pub fn new(server_id:String,timestamp:u64,f_id:u64) -> FPacket{
         FPacket{
             server_id,
             timestamp,
@@ -76,7 +69,7 @@ impl FPacket{
         self.timestamp
     }
 
-    pub fn get_f_id(&self) -> u32{
+    pub fn get_f_id(&self) -> u64{
         self.f_id
     }
 
@@ -115,7 +108,7 @@ trait Identified<'a>{
 pub enum Packet{
     SanityCheck(SanityCheckPacket),
     F(FPacket),
-    CLN(CLNPacket)
+    OID(OIDPacket),
 }
 
 impl Packet{
@@ -123,7 +116,7 @@ impl Packet{
         match self {
             SanityCheck(packet) => Some(packet),
             F(packet) => Some(packet),
-            CLN(packet) => Some(packet)
+            OID(packet) => Some(packet),
         }
     }
 
@@ -138,19 +131,30 @@ impl Packet{
                 if raw.len() < (11 + MIN_PACKET_SIZE) as usize {
                     return Err("Packet is too small")
                 }
-                let timestamp = u64::from_be_bytes([raw[0],raw[1],raw[2],raw[3],raw[4],raw[5],raw[6],raw[7]]);
-                raw.drain(0..8);
-                let sid = &raw[0..32];
-                Ok(F(FPacket::new(String::from_utf8_lossy(sid).to_string(),timestamp,u32::from_be_bytes([raw[32],raw[33],raw[34],raw[35]]))))
+                let timestamp_l = raw[0];
+                raw.remove(0);
+                let timestamp = String::from_utf8_lossy(raw.drain(0..timestamp_l as usize).as_slice()).to_string();
+                let timestamp = match timestamp.as_str().parse(){
+                    Ok(t) => t,
+                    Err(_) => return Err("Invalid timestamp")
+                };
+                let sid = raw.drain(0..32).collect::<Vec<u8>>();
+
+                let fid = String::from_utf8_lossy(raw.drain(0..10).as_slice()).to_string();
+                print!("F ID: {}",fid);
+                let fid = match fid.as_str().parse(){
+                    Ok(t) => t,
+                    Err(_) => return Err("Invalid F ID")
+                };
+                Ok(F(FPacket::new(String::from_utf8_lossy(sid.as_slice()).to_string(),timestamp,fid)))
+
             },
-            0xC => {
-                if raw.len() < (8 + MIN_PACKET_SIZE) as usize {
+            0xA => {
+                if raw.len() < (MIN_PACKET_SIZE + 1) as usize {
                     return Err("Packet is too small")
                 }
-                let timestamp = u64::from_be_bytes([raw[0],raw[1],raw[2],raw[3],raw[4],raw[5],raw[6],raw[7]]);
-                raw.drain(0..8);
                 let sid = String::from_utf8_lossy(raw.drain(0..32).as_slice()).to_string();
-                Ok(CLN(CLNPacket::new(sid,timestamp,String::from_utf8_lossy(raw.as_slice()).to_string())))
+                Ok(OID(OIDPacket::new(sid,raw.remove(0))))
             },
             _ => Err("Unknown Packet type")
         }

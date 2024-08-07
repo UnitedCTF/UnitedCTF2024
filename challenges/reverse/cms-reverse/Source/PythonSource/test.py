@@ -25,7 +25,7 @@ def send_bytes():
             print('received {!r}'.format(data))
     finally:
         print('closing socket')
-        sock.close()
+        sock.close() 
 def send_bytes2():
     # Create a TCP/IP socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

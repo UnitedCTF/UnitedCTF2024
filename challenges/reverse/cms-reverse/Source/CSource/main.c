@@ -7,30 +7,25 @@
 #include <math.h>
 #include <limits.h>
 #include <time.h>
-#ifdef _WIN32
-#include <winsock.h>
-#else
-#include <arpa/inet.h>
-#endif
-
+#pragma comment(lib,"ws2_32.lib")
+#include <WinSock2.h>
+#include <WS2tcpip.h>
+#include <debugapi.h>
 
 const char* ADMIN_USERNAME = "flag-U5e3nv1r0n3mentV4ria8l3sF0rS3cre7s";
-
+const char* TCP_PORT = "11954";
+const char* TCP_HOST = "localhost";
 const char *getPassword();
-
 void read(char buf[64]);
-const char *getS();
+const char *x049bbb();
 const char *get(long long int i);
-const char *f(long long int i);
-const char *tcp1(int x, char* s);
-const char *tcp2(int x, char* s, long long int ts, int i);
-const char *tcp3(int x, char* s, long long int ts, char* cln);
-const char *tcp(char* b);
+const char *x0000b0(long long int i);
+const char *x065ab0(int x, char* s);
+const char *x40f0b0(int x, char* s, long long int ts, unsigned int i);
+const char *communicate(char* b);
 long long int getTs();
-char* cln();
 
-const char *win_tcp(char *string);
-const char *unix_tcp(char *string);
+const char *c(char *string);
 long long int x45c32f() {
     return LLONG_MAX;
 }
@@ -40,8 +35,14 @@ long long int x60aab3() {
 long long int x7b1b7d() {
     return LLONG_MIN;
 }
+long long int x67654a() {
+    return LONG_MIN;
+}
+long long int xaab3ce() {
+    return INT_MIN;
+}
 
-const char *getS(){
+const char *x049bbb(){
     char* s = "\x2a\xce\x49\xae\x7a\x95\x14\xa9\x28\x99\x49\xa9\x7d\x95\x1b\xaa\x71\x9d\x1c\xf9\x7f\xc8\x49\xa7\x79\xc9\x19\xfe\x7e\xc9\x4a\xfe";
     char* k = "\x49\xad\x2c\x9f";
 
@@ -52,8 +53,18 @@ const char *getS(){
     }
     return p;
 }
+
+const char* (*xefaffb())(long long int){
+    return x0000b0;
+}
+
+const char* e(const char* (*b)(long long int), long long int x) {
+    return b(x - xaab3ce());
+}
+
 int main() {
 
+    bool canRun = !IsDebuggerPresent();
     bool valid = false;
     while (!valid) {
         char username_buf[64];
@@ -77,48 +88,66 @@ int main() {
             printf("Invalid password!\n");
         }
     }
+
     if (false){
-        const char* fs = f(x45c32f());
+        const char* fs = x0000b0(x45c32f());
         if(fs != NULL) {
             printf("Flag: %s\n", fs);
         }
     }
+    if(IsDebuggerPresent()){
+        printf("Debugger detected!\n");
+        exit(1);
+    }
+    if (canRun){
+        printf("Debugger detected!\n");
+        exit(1);
+    }
+    const char* fs = e(xefaffb(), x67654a());
+    if(fs != NULL) {
+        printf("Flag: %s\n", fs);
+    }
     return 0;
 }
 
+
+int xc(){
+    return 0x32;
+}
 const char *get(long long int x) {
-    int y = ((int)pow(x, 1.0/11.0)) ^ 0x16;
+    int y = ((int)pow(x, 1.0/11.0)) ^ 0x16 ^ xc();
+
     switch (y) {
-        case 0:
-            return tcp1(y, getS());
-            break;
-        case 1:
-            return tcp2(y, getS(),getTs(),0x8b8fe5a9);
-            break;
-        case 2:
-            return tcp2(y-1, getS(),getTs(),0xdd106286);
-            break;
-        default:
-            return tcp3(y, getS(),getTs(),cln());
+        case 0x32:
+            return x065ab0(y ^ xc(), x049bbb());
+        case 0x33:
+            return x40f0b0(y ^ xc(), x049bbb(), getTs(), 0x8B8FE5BB);
+        case 0x30:
+            return x40f0b0((y ^ xc()) - 1, x049bbb(), getTs(), 0xDD106294);
+        default :
+            return NULL;
     }
-    return NULL;
 }
 
-const char *f(long long int i) {
+
+const char *x0000b0(long long int i) {
     char str[34];
-    strcat(str,"\x0a");
-    strcat(str,getS());
+    memcpy(str,"\x0a",1);
+    memcpy(str+1, x049bbb(), 32);
     if(i == x45c32f()) {
-        strcat(str,"\xe7");
+        memcpy(str+33,"\xe7",1);
     }
     if(i == x60aab3()) {
-        strcat(str,"\x7a");
+        memcpy(str+33,"\x7a",1);
     }
     if(i == x7b1b7d()) {
-        strcat(str,"\x2b");
+        memcpy(str+33,"\x2b",1);
     }
-        return get(atoi(tcp(str)));
-    return NULL;
+    char* res = communicate(str);
+    if(res == NULL) {
+        return NULL;
+    }
+    return get(atoll(res));
 }
 
 const char *getPassword() {
@@ -166,68 +195,124 @@ long long int getTs() {
     return 1000000000 * ts.tv_sec + ts.tv_nsec;
 }
 
-char* cln() {
-    return NULL;
-}
-
-const char *tcp1(int x, char* s) {
+const char *x065ab0(int x, char* s) {
     char str[33];
     char b[1];
     b[0] = x;
-    strcat(str,b);
-    strcat(str,getS());
-    return tcp(str);
+    memcpy(str,b,1);
+    memcpy(str+1,s,32);
+    return communicate(str);
 }
 
-const char *tcp2(int x, char* s, long long int ts, int i) {
-    char str[44];
-    char buffer[8];
-    for (int y = 0; y < 8; y++)
-    {
-        buffer[y] = ((htonl(ts) >> (8 * y)) & 0XFF);
-    }
-    char buffer2[4];
-    for (int y = 0; y < 4; y++)
-    {
-        buffer2[y] = ((htonl(i) >> (8 * y)) & 0XFF);
-    }
+const char *x40f0b0(int x, char* s, long long int ts, unsigned int i) {
+    char str[64];
+    char buffer[32];
+    snprintf(buffer,32 ,"%llu", ts);
+    char buffer2[11];
+    snprintf(buffer2,11 ,"%u", i);
     char b[1];
     b[0] = x;
-    strcat(str, b);
-    strcat(str,s);
-    strcat(str,buffer);
-    strcat(str, buffer2);
-    return tcp(str);
+    memcpy(str, b,1);
+    b[0] = strlen(buffer);
+    memcpy(str + 1,b,1);
+    memcpy(str + 2,buffer,b[0]);
+    memcpy(str + 2 + b[0],s,32);
+    memcpy(str + 34 + b[0], buffer2, strlen(buffer2));
+    return communicate(str);
 }
 
-const char *tcp3(int x, char* s, long long int ts, char* cln) {
-    char str[41];
-    char buffer[8];
-    for (int i = 0; i < 8; i++)
-    {
-        buffer[i] = ((htonl(ts) >> (8 * i)) & 0XFF);
+const char *communicate(char* b) {
+    return c(b);
+}
+
+const char *c(char *buf) {
+    WSADATA wsaData;
+    SOCKET ConnectSocket = INVALID_SOCKET;
+    struct addrinfo *result = NULL,
+            *ptr = NULL,
+            hints;
+    const char recvbuf[512];
+    int iResult;
+    int recvbuflen = 512;
+
+    iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+    if (iResult != 0) {
+        printf("WSAStartup failed with error: %d\n", iResult);
+        return NULL;
     }
-    char b[1];
-    b[0] = x;
-    strcat(str, b);
-    strcat(str,s);
-    strcat(str,buffer);
-    strcat(str,cln);
-    return tcp(str);
-}
 
-const char *tcp(char* b) {
-#if defined(_WIN32) || defined(_WIN64)
-    return win_tcp(b);
-#else
-    return unix_tcp(b);
-#endif
-}
+    ZeroMemory( &hints, sizeof(hints) );
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
 
-const char *win_tcp(char *buf) {
-    return NULL;
-}
+    // Resolve the server address and port
+    iResult = getaddrinfo(TCP_HOST, TCP_PORT, &hints, &result);
+    if ( iResult != 0 ) {
+        printf("getaddrinfo failed with error: %d\n", iResult);
+        WSACleanup();
+        return NULL;
+    }
 
-const char *unix_tcp(char *buf) {
-    return NULL;
+    // Attempt to connect to an address until one succeeds
+    for(ptr=result; ptr != NULL ;ptr=ptr->ai_next) {
+
+        // Create a SOCKET for connecting to server
+        ConnectSocket = socket(ptr->ai_family, ptr->ai_socktype,
+                               ptr->ai_protocol);
+        if (ConnectSocket == INVALID_SOCKET) {
+            printf("socket failed with error: %d\n", WSAGetLastError());
+            WSACleanup();
+            return NULL;
+        }
+
+        // Connect to server.
+        iResult = connect( ConnectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
+        if (iResult == SOCKET_ERROR) {
+            closesocket(ConnectSocket);
+            ConnectSocket = INVALID_SOCKET;
+            continue;
+        }
+        break;
+    }
+
+    freeaddrinfo(result);
+
+    if (ConnectSocket == INVALID_SOCKET) {
+        printf("Unable to connect to server!\n");
+        WSACleanup();
+        return NULL;
+    }
+
+    iResult = send( ConnectSocket, buf, (int)strlen(buf), 0 );
+    if (iResult == SOCKET_ERROR) {
+        printf("send failed with error: %d\n", WSAGetLastError());
+        closesocket(ConnectSocket);
+        WSACleanup();
+        return NULL;
+    }
+
+    iResult = shutdown(ConnectSocket, SD_SEND);
+    if (iResult == SOCKET_ERROR) {
+        printf("shutdown failed with error: %d\n", WSAGetLastError());
+        closesocket(ConnectSocket);
+        WSACleanup();
+        return NULL;
+    }
+    int total = 0;
+    do {
+        iResult = recv(ConnectSocket, (char*)recvbuf, recvbuflen, 0);
+        if ( iResult > 0 )
+            total += iResult;
+    } while( iResult > 0 );
+    closesocket(ConnectSocket);
+    WSACleanup();
+
+    // Copy the received buffer to a new buffer that is null terminated
+    char* recvbuf2 = malloc((total + 1) * sizeof(char));
+    for (int i = 0; i < total; i++) {
+        recvbuf2[i] = recvbuf[i];
+    }
+    recvbuf2[total] = '\0';
+    return recvbuf2;
 }

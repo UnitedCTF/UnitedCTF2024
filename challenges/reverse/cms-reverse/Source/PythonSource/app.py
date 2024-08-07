@@ -10,7 +10,7 @@ SERVER_ID = "cce13886a4e64875800f6ee80d5a7dfa"
 FLAG3 = "FLAG3"
 FLAG4 = "FLAG4"
 FLAG5 = "FLAG5"
-TIME_BUFFER_NS = 1_000_000_000
+TIME_BUFFER_NS = 6_000_000_000
 @app.get("/74ba5d54-a5a7-4390-a1a1-4fdde2e66a05")
 def getHash():
     return Response(sha256(bytes(SERVER_ID,"utf-8")).hexdigest(), media_type="text/plain")
@@ -26,7 +26,7 @@ def validateFlag3(timestamp: Annotated[str, Form()], key: Annotated[str, Form()]
         if int(timestamp) < time.time_ns() - TIME_BUFFER_NS:
             return Response("Invalid timestamp", media_type="text/plain", status_code=400)
         kbytes = base64.b64decode(key)
-        key = int(timestamp).to_bytes(8, byteorder='big')
+        key = int(timestamp).to_bytes(8, byteorder='little')
         kbytes = bytes([b ^ key[i % len(key)] for i,b in enumerate(kbytes)])
         serv_id = base64.b64decode(kbytes)
         if serv_id != bytes(SERVER_ID,"utf-8"):
@@ -41,7 +41,7 @@ def validateFlag4(timestamp: Annotated[str, Form()], key: Annotated[str, Form()]
         if int(timestamp) < time.time_ns() - TIME_BUFFER_NS:
             return Response("Invalid timestamp", media_type="text/plain", status_code=400)
         kbytes = base64.b64decode(key)
-        key = int(timestamp).to_bytes(8, byteorder='big')
+        key = int(timestamp).to_bytes(8, byteorder='little')
         kbytes = bytes([b ^ key[i % len(key)] for i,b in enumerate(kbytes)])
         serv_id = base64.b64decode(kbytes)
         if serv_id != bytes(SERVER_ID,"utf-8"):
@@ -49,47 +49,6 @@ def validateFlag4(timestamp: Annotated[str, Form()], key: Annotated[str, Form()]
         return Response(FLAG4, media_type="text/plain")
     except:
         return Response("Bad request", media_type="text/plain", status_code=400)
-
-
-@app.post("/8af81be4-f251-4996-9688-3c074891fb00")
-def validateFlag5(timestamp: Annotated[str, Form()], key: Annotated[str, Form()]):
-    try:
-        if int(timestamp) < time.time_ns() - TIME_BUFFER_NS:
-            return Response("Invalid timestamp", media_type="text/plain", status_code=400)
-        kbytes = base64.b64decode(key)
-        key = bytes(SERVER_ID,"utf-8")
-        kbytes = bytes([b ^ key[i % len(key)] for i,b in enumerate(kbytes)])
-        kbytes = base64.b64decode(kbytes)
-        key = int(timestamp).to_bytes(8, byteorder='little')
-        kbytes = bytes([b ^ key[i % len(key)] for i,b in enumerate(kbytes)])
-        serv_id = base64.b64decode(kbytes)
-        serv_id = serv_id.decode().split("@")
-        cln = serv_id[1]
-        serv_id = serv_id[0]
-        if serv_id != SERVER_ID:
-            return Response("Invalid key", media_type="text/plain", status_code=400)
-        if not validateCLN(cln,timestamp):
-            return Response("Invalid CLN", media_type="text/plain", status_code=400)
-        return Response(FLAG5, media_type="text/plain")
-    except:
-        print("error")
-        return Response("Bad request", media_type="text/plain", status_code=400)
-
-def validateCLN(cln,timestamp):
-    try:
-        cln = bytes.fromhex(cln).decode()
-        scln = cln.split("@")
-        b64 = scln[0]
-        ts = int(scln[1])
-        key = int(ts).to_bytes(8, byteorder='big')
-        kbytes = base64.b64decode(b64)
-
-        kbytes = bytes([b ^ key[i % len(key)] for i,b in enumerate(kbytes)]).decode()
-        if int(timestamp) < time.time_ns() - TIME_BUFFER_NS:
-            return False
-        return sha256(bytes(SERVER_ID + str(ts),"utf-8")).hexdigest() == kbytes
-    except:
-        return False
 
 
 if __name__ == "__main__":
