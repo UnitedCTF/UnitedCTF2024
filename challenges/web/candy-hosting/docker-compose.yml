@@ -1,0 +1,11 @@
+services:
+  web-candyhosting:
+    build:
+      context: .
+    container_name: web-candyhosting
+    hostname: web-candyhosting
+    ports:
+      - "8080:80"
+    environment:
+      OUT_FOLDER_PREFIX: /var/www/html/websites
+      TEST_FOLDER_PREFIX: /tmp/website-extractor
