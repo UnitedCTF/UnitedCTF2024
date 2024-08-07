@@ -1,6 +1,4 @@
 # Quotes from https://github.com/reggi/fortune-cookie
-# sudo docker build . -t leet_chall
-# sudo docker run -ti --rm -p 1337:1337 leet_chall
 
 import signal
 import string
@@ -14,8 +12,8 @@ class LeetServer():
 	allDicts = [dictLvl0, dictLvl1, dictLvl2]
 	quoteFilename = "fortune-cookies.txt"
 	bannerFilename = "banner.txt"
-	timeout = 8 # seconds
-	flag = ["flag-","7h3","Fu7ur31sY0ur5"]
+	timeout = 10 # seconds
+	flag = ["flag-","7h3","Fu7ur31sY0ur5"] # "flag-7h3Fu7ur31sY0ur5"
 
 
 	def __init__(self) -> None:
@@ -44,9 +42,12 @@ class LeetServer():
 	def welcome(self) -> None:
 		with open(self.bannerFilename,'r') as f:
 			print(f.read())
+		print("Peux tu me renvoyer la phrase encodé en clair ? Toutes les lettres sont en minuscule.")
+		print("Can you send me the sentence back in plain text ? All letters are lowercase.")
+		print()
 
-	def gameOver(self) -> None: # TODO: Change the message
-		print("Y0u 4r3n't a r3411y h4ck3r...")
+	def gameOver(self) -> None:
+		print("7h3 myst3ri3s 0f 7h3 univ3rs3 4r3 unf4th0m4bl3 f0r y0u...")
 
 	def badResponse(self) -> None:
 		print("B4d r3sp0ns3 !")
@@ -89,11 +90,13 @@ class LeetServer():
 	def chall(self) -> None:
 		self.welcome()
 		defeat = False
+		n = 5
 
 		difficultyLevel = self.chooseDifficultyLevel()
+		quotes = random.sample(self.allQuotes[difficultyLevel],n)
 
-		for i in range(5): # TODO: choose the number
-			quote = random.choice(self.allQuotes[difficultyLevel])
+		for i in range(n):
+			quote = quotes[i]
 			self.sendLeetSpeak(quote,difficultyLevel)
 			response = self.recvResponse()
 			
