@@ -8,6 +8,8 @@ C'est toujours la même chose avec ce Monty Leroy. Il ne cesse de parler de son 
 
 De toute façon, il me doit de l'argent pour la "Cartesian Glide" que nous construisons, et il m'a dit que le mot de passe de paiement se trouve quelque part dans ce fichier. Je ne sais pas de quoi il parle, mais je suis sûr que vous pouvez le trouver pour moi.
 
+Format du flag: flag-[0-9a-zA-Z_]{24}
+
 ## Description (english)
 
 It's always the same thing with that Monty Leroy guy. He's always talking about his "AI" and how it's going to change the world. But you know better. You know that AI is just a bunch of numbers and weights. I can't believe we are still working with that guy...
