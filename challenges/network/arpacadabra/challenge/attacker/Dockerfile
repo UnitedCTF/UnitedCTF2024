@@ -12,14 +12,18 @@ RUN apk --update add bash \
     scapy \
     ipython \
     tmux \
-    openssh
+    openssh \
+    sudo
+
+RUN adduser -D user -s /bin/bash
+RUN adduser user wheel
+RUN echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel
 
 ENV PASSWORD=steadying-cursor-sulfide-rudder4
 RUN ssh-keygen -A
-RUN echo "root:$PASSWORD" | chpasswd
+RUN echo "user:$PASSWORD" | chpasswd
 RUN mkdir /var/run/sshd
 
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 CMD ["/usr/sbin/sshd", "-D"]

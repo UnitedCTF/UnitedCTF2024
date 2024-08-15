@@ -18,16 +18,12 @@ services:
   attacker:
     build: attacker
     mac_address: 00:00:00:00:00:03
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
     networks:
       arpacadabra:
         ipv4_address: 172.80.183.4
 
 networks:
   arpacadabra:
-    # internal: true
     ipam:
       config:
         - subnet: 172.80.183.0/24
