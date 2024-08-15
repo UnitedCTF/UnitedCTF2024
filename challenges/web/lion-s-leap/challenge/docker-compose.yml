@@ -1,0 +1,14 @@
+services:
+  box:
+    build: box
+    networks:
+      - lion-s-leap-net
+
+  client:
+    build: client
+    networks:
+      - lion-s-leap-net
+
+networks:
+  lion-s-leap-net:
+    driver: bridge

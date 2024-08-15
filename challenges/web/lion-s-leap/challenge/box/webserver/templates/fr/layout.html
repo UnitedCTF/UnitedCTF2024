@@ -1,0 +1,27 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Saut du Lion</title>
+  <link rel="stylesheet" href="/static/css/udes_like.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/login.css" />
+</head>
+<body>
+<header>
+  <img class="transparent-image" src="/static/images/logo.png" alt="logo" />
+  <nav>
+    <a href="/library">Bibliothèque</a>
+    {{if .IsLogged}} <a href="/profile">Profil</a> {{end}} {{if .IsLogged}}
+    <a href="/logout">Déconnexion</a> {{else}} <a href="/login">Connexion</a> {{end}}
+    {{if not .IsLogged}} <a href="/register">Inscription</a> {{end}} {{if eq
+    .Lang "fr"}} <a href="/lang?l=en">EN</a> {{else}}
+    <a href="/lang?l=fr">FR</a> {{end}}
+  </nav>
+</header>
+<main class="main-content">{{template "body" .}}</main>
+<footer>Fait avec Go</footer>
+</body>
+</html>
+{{end}}

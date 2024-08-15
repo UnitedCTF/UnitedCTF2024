@@ -1,0 +1,20 @@
+{{define "body"}}
+<div class="container">
+    <form action="/register" method="post">
+        <label for="username"><b>Nom d'utilisateur</b></label>
+        <input type="text" placeholder="Entrez le nom d'utilisateur" name="username" required>
+
+        <label for="password"><b>Mot de passe</b></label>
+        <input type="password" placeholder="Entrez le mot de passe" name="password" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Entrez l'email" name="email" required>
+
+        <label for="name"><b>Nom</b></label>
+        <input type="text" placeholder="Entrez le nom" name="name" required>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+</div>
+<script src="/static/js/script.js"></script>
+{{end}}
