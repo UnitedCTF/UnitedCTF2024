@@ -1,0 +1,25 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaudeville Venin Sssslithering</title>
+  <link rel="stylesheet" href="/static/css/udes_like.css" />
+</head>
+<body>
+<header>
+  <img class="transparent-image" src="/static/images/logo.jpg" alt="logo" />
+  <nav>
+    <a href="/flag">Flag</a>
+    <a href="/">Accueil</a>
+    <a href="/secret">Secret</a>
+    <a href="/log">Journal</a>
+    {{if eq .Lang "fr"}} <a href="/lang?l=en">EN</a> {{else}} <a href="/lang?l=fr">FR</a> {{end}}
+  </nav>
+</header>
+<main class="main-content">{{template "body" .}}</main>
+<footer>Fabriqué avec Go</footer>
+</body>
+</html>
+{{end}}

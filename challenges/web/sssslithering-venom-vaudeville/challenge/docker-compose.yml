@@ -1,0 +1,14 @@
+services:
+  box:
+    build: ./box/
+    networks:
+      - sssslithering-venom-vaudeville-net
+
+  client:
+    build: ./client/
+    networks:
+      - sssslithering-venom-vaudeville-net
+
+networks:
+  sssslithering-venom-vaudeville-net:
+    driver: bridge

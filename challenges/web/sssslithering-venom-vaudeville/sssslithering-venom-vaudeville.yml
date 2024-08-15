@@ -1,0 +1,27 @@
+name: "Sssslithering Venom Vaudeville"
+author: "Talgarr"
+category: web
+description: |-
+  ## Description (français)
+
+  Sssslithering Venom Vaudeville est un site web de vente de billets pour un spectacle de serpents. Vous avez trouvé le code source, seriez-vous capable de retrouvé le flag?
+
+  ## Description (english)
+
+  Sssslithering Venom Vaudeville is a website for selling tickets to a snake show. You’ve found the source code; would you be able to find the flag?
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - flag-LogPoisoningIsAnIntegrationHell
+
+files:
+  - challenge/sssslithering-venom-vaudeville.7z
+
+tags:
+  - difficile
+  - web

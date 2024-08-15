@@ -1,0 +1,154 @@
+{{define "body"}}
+<div class="container">
+  <div class="card">
+    <button id="uselessButton" onclick="changeColor()">
+      This button might be useless
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="alert('You have activated the self-destruct sequence. Just kidding!')">
+      Do Not Press
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="rickRoll()">
+      Surprise Me
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="makeItRain()">
+      Make it Rain
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="countClicks(this)">
+      Click Counter
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="invertColors()">
+      Invert Colors
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="randomPosition(this)">
+      Catch Me If You Can
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="rollerCoasterRide()">
+      Virtual Roller Coaster Ride
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="cottonCandy()">
+      Get Virtual Cotton Candy
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="carouselSpin(this)">
+      Spin Like a Carousel
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="hauntedHouse()">
+      Enter the Haunted House
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="ticketBooth()">
+      Free Tickets!
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="balloonPop(this)">
+      Pop a Balloon
+    </button>
+  </div>
+</div>
+
+<script>
+  function changeColor() {
+    document.getElementById("uselessButton").style.backgroundColor = getRandomColor();
+  }
+
+  function spinButton(button) {
+    button.style.transition = "transform 0.5s";
+    button.style.transform = "rotate(360deg)";
+    setTimeout(() => {
+      button.style.transform = "rotate(0deg)";
+    }, 500);
+  }
+
+  function rickRoll() {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+  }
+
+  function makeItRain() {
+    alert("💰💰💰 It's raining virtual coins! 💰💰💰");
+  }
+
+  let clickCount = 0;
+  function countClicks(button) {
+    clickCount++;
+    button.innerText = `Clicked ${clickCount} times`;
+  }
+
+  function invertColors() {
+    document.body.style.filter = "invert(1)";
+    setTimeout(() => {
+      document.body.style.filter = "invert(0)";
+    }, 3000);
+  }
+
+  function randomPosition(button) {
+    const x = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+    const y = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+    button.style.position = "absolute";
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+  }
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function rollerCoasterRide() {
+    alert("Hold on tight! The roller coaster is about to drop... Whoosh! 🎢");
+  }
+
+  function cottonCandy() {
+    alert("You got a giant fluffy pink cotton candy! 🍬");
+  }
+
+  function carouselSpin(button) {
+    button.style.transition = "transform 2s ease";
+    button.style.transform = "rotate(1080deg)";
+    setTimeout(() => {
+      button.style.transform = "rotate(0deg)";
+    }, 2000);
+  }
+
+  function hauntedHouse() {
+    alert("Boo! 👻 Welcome to the Haunted House. Watch out for the ghosts!");
+  }
+
+  function ticketBooth() {
+    alert("Congratulations! You've won a free ticket to the virtual amusement park! 🎟️");
+  }
+
+  function balloonPop(button) {
+    button.innerText = "🎈 Pop!";
+    setTimeout(() => {
+      alert("Pop! The balloon burst into confetti! 🎉");
+      button.innerText = "Pop a Balloon";
+    }, 500);
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{{end}}
