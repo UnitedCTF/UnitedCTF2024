@@ -1,0 +1,14 @@
+services:
+  beary:
+    build: beary
+    networks:
+      - network
+
+  webserver:
+    build: webserver
+    networks:
+      - network
+
+networks:
+  network:
+    internal: true
