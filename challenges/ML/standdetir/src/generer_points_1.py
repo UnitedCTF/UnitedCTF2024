@@ -1,18 +1,15 @@
 import random
-import math
 import matplotlib.pyplot as plt
-import csv
+
+from utils import get_random_point, distance_euclide, save_to_csv
 
 random.seed(0)
 
-def get_random_point(dim):
-    return tuple(random.random() for _ in range(dim))
-
-def distance_euclide(p1, p2):
-    dists = []
-    for p_1, p_2 in zip(p1, p2):
-        dists.append((p_1 - p_2)**2)
-    return math.sqrt(sum(dists))
+"""
+Premier test : cible "standard", en cercles concentriques.
+Le score (en nombres entiers) varie selon la distance par rapport au point (0.5, 0.5).
+Certains points du set de test sont choisis a la main, d'autres sont aleatoires.
+"""
 
 def score_point(point):
     #distance du centre
@@ -28,25 +25,13 @@ def score_point(point):
         if dist < max_dist:
             score = scores[i]
             break
-    return 10 - score, dist
-
-def save_to_csv(points, scores = None, fichier = '../dataset/dataset.csv'):
-    with open(fichier, 'w') as f:
-        writer = csv.writer(f, lineterminator='\n')
-        if scores is not None:
-            writer.writerow(['x', 'y', 'score'])
-            for point, score in zip(points, scores):
-                writer.writerow((*point, score))
-        else:
-            writer.writerow(['x', 'y'])
-            for point in points:
-                writer.writerow(point)
+    return score, dist
 
 def creer_dataset_random(taille):
     points = []
     scores = []
     for _ in range(taille):
-        point = get_random_point(2) # a remplacer par des points choisis a la main
+        point = get_random_point(2)
         points.append(point)
         score, dist = score_point(point)
         scores.append(score)
@@ -55,22 +40,36 @@ def creer_dataset_random(taille):
     #plt.show()
     return points, scores
 
-def creer_dataset_test_standard():
+def creer_dataset_test():
     points = []
+    points.append((0.12,0.88))
+    points.append((0.04,0.26))
+    points.append((0.52,0.58))
+    points.append((0.39,0.10))
+    points.append((0.25,0.28))
+    points.append((0.75,0.90))
+    points.append((0.59,0.03))
+    points.append((0.79,0.30))
+    points.append((0.38,0.56))
+    points.append((0.24,0.91))
+    points.append((0.16,0.41))
+    points.append((0.28,0.51))
+    points.append((0.52,0.62))
+    points.append((0.53,0.41))
+    points.append((0.63,0.40))
     points.append((0.0, 0.0))
-    points.append((0.3, 0.2))
+    points.append((0.7, 0.2))
     points.append((0.7, 0.6))
-    points.append((0.5, 0.6))
+    points.append((0.5, 0.4))
     points.append((0.5, 0.5))
     return points
 
 def main():
     points, scores = creer_dataset_random(300)
-    save_to_csv(points, scores, '../dataset/dataset_train_1.csv')
+    save_to_csv(points, header=['x', 'y', 'score'], scores=scores, fichier='../dataset/dataset_train_1.csv')
 
-    points, scores = creer_dataset_random(16)
-    points += creer_dataset_test_standard()
-    save_to_csv(points, fichier='../dataset/dataset_test_1.csv')
+    points = creer_dataset_test()
+    save_to_csv(points, header=['x', 'y'], fichier='../dataset/dataset_test_1.csv')
 
 if __name__ == '__main__':
     main()
