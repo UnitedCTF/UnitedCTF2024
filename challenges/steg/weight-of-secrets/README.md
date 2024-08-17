@@ -18,19 +18,14 @@ Anyway, he owes me some money for the "Cartesian Glide" slope we are building an
 
 Flag format: flag-[0-9a-zA-Z_]{24}
 
-## Solution
+## Build the challenge
 
-The script `main.py` that creates the model is also validating that the model contains the correct flag after creation/
-
-Expected output:
+You have access to the `model.pth` file for this challenge. If it is not provided, you can build it using the `generate_ctf_file.py` script.
 
 ```bash
-Model created with 29 layers
-Weights changed
-Model saved to model.pth
-Model loaded from model.pth
-Flag: flag-th3_we1gh7s_4rE_7H3_fL4g
-Flag is correct!
+python generate_ctf_file.py > /dev/null
 ```
+
+## Solution
 
 An detailed explanation of the solution can be found in the [solution](./solution/README.md) file.

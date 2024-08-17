@@ -1,23 +1,23 @@
 # Solution
 
-The script `main.py` that creates the model is also validating that the model contains the correct flag after creation. You can simply read the `main.py` file to understand how the flag is hidden in the model if you simply want the code.
+The script `main.py` that creates the model also validates that the model contains the correct flag after creation. You can read the `main.py` file to understand how the flag is hidden in the model if you simply want the code.
 
 ## Write-up
 
 Let's start by looking at the title and the description of the challenge. The title is "Weight of Secrets" and the description mentions that the flag is hidden in the model.
 
-We have multiple reference to the "Weight" of the model, which is a term used in machine learning to refer to the parameters of the model.
+We have multiple references to the "Weight" of the model, which is a term used in machine learning to refer to the parameters of the model.
 
-The "Cartesian Glide" is also mentioned, which is a reference to an other challenge of the CTF.
+The "Cartesian Glide" is also mentioned, which is a reference to another challenge of the CTF.
 
 The tags for that challenge are Steg and AI/ML, which confirms that the flag is hidden in the model.
 
-The file provided is a `.pth` file. A google search of that extension will tell you that it is a PyTorch model file. PyTorch is a popular library for machine learning.
+The file provided is a `.pth` file. A Google search of that extension will tell you that it is a PyTorch model file. PyTorch is a popular library for machine learning.
 
 And finally, the flag format is given and it tells us that the flag is 24 characters long without the `flag-` prefix, we are looking for 29 characters in total then.
 
 
-**Note:** Pytorch can run on CPU, no GPU are needed for that challenge. 
+**Note:** Pytorch can run on CPU, no GPU is needed for that challenge. 
 
 If we write a simple script to read the model and print it to see what we have:
 
@@ -138,9 +138,9 @@ We can see the weights here, let's compare to what we are looking for:
 
 Now we need to map `f` with `0.1020`, the `l` with `0.1080`... and so on.
 
-At this point we can search for a few ways to encode a letter with a number. The `0.97` for `a` is a good hint that we are looking at ASCII values.
+At this point, we can search for a few ways to encode a letter with a number. The `0.97` for `a` is a good hint that we are looking at ASCII values.
 
-Now we just need to write a script to decode the weights of simply do it manually since the flag is only 29 characters long. Scripting is a good idea but the float values can be tricky to use since they will need a few rounding to get the correct ASCII value.
+Now we just need to write a script to decode the weights or simply do it manually since the flag is only 29 characters long. Scripting is a good idea but the float values can be tricky to use since they will need a few rounding to get the correct ASCII value.
 
 **Note** It is also possible to read the weights of a model online with a tool like [Netron](https://netron.app/).
 
