@@ -1,9 +1,10 @@
 import csv
 from sklearn.neighbors import KNeighborsClassifier
-from generer_points_1 import distance_euclide, score_point
+from utils import distance_euclide
+from generer_points_2 import score_point
 
 #lit un fichier CSV
-def load_dataset(fichier):
+def load_dataset(fichier, dim=3):
     points = []
     scores = []
     with open(fichier, 'r') as f:
@@ -12,8 +13,9 @@ def load_dataset(fichier):
         for line in reader:
             x = float(line[0])
             y = float(line[1])
-            points.append((x, y))
-            if 'train' in fichier:
+            z = float(line[2])
+            points.append((x, y, z))
+            if len(line) > dim:
                 scores.append(int(line[-1]))
     return points, scores
 
@@ -36,22 +38,23 @@ def knn_sklearn(points_train, scores_train, points_test, k=3):
     scores_test = [knc.predict([pt])[0] for pt in points_test]
     return scores_test
 
-def get_gt(points):
+def get_gt(points, centre_zones, centre_zones_scores):
     scores = []
     for point in points:
-        score, dist = score_point(point)
+        score = score_point(point, centre_zones, centre_zones_scores)
         scores.append(score)
     return scores
 
 def main():
-    points_train, scores_train = load_dataset('../dataset/dataset_train_1.csv')
-    points_test, _ = load_dataset('../dataset/dataset_test_1.csv')
+    centre_zones, centre_zones_scores = load_dataset('../dataset/centres_zones_2.csv')
+    points_train, scores_train = load_dataset('../dataset/dataset_train_2.csv')
+    points_test, _ = load_dataset('../dataset/dataset_test_2.csv')
     print(len(points_test))
     scores_test = knn(points_train, scores_train, points_test, 3)
     scores_test2 = knn_sklearn(points_train, scores_train, points_test, 3)
     print(scores_test)
     print(scores_test2)
-    scores_test_gt = get_gt(points_test)
+    scores_test_gt = get_gt(points_test, centre_zones, centre_zones_scores)
     print(scores_test_gt)
     print(sum(scores_test), sum(scores_test2), sum(scores_test_gt))
 
