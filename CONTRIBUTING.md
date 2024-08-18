@@ -16,7 +16,7 @@
             - "standard" (valeur fixe)
         - value
             - score fixe estimé selon la norme [CFSS](https://tricolor-question-028.notion.site/Common-Flag-Scoring-System-CFSS-751f71c34c7d4c1db661cbd7365af71f)
-            - c'est pas grave si c'est pas exact, ça va être validé au QA
+            - c'est pas grave si c'est pas exact, ça va être validé au QA, mais laissez un commentaire à côté de l'estimation avec les critères CFSS
         - flag(s)
         - tags
         - files (si applicable)
