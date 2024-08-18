@@ -13,8 +13,12 @@ INVALID_INPUT_MESSAGE = """
 Numbers, worker. Numbers. Not poetry. Not your life story. Just numbers. Let's try again.
 """
 
-BAD_ANSWER_MESSAGE = """
+BAD_ANSWER_MESSAGE_WITH_CLUE = """
 Are you even trying? That's not even close. The answer was {answer}. I'm starting to regret giving you this easy job.
+"""
+
+BAD_ANSWER_MESSAGE_WITHOUT_CLUE = """
+Ay, caramba! You are way off. Or maybe not. Who knows? I do off course. The answer was... oh, never mind. I helped you enough already. You need to restart. Bye.
 """
 
 FIRST_CORRECT_ANSWER_MESSAGE = """
@@ -26,5 +30,5 @@ Another one in the bag! You're on a roll! Keep it up! Just a few more correct an
 """
 
 SECOND_CORRECT_ANSWER_MESSAGE = """
-You did it! Ten correct answers in a row? That's incredible! You've officially leveled up from 'worker' to 'roller coaster engineering prodigy'. As a reward for your exceptional performance, here's your second flag - and trust me, this one's the VIP pass to the digital confetti realm. Enjoy the golden shower of recognition! Here is your digital confetti: {flag}
+You did it! Hundred correct answers in a row? That's incredible! You've officially leveled up from 'worker' to 'roller coaster engineering prodigy'. As a reward for your exceptional performance, here's your second flag - and trust me, this one's the VIP pass to the digital confetti realm. Enjoy the golden shower of recognition! Here is your digital confetti: {flag}
 """
