@@ -18,7 +18,7 @@ Format du flag: `flag-[0-9a-zA-Z_]*`
 
 Alright team, I've got some exciting news. We're revamping the Cartesian Glide. Forget everything you know about bulky coasters. We're going for sleek, fast, and intense. Picture a roller coaster that's almost like a line on paper, but with way more thrills.
 
-To pull this off, we've got a new AI on board. It's supposed to be a genius at calculating the exact coordinates for every twist and turn. Problem is, this AI is the plan, like the whole plan. We have to deal with it if we want to build a coaster that's actually safe.
+To pull this off, we've got a new AI on board. It's supposed to be a genius at calculating the exact coordinates for every twist and turn. Problem is, this AI is the plan, like the whole plan. We have to deal with it if we want to build a safe coaster.
 
 So, I need you to double-check everything. We will not build that coaster in five minutes, it will take some time. Let's show this AI who's boss.
 
