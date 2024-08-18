@@ -32,6 +32,9 @@ Les coordonnées sont contenues entre zéro et un. Pour ce que vous en savez, l'
 
 **Format du flag**: `flag-{base64(la somme du score de tous les points du jeu d'évaluation)}`
 
+![Données d'entraînement](Data_challenge_1.png)
+![Données de test](Data_challenge_1_test.png)
+![Représentation de l'espace détaillé](Data_challenge_1_detaille.png)
 
 ## Description (english)
 
