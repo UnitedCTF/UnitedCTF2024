@@ -1,6 +1,5 @@
 import random
 import matplotlib.pyplot as plt
-import csv
 
 from utils import get_random_point, distance_euclide, save_to_csv
 
