@@ -1,6 +1,9 @@
 name: GoQuick
 author: Linkster78
 category: Web
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 7
 
 description: |-
   ## Description (fr)
