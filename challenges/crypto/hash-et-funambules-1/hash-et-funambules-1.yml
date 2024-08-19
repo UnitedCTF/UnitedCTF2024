@@ -24,6 +24,8 @@ flags:
 files:
   - ./challenge/app/app.go
 
+connection_info: nc <host> <port>
+
 tags:
   - facile
   - crypto

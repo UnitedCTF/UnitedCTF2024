@@ -25,6 +25,8 @@ files:
   - ./challenge/app/app.go
   - ./challenge/app/rockyou.txt.tar.gz
 
+connection_info: nc <host> <port>
+
 tags:
   - difficile
   - crypto
