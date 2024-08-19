@@ -3,11 +3,15 @@ services:
     build: box
     networks:
       - lion-s-leap-net
+    ports:
+        - "80:80"
 
   client:
     build: client
     networks:
       - lion-s-leap-net
+    ports:
+        - "22:22"
 
 networks:
   lion-s-leap-net:
