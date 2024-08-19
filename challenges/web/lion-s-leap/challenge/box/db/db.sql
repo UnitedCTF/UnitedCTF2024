@@ -35,9 +35,8 @@ CREATE TABLE HashChange (
     FOREIGN KEY (new_hashing_algorithm) REFERENCES HashingAlgorithm(id)
 );
 
-INSERT INTO HashingAlgorithm (algo, round) VALUES ('bcrypt', 10 );
+INSERT INTO HashingAlgorithm (algo, round) VALUES ('bcrypt', 16 );
 INSERT INTO HashingAlgorithm (algo, round) VALUES ('sha256', 64 );
 INSERT INTO HashingAlgorithm (algo, round) VALUES ('blake2b_256', 1 );
-INSERT INTO Users (username, password_hash, salt, hashing_algorithm, profile_name, email, is_admin) VALUES ('admin', '$2a$10$Jy/dPD15yoTHZrxJgQ0d6uNZ0Qe0cKJd.tnNabDRgKtEaRyKCImMu', 'u9jas8dDKs', 1, 'Administrator', 'admin@duckduck.com', TRUE);
-INSERT INTO Users (username, password_hash, salt, hashing_algorithm, profile_name, email) VALUES ('user', '$2a$10$jTcXRB9kXVu1kkpKNnlHKOTVSW0dQJ3urmz4U7K21F0mrFk/5HAtG', 'o2n8aeVYDd', 1, 'User', 'user@duckduck.com');
+INSERT INTO Users (username, password_hash, salt, hashing_algorithm, profile_name, email, is_admin) VALUES ('admin', '$2a$16$yBzd6w7J/c8zdDFJy3ZoqOos0KuUK9IJkj7hO94vRRa8Z/rLnfGwe', 'c2zSdga1Mu', 1, 'Administrator', 'admin@duckduck.com', TRUE);
 
