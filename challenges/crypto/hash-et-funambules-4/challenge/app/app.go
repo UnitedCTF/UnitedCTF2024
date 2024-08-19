@@ -164,7 +164,6 @@ func handleConnection(conn net.Conn, flag string, passwords []string) {
 	}
 
 	// Generate random number to select a password
-	// Generate a random salt
 	value, err := rand.Int(rand.Reader, big.NewInt(int64(len(passwords))))
 	if err != nil {
 		log.Println("Error generating random number:", err.Error())
