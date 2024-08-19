@@ -12,6 +12,14 @@ Vous avez les plans 🗺️📏, seriez-vous retrouvé les mots de passes?
 The team passwords were lost in a Jack-in-the-Box 🤡📦!
 You have the plans 🗺️📏, will you be able to retrieve the passwords?
 
+## Run
+
+```bash
+sudo docker build -t hash_funambules-2 ./challenge
+sudo docker run -P hash_funambules-2
+sudo docker ps
+```
+
 ## Solution
 
 Solution of the challenge can be found [here](solution/).
