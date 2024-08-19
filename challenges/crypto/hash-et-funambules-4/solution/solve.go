@@ -34,7 +34,7 @@ func checkHashPassword(hashed_pasword string, password string, algorithm string)
 	case "sha3":
 		hasher = sha3.New256()
 	case "blake2b":
-		hasher, _ = blake2b.New256([]byte("this_is_a_key"))
+		hasher, _ = blake2b.New256([]byte("d6624d407ab80896d1f442b9a079b7ae"))
 	case "bcrypt":
 		return bcrypt.CompareHashAndPassword([]byte(hashed_pasword), []byte(password)) == nil
 	default:
