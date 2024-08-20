@@ -43,7 +43,11 @@ Nous aurions donc ceci :
 {  "name": "", "name": { "$ne": null }" }
 ```
 
-Le problème est qu'il nous reste un guillemet à fermer. On peut dire que c'est un commentaire :
+Le problème est qu'il nous reste un guillemet à fermer. Il nous faudrait un champ simple qu'on peut ajouter qui ne dénaturerait pas la requête.
+
+Pour cela, on peut chercher dans la [liste des opérations supportées](https://www.mongodb.com/docs/manual/reference/operator/query/) par MongoDB pour une requête.
+
+On trouve "$comment" qui n'a aucun effet sur la requête, nous l'utilisons pour "consommer" le guillemet fermant.
 
 ```sh 
 # /color?name=","name":"{"$ne":null}","$comment":""
