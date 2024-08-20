@@ -57,8 +57,8 @@
             <table class='tui-table hovered-cyan' style='width: 700px; margin-bottom: 20px;'>
                 <thead>
                     <tr>
-                        <th>Fichier</th>
-                        <th>Taille</th>
+                        <th>Files</th>
+                        <th>Size</th>
                     </tr>
                 </thead>
                 <tbody>
