@@ -4,9 +4,10 @@ En naviguant sur la page web, on peut voir que le terminal est géré par un scr
 Il est indiqué que nous n'avons pas les permissions requises pour obtenir un ticket.
 
 On peut donc supposer que notre session n'a pas les droits requis.
-En PHP, il est possible de stocker les différentes sessions dans le dossier `/var/lib/php/sessions/`.
+En PHP, les session sont stocké par défaut dans un dossier temporaire
+https://stackoverflow.com/questions/4927850/location-for-session-files-in-apache-php.
 
-En listant les fichiers de ce dossier, on voit plusieurs sessions existantes sur le serveur.
+En listant les fichiers du dossier `/tmp`, on voit plusieurs sessions existantes sur le serveur.
 
 ```
 sess_0d2ab5e7894135660f19c6b0c260b643	0
