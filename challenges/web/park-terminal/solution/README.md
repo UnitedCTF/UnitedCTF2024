@@ -1,12 +1,12 @@
 # Park terminal
 
-En naviguant dans la page web, on peut voir que le terminal est géré par un script PHP. 
-On nous dit que l'on a pas les permissions requises pour obtenir un ticket.
+En naviguant sur la page web, on peut voir que le terminal est géré par un script PHP.
+Il est indiqué que nous n'avons pas les permissions requises pour obtenir un ticket.
 
-On peut donc se dire que notre session n'a pas les droits requis. 
-En PHP il est possible de stocker les différentes sessions dans le dossier `/var/lib/php/sessions/`.
+On peut donc supposer que notre session n'a pas les droits requis.
+En PHP, il est possible de stocker les différentes sessions dans le dossier `/var/lib/php/sessions/`.
 
-En listant les fichiers de ce dossier on voit plusieurs sessions existantes sur le serveur.
+En listant les fichiers de ce dossier, on voit plusieurs sessions existantes sur le serveur.
 
 ```
 sess_0d2ab5e7894135660f19c6b0c260b643	0
@@ -22,10 +22,10 @@ sess_25a1588c37430024440677c186380d9b3	22
 sess_35a1588c37493024440677c186380d9b3	22
 ```
 
-On peut essayer les différentes sessions pour voir si l'une d'entre elles nous donne les droits requis.
+On peut essayer les différentes sessions pour voir si l'une d'elles nous donne les droits requis.
 
-En modifiant le cookie de session avec une des sessions existantes et en allant voir à la racine du terminal,
-on peut voir de nouveaux fichiers et dossiers qui n'étaient pas accessibles auparavant.
+En modifiant le cookie de session avec l'une des sessions existantes et en explorant la racine du 
+terminal, on peut voir de nouveaux fichiers et dossiers qui n'étaient pas accessibles auparavant.
 
 ```
 sess_65a1588c37413024440677c186380d9b3
@@ -33,7 +33,6 @@ sess_65a1588c37413024440677c186380d9b3
 
 Une fois cette session utilisée, on peut voir le fichier `.flag-HoHoPHPOupsiiii` à la racine du terminal.
 
-```
 
 
 ## Flag
