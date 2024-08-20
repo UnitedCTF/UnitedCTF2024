@@ -8,7 +8,6 @@
           if ($file != '.' && $file != '..') {
             $filepath = $dir . '/' . $file;
 
-            // si le fichier ou dossier commence par un ., on montre seulement si on est admin
             if ($file[0] == '.' && !is_admin()) {
               continue;
             }
@@ -19,7 +18,6 @@
             } else {
               echo '<td style="text-align: left;">' . htmlspecialchars($file) . '</td>';
             }
-            // afficher la taille du fichier
             echo '<td>' . filesize($filepath) . '</td>';
             echo '</tr>';
           }
