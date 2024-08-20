@@ -19,7 +19,7 @@ from template import (
     TIMEOUT_MESSAGE,
 )
 
-REGEX_VALIDATION = "[0-9]+"
+REGEX_VALIDATION = "[0-9]+$"
 DATA_FILE = "./data/scatter-data.csv"
 TIMEOUT = 1
 EASY_ROUND_COUNT = 5
