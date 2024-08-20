@@ -3,7 +3,7 @@
 
   function list_dir($dir) {
     if (is_dir($dir)) {
-      if ($dh = opendir($dir)) {
+      if ($dh = @opendir($dir)) {
         while(($file = readdir($dh)) !== false) {
           if ($file != '.' && $file != '..') {
             $filepath = $dir . '/' . $file;
@@ -32,9 +32,9 @@
   $is_admin = is_admin();
   
   if (isset($_GET['path'])) {
-    $path = $_GET['path'];
+    $path = preg_replace('#/+#', '/', $_GET['path']);
   } else {
-    $path = 'maintenance';
+    $path = '/maintenance';
   }
   
 ?>
@@ -70,7 +70,7 @@
         </fieldset>
     </div>
     <p>
-        service de maintenance
+        maintenance
     </p>
 </body>
 </html>
