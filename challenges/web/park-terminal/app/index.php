@@ -28,6 +28,18 @@
   
   function is_admin() { return isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'; }
 
+  function sessions_count() {
+    $count = 0;
+    if ($dh = @opendir("/tmp")) {
+      while(($file = readdir($dh)) !== false) {
+        if (strpos($file, "sess_") == 0) {
+          $count++;
+        }
+      }
+    }
+
+    return $count;
+  }
 
   $is_admin = is_admin();
   
@@ -70,7 +82,7 @@
         </fieldset>
     </div>
     <p>
-        maintenance
+        maintenance system - <span><?php echo sessions_count();?></span> sessions connected
     </p>
 </body>
 </html>
