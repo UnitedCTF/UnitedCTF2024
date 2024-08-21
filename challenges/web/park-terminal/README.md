@@ -7,7 +7,7 @@
 On est jamais mieux servi que par soi-même ! Lorsque je suis arrivé au Parc d'attraction, il n'y avait 
 personne pour m'acceuillir. Je me suis donc servi et j'ai voulu prendre un ticket pour moi.
 
-Malchance la session de ce terminal n'a pas les accès nécessaires pour me donner un ticket. Tout ce que je sais 
+Malchance! La session de ce terminal n'a pas les accès nécessaires pour me donner un ticket. Tout ce que je sais 
 c'est que le fichier de génération de ticket est à la racine.
 
 
