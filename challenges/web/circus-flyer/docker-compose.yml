@@ -1,0 +1,16 @@
+services:
+  app:
+    build: ./app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.2
+    volumes:
+      - mongo-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+
+volumes:
+  mongo-data:

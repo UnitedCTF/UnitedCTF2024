@@ -1,0 +1,28 @@
+name: "Candy hosting 🍭☁️"
+author: "KptCheeseWhiz"
+category: web
+description: |-
+  ## Description (français)
+
+  Fatigué du nuage blanc normal? Hébergez votre site web directement sur nos serveurs alimentés en barbe à papa!
+
+  ## Description (english)
+
+  Tired of the normal plain white cloud? Host your website directly into our cotton candy powered servers!
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+connection_info: https://challenges.unitedctf.ca:8080
+
+flags: 
+  - flag-684385ac3cefd18c73705c87ab7ff6ae
+
+files:
+  - source.zip
+
+tags:
+  - web

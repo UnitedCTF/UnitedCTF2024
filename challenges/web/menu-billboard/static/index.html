@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html {
+            background-color: chocolate;
+        }
+        .title {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(34, 34, 34);
+            display: inline-block;
+            font-size: 32px;
+            font-weight: bolder;
+            margin-bottom: 30px;
+        }
+        img {
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+            height: auto;
+            width: 300px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .prices {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            row-gap: 8px;
+            width: max-content;
+            background-color: bisque;
+            padding: 16px;
+            border-radius: 8px;
+            border-width: 5px;
+            border-color: black;
+            border-style: solid;
+            margin-bottom: 30px;
+        }
+        .price {
+            font-family: cursive;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: rgb(140, 238, 245);
+            color: black;
+            border-radius: 5px;
+            border-style: solid;
+        }
+
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="title">Bienvenue / Welcome</div>
+            <div class="prices">
+                <p>Menu &lt;3</p>
+                <div class="price">Entrée / Entrance : 25$</div>
+                <div class="price">Boîte de jus / Juicebox : 5$</div>
+                <div class="price">Frites / Fries : 7$</div>
+                <div class="price">Pomme d'amour / Candy Apple : 3$</div>
+            </div>
+            <div id="specialDiv"></div>
+        </div>
+
+    </body>
+    
+    <script src="static/app.js"></script>
+</html>

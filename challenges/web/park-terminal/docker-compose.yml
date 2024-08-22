@@ -1,0 +1,6 @@
+services:
+  app:
+    build: ./app
+    ports:
+      - "10876:80"
+
