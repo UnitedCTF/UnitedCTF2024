@@ -2,8 +2,8 @@ name: "Accident"
 author: "Constant"
 category: trivia
 type: standard
-# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
-value: 7
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
 
 description: |-
   ## Description (français)
