@@ -19,5 +19,7 @@ class Utils(commands.Cog):
             for guild in self.bot.guilds:
                 await self.bot.tree.sync(guild=guild)
             await interaction.edit_original_response(content=f"Synced commands")
+
+
 async def setup(bot: Krusty):
-    await bot.add_cog(Utils(bot), guild=discord.Object(id=1258573665964916867))
+    await bot.add_cog(Utils(bot), guild=discord.Object(id=int(os.getenv('CTF_GUILD_ID'))))

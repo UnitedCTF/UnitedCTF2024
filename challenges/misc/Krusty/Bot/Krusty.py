@@ -3,11 +3,11 @@ from discord.ext import commands
 
 import dotenv
 import os
-import json
 
 commands_ext = (
     'commands.Utils',
-    'commands.Flags'
+    'commands.Flags',
+    'commands.Help'
 )
 
 
@@ -41,10 +41,12 @@ async def setup_guild_for_ctf(guild: discord.Guild):
                                                 send_messages=False),
         unprivileged: discord.PermissionOverwrite(read_messages=False, view_channel=False)
     }
-    ctf_channel = await guild.create_text_channel('what-is-this', overwrites=overwrites)
-
-    # send the message to the channel
-    await ctf_channel.send(os.getenv('CTF_CHANNEL_MESSAGE'))
+    if ctf_channel is not None:
+        await ctf_channel.edit(overwrites=overwrites)
+    else:
+        ctf_channel = await guild.create_text_channel('what-is-this', overwrites=overwrites)
+        # send the message to the channel
+        await ctf_channel.send(os.getenv('CTF_CHANNEL_MESSAGE'))
 
     # give the privileged role to the members who had it before
     for member in privileged_members:
@@ -63,6 +65,7 @@ class Krusty(commands.Bot):
             command_prefix='!',
             intents=discord.Intents.all()
         )
+        self.remove_command('help')
         dotenv.load_dotenv()
 
     async def on_ready(self):
