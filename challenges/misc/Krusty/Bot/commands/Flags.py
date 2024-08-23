@@ -19,6 +19,8 @@ class Flag(commands.Cog):
     async def get_flag(self, interaction):
         await interaction.response.send_message(os.getenv('FROM_COMMAND'), ephemeral=True)
 
+
+
     @app_commands.command(name="get_role", description="(WIP) permission issues")
     @app_commands.describe(role="the role you want to get")
     async def get_role(self, interaction, role: discord.Role):

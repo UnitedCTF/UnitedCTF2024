@@ -1,31 +1,40 @@
 from discord.ext import commands
 from discord import app_commands
 import discord
-
+from discord.app_commands import Choice
 import os
 
 current_choice = ["Main Menu"]
+
+
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @app_commands.command(name="help", description="You want help ? I'm here for that !")
-    async def help(self, interaction):
-        view = HelpChooser(interaction)
+    @app_commands.describe(language="The language you want the help to be in")
+    @app_commands.choices(language=[
+        Choice(name="English", value="en"),
+        Choice(name="Francais", value="fr")
+    ])
+    async def help(self, interaction, language:Choice[str]="en"):
+        view = HelpChooser(interaction, language)
         await view.start()
 
 
 class HelpChooser(discord.ui.View):
     message: discord.Message
     interaction: discord.Interaction
-    embeds = {
+
+    embeds: dict
+    en_embeds = {
         "initial": discord.Embed(
             title="Krusty help page",
             description="Hey !\n"
                         "You asked for some help ?\n"
                         "Try to select one of the category to have some more information about it\n"
                         "\n"
-                        "Here are some links useful for the UnitedCTF:\n"
+                        "Here are links about the UnitedCTF:\n"
                         "[UnitedCTF](https://unitedctf.ca/) | [The 2024 CTF](https://ctf.unitedctf.ca/)"
             , color=discord.Color.blurple()
         ),
@@ -35,23 +44,60 @@ class HelpChooser(discord.ui.View):
                         "1. Don't give up\n"
                         "2. Try to understand the challenge\n"
                         "3. Don't hesitate to ask for help\n"
-                        "4. Don't forget to have fun !"
+                        "4. Don't forget to have fun !\n"
+                        "\n"
+                        "Some websites that might help you along your journey:\n"
+                        "[Hacktricks](https://book.hacktricks.xyz/) | [CTF101](https://ctf101.org/)"
             , color=discord.Color.blurple()
         ),
         "commands": discord.Embed(
             title="Commands",
             description="Here are some commands you can use:\n"
+                        "</help:1270454321686777967> `language` : Get help, language can be `English` or `Francais` \n"
                         "\n"
-                        "\n"
-                        ""
+                        "~~/get_role `role` ~~ : deactivated [ Need to be careful on permission issues ]\n"
             , color=discord.Color.blurple()
         )
     }
+    fr_embeds = {
+        "initial": discord.Embed(
+            title="Page d'aide Krusty",
+            description="Salut !\n"
+                        "Tu as demandé de l'aide ?\n"
+                        "Essaie de sélectionner une des catégories pour obtenir plus d'informations à ce sujet\n"
+                        "\n"
+                        "Voici les liens du UnitedCTF:\n"
+                        "[UnitedCTF](https://unitedctf.ca/) | [Le CTF 2024](https://ctf.unitedctf.ca/)"
+            , color=discord.Color.blurple()
+        ),
+        "tips": discord.Embed(
+            title="Astuces et conseils pour le CTF",
+            description="Voici quelques astuces et conseils pour le CTF:\n"
+                        "1. Ne baisse pas les bras\n"
+                        "2. Essaie de comprendre le défi\n"
+                        "3. N'hésite pas à demander de l'aide\n"
+                        "4. N'oublie pas de t'amuser !\n"
+                        "\n"
+                        "Quelques sites web qui pourraient t'aider au cours de ton aventure:\n"
+                         "[Hacktricks](https://book.hacktricks.xyz/) | [CTF101](https://ctf101.org/)"
+            , color=discord.Color.blurple()
+        ),
+        "commands": discord.Embed(
+            title="Commandes",
+            description="Voici quelques commandes que tu peux utiliser:\n"
+                        "</help:1270454321686777967> `langue` : Obtenir de l'aide, la langue peut être `English` ou `Francais` \n"
+                        "\n"
+                        "~~/get_role `rôle`~~ : désactivé [ Besoin de faire attention aux problèmes de permissions ]\n"
+            , color=discord.Color.blurple()
+        )
+    }
+    
 
-    def __init__(self, interaction):
+    def __init__(self, interaction, language):
         super().__init__()
         self.message = None
         self.interaction = interaction
+        self.embeds = self.en_embeds if language == "en" else self.fr_embeds
         global current_choice
 
     @discord.ui.select(placeholder=current_choice[0],
@@ -78,7 +124,7 @@ class HelpChooser(discord.ui.View):
         return interaction.user.id == self.interaction.user.id
 
     async def on_timeout(self):
-        await self.interaction.edit(view=None)
+        self.clear_items()
 
     async def on_error(self, interaction, error, item):
         await interaction.response.send_message("An error occured")
