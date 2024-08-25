@@ -55,3 +55,4 @@ Ce défi doit:
 | ÉTS | Jules Barbier, @youllou |
 | Polytechnique | Étienne Perron, @bigboy_87 |
 | Concordia | Constance Prevot, @otaphoque |
+|Université Laval | mymelody1242|
