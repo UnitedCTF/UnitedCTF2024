@@ -6,6 +6,7 @@ C'est un peu préoccupant que la clé pour l'obscurcissement de base soit si fac
 
 Utilise le fichier du challenge JavaReverse 2 pour ce challenge.
 Java 11+ requis
+Rouler le programme avec launcher.bat
 ## Description (English)
 It's a little worrying that the key for basic obfuscation is so easy to find. Fortunately, the software has marked it as obsolete! That means it's no longer in use, right?
 

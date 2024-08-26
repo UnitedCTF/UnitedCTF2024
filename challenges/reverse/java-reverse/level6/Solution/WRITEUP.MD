@@ -79,7 +79,7 @@ Cela enlève l'option d'appeller la fonction a partir d'une autre classe et nous
 encFlag = HTTPRequests.post("/thisisandendpointithink")
 ```
 
-`HTTPRequests` est la classe `X2a53573b514b2c2044253c3f494a3951362c43313f55494e$X2750423f0f60303e3724334f` et elle permet de communiquer avec le serveur HTTP qui est lancé avec nôtre application.
+`HTTPRequests` est la classe `X2a53573b514b2c2044253c3f494a3951362c43313f55494e$X2750423f0f60303e3724334f` et elle permet de communiquer avec le serveur HTTP qui est lancé avec notre application.
 
 La majorité du code dans cette ligne permet simplement d'obtenir `"/thisisandendpointithink"` en récupérant des strings du fichier `config.conf` et en les décryptant.
 

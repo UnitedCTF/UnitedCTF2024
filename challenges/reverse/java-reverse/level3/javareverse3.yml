@@ -1,6 +1,9 @@
 ﻿name: JavaReverse 3
 author: Atlantis11656
 category: Reverse
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
+value: 3
 
 description: |-
     ## Description (Français)
@@ -8,12 +11,14 @@ description: |-
 
     Utilise le fichier du challenge JavaReverse 2 pour ce challenge.
     Java 11+ requis
+    Rouler le programme avec launcher.bat
 
     ## Description (English)
     It turns out that Krusty doesn't remember where he wrote down the software password. He says he remembers leaving it somewhere outside the code. Help us find it.
 
     Use the JavaReverse 2 challenge file for this challenge.
     Java 11+ required
+    Run the program with launcher.bat
 
 flags:
     - flag-JARFil3sAreJus7ZipArch1v3s

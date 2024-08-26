@@ -6,11 +6,13 @@ Krusty nous informe que le logiciel est conçu pour faciliter l'ajout de manège
 
 Utilise le fichier du challenge JavaReverse 2 pour ce challenge.
 Java 11+ requis
+Rouler le programme avec launcher.bat
 ## Description (English)
 Krusty informs us that the software is designed to facilitate the addition of rides, which will save us money when expanding the park! He explains that the software uses reflection to allow new objects to be added without having to modify the base code. I'm not sure what that means...
 
 Use the JavaReverse 2 challenge file for this challenge.
 Java 11+ required
+Run the program with launcher.bat
 ## [Solution](./Solution/WRITEUP.MD)
 ## FLAG
 `flag-CarefulW1thRef1ec7i0n`
