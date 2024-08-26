@@ -8,4 +8,4 @@
 ## [Solution](./Solution/WRITEUP.MD)
 
 ### FLAG
-`flag-Kru5ty1s7h35ecr3tCE0`
+`flag-4REy0uLo5t0rSom37hing?`

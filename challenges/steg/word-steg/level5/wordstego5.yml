@@ -1,11 +1,13 @@
-name: WordStego 5
+name: WordStego 6
 author: Atlantis11656
 category: Steganography
-
+type: standard
+# CFSS:0.1/TS:B/E:l/HSFC:N=2-4
+value: 2
 description: |-
 
 flags:
-    - flag-4REy0uLo5t0rSom37hing?
+    - flag-W0WH0wD1dUF1ndM3
    
 tags:
     - steg
