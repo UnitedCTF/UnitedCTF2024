@@ -25,7 +25,7 @@ extra:
   minimum: 50
 
 flags:
-  - FLAG-g07_4_5uRpRI53_f0R_y0u
+  - flag-g0745uRpRI53f0Ry0u
 
 files:
   - ./menu.txt
