@@ -18,6 +18,8 @@ which happens to be the account name repeated 2 times as the hint says.
 
 So we can use [cyberchef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)Rabbit(%7B'option':'UTF8','string':'BarnabasBarnabas'%7D,%7B'option':'Hex','string':''%7D,'Big','Raw','Raw')&input=SHpNWDQrMXhzeXFJVzYrdXl2K0JVNWI4STB3aVBPUT0&oeol=FF) to decode the solution.
 
+ATTENTION, one of the TXT files is a trap, the rabbit decides to stand someone up ;)
+
 ## Flag
 
 `flag-g0745uRpRI53f0Ry0u`
