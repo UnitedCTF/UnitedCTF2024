@@ -1,4 +1,4 @@
-name: Fortune l33t3r
+name: Fortune l33t3r 1
 author: Yxène
 category: Programming
 
@@ -11,7 +11,12 @@ description: |-
 
   In a small dark alley of the park, you come across an old fortune-telling machine. Intrigued, you insert a token to find out what the future holds. But then it's a cold shower! The machine's response is incomprehensible. However, your computer instinct detects a form of logic in the machine's messages, and you roll up your sleeves to understand what it's saying.
 
-flags:
+type: standard
+
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flag:
 - flag-7h3Fu7ur31sY0ur5
 
 tags:

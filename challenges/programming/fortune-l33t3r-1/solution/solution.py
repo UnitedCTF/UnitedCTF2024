@@ -22,7 +22,7 @@ for level in range(3):
 		for leetChar in allDicts[level]:
 			originalQuote = originalQuote.replace(leetChar,allDicts[level][leetChar]) # Traduction de la phrase leet speakée
 		print(f'Leet: "{leetQuote}"')
-		print(f'Plaintext: "{originalQuote}"')
+		print(f'Plaintext: "{originalQuote}"\n')
 		io.sendline(originalQuote.encode('utf-8')) # Envoi de la phrase traduite
 	io.recvline()
 	received = io.recvlineS() # Réception d'une partie du flag

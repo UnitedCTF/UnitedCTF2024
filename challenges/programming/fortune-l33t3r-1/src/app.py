@@ -13,7 +13,7 @@ class LeetServer():
 	quoteFilename = "fortune-cookies.txt"
 	bannerFilename = "banner.txt"
 	timeout = 10 # seconds
-	flag = ["flag-","7h3","Fu7ur31sY0ur5"] # "flag-7h3Fu7ur31sY0ur5"
+	flag = ["flag-7h3","Fu7ur3","1sY0ur5"] # "flag-7h3Fu7ur31sY0ur5"
 
 
 	def __init__(self) -> None:
@@ -28,11 +28,11 @@ class LeetServer():
 		for quote in quotes:
 			if set(quote).isdisjoint(set(forbiddenChars)):
 				quote = quote.strip().lower()
-				if i < 40: # 40 quotes for level 1
+				if i < 20: # 20 quotes for level 1
 					self.allQuotes[0].append(quote)
-				elif i < 120: # 80 quotes for level 2
+				elif i < 60: # 40 quotes for level 2
 					self.allQuotes[1].append(quote)
-				else: # 130 quotes for level 3 (without counting forbidden quotes)
+				else: # 65 quotes for level 3 (without counting forbidden quotes)
 					self.allQuotes[2].append(quote)
 				i += 1
 
