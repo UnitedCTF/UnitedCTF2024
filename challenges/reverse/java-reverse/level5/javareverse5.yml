@@ -17,6 +17,7 @@ description: |-
 
     Use the JavaReverse 2 challenge file for this challenge.
     Java 11+ required
+    Run the program with launcher.bat
 flags:
     - flag-WhyW0uldY0uM4keObfusc47i0nRever5able
    
