@@ -1,4 +1,4 @@
-# Fortune l33t3r
+# Fortune l33t3r 2
 
 **`Auteur:`** [Yxène](https://github.com/Yxene)
 
