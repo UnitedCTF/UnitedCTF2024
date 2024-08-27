@@ -10,11 +10,9 @@ description: |-
 
   A room, a terminal, a locked door asking for a secret code... and banned words. How hard can it be?
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
 
 connection_info: nc challenges.unitedctf.ca 1235
 
