@@ -12,7 +12,7 @@ description: |-
 
 type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
-value: 5
+value: 4
 
 connection_info: nc challenges.unitedctf.ca 1237
 
