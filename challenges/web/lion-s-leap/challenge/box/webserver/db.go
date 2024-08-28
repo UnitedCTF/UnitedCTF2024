@@ -143,7 +143,7 @@ func getUserInfo(db *sql.DB, userid int) (string, string, error) {
 
 func createUser(db *sql.DB, username string, password string, email string, name string) error {
 
-	hash, salt, err2 := hashPassword(password, "bcrypt", 10)
+	hash, salt, err2 := hashPassword(password, "bcrypt", 16)
 	if err2 != nil {
 		return err2
 	}
