@@ -1,0 +1,19 @@
+name: Fastpass 1
+author: Ch0ufleur
+category: Web
+
+description: |-
+  ## Description (fr)
+
+  Le site permettant la génération de "Fast pass", des billets pour éviter les files d'attentes, est à capacité pour aujourd'hui. Il refuse de générer de nouvelles "Fast pass". Mais toi, tu veux VRAIMENT éviter les files d'attentes... Et si?
+
+  ## Description (en)
+
+  The website that generates fast passes, special tickets to skip wait lines for attractions, is at capacity for the day. No more fast passes can be generated. But you, you REALLY want to skip wait lines... What if?
+
+flags:
+- flag-actu4t0r5-183d1aa82
+
+tags:
+- web
+
