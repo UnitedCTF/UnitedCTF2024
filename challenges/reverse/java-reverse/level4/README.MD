@@ -15,4 +15,4 @@ Java 11+ required
 Run the program with launcher.bat
 ## [Solution](./Solution/WRITEUP.MD)
 ## FLAG
-`flag-WhatD1dW3SayAb0UTSecr3Ts?`
+`flag-[az-A-Z0-9]+`
