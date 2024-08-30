@@ -20,9 +20,30 @@ Date:   Thu Aug 29 23:10:43 2024 -0400
     Initial commit
 ```
 
-But it is not the only command at our disposition. We can also use the command `git reflog` to view all the reference logs.
+By running the command `git diff 5549501 228d792`, the difference between the "Initial commit" and "Lost balloon" commits is only Timmy without his balloon, something seems to be missing.
 
+```git
+diff --git a/index.html b/index.html
+index 70a0751..1895d20 100644
+--- a/index.html
++++ b/index.html
+@@ -1,10 +1,4 @@
+ <html>
+   <head></head>
+-  <body>
+-    <pre style="font-size: 6em">
+- 😭
+-/|\
+-/ \
+-    </pre>
+-  </body>
++  <body></body>
+ </html>
 ```
+
+To have more information about the local Github repository, we can use the command `git reflog` to view all the reference logs.
+
+```git
 5549501 (HEAD -> main) HEAD@{0}: rebase (finish): returning to refs/heads/main
 5549501 (HEAD -> main) HEAD@{1}: commit: Lost balloon
 228d792 HEAD@{2}: rebase (start): checkout 228d792323327bdf9078deac272f40b7c88e7db8
@@ -31,7 +52,7 @@ But it is not the only command at our disposition. We can also use the command `
 228d792 HEAD@{5}: commit (initial): Initial commit
 ```
 
-We can see that there was a commit named `Gave balloon` but it was overwritten by a rebase.
+We can see that there was a commit named `Gave balloon` but it was overwritten by a rebase to `228d792` (the "Initial commit" commit).
 
 We can return to that lost commit by running the command `git checkout 1a8c97a`.
 
