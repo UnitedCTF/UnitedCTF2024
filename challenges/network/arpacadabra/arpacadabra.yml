@@ -12,11 +12,9 @@ description: |-
   Former siamese twins are sharing gossips in the mirror room. As a wizard 🎩, will you be able to trick them?
   Connect via SSH with `user:steadying-cursor-sulfide-rudder4`
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+value: 5
 
 flags:
   - flag-ArpPoisoningIsPrettyWildWhenNotOnHTTPs
