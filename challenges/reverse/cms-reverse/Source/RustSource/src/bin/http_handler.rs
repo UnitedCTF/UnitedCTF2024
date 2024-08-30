@@ -1,7 +1,7 @@
 use const_format::formatcp;
 
-const PORT:u32 = 9860;
-const HTTP_SERVER_URL:&'static str = formatcp!("http://localhost:{}",PORT);
+const PORT:u32 = 10000;
+const HTTP_SERVER_URL:&'static str = formatcp!("http://ctf.unitedctf.ca:{}",PORT);
 
 pub async fn do_get_request(endpoint:&'static str) -> Result<String,String>{
     let url = &format!("{}/{}",HTTP_SERVER_URL,endpoint);

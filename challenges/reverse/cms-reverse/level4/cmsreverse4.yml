@@ -1,0 +1,26 @@
+﻿name: Clown Management Software 4
+author: Atlantis11656
+category: Reverse
+type: standard
+# CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
+value: 8
+
+description: |-
+    ## Description (Français)
+    Nous avons une erreur lorsqu'on entre le mot de passe, surement dû au sabotage de krusty! Peux-tu réparer le logiciel?
+
+    Assure toi de toujours lancer CMS-PRO_BACKEND.exe quand tu roule le CMS-PRO_CLIENT.exe
+    ## Description (English)
+    We have an error when entering the password, probably due to Krusty's sabotage! Can you fix the software?
+
+    Make sure to always run CMS-PRO_BACKEND.exe when you run CMS-PRO_CLIENT.exe
+
+flags:
+    - flag-Q8T3R6A5ZX7P9JFR2C3DZ8JKR6YA2PXLM
+   
+tags:
+    - reverse
+    - C
+
+requirements:
+    - Clown Management Software 2

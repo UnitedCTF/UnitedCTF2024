@@ -9,16 +9,12 @@ use crate::bin::packets::{ FPacket, Packet};
 
 const PORT:u32 = 11954;
 const URL:&'static str = formatcp!("127.0.0.1:{}",PORT);
-const FLAG:&'static str = "flag-H3yD0ntL0okH3re";
 
 pub struct TCPHandler{
     cache:Mutex<Box<HashMap<String,String>>>
 }
 impl TCPHandler{
     pub fn new() -> TCPHandler{
-        if FLAG.len() != 20{
-            panic!("huh??");
-        }
         TCPHandler{
             cache:Mutex::new(Box::new(HashMap::new()))
         }

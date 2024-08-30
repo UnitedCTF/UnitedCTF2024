@@ -141,7 +141,6 @@ impl Packet{
                 let sid = raw.drain(0..32).collect::<Vec<u8>>();
 
                 let fid = String::from_utf8_lossy(raw.drain(0..10).as_slice()).to_string();
-                print!("F ID: {}",fid);
                 let fid = match fid.as_str().parse(){
                     Ok(t) => t,
                     Err(_) => return Err("Invalid F ID")

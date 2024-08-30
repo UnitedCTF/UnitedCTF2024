@@ -63,7 +63,7 @@ const char* e(const char* (*b)(long long int), long long int x) {
 }
 
 int main() {
-
+    printf("%s","$$$$$$\\  $$\\      $$\\  $$$$$$\\         $$$$$$$\\  $$$$$$$\\   $$$$$$\\  \n$$  __$$\\ $$$\\    $$$ |$$  __$$\\        $$  __$$\\ $$  __$$\\ $$  __$$\\ \n$$ /  \\__|$$$$\\  $$$$ |$$ /  \\__|       $$ |  $$ |$$ |  $$ |$$ /  $$ |\n$$ |      $$\\$$\\$$ $$ |\\$$$$$$\\ $$$$$$\\ $$$$$$$  |$$$$$$$  |$$ |  $$ |\n$$ |      $$ \\$$$  $$ | \\____$$\\\\______|$$  ____/ $$  __$$< $$ |  $$ |\n$$ |  $$\\ $$ |\\$  /$$ |$$\\   $$ |       $$ |      $$ |  $$ |$$ |  $$ |\n\\$$$$$$  |$$ | \\_/ $$ |\\$$$$$$  |       $$ |      $$ |  $$ | $$$$$$  |\n \\______/ \\__|     \\__| \\______/        \\__|      \\__|  \\__| \\______/ \n ");
     bool canRun = !IsDebuggerPresent();
     bool valid = false;
     while (!valid) {
@@ -96,11 +96,11 @@ int main() {
         }
     }
     if(IsDebuggerPresent()){
-        printf("Debugger detected!\n");
+        printf("Access Denied.\n");
         exit(1);
     }
     if (canRun){
-        printf("Debugger detected!\n");
+        printf("An error occured.\n");
         exit(1);
     }
     const char* fs = e(xefaffb(), x67654a());
