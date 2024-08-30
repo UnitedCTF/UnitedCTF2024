@@ -1,0 +1,31 @@
+name: Carousel
+author: jactymilena
+category: steg
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
+
+description: |-
+  ## Description (fr)
+
+  J'aurais dû noter mon mot de passe sur un papier...
+  Au moins, je me rappelle que c'était seulement des lettres minuscules...
+
+  D'ici là, aucun enfant ne pourra profiter du carrousel. 
+
+  Je me rappelle seulement de : `xqn?c?l?wmz?pfo`.
+
+  ## Description (en)
+
+  I should have written my password down on paper...  
+  At least I remember it was only lowercase letters...  
+
+  Until then, no child will be able to enjoy the carousel.  
+
+  I only remember this: xqn?c?l?wmz?pfo.
+
+flags:
+- flag-G0Pl4yW1thTh3C4r0us3l
+
+tags:
+- steg
