@@ -18,4 +18,4 @@ Run the program with launcher.bat
 ## [Solution](./Solution/WRITEUP.MD)
 
 ### FLAG
-`flag-[az-A-Z0-9]+`
+`flag-[a-zA-Z0-9]+`
