@@ -2,10 +2,17 @@
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
 ## Description (Français)
+Hé! psst! J'ai un défi pour toi... Si tu arrive a imprimer un message sur les 3 écrans devant toi, je t'offre des prix alléchants!
+
+Commence avec le premier pour obtenir un coupon rabais sur la barbe a papa!
 
 ## Description (English)
+Hey! psst! I have a challenge for you... If you can print a message on the 3 screens in front of you, I'll give you some attractive prizes!
 
-## [Solution](./Solution/WRITEUP.MD)
+Start with the first one to get a discount coupon for cotton candy!
+
+## Solution
+Solution of the challenge can be found [here](./Solution/WRITEUP.MD).
 
 ### FLAG
-`flag-X9F3K7ZQ2JPXLMN4V5QW8TYC6DZ8JR6A`
+`flag-[a-zA-Z0-9]+`

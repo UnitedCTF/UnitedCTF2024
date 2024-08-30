@@ -1,14 +1,22 @@
 ﻿name: Shellcode Obfuscation 2
 author: Atlantis11656
-category: Pwn
+category: pwn
 type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
-value: 5
+value: 6
 description: |-
     ## Description (Français)
-    
+    Hé! psst! J'ai un défi pour toi... Si tu arrive a imprimer un message sur les 3 écrans devant toi, je t'offre des prix alléchants!
+
+    Essaie d'imprimer sur le deuxième écran pour avoir un coupon rabais pour les manèges!
+
     ## Description (English)
+    Hey! psst! I have a challenge for you... If you can print a message on the 3 screens in front of you, I'll give you some attractive prizes!
+
+    Try to print on the second screen to get a discount coupon for the rides!
 
 flags:
-    - 
-   
+    - flag-ML5V9JD3K8WTYQZA7R6YA2C3DZ8V7T1B
+
+tags:
+    - pwn

@@ -22,27 +22,30 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-6">
                     1. Pour chaque niveau, vous devez executer du code qui va imprimer
-                    le string "Hello world" sur STDOUT.<br />
+                    le string demandé sur STDOUT.<br />
                     2. Les seuls syscalls permis sont read sur stdin, write sur
                     stdout/stderr, exit et sigreturn.<br />
                     3. Le shellcode qui va etre executé doit etre en dessous de 75 bytes
                     de long.<br />
                     4. L'architecture est AMD64.<br />
                     5. Le format du shellcode doit etre en hexadécimal
-                    (\x00\x01\x02).<br /><br />
+                    (\x00\x01\x02).<br />
+                    6. Le programme qui roule le shellcode à été compilé avec gcc -z execstack -fno-stack-protector -o
+                    [executable] [source.c]
                 </div>
             </div>
             <h3 class="text-center">Instructions</h3>
             <div class="row d-flex justify-content-center">
                 <div class="col-6">
-                    1. For each level, you must execute code that will print the string
-                    "Hello world" on STDOUT.<br />
+                    1. For each level, you must execute code that will print the expected string on STDOUT.<br />
                     2. The only syscalls allowed are read on stdin, write on
                     stdout/stderr, exit and sigreturn.<br />
                     3. The shellcode that will be executed must be less than 75 bytes
                     long.<br />
                     4. The architecture is AMD64.<br />
                     5. The shellcode format must be in hexadecimal (\x00\x01\x02).<br />
+                    6. The program that runs the shellcode was compiled with gcc -z execstack -fno-stack-protector -o
+                    [executable] [source.c]
                 </div>
             </div>
         </div>
@@ -56,6 +59,7 @@
             <div class="d-flex justify-content-center">
                 <textarea id="level1_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
+            <h3>To print: Barbe à papa</h3>
             <div class="row d-flex justify-content-center">
                 <button class="btn btn-primary mt-4 col-5" onclick="execute(1)">
                     Execute
@@ -107,7 +111,8 @@
             <div class="d-flex justify-content-center">
                 <textarea id="level2_operations" class="form-control col-12" rows="3" oninput="operation(2)"></textarea>
             </div>
-            <p id="level2_op_output"></p>
+            <p id="level2_op_output" class="text-break"></p>
+            <h3>To print: Manèges</h3>
             <div class="row d-flex justify-content-center">
                 <button class="btn btn-primary mt-4 col-5" onclick="execute(2)">
                     Execute
@@ -118,31 +123,20 @@
                 <textarea id="level2_output" class="form-control col-12" rows="3" readonly></textarea>
             </div>
         </div>
-        <div class="level3 row mt-5 p-0">
+        <div class="level3 row mt-5 pb-5 p-0">
             <h3 class="text-center bg-dark text-light py-3">Level 3</h3>
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x0f\x05\x31\x89</p>
+            <p>Les bytes suivants sont interdits:\x0f\x05</p>
             <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x0f\x05\x31\x89</p>
+            <p>The following bytes are forbidden:\x0f\x05</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
             <h4 class="col-12">Operations:</h4>
-            <h5>Restrictions sur les opérations:</h5>
-            <p>
-                La liste de keyword suivante est interdite:
-                <br />["import","=","def","exec","eval","compile","os","global","try","expect","finally","\\","+","-","^","*","/","%","//"]
-            </p>
-            <h5>Operations restrictions:</h5>
-            <p>
-                The following keyword list is forbidden:
-                <br />["import","=","def","exec","eval","compile","os","global","try","expect","finally","\\","+","-","^","*","/","%","//"]
-            </p>
-            <div class="d-flex justify-content-center">
-                <textarea id="level3_operations" class="form-control col-12" rows="3" oninput="operation(3)"></textarea>
-            </div>
-            <p id="level3_op_output"></p>
+            <h5>Aucune opération permise</h5>
+            <h5>No operations allowed</h5>
+            <h3>To print: UnitedCTF</h3>
             <div class="row d-flex justify-content-center">
                 <button class="btn btn-primary mt-4 col-5" onclick="execute(3)">
                     Execute
@@ -151,29 +145,6 @@
             <h4 class="col-12">Output:</h4>
             <div class="d-flex justify-content-center">
                 <textarea id="level3_output" class="form-control col-12" rows="3" readonly></textarea>
-            </div>
-        </div>
-        <div class="level4 row mt-5 pb-5 p-0">
-            <h3 class="text-center bg-dark text-light py-3">Level 4</h3>
-            <h4 class="col-12">Bytes:</h4>
-            <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x0f\x05</p>
-            <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x0f\x05</p>
-            <div class="d-flex justify-content-center">
-                <textarea id="level4_bytes" class="form-control col-12" rows="3"></textarea>
-            </div>
-            <h4 class="col-12">Operations:</h4>
-            <h5>Aucune opération permise</h5>
-            <h5>No operations allowed</h5>
-            <div class="row d-flex justify-content-center">
-                <button class="btn btn-primary mt-4 col-5" onclick="execute(4)">
-                    Execute
-                </button>
-            </div>
-            <h4 class="col-12">Output:</h4>
-            <div class="d-flex justify-content-center">
-                <textarea id="level4_output" class="form-control col-12" rows="3" readonly></textarea>
             </div>
         </div>
     </div>
