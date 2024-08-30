@@ -20,7 +20,7 @@ At least I remember it was only lowercase letters...
 
 Until then, no child will be able to enjoy the carousel.  
 
-I only remember this: xqn?c?l?wmz?pfo.
+I only remember this: `xqn?c?l?wmz?pfo`.
 
 ## Solution
 
