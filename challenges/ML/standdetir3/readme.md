@@ -14,7 +14,9 @@ $$\lvert p1_{1} - p2_{1} \lvert + 2 \lvert p1_{2} - p2_{2} \lvert + (p1_{3} - p2
 
 **Aucun chat n'a été blessé durant la rédaction de cette mise en situation**
 
-**Format du flag**: `flag-{base64(la somme du score de tous les points du jeu d'évaluation)}`
+**Format du flag**: `flag-{[0-9]{20,40}}`
+
+Le flag suit le même format qu'au niveau précédent. Le jeu de test étant plus gros, le flag devrait toutefois être plus long.
 
 
 ## Description (english)

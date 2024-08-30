@@ -26,7 +26,7 @@ def knn(points_train, scores_train, points_test, k):
         combined_list = [(point, score, dist) for point, score, dist in zip(points_train, scores_train, dists)]
         combined_list.sort(key=lambda a: a[-1])
         knn_scores = [p[1] for p in combined_list[:k]]
-        mode = max(set(knn_scores[:k]), key=knn_scores[:k].count)
+        mode = max(set(knn_scores[:k]), key=knn_scores[:k].count)  # calcul de la valeur modale
         scores_test.append(mode)
     return scores_test
 
@@ -42,7 +42,7 @@ def get_gt(points, centre_zones, centre_zones_scores):
     scores = []
     for point in points:
         score = score_point(point, centre_zones, centre_zones_scores)
-        scores.append(score)
+        scores.append(str(score))
     return scores
 
 def main():
@@ -55,7 +55,7 @@ def main():
     print(scores_test)
     print(scores_test2)
     scores_test_gt = get_gt(points_test, centre_zones, centre_zones_scores)
-    print(scores_test_gt)
+    print(''.join(scores_test_gt))
     print(sum(scores_test), sum(scores_test2), sum(scores_test_gt))
 
 if __name__ == '__main__':

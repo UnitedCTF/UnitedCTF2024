@@ -27,7 +27,7 @@ def knn(points_train, scores_train, points_test, k):
         combined_list = [(point, score, dist) for point, score, dist in zip(points_train, scores_train, dists)]
         combined_list.sort(key=lambda a: a[-1])
         knn_scores = [p[1] for p in combined_list[:k]]
-        mode = max(set(knn_scores[:k]), key=knn_scores[:k].count)
+        mode = max(set(knn_scores[:k]), key=knn_scores[:k].count)  # calcul de la valeur modale
         scores_test.append(mode)
     return scores_test
 
