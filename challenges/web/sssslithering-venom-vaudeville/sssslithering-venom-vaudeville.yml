@@ -12,11 +12,9 @@ description: |-
   Sssslithering Venom Vaudeville is a troubling website... or is it fun? You’ve found the source code; would you be able to find the flag?
   You have access to a local machine with SSH: `user:traps-sizably-jogger-scrimmage2`
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 10
 
 flags:
   - flag-LogPoisoningIsAnIntegrationHell
