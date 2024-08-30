@@ -15,6 +15,11 @@ sudo echo "socks4 127.0.0.1 9050" >> /etc/proxychains.conf
 ```
 
 ```shell
-proxychains nmap 172.25.0.0/24 -sT -p 80
-proxychains curl http://172.25.0.3:80
+proxychains nmap 172.99.53.0/24 -sT -p 80
+```
+
+![alt text](image.png)
+
+```shell
+proxychains curl http://172.99.53.183:80
 ```
