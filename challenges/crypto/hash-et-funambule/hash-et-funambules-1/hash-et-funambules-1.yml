@@ -12,11 +12,9 @@ description: |-
   The team passwords were lost in a Jack-in-the-Box 🤡📦!
   You have the plans 🗺️📏, will you be able to retrieve the passwords?
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
 
 flags:
   - flag-MD5IsNotSecure827391b8ys918hye9
