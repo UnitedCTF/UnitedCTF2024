@@ -18,4 +18,4 @@ Run the program with launcher.bat
 ## [Solution](./Solution/WRITEUP.MD)
 
 ### FLAG
-`flag-DontPrintTheStackTrace`
+`flag-[az-A-Z0-9]+`
