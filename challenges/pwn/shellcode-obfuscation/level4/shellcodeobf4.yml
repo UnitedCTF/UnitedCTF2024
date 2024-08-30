@@ -1,0 +1,14 @@
+﻿name: Shellcode Obfuscation 4
+author: Atlantis11656
+category: Pwn
+type: standard
+# CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
+value: 5
+description: |-
+    ## Description (Français)
+    
+    ## Description (English)
+
+flags:
+    - 
+   
