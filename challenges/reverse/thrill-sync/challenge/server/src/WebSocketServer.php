@@ -15,12 +15,15 @@ class WebSocketServer implements MessageComponentInterface
 
     public function onOpen(ConnectionInterface $conn)
     {
-        echo "New connection! ({$conn->resourceId})\n";
+        $current_time = date('Y-m-d H:i:s');
+        echo "[$current_time] New connection! ({$conn->resourceId})\n";
         $conn->send(json_encode(['action' => 'welcome', 'message' => 'Welcome to the ThrillSync WebSocket server']));
     }
 
     public function onMessage(ConnectionInterface $from, $msg)
     {
+        $current_time = date('Y-m-d H:i:s');
+        echo "[$current_time] Message received from {$from->resourceId}: $msg\n";
         $data = json_decode($msg, true);
         if (json_last_error() === JSON_ERROR_NONE) {
             if (isset($data['action'])) {
@@ -35,10 +38,10 @@ class WebSocketServer implements MessageComponentInterface
                             $from->send(json_encode(['action' => 'status', 'status' => 'failure']));
                         }
                         break;
-                    case 'flags' :
+                    case 'flags':
                         if (isset($data['token'])) {
                             $flags = $this->db->getFlags($data['token']);
-                            if (is_array($flags)){
+                            if (is_array($flags)) {
                                 $from->send(json_encode(['action' => 'flags', 'status' => 'success', 'flags' => $flags]));
                             } else {
                                 $from->send(json_encode(['action' => 'flags', 'status' => 'failure']));
@@ -80,29 +83,34 @@ class WebSocketServer implements MessageComponentInterface
                             $from->send(json_encode(['action' => 'logout', 'status' => 'failure']));
                         }
                         break;
+                    case 'ping':
+                        $from->send(json_encode(['action' => 'ping', 'status' => 'pong']));
+                        break;
                     default:
-                        echo "Invalid action received from {$from->resourceId}: {$data['action']}\n";
+                        echo "[$current_time] Invalid action received from {$from->resourceId}: {$data['action']}\n";
                         $from->send(json_encode(['error' => 'Invalid action']));
                         break;
                 }
             } else {
-                echo "No action received from {$from->resourceId}\n";
+                echo "[$current_time] No action received from {$from->resourceId}\n";
                 $from->send(json_encode(['error' => 'No action received']));
             }
         } else {
             $from->send(json_encode(['error' => 'Invalid JSON']));
-            echo "Invalid JSON received from {$from->resourceId}: $msg\n";
+            echo "[$current_time] Invalid JSON received from {$from->resourceId}: $msg\n";
         }
     }
 
     public function onClose(ConnectionInterface $conn)
     {
-        echo "Connection {$conn->resourceId} has disconnected\n";
+        $current_time = date('Y-m-d H:i:s');
+        echo "[$current_time] Connection {$conn->resourceId} has disconnected\n";
     }
 
     public function onError(ConnectionInterface $conn, \Exception $e)
     {
-        echo "An error has occurred: {$e->getMessage()}\n";
+        $current_time = date('Y-m-d H:i:s');
+        echo "[$current_time] An error has occurred: {$e->getMessage()}\n";
         $conn->close();
     }
 }
