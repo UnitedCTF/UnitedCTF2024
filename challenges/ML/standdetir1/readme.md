@@ -30,7 +30,9 @@ Les coordonnées sont contenues entre zéro et un. Pour ce que vous en savez, l'
 
 **Aucun chat n'a été blessé durant la rédaction de cette mise en situation**
 
-**Format du flag**: `flag-{base64(la somme du score de tous les points du jeu d'évaluation)}`
+**Format du flag**: `flag-{[0-9]{20,40}}`
+
+Le flag est une concaténation du score de tous les points du jeu de test dans l'ordre. Par exemple, si votre jeu de test comporte trois points valant 4, 8 et 0 respectivement, votre flag sera `flag-480`.
 
 ![Données d'entraînement](Data_challenge_1.png)
 ![Données de test](Data_challenge_1_test.png)
