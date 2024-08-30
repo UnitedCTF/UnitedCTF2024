@@ -7,19 +7,19 @@ RUN adduser user
 USER user
 
 RUN mkdir /home/user/app
-COPY challenge/server/ /home/user/app
+COPY challenge/server /home/user/app
 
 WORKDIR /home/user/app
 
 USER root
 
 RUN chmod +x ./composer.phar
+RUN chown -R user:user /home/user/app/db/
 
 USER user
 RUN ./composer.phar install
 
-ENV PORT=8081
-EXPOSE 8081
+ENV PORT=80
+EXPOSE 80
 
-#CMD ["php", "main.php"]
-CMD ["tail", "-f", "/dev/null"]
+CMD ["php", "main.php"]

@@ -54,3 +54,9 @@ async def register(ws, username, password, email):
     payload = {"action": "register", "username": username, "password": password, "email": email}
     data = await send_message(ws, payload)
     return data["status"] == "success"
+
+
+async def ping(ws):
+    payload = {"action": "ping"}
+    data = await send_message(ws, payload)
+    return data["status"] == "pong"

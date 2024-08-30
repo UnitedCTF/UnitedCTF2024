@@ -5,7 +5,6 @@ import json
 import websockets
 from function import navigation, session
 
-
 def parse_args():
     parser = argparse.ArgumentParser(description="WebSocket client")
     parser.add_argument('--host', type=str, required=True, help='The host to connect to')

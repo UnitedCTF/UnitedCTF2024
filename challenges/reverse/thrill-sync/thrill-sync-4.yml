@@ -1,4 +1,4 @@
-name: "Thrill Sync"
+name: "Thrill Sync 4"
 author: "Talgarr"
 category: reverse
 description: |-
@@ -10,20 +10,20 @@ description: |-
   The team passwords were lost in a Jack-in-the-Box 🤡📦!
   You have the plans 🗺️📏, will you be able to retrieve the passwords?
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+value: 6
 
 flags:
-  - flag-
+  - flag-PHP_m4g1c_h4sh_3897568204d82619
 
 files:
-  - ./challenge/client/client.7z
-  - ./solution/thrill-sync.db
+  - ./files/data_leaked.7z
 
 connection_info: python client.py --host <host> --port <port>
 
 tags:
   - reverse
+
+requirements:
+  - Thrill Sync 1
