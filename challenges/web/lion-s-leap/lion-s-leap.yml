@@ -13,11 +13,9 @@ description: |-
   The format of this flag is : `flag-<admin_password>`
   You have access to a local machine with SSH.
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC/N=6-10
+value: 10
 
 flags:
   - flag-drakthull1
