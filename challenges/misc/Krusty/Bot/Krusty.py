@@ -7,7 +7,8 @@ import os
 commands_ext = (
     'commands.Utils',
     'commands.Flags',
-    'commands.Help'
+    'commands.Help',
+    'commands.BalloonsCommands',
 )
 
 
@@ -56,6 +57,8 @@ async def setup_guild_for_ctf(guild: discord.Guild):
     for member in guild.members:
         if member not in privileged_members:
             await member.add_roles(unprivileged)
+
+    # create a
 
 
 class Krusty(commands.Bot):

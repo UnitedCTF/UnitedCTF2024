@@ -1,13 +1,12 @@
-class Balloon():
-    color: str
-    emoji_id: int
+class Balloon:
+    emoji: str
     points: int
-    password: str | None
+    description: str
 
-    def __init__(self, color: str, emoji_id: int, points: int, password: str | None):
-        self.emoji_id = emoji_id
+    def __init__(self, emoji: str, points: int, description: str) :
+        self.emoji = emoji
         self.points = points
-        self.password = password
+        self.description = description
 
 
 
