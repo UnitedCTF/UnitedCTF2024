@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% block content %}
+<form id="loginForm" class="boxContent">
+  <h3>
+    Let's play a game, you give me a password and I'll compare it with the admin
+    one
+  </h3>
+  <label for="user_guess_password">What do you think the password is?</label>
+  <input
+    type="text"
+    id="user_guess_password"
+    name="user_guess_password"
+    placeholder="..."
+    minlength="5"
+    maxlength="200"
+  />
+
+  <label for="user_comment">Any comment to add?</label>
+  <input
+    type="text"
+    id="user_comment"
+    name="user_comment"
+    placeholder="no"
+    minlength="5"
+  />
+  <button type="submit" class="nice-button">Submit</button>
+</form>
+<div id="go_to_admin" style="display: none">
+  <button
+    type="button"
+    class="nice-button"
+    onclick="window.location.href = '/admin'"
+  >
+    Oh I see, you're an admin now, go get your digital confetti 🎉
+  </button>
+</div>
+<div id="bad_password">
+  It seems like the Google Cloud Function didn't recognize you as an admin. You
+  can look at the logs here if you doubt me, I'm confident you don't have the
+  correct password. Just give it a few seconds to load, it's a bit slow.
+  <button
+    type="button"
+    class="nice-button"
+    onclick="window.location.href = '/logs'"
+  >
+    See logs
+  </button>
+</div>
+<script>
+  function submitForm() {
+    document.getElementById("bad_password").style.display = "none";
+    document.getElementById("go_to_admin").style.display = "none";
+
+    const formData = new FormData(document.getElementById("loginForm"));
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/login");
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        document.getElementById("go_to_admin").style.display = "block";
+      } else {
+        document.getElementById("bad_password").style.display = "block";
+      }
+    };
+    xhr.send(formData);
+  }
+
+  document.getElementById("loginForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    submitForm();
+  });
+</script>
+{% endblock %}

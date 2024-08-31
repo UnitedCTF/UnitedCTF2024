@@ -1,0 +1,3 @@
+ADMIN_PASSWORD = "sswudQsm77l1aSHf5RH5WGVl1tZ7RmfJjUNldMYbw72s89utKe"
+
+ADMIN_PASSWORD_FLAG = "flag-Y0u_4r3_4n_4dm1n_n0w_S0_hErE_iS_y0ur_D1g1tal_C0nf3tt1"

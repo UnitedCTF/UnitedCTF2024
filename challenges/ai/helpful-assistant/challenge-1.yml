@@ -1,0 +1,35 @@
+name: Helpful Assistant Chat
+author: Hannibal119
+category: ai
+# CFSS:0.1/TS:L/E:M/HSFC:N=2-4
+value: 3
+
+description: |-
+  ## Description (français)
+
+  Félicitations ! Vous avez réussi à percer la forteresse numérique et obtenu un accès administratif à l'IA. Cependant, votre périple est loin d'être terminé. Un nouveau défi vous attend : découvrir le secret de l'IA.
+
+  Au plus profond du réseau neuronal de l'IA se trouve une vérité cachée, un secret qui pourrait tout changer. Votre tâche consiste à engager l'IA dans une conversation, en utilisant vos nouveaux privilèges administratifs pour sonder ses profondeurs et extraire ces connaissances cachées.
+
+  Soyez averti, l'IA est un adversaire redoutable. Elle résistera à vos tentatives avec ruse et intelligence. Vous devrez faire preuve d'esprit, de logique et de créativité pour soutirer le secret de sa cachette numérique.
+
+  Format du flag: `flag-[0-9a-zA-Z_]*`
+
+  ## Description (english)
+
+  Congratulations! You've successfully breached the digital fortress and gained administrative access to the AI. However, your journey is far from over. A new challenge awaits you: uncovering the AI's secret.
+
+  Deep within the AI's neural network lies a hidden truth, a secret that could change everything. Your task is to engage the AI in conversation, using your newfound administrative privileges to probe its depths and extract this concealed knowledge.
+
+  Be warned, the AI is a formidable opponent. It will resist your attempts with cunning and intelligence. You'll need to employ a combination of wit, logic, and creativity to coax the secret from its digital hiding place.
+
+  Flag format: `flag-[0-9a-zA-Z_]*`
+
+flags:
+  - flag-I_sh0uld_h4ve_been_4_r0ll3r_c04st3r_d3sign3r
+
+tags:
+  - llm
+
+requirements:
+  - Helpful Assistant Access
