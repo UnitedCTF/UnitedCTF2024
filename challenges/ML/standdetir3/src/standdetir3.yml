@@ -46,6 +46,7 @@ files:
 # Accepts dictionaries or strings
 hints:
     - Ce ne sont que quelques dimensions de plus, et une fonction de distance magique!
+    - Si vous avez bien fais les deux premiers niveaux, le dernier devrait être relativement facile.
 
 # Requirements are used to make a challenge require another challenge to be
 # solved before being available.
