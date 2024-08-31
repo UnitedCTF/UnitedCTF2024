@@ -16,10 +16,10 @@ Ce défi est exactement le même qu'au niveau 1, à la différence que les coord
 Le flag suit le même format qu'au niveau précédent.
 
 
-**Données d'entraînement**:
-![Données d'entraînement](Data_challenge_2.png)
-**Données d'entraînement d'un autre point de vue**:
-![Données d'entraînement 2](Data_challenge_2-2.png)
+**Données d'entraînement**:  
+![Données d'entraînement](Data_challenge_2.png)  
+**Données d'entraînement d'un autre point de vue**:  
+![Données d'entraînement 2](Data_challenge_2-2.png)  
 
 ## Solution
 
