@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "postgres"
+}
+
+model Clown {
+  id       Int                @id @default(autoincrement())
+  name     String
+  email    String
+  password String
+  isAdmin  Boolean            @default(false)
+  articles ClownsOnArticles[]
+}
+
+model Article {
+  id     Int                @id @default(autoincrement())
+  title  String
+  body   String
+  clowns ClownsOnArticles[]
+}
+
+model ClownsOnArticles {
+  clown     Clown   @relation(fields: [clownId], references: [id])
+  clownId   Int
+  article   Article @relation(fields: [articleId], references: [id])
+  articleId Int
+
+  @@id([clownId, articleId])
+}
