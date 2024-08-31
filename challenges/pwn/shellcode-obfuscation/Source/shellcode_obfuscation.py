@@ -58,7 +58,7 @@ def validate_operation(input: str) -> tuple[bool, str]:
         return False, "Input does not contain the placeholder"
     if input.count(BYTES_PLACEHOLDER) > 1:
         return False, "Input contains more than one placeholder"
-    return False, "Input is not an array"
+    return True, ""
 
 
 def validate_allowed_keywords(
