@@ -6,10 +6,11 @@ class sql_conn():
 
     def __init__(self, guild_id):
         self.guild_id = guild_id
+        sqlite3.enable_callback_tracebacks(True)
         try:
-            file = open('./data/db/' + str(self.guild_id) + '.db', 'x')
+            file = open('./Krusty/data/db/' + str(self.guild_id) + '.db', 'x')
             file.close()
-            self.conn = sqlite3.connect('./data/db/' + str(self.guild_id) + '.db')
+            self.conn = sqlite3.connect('./Krusty/data/db/' + str(self.guild_id) + '.db')
             self.cursor = self.conn.cursor()
             self.cursor.execute('CREATE TABLE IF NOT EXISTS players ('
                                 'id INTEGER PRIMARY KEY, '
@@ -42,7 +43,7 @@ class sql_conn():
 
 
     def __enter__(self):
-        self.conn = sqlite3.connect('./data/db/' + str(self.guild_id) + '.db')
+        self.conn = sqlite3.connect('./Krusty/data/db/' + str(self.guild_id) + '.db')
         self.cursor = self.conn.cursor()
         return self.cursor
 

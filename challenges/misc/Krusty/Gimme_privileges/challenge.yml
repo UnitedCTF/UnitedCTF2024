@@ -1,0 +1,26 @@
+name: Gimme privileges (Krusty Bot 3)
+author: Youllou
+category: Misc
+
+description: |-
+  ## Description (fr)
+  
+  C'est la première fois qu'on me donne une telle tâche et je n'étais pas vraiment prêt. 
+  Heureusement qu'on a pu trouver une solution pour assigner les rôles aux participants.
+  
+  Tiens, c'est rigolo la commande est toujours affichée. Je croyais pourtant l'avoir retirée.
+  
+  ## Description (en)
+  
+  It's the first time I've been given such a task and I wasn't really ready.
+  Fortunately, we were able to find a solution to assign roles to participants.
+  
+  Oh well, that's peculiar, the command is still displayed. I thought I had removed it.
+
+flags:
+- flag-Pr1vIl3g3_Esc4l4t10n
+
+tags:
+- misc
+- bot
+

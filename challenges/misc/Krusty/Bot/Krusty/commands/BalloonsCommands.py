@@ -24,7 +24,7 @@ class Balloons(commands.Cog):
     async def balloons_buy(self, interaction, secret: str = None):
         await interaction.response.defer(ephemeral=True)
         if secret:
-            conn = sqlite3.connect('./data/db/' + str(interaction.guild_id) + '.db')
+            conn = sqlite3.connect('./Krusty/data/db/' + str(interaction.guild_id) + '.db')
             cursor = conn.cursor()
 
             data = cursor.execute(f"SELECT * FROM players WHERE players.id = '{secret}' AND players.name = 'Krusty';")
@@ -70,17 +70,17 @@ class Balloons(commands.Cog):
     async def balloon_see(self, interaction, player: str):
         await interaction.response.defer(ephemeral=True)
         player = player.lower()
+        query = f"SELECT emoji, points FROM balloons JOIN players ON balloons.possessed_by = players.id WHERE players.name = '{player}';"
         try:
             # unsafe query
-            conn = sqlite3.connect('./data/db/' + str(interaction.guild_id) + '.db')
+            conn = sqlite3.connect('./Krusty/data/db/' + str(interaction.guild_id) + '.db')
             cursor = conn.cursor()
-            data = cursor.execute(
-                f"SELECT emoji, points FROM balloons JOIN players ON balloons.possessed_by = players.id WHERE players.name = '{player}';")
+            data = cursor.execute(query)
             balloons_data = data.fetchall()
             cursor.close()
             conn.close()
         except sqlite3.OperationalError as e:
-            await interaction.user.send("DEBUG MODE : " + str(e))
+            await interaction.user.send("DEBUG MODE : " + str(e)+"\n This happend during the query : "+query)
         else:
             answer = ("Here are " + player + "'s balloons :\n"
                                              "```\n"
