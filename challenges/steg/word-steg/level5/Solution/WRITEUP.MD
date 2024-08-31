@@ -1,4 +1,4 @@
-# WordStego 6
+# WordStego 5
 ## Write-up
 ### Solution (Français)
 

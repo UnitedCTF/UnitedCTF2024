@@ -5,7 +5,8 @@
 
 ## Description (English)
 
-## [Solution](./Solution/WRITEUP.MD)
+## Solution
+Solution of the challenge can be found [here](./Solution/WRITEUP.MD).
 
 ### FLAG
-`flag-W0WH0wD1dUF1ndM3`
+`flag-[a-zA-Z0-9]+`

@@ -2,10 +2,12 @@
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
 ## Description (Français)
-Bienvenue dans notre parc d'attraction 
+
+
 ## Description (English)
 
-## [Solution](./Solution/WRITEUP.MD)
+## Solution
+Solution of the challenge can be found [here](./Solution/WRITEUP.MD).
 
 ### FLAG
-`flag-welcometothenewworld`
+`flag-[a-zA-Z0-9]+`
