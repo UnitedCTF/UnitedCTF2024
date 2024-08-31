@@ -41,4 +41,5 @@ If we double click on it, we are taken to the address of the function, where we 
 At the very end of the function execution, we can see the flag in the registers:
 
 ![flag](image-2.png)
+
 flag: `flag-GDB1sWond3rfu1R1ght?`
