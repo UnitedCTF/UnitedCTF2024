@@ -3,7 +3,7 @@ author: "@MyMelody1242"
 category: reverse 
 description: 
 
-Joue avec les flags pour trouver le flag ! 
+Joue avec les flags pour trouver le flag !
 
 Play with the flags to get the flag !
 
@@ -23,4 +23,4 @@ tags:
     - reverse 
 
 hints:
-    - Le --help peut parfois être trompeur. / The --help may not always tell the truth.
+    - Le --help peut parfois être trompeur. Regarde s'il y a un moyen de générer un gagnant par carte pleine. / The --help may not always tell the truth. Try to find a way to generate a winner by full card.
