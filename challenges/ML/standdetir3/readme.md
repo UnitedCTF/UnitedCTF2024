@@ -6,7 +6,7 @@
 
 ## Description (français)
 
-Après avoir percé de mystère des cibles en 3D (la pognez-vous?), vous regardez un peu aux alentours: pas un chat. Vous continuez donc de fouiller dans vos affaires.
+Après avoir percé le mystère des cibles en 3D (la pognez-vous?), vous regardez un peu aux alentours: pas un chat. Vous continuez donc de fouiller dans vos affaires.
 Éventuellement, vous tombez sur des cibles pour le moins étrange. En fait, vous n'avez pas de certitude de bien voir de quoi il s'agit. Une rapide inspection vous apprend que les cibles qui sont devant vous sont en huit dimensions(!). Ce sera compliqué à visualiser, mais le principe est le même que pour les cibles en deux ou trois dimensions. Aussi, il vous semble percevoir quelque chose de différent dans le calcul des distances lorsque vous approchez des cibles. Certaines dimensions se parcourent plus rapidement que d'autres. Il faudra donc ajuster votre fonction de distance adéquatement.
 
 Le challenge est exactement le même qu'au niveau 2, à la différence que l'espace est maintenant en 8D, et que la fonction de distance à utiliser est faite sur mesure.
