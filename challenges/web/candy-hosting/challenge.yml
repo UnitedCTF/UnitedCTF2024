@@ -10,11 +10,9 @@ description: |-
 
   Tired of the normal plain white cloud? Host your website directly into our cotton candy powered servers!
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 7
 
 connection_info: https://challenges.unitedctf.ca:8080
 
