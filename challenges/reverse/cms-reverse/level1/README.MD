@@ -17,7 +17,8 @@ Unfortunately, we lost the administrator account to access the software. Can you
 Run the software with the run.bat file
 
 Little hint: All the flags of the track are in CMS-PRO_CLIENT.exe
-## [Solution](./Solution/WRITEUP.MD)
+## Solution
+Solution of the challenge can be found [here](./Solution/WRITEUP.MD).
 
 ### FLAG
 `flag-[a-zA-Z0-9]+`

@@ -9,7 +9,8 @@ Assure toi de toujours lancer CMS-PRO_BACKEND.exe quand tu roule le CMS-PRO_CLIE
 We just learned that Krusty paid the software installer to sabotage it! The serial number was supposed to print once the correct password was entered, but it doesn't print! Can you find out how to print it?
 
 Make sure to always run CMS-PRO_BACKEND.exe when you run CMS-PRO_CLIENT.exe
-## [Solution](./Solution/WRITEUP.MD)
+## Solution
+Solution of the challenge can be found [here](./Solution/WRITEUP.MD).
 
 ### FLAG
 `flag-[a-zA-Z0-9]+`

@@ -9,7 +9,8 @@ Assure toi de toujours lancer CMS-PRO_BACKEND.exe quand tu roule le CMS-PRO_CLIE
 We have an error when entering the password, probably due to Krusty's sabotage! Can you fix the software?
 
 Make sure to always run CMS-PRO_BACKEND.exe when you run CMS-PRO_CLIENT.exe
-## [Solution](./Solution/WRITEUP.MD)
+## Solution
+Solution of the challenge can be found [here](./Solution/WRITEUP.MD).
 
 ### FLAG
 `flag-[a-zA-Z0-9]+`
