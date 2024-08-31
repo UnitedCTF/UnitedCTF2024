@@ -52,8 +52,8 @@ def execute(
 
 
 def validate_operation(input: str) -> tuple[bool, str]:
-    if input.startswith("[") and input.endswith("]"):
-        return True, ""
+    if not input.startswith("[") or not input.endswith("]"):
+        return False, "Input must be a list"
     if BYTES_PLACEHOLDER not in input:
         return False, "Input does not contain the placeholder"
     if input.count(BYTES_PLACEHOLDER) > 1:
