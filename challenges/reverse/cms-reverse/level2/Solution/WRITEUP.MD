@@ -1,7 +1,7 @@
 # Clown Management Software 2
 ## Write-up
 ### Solution (Français)
-Quand on lance le programme, on nous demander pour le nom d'utilisateur (flag 1) suivi du mot de passe.
+Quand on lance le programme, on nous demande le nom d'utilisateur (flag 1) suivi du mot de passe.
 
 Quand on décompile le client, on trouve dans main qu'on demande un input au user, et qu'on le compare avec le résultat de la fonction getPassword.
 
