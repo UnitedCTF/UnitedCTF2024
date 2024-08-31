@@ -26,8 +26,11 @@ const char *communicate(char* b);
 long long int getTs();
 
 const char *c(char *string);
-long long int x45c32f() {
-    return LLONG_MAX;
+long long int x45c32f(int x) {
+    if(x == sizeof(void *) * 8){
+        return LLONG_MAX - (x * sizeof(void *) * 8);
+    }
+    exit(1);
 }
 long long int x60aab3() {
     return LONG_MIN - INT_MIN;
@@ -61,10 +64,11 @@ const char* (*xefaffb())(long long int){
 const char* e(const char* (*b)(long long int), long long int x) {
     return b(x - xaab3ce());
 }
-
+bool x95843() {
+    return sizeof(void *)*8 == 8 && sizeof(long) == 4;
+}
 int main() {
-    printf("%s","$$$$$$\\  $$\\      $$\\  $$$$$$\\         $$$$$$$\\  $$$$$$$\\   $$$$$$\\  \n$$  __$$\\ $$$\\    $$$ |$$  __$$\\        $$  __$$\\ $$  __$$\\ $$  __$$\\ \n$$ /  \\__|$$$$\\  $$$$ |$$ /  \\__|       $$ |  $$ |$$ |  $$ |$$ /  $$ |\n$$ |      $$\\$$\\$$ $$ |\\$$$$$$\\ $$$$$$\\ $$$$$$$  |$$$$$$$  |$$ |  $$ |\n$$ |      $$ \\$$$  $$ | \\____$$\\\\______|$$  ____/ $$  __$$< $$ |  $$ |\n$$ |  $$\\ $$ |\\$  /$$ |$$\\   $$ |       $$ |      $$ |  $$ |$$ |  $$ |\n\\$$$$$$  |$$ | \\_/ $$ |\\$$$$$$  |       $$ |      $$ |  $$ | $$$$$$  |\n \\______/ \\__|     \\__| \\______/        \\__|      \\__|  \\__| \\______/ \n ");
-    bool canRun = !IsDebuggerPresent();
+    printf("%s","$$$$$$\\  $$\\      $$\\  $$$$$$\\         $$$$$$$\\  $$$$$$$\\   $$$$$$\\  \n$$  __$$\\ $$$\\    $$$ |$$  __$$\\        $$  __$$\\ $$  __$$\\ $$  __$$\\ \n$$ /  \\__|$$$$\\  $$$$ |$$ /  \\__|       $$ |  $$ |$$ |  $$ |$$ /  $$ |\n$$ |      $$\\$$\\$$ $$ |\\$$$$$$\\ $$$$$$\\ $$$$$$$  |$$$$$$$  |$$ |  $$ |\n$$ |      $$ \\$$$  $$ | \\____$$\\\\______|$$  ____/ $$  __$$< $$ |  $$ |\n$$ |  $$\\ $$ |\\$  /$$ |$$\\   $$ |       $$ |      $$ |  $$ |$$ |  $$ |\n\\$$$$$$  |$$ | \\_/ $$ |\\$$$$$$  |       $$ |      $$ |  $$ | $$$$$$  |\n \\______/ \\__|     \\__| \\______/        \\__|      \\__|  \\__| \\______/ \n\n");
     bool valid = false;
     while (!valid) {
         char username_buf[64];
@@ -88,26 +92,25 @@ int main() {
             printf("Invalid password!\n");
         }
     }
-
-    if (false){
-        const char* fs = x0000b0(x45c32f());
+    if (x95843()) {
+        const char* fs = x0000b0(x45c32f(32));
         if(fs != NULL) {
             printf("Flag: %s\n", fs);
         }
     }
-    if(IsDebuggerPresent()){
+    if(IsDebuggerPresent()) {
         printf("Access Denied.\n");
         exit(1);
     }
-    if (canRun){
-        printf("An error occured.\n");
-        exit(1);
+    if (IsDebuggerPresent()){
+        const char* fs = e(xefaffb(), x67654a());
+        if(fs != NULL) {
+            printf("Flag: %s\n", fs);
+        }
+        return 0;
     }
-    const char* fs = e(xefaffb(), x67654a());
-    if(fs != NULL) {
-        printf("Flag: %s\n", fs);
-    }
-    return 0;
+    printf("An error occured.\n");
+    exit(1);
 }
 
 
@@ -134,7 +137,7 @@ const char *x0000b0(long long int i) {
     char str[34];
     memcpy(str,"\x0a",1);
     memcpy(str+1, x049bbb(), 32);
-    if(i == x45c32f()) {
+    if(i == LLONG_MAX - (64*64)) {
         memcpy(str+33,"\xe7",1);
     }
     if(i == x60aab3()) {
