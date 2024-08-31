@@ -5,10 +5,10 @@ import dotenv
 import os
 
 commands_ext = (
-    'commands.Utils',
-    'commands.Flags',
-    'commands.Help',
-    'commands.BalloonsCommands',
+    'Krusty.commands.Utils',
+    'Krusty.commands.Flags',
+    'Krusty.commands.Help',
+    'Krusty.commands.BalloonsCommands',
 )
 
 
@@ -81,7 +81,11 @@ class Krusty(commands.Bot):
             await self.load_extension(ext)
         print('Syncing commands in guild ' + Test_Guild.name)
         await self.tree.sync(guild=Test_Guild)
-        print('Bot is ready')
+        print('Changing status')
+        await self.change_presence(
+            activity=discord.CustomActivity(name='......... Use /help to get help ...... ' + os.getenv("IN_ACTIVITY"),
+                                            emoji='🤡'))
+        print('Krusty is ready')
 
     async def on_member_join(self, member):
         # the self check is not necessary, but it includes a self in the method, so it is not flagged as a potential
@@ -96,6 +100,6 @@ class Krusty(commands.Bot):
         self.close()
 
 
-if __name__ == '__main__':
-    with Krusty() as bot:
-        bot.run(os.getenv('TOKEN'))
+
+
+

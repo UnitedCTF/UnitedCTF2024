@@ -4,7 +4,7 @@ from discord import app_commands
 
 import os
 
-from Bot import Krusty
+from Krusty import Krusty
 
 
 class Utils(commands.Cog):

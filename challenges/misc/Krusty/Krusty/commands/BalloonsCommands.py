@@ -7,11 +7,11 @@ import discord
 
 import os
 
-from Bot.Krusty import Krusty
-from Bot.errors import *
-from Bot.data.Controller.PlayerController import PlayerController
+from Krusty import Krusty
+from Krusty.errors import *
+from Krusty.data.Controller.PlayerController import PlayerController
 
-from Bot.errors.DataModelErrors import NotFoundError, AlreadyExistsError
+from Krusty.errors.DataModelErrors import NotFoundError, AlreadyExistsError
 
 
 class Balloons(commands.Cog):
@@ -65,9 +65,9 @@ class Balloons(commands.Cog):
             player_controller.give_balloon(player.id, choosen, random.randint(1, 37), "A balloon")
         await interaction.followup.send("You bought a balloon", ephemeral=True)
 
-    @app_commands.command(name="see_balloons", description="See someone's balloons")
+    @app_commands.command(name="balloon_see", description="See someone's balloons")
     @app_commands.describe(player="The name of the player you want to see the balloons of")
-    async def see_balloons(self, interaction, player: str):
+    async def balloon_see(self, interaction, player: str):
         await interaction.response.defer(ephemeral=True)
         player = player.lower()
         try:
@@ -93,8 +93,8 @@ class Balloons(commands.Cog):
 
             await interaction.followup.send(answer, ephemeral=True)
 
-    @app_commands.command(name="register", description="Register as a player")
-    async def register(self, interaction):
+    @app_commands.command(name="balloon_register", description="Register as a player")
+    async def balloon_register(self, interaction):
         await interaction.response.defer(ephemeral=True)
         player_controller = PlayerController(interaction.guild_id)
         try:

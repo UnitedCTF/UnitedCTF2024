@@ -1,5 +1,5 @@
 from .sql_conn import sql_conn
-from Bot.errors import DataModelErrors as dataErrors
+from Krusty.errors import DataModelErrors as dataErrors
 from .BalloonController import BalloonController
 from ..Model.Player import Player
 

@@ -1,13 +1,16 @@
 import asyncio
+import sys
 
 from discord.ext import commands
 from discord import app_commands
 import discord
 
 import os
+from PIL import Image, ImageDraw
+import subprocess
 
-from Bot.Krusty import Krusty
-from Bot.errors import *
+from Krusty import Krusty
+from Krusty.errors import *
 
 
 class Flag(commands.Cog):
@@ -18,8 +21,6 @@ class Flag(commands.Cog):
     @app_commands.command(name="get_flag", description="What does this do ?")
     async def get_flag(self, interaction):
         await interaction.response.send_message(os.getenv('FROM_COMMAND'), ephemeral=True)
-
-
 
     @app_commands.command(name="get_role", description="(WIP) permission issues")
     @app_commands.describe(role="the role you want to get")
@@ -56,6 +57,7 @@ class Flag(commands.Cog):
             await interaction.response.send_message("You already have this role", ephemeral=True)
         else:
             raise FakeError(f"get_role with role {role.name}")
+
 
 
 async def setup(bot: Krusty):
