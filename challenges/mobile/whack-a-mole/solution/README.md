@@ -1,4 +1,4 @@
-# Fastpass 1
+# Whack-a-mole
 
 ## Write-up (français)
 
