@@ -2,10 +2,9 @@ name: "Bingo me"
 author: "@MyMelody1242"
 category: reverse 
 description: 
+Play with flags to get the flag.
 
-Je sais...la sécurité par obscurité c'est non... 
-
-I know... security by obscurity is bad...
+Joue avec les flags pour avoir le flag.
 
 type: dynamic
 extra:
