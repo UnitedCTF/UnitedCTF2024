@@ -18,6 +18,9 @@ description: |-
 
   Definitely, there are certain details that only the development team can see.  
 
+files:
+- game.zip
+
 flags:
 - flag-l0oksL1k3G4m30v3r
 
