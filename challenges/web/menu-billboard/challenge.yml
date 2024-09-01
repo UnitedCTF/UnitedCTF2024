@@ -14,11 +14,8 @@ description: |-
   We had to put it in production, but maybe we did so too fast...
   Initially, the goal was to have a rotating display of various images from the attraction park, but we had to settle with just the one: it was too complex otherwise.
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+value: 2
 
 connection_info: à compléter
 
