@@ -10,4 +10,4 @@ Pour trouver le flag, il faut se rendre au fond de la grotte. Celui-ci sera affi
 
 ![image](flag.png)
 
-Le flag peut aussi être trouver en modifiant le code du jeu pour activer le texte du flag et l'afficher à l'écran.
+Le flag peut aussi être trouvé en modifiant le code du jeu pour activer le texte du flag et l'afficher à l'écran.

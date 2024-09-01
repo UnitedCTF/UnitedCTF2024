@@ -4,7 +4,7 @@
 
 Pour trouver le flag, il faut terminer le jeu. Il est possible de s'y prendre de différentes manières, en voici une d'entre elles : 
 
-Il y a des spikes qui font en sorte que le joueur ne peut pas se rendre à la fin du jeu. Donc, il faudrait commencer par rendre le joueur invencible en pour qu'il puisse se rendre à la fin du niveau. Pour ce faire, la fonction `TakeDamage()` peut être modifiée.
+Il y a des spikes qui font en sorte que le joueur ne peut pas se rendre à la fin du jeu. Donc, il faudrait commencer par rendre le joueur invincible pour qu'il puisse se rendre à la fin du niveau. Pour ce faire, la fonction `TakeDamage()` peut être modifiée.
 
 ![image](dnSpy1.png)
 
