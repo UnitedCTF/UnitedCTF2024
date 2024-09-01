@@ -36,5 +36,8 @@ flags:
     content: 'The Bobcat'
   }
 
+files:
+  - level1_photo.jpg
+
 tags:
 - osint

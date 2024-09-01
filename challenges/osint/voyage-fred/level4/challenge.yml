@@ -40,5 +40,8 @@ flags:
     content: 'Laff Trakk'
   }
 
+files:
+  - level4_photo.jpg
+
 tags:
 - osint

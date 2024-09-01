@@ -42,5 +42,8 @@ flags:
     content: "Knott's Berry Farm"
   }
 
+files:
+  - level3_photo.jpg
+
 tags:
 - osint
