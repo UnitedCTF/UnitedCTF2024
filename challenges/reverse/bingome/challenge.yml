@@ -1,0 +1,26 @@
+name: "Bingo me"
+author: "MyMelody1242"
+category: reverse 
+description: |-
+    ## Description (fr)
+    Joue avec les flags pour avoir le flag.
+
+    ## Description (en)
+    Play with flags to get the flag.
+
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
+value: 7
+
+files:
+    - bingome/bingo
+
+flags:
+    - flag-!2s3cur3
+
+tags:
+    - reverse 
+    - static analysis 
+
+hints:
+    - Le --help peut parfois être trompeur. / The --help may not always tell the truth.
