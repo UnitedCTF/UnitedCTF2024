@@ -15,5 +15,4 @@ RUN npm prune
 
 RUN npm install -g ts-node
 
-ENV DATABASE_URL file:./database.db
 ENTRYPOINT [ "npm", "run", "start:docker" ]
