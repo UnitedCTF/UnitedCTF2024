@@ -1,0 +1,26 @@
+name: Fastpass 3
+author: Ch0ufleur
+category: Web
+
+description: |-
+  ## Description (fr)
+
+  Peux-tu trouver la clé qui permet de générer les fastpass?
+
+  ## Description (en)
+
+  Can you find the key used to generate the fastpasses?
+
+flags:
+- flag-go-enjoy-the-rides-995cc32a
+
+tags:
+- privesc
+
+requirements:
+- fastpass1
+- fastpass2
+
+type: standard
+
+value: 4 #CFSS:0.1/TS:I/E:L/HSFC:N=4-7

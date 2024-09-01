@@ -1,0 +1,25 @@
+name: Fastpass 2
+author: Ch0ufleur
+category: Web
+
+description: |-
+  ## Description (fr)
+
+  Tu es si proche! Je sens le doux parfum de la fastpass d'ici.
+
+  ## Description (en)
+
+  You're almost there! I can smell the fastpass from here.
+
+flags:
+- flag-y0u-f0und-th3-f4stp455-79f3d12
+
+tags:
+- privesc
+
+requirements:
+- fastpass1
+
+type: standard
+
+value: 2 #CFSS:0.1/TS:L/E:L/HSFC:N=1-2
