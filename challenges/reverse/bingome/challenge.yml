@@ -1,25 +1,25 @@
 name: "Bingo me"
-author: "@MyMelody1242"
+author: "MyMelody1242"
 category: reverse 
-description: 
-Play with flags to get the flag.
+description: |-
+    ## Description (fr)
+    Joue avec les flags pour avoir le flag.
 
-Joue avec les flags pour avoir le flag.
+    ## Description (en)
+    Play with flags to get the flag.
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+value: # TODO
+
+files:
+    - bingome/bingo
 
 flags:
     - flag-!2s3cur3
 
-topics:
-    - static analysis 
-
 tags:
     - reverse 
+    - static analysis 
 
 hints:
     - Le --help peut parfois être trompeur. / The --help may not always tell the truth.
