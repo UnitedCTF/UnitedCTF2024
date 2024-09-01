@@ -1,0 +1,25 @@
+name: "Lost Game 3"
+author: jactymilena
+category: gaming
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 6
+
+description: |-
+  ## Description (fr)
+
+  Il y a foule dans cette arcade ! Pourtant, en me promenant, je remarque ce jeu poussiéreux, sans personne autour. Je décide donc d'essayer d'y jouer !  
+
+  MAIS COMMENT PEUT-ON TERMINER CE JEU ?
+
+  ## Description (en)
+
+  This arcade is crowded! Yet, as I walk around, I notice this dusty game with no one around it. So, I decide to give it a try!  
+
+  BUT HOW CAN YOU FINISH THIS GAME?
+
+flags:
+- flag-n0tG4m30v3r
+
+tags:
+- gaming
