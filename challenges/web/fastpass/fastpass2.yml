@@ -20,8 +20,6 @@ tags:
 requirements:
 - fastpass1
 
-type:
-- standard
+type: standard
 
-value: #CFSS:0.1/TS:L/E:L/HSFC:N=1-2
-- 1
+value: 1 #CFSS:0.1/TS:L/E:L/HSFC:N=1-2

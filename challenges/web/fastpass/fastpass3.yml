@@ -21,8 +21,6 @@ requirements:
 - fastpass1
 - fastpass2
 
-type:
-- standard
+type: standard
 
-value: #CFSS:0.1/TS:I/E:L/HSFC:N=4-7
-- 4
+value: 4 #CFSS:0.1/TS:I/E:L/HSFC:N=4-7
