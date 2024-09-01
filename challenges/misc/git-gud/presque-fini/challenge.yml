@@ -1,0 +1,30 @@
+name: "Git Gud - Presque fini"
+author: "Deimos"
+category: web
+description: |-
+  ## Description (français)
+
+  Bienvenue chez nous, on est tellement enthousiaste de t'avoir en stage pour continuer le site web du parc d'attraction!
+  C'est assez simple, prend ce que l'autre stagiaire a fait et continue, tout est dans le [git](https://git-scm.com/)!
+
+  Avant de partir, il me semble qu'un peu de doc à été écrite mais ça pas été finalisé, es-tu tout de même capable de trouver ça?
+
+  ## Description (english)
+
+  Welcome to our place, we are so excited to have you as an intern to continue the theme park website!
+  It's pretty simple, take what the other intern did and keep going, it's all in the [git](https://git-scm.com/)!
+
+  Before leaving, it seems to me that some documentation has been written but it has not been finalized, are you still able to find it?
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flags: 
+  - flag-T0D0-TH3-T0D0
+
+files:
+  - ./git-gud-challenge.zip
+
+tags:
+  - misc

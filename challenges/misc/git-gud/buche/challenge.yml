@@ -1,0 +1,30 @@
+name: "Git Gud - Bûche"
+author: "Deimos"
+category: web
+description: |-
+  ## Description (français)
+
+  Bienvenue chez nous, on est tellement enthousiaste de t'avoir en stage pour continuer le site web du parc d'attraction!!
+  C'est assez simple, prend ce que l'autre stagiaire a fait et continue, tout est dans le [git](https://git-scm.com/)!
+
+  Il y a beaucoup de travail là dedans! Regarde ce qui as été fait avant toi, ça pas été fait sans embuche.
+
+  ## Description (english)
+
+  Welcome to our place, we are so excited to have you as an intern to continue the theme park website!
+  It's pretty simple, take what the other intern did and keep going, it's all in the [git](https://git-scm.com/)!
+
+  There's a lot of work in there! Look at what's been done before you, it wasn't done without pitfalls.
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flags: 
+  - flag-C4-8UCH3-F027
+
+files:
+  - ./git-gud-challenge.zip
+
+tags:
+  - misc
