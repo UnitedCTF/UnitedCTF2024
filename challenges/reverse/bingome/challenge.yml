@@ -9,7 +9,8 @@ description: |-
     Play with flags to get the flag.
 
 type: standard
-value: # TODO
+# CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
+value: 7
 
 files:
     - bingome/bingo
