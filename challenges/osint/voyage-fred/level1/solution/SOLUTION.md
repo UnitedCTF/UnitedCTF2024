@@ -6,7 +6,7 @@ En examinant la photo, on peut voir un manège du nom de "Pandemonium" de couleu
 
 ![alt text](image.png)
 
-Avec un simple recherche sur Google Images telle que "pandemonium amusement park blue orange purple", on trouve des images du manège et on peut voir qu'il appartient au parc Great Escape.
+Avec une simple recherche sur Google Images telle que "pandemonium amusement park blue orange purple", on trouve des images du manège et on peut voir qu'il appartient au parc Great Escape.
 
 ![alt text](image-1.png)
 
