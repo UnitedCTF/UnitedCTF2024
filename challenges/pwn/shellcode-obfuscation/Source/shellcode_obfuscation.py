@@ -1,6 +1,5 @@
 from typing import List
-from subprocess import PIPE
-from pwnlib.tubes.process import process
+from subprocess import Popen,PIPE
 from execute_input import execute_input
 
 BYTES_PLACEHOLDER = '"BYTES"'
@@ -106,10 +105,16 @@ def validate_input(
 
 
 def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
-    proc = process("./exec_shellcode", stdin=PIPE, stdout=PIPE, stderr=PIPE)
-    proc.sendline(str(len(shellcode)))
-    out, err = proc.communicate(shellcode)
-    return err.decode(), out.decode()
+    hex = shellcode.hex()
+    hex_str = "\\x" + '\\x'.join([''.join([hex[i],hex[i + 1]]) for i in range(0,len(hex),2)])
+    print(hex_str)
+    proc = Popen(["./exec_shellcode",hex_str], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+    proc.wait(timeout=5)
+    out, err = proc.stdout.read(), proc.stderr.read()
+    try:
+        return err.decode("latin-1"), out.decode("latin-1")
+    except Exception as e:
+        return f"Error decoding output, byte string received:\nout ->{str(out)}\nerr ->{str(err)}", ""
 
 
 def validate_shellcode_output(out: str, expected: str) -> tuple[bool, str]:

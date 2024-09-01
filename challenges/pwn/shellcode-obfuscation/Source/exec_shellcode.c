@@ -9,14 +9,25 @@
 
 int main(int argc, char **argv)
 {
-    char buf[3];
-    scanf("%s", buf);
-    int length = strtol(buf, NULL, 10);
-    char *bytes = malloc(sizeof(char) * length);
-    read(0, bytes, length);
-    mprotect((void *)((intptr_t)bytes & ~0xFFF), sizeof(char) * length, PROT_READ | PROT_EXEC);
-    int (*exeshell)();
-    exeshell = (int (*)())bytes;
+    if(argc < 2) return 1;
+
+    unsigned char payload[128];
+
+    int arg1Length = strlen(argv[1]) - 1;
+    int inputLength = arg1Length < 512 ? arg1Length : 512;
+
+    for(int i = 0; i < inputLength; i += 4) {
+        char *ptr;
+        payload[i/4] = (unsigned char) strtoul(argv[1] + i + 2, &ptr, 16);
+    }
+
+    long page_size = sysconf(_SC_PAGESIZE);
+    void *page_start = (void *) ((long) payload & -page_size);
+    mprotect(page_start, page_size * 2, PROT_READ | PROT_WRITE | PROT_EXEC);
     prctl(PR_SET_SECCOMP, SECCOMP_MODE_STRICT);
-    (int)(*exeshell)();
+
+    asm(
+            "call %0"
+            :: "ar" (payload)
+            );
 }
