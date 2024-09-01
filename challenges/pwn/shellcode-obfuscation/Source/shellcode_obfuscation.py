@@ -1,73 +1,37 @@
 from typing import List
 from subprocess import Popen,PIPE
-from execute_input import execute_input
 
-BYTES_PLACEHOLDER = '"BYTES"'
-RESTRICTED_DEFAULT = [
-    "import",
-    "=",
-    "def",
-    "exec",
-    "eval",
-    "compile",
-    "os",
-    "global",
-    "try",
-    "expect",
-    "finally",
-    "\\",
-]
-DEFAULT_MAX_LENGTH = 100
-DEFAULT_MAX_LENGTH_DEOBF = 75
-
+DEFAULT_MAX_LENGTH = 75
+DEFAULT_NUMBER_OF_DIFF_BYTES = 100_000
 
 def execute(
-    operation: str,
     shellcode_bytes: str,
-    restricted_expr: list[str] = RESTRICTED_DEFAULT,
     restricted_bytes: list[bytes] = [],
+    number_of_diff_bytes: int = DEFAULT_NUMBER_OF_DIFF_BYTES,
     max_length=DEFAULT_MAX_LENGTH,
 ) -> dict[str, str]:
-    code = operation.replace(BYTES_PLACEHOLDER, '"' + shellcode_bytes + '"')
-    v, s = validate_input(
-        operation, shellcode_bytes, restricted_expr, restricted_bytes, max_length
-    )
-    if not v:
-        return {"error": s}
     try:
-        v, b = execute_input(code)
+        b = [int(x,16) for x in filter(lambda c: c != "", shellcode_bytes.strip().split("\\x"))]
+        v,s = validate_restricted_bytes(bytes(b), restricted_bytes)       
         if not v:
-            return {"error": b}
+            return {"error": s} 
+        list = []
+        for i in b:
+            if i not in list:
+                list.append(i)
+        if len(list) > number_of_diff_bytes:
+            return {"error": f"Too many different bytes. Max number of different bytes is {str(number_of_diff_bytes)}"}
+        
         if len(b) == 0:
             return {"error": "Invalid input"}
-        if len(b) > DEFAULT_MAX_LENGTH_DEOBF:
+        if len(b) > max_length:
             return {
-                "error": f"Input is too long. Max length for deobfuscated bytecode is {str(DEFAULT_MAX_LENGTH_DEOBF)} bytes"
+                "error": f"Input is too long. Max length for bytecode is {str(max_length)} bytes"
             }
-        e, o = execute_shellcode(b)
+        e, o = execute_shellcode(bytes(b))
         return {"res": o} if not e else {"error": e}
     except Exception as e:
-        return {"error": s}
-
-
-def validate_operation(input: str) -> tuple[bool, str]:
-    if not input.startswith("[") or not input.endswith("]"):
-        return False, "Input must be a list"
-    if BYTES_PLACEHOLDER not in input:
-        return False, "Input does not contain the placeholder"
-    if input.count(BYTES_PLACEHOLDER) > 1:
-        return False, "Input contains more than one placeholder"
-    return True, ""
-
-
-def validate_allowed_keywords(
-    input: str, restricted_expressions: List[str] = RESTRICTED_DEFAULT
-) -> tuple[bool, str]:
-    for i in restricted_expressions:
-        if i in input:
-            return False, f"Keyword {i} not allowed in operation"
-    return True, ""
-
+        return {"error": e}
 
 def validate_restricted_bytes(
     input: bytes, restricted_bytes: List[bytes]
@@ -80,30 +44,6 @@ def validate_restricted_bytes(
         return False, f'Bytes {",".join(invalid_found)} are restricted'
     return True, ""
 
-
-def validate_input(
-    operation: str,
-    shellcode_bytes: str,
-    restricted_expressions: List[str] = RESTRICTED_DEFAULT,
-    restricted_bytes: List[bytes] = [],
-    max_length: int = 300,
-) -> tuple[bool, str]:
-    v, s = validate_operation(operation)
-    if not v:
-        return (v, s)
-    sb = [x for x in filter(lambda c: c != "", shellcode_bytes.strip().split("\\x"))]
-    if len(sb) > max_length:
-        return False, f"Input is too long. Max length is {str(max_length)} bytes"
-    v, s = validate_allowed_keywords(operation, restricted_expressions)
-    if not v:
-        return (v, s)
-    try:
-        b = [int(x, 16) for x in sb]
-        return validate_restricted_bytes(bytes(b), restricted_bytes)
-    except ValueError:
-        return False, "Byte values must be in the format \\x00"
-
-
 def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
     hex = shellcode.hex()
     hex_str = "\\x" + '\\x'.join([''.join([hex[i],hex[i + 1]]) for i in range(0,len(hex),2)])
@@ -113,14 +53,15 @@ def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
     out, err = proc.stdout.read(), proc.stderr.read()
     try:
         return err.decode("latin-1"), out.decode("latin-1")
-    except Exception as e:
+    except Exception:
         return f"Error decoding output, byte string received:\nout ->{str(out)}\nerr ->{str(err)}", ""
 
 
-def validate_shellcode_output(out: str, expected: str) -> tuple[bool, str]:
+def validate_shellcode_output(out: dict[str,str], expected: str) -> tuple[bool, str]:
+    print(out)
     if "error" in out:
-        return False, out["error"]
-    out = out["res"]
+        return False, str(out["error"])
+    out = str(out["res"])
     if expected in out:
         return True, ""
     return False, f"Expected output was not printed.\n Output:\n {out}"

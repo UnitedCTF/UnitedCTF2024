@@ -3,11 +3,9 @@ from os import getenv
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, FileResponse
 from pydantic import BaseModel
-from shellcode_obfuscation import RESTRICTED_DEFAULT, execute, validate_shellcode_output
+from shellcode_obfuscation import execute, validate_shellcode_output
 
 PORT = int(getenv("PORT", 8000))
-DEFAULT_OPERATION = '[int(x) for x in b"BYTES"]'
-LEVEL_2_RESTRICTED = RESTRICTED_DEFAULT + ["+", "-", "^", "*", "/", "%", "//"]
 LEVEL1_EXPECTED_OUTPUT = "Barbe à papa"
 LEVEL2_EXPECTED_OUTPUT = "Manèges"
 LEVEL3_EXPECTED_OUTPUT = "UnitedCTF"
@@ -15,7 +13,6 @@ LEVEL3_EXPECTED_OUTPUT = "UnitedCTF"
 
 class Request(BaseModel):
     shellcode_bytes: str
-    operation: str
 
 
 app = FastAPI()
@@ -36,7 +33,7 @@ async def index_js():
 
 @app.post("/level1")
 async def level1(req: Request):
-    out = execute(DEFAULT_OPERATION, req.shellcode_bytes)
+    out = execute(req.shellcode_bytes)
     v, s = validate_shellcode_output(out, LEVEL1_EXPECTED_OUTPUT)
     if not v:
         return {"error": s}
@@ -45,21 +42,19 @@ async def level1(req: Request):
 
 @app.post("/level2")
 async def level2(req: Request):
-    out = execute(
-        req.operation,
-        req.shellcode_bytes,
-        restricted_bytes=[b"\x0f", b"\x05", b"\x31", b"\x89"],
-    )
+    out = execute(req.shellcode_bytes, restricted_bytes=[b"\x0f", b"\x05"])
     v, s = validate_shellcode_output(out, LEVEL2_EXPECTED_OUTPUT)
     if not v:
         return {"error": s}
     return {"flag": getenv("FLAG2")}
 
-
 @app.post("/level3")
 async def level3(req: Request):
     out = execute(
-        DEFAULT_OPERATION, req.shellcode_bytes, restricted_bytes=[b"\x0f", b"\x05"]
+        req.shellcode_bytes,
+        restricted_bytes=[b"\x0f", b"\x05"],
+        number_of_diff_bytes=1000,
+        max_length=300
     )
     v, s = validate_shellcode_output(out, LEVEL3_EXPECTED_OUTPUT)
     if not v:

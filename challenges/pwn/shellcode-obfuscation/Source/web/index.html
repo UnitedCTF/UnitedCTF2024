@@ -74,44 +74,12 @@
             <h3 class="text-center bg-dark text-light py-3">Level 2</h3>
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x0f\x05\x31\x89</p>
+            <p>Les bytes suivants sont interdits:\x0f\x05</p>
             <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x0f\x05\x31\x89</p>
+            <p>The following bytes are forbidden:\x0f\x05</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level2_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
-            <h4 class="col-12">Operations:</h4>
-            <p>
-                Vous pouvez effectuer des opérations sur les bytes en python à
-                l'aide de la compréhension de liste pour les transformer en
-                format executable. <br />Attention, assurez vous que les bytes
-                soient biens formattés et que l'output soit une liste d'integer
-                qui correspond a votre shellcode a executer.
-            </p>
-
-            <br />
-            <p>
-                You can perform operations on the bytes in python using list
-                comprehension to transform them into an executable format.
-                <br />Be careful, make sure the bytes are well formatted and
-                that the output is a list of integers that corresponds to your
-                shellcode to execute.
-            </p>
-            <br />
-            <h5>Restrictions sur les opérations:</h5>
-            <p>
-                La liste de keyword suivante est interdite:
-                <br />["import","=","def","exec","eval","compile","os","global","try","expect","finally","\\"]
-            </p>
-            <h5>Operations restrictions:</h5>
-            <p>
-                The following keyword list is forbidden:
-                <br />["import","=","def","exec","eval","compile","os","global","try","expect","finally","\\"]
-            </p>
-            <div class="d-flex justify-content-center">
-                <textarea id="level2_operations" class="form-control col-12" rows="3" oninput="operation(2)"></textarea>
-            </div>
-            <p id="level2_op_output" class="text-break"></p>
             <h3>To print: Manèges</h3>
             <div class="row d-flex justify-content-center">
                 <button class="btn btn-primary mt-4 col-5" onclick="execute(2)">
@@ -128,14 +96,13 @@
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
             <p>Les bytes suivants sont interdits:\x0f\x05</p>
+            <p>Maximum 10 bytes différents autorisés</p>
             <h5>Bytecode restrictions:</h5>
             <p>The following bytes are forbidden:\x0f\x05</p>
+            <p>Maximum 10 different bytes allowed</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
-            <h4 class="col-12">Operations:</h4>
-            <h5>Aucune opération permise</h5>
-            <h5>No operations allowed</h5>
             <h3>To print: UnitedCTF</h3>
             <div class="row d-flex justify-content-center">
                 <button class="btn btn-primary mt-4 col-5" onclick="execute(3)">
