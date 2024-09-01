@@ -8,7 +8,7 @@
 
 ## Description (english)
 
-6 Flags, by UnitedCTF, vient tout juste d'ouvrir ses portes ! [Voici](../Website/templates/index.html) le site promotionnel du parc. Tiens donc, on dirait que le développeur a laissé quelques traces dans d'atures pages...
+6 Flags, by UnitedCTF, vient tout juste d'ouvrir ses portes ! [Voici](../Website/templates/index.html) le site promotionnel du parc. Tiens donc, on dirait que le développeur a laissé quelques traces dans d'autres pages...
 
 ## Solution
 
