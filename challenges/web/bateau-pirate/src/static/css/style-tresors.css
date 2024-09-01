@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'PirateWriting';
+    src: url('../font/BattlesbridgeDemo-AL126.ttf');
+}
+
+span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 55px;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/236x/84/21/70/842170d0c6dae05a7776d93009a8fbe5--old-wood-texture-texture-walls.jpg");
+    font-family: 'PirateWriting';
+}
+
+.title {
+    padding-top: 120px;
+    width: 300px;
+    padding-left: 70px;
+}
+
+.note {
+    background-image: url("https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG.png");
+    width: 448px;
+    height: 660px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.note p {
+    width: 300px;
+    padding-left: 70px;
+    margin-bottom: 30px;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+/*
+    https://getcssscan.com/css-buttons-examples 
+    .button-5
+*/
+
+.btn {
+    margin-top: 10px;
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+/* 
+    https://webdeasy.de/en/css-forms/
+    #6 Multi Step Form with Progress Bar
+*/
+input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}

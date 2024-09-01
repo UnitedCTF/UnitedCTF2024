@@ -1,0 +1,15 @@
+{% extends 'tresor.html' %}
+
+{% block js %}
+<script src="/js/lvl1.js"></script>
+{% endblock %}
+
+{% block lvl %}1{% endblock %}
+
+{% block form %}
+<form id="tresor" action="">
+    <input type="text" id="key" name="key" placeholder="key" value="{{ request.form['key'] }}"></input>
+    <br>
+    <button type="submit" class="btn">unlock</button>
+</form>
+{% endblock %}

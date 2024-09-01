@@ -1,0 +1,30 @@
+body {
+    background-image: url("https://i.pinimg.com/236x/84/21/70/842170d0c6dae05a7776d93009a8fbe5--old-wood-texture-texture-walls.jpg");
+}
+
+.taches {
+    background-image: url("https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG.png");
+    width: 448px;
+    height: 660px;
+}
+
+
+.taches ul,
+.taches h1 {
+    padding-left: 150px;
+}
+
+.taches li {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.taches a {
+    margin-bottom: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.taches h1 {
+    padding-top: 150px;
+}

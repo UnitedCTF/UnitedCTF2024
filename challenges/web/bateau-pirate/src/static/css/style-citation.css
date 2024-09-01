@@ -1,0 +1,29 @@
+body {
+  background-image: url("../img/flag-3Y35-0N-TH3-PR1Z3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+html {
+  height: 100%;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h1 {
+  font-size: 7em;
+  color: aqua;
+}
+
+p {
+  font-size: 5em;
+  color: darkcyan;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}

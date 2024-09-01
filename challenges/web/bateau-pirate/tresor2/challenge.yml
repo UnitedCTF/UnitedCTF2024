@@ -1,0 +1,29 @@
+name: "Bateau pirate - Trésor 2"
+author: "Deimos"
+category: web
+description: |-
+  ## Description (français)
+  
+  On vient de terminer les derniers détails avant de réouvrir le bateau pirate. Le Capitaine m'a demandé de faire une dernière inspection pour s'assurer que nos secrets restent entre bonnes mains.
+  Veux-tu m'aider? Ça ira plus vite!
+  
+  Afin d'améliorer la sécurité, l'authentification à deux facteurs à été ajouter
+  J'espère que cela sera suffisant pour protéger notre butin...
+
+  ## Description (english)
+
+  We just finished the last details before reopening the pirate ship. The Captain asked me to do a final inspection to make sure our secrets stay in good hands.
+  Will you help me? It'll go faster!
+
+  To improve security, two-factor authentication has been added
+  I hope this will be enough to protect our loot...
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flags: 
+  - flag-S3CR3T-F0UND
+
+tags:
+  - web

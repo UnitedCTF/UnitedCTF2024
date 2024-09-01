@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style-index.css') }}">
+{% endblock %}
+{% block content %}
+<div class="taches">
+    <h1>Tâches du jour</h1>
+    <ul>
+        <li><a href="/nettoyage">Défi nettoyage</a></li>
+        <li><a href="/citation">Défi citation</a></li>
+        <li><a href="/peinture">Défi peinture</a></li>
+        <li><a href="/tresors/1">Défi trésor 1</a></li>
+        <li><a href="/tresors/2">Défi trésor 2</a></li>
+    </ul>
+</div>
+{% endblock %}

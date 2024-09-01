@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style-citation.css') }}">
+{% endblock %}
+{% block content %}
+<div>
+    <h1 class="title">{% block title %} "Not All Treasure Is Silver And Gold, Mate." {% endblock %}</h1>
+    <p>- Captain Jack Sparrow</p>
+</div>
+{% endblock %}
