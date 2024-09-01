@@ -1,12 +1,3 @@
-### Bingo me 
-
-I know... security by obscurity is bad...
-
-Je sais...la sécurité par obscurité c'est non...
-
-Hint : The --help may not always tell the truth. 
-
-Hint : Le --help peut parfois être trompeur.
 
 #### Solution
 
