@@ -1,0 +1,40 @@
+name: Fred en voyage 1
+author: Linkster78
+category: OSINT
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
+
+description: |-
+  ## Description (fr)
+
+  À l'occasion de son 20e anniversaire, Fred part en voyage aux États-Unis pour faire une tournée de parcs d'attractions.<br>
+  Il en profite pour prendre tout plein de photos qu'il sauvegarde sur son téléphone.
+
+  Quel est le nom de la montagne russe en bois visible dans le fond de cette photo?
+
+  Note: Le flag est le nom de la montagne russe en minuscules avec des espaces.
+  
+  **Vous n'avez que 3 essais.**
+
+  ## Description (en)
+
+  To celebrate his 20th birthday, Fred goes on a trip throughout the United States to visit a handful of amusement parks.<br>
+  While he's there, he takes a bunch of pictures which he saves on his phone.
+
+  What is the name of the wooden roller coaster visible in the background of this photo?
+
+  Note: The flag is the name of the roller coaster in lowercase with spaces.
+  
+  **You only have 3 attempts.**
+
+attempts: 3
+
+flags:
+  - {
+    type: 'static',
+    content: 'The Bobcat'
+  }
+
+tags:
+- osint
