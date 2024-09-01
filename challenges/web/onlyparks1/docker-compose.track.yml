@@ -1,0 +1,49 @@
+services:
+  web-onlyparks1-app:
+    build: .
+    restart: unless-stopped
+    networks:
+      - external
+      - internal
+    ports:
+      - 5000:5000
+    environment:
+      DATABASE_URL: postgres://postgres@web-onlyparks-db:5432/onlyparks1
+      FLAG: flag-41fd4068140c840595055e4691854291
+
+  web-onlyparks2-app:
+    build: ../onlyparks2
+    restart: unless-stopped
+    networks:
+      - external
+      - internal
+    ports:
+      - 5001:5000
+    environment:
+      DATABASE_URL: postgres://postgres@web-onlyparks-db:5432/onlyparks2
+      FLAG: flag-89a5178d28493b04d91bb0e2296d15c7
+
+  web-onlyparks3-app:
+    build: ../onlyparks3
+    restart: unless-stopped
+    networks:
+      - external
+      - internal
+    ports:
+      - 5002:5000
+    environment:
+      DATABASE_URL: postgres://postgres@web-onlyparks-db:5432/onlyparks3
+      FLAG: flag-08826f5b2a0fb34674c7a808757173e5
+
+  web-onlyparks-db:
+    image: postgres:16
+    restart: unless-stopped
+    networks:
+      - internal
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+networks:
+  external:
+  internal:
+    internal: true
