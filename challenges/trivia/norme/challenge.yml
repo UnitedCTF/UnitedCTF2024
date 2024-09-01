@@ -25,7 +25,7 @@ description: |-
   Format: AAAA AAAAA-AA
 
 flags:
-  - `ASTM F2291-04`
+  - 'ASTM F2291-04'
 
 tags:
   - trivia
