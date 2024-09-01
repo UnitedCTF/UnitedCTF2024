@@ -19,11 +19,11 @@ description: |-
 
   **Free hint: This app was compiled in Mono mode, not in IL2CPP mode**
 
-flags: #the flag should be case insensitive
-- flag-AAAF3FkxFA
-- flag-AAAF3FKxFA
-- flag-AAAF3FkXFA
-- flag-AAAF3FKXFA
+flags:
+  - {
+    type: "static",
+    content: "flag-AAAF3FKXFA",
+  }
 
 tags:
 - mobile
@@ -36,3 +36,4 @@ value: 8 #CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
 
 files:
 - guide.pdf
+- whackamolle.apk
