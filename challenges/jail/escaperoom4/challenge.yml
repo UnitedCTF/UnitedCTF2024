@@ -10,11 +10,9 @@ description: |-
 
   A room, a terminal, a locked door asking for a secret code... and the functions are disabled. How hard can it be?
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 6
 
 connection_info: nc challenges.unitedctf.ca 1238
 
