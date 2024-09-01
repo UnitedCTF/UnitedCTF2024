@@ -1,0 +1,26 @@
+name: "Bingo me"
+author: "@MyMelody1242"
+category: reverse 
+description: 
+
+Je sais...la sécurité par obscurité c'est non... 
+
+I know... security by obscurity is bad...
+
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+    - flag-!2s3cur3
+
+topics:
+    - static analysis 
+
+tags:
+    - reverse 
+
+hints:
+    - Le --help peut parfois être trompeur. / The --help may not always tell the truth.

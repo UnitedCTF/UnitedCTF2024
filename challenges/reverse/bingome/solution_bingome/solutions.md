@@ -1,3 +1,13 @@
+### Bingo me 
+
+I know... security by obscurity is bad...
+
+Je sais...la sécurité par obscurité c'est non...
+
+Hint : The --help may not always tell the truth. 
+
+Hint : Le --help peut parfois être trompeur.
+
 #### Solution
 
 Ils ont accès à la version debug, ce qui rend le challenge réalisable en peu de temps. Il faut savoir lire pour résoudre ce défi. Ce challenge permet de s'initier au concept de backdoor intentionellement induite par le programmeur...réduit à sa plus simple expression.
