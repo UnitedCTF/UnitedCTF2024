@@ -17,8 +17,8 @@ description: |-
   There's a lot of work in there! Look at what's been done before you, it wasn't done without pitfalls.
 
 type: standard
-# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
-value: 2
+# CFSS:0.1/TS:L/E:L/HSFC:N=2-4
+value: 1
 
 flags: 
   - flag-C4-8UCH3-F027
