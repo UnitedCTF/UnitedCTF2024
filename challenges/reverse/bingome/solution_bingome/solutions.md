@@ -1,6 +1,6 @@
 #### Solution
 
-Ils ont accès à la version debug, ce qui rend le challenge réalisable en peu de temps. Il faut savoir lire pour résoudre ce défi. Ce challenge permet de s'initier au concept de backdoor intentionellement induite par le programmeur pour debug ou autre...réduit à sa plus simple expression.
+Ils ont accès à la version debug, ce qui rend le challenge réalisable en peu de temps. Il faut savoir lire pour résoudre ce défi. Ce challenge permet de s'initier au concept de backdoor intentionellement induite par le programmeur...réduit à sa plus simple expression.
 
 1. Rendez-vous au main
 
