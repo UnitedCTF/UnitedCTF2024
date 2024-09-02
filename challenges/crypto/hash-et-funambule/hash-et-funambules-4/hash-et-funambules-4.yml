@@ -14,7 +14,7 @@ description: |-
 
 type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
-value: 4
+value: 2
 
 flags:
   - flag-JackSmashTheBox52e3ec11999a
