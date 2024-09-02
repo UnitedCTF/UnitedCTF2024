@@ -1,0 +1,20 @@
+FROM python:3-slim-bullseye
+
+WORKDIR /app
+
+RUN apt-get update
+RUN apt-get install -y socat
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+
+RUN python -m venv .
+RUN bin/pip install pycryptodome
+
+COPY run.sh run.sh
+COPY src/challenge.py challenge.py
+
+RUN chmod +x run.sh
+
+ENTRYPOINT ["sh","/app/run.sh"]
+
+EXPOSE 1337
