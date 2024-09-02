@@ -1,4 +1,4 @@
-# Nom du défi
+# MagicoMath
 
 ## Write-up (français)
 

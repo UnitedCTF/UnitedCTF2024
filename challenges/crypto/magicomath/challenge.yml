@@ -1,4 +1,4 @@
-name: TBD 2
+name: MagicoMath 1
 author: TechnoJo4
 category: crypto
 
@@ -11,19 +11,17 @@ description: |-
 
   ## Description (en)
 
-  Among the many attractions offered this year, MagicoMath attracts people with a heart for mathematics. He addresses the audience in a strange language, made up of symbols, numbers, and mysterious words.
-
-  Will you be able to decipher MagicoMath?
+  I've only given you an encryption function. You won't be able to decrypt the flag, right?
 
 flags:
-- flag-d0ntl1m1ty0urs3lf
+- flag-th3ecbp3ngu1nsaysh3ll0
 
 files:
-- ./challenge2.py
+- ./challenge.py
 
 type: standard
-# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
-value: 3
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 7
 
 tags:
 - crypto

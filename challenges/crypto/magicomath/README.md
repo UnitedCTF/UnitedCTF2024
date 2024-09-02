@@ -1,4 +1,4 @@
-# Nom du défi TBD
+# MagicoMath 1/2
 
 **`Auteur.e`** [TechnoJo4](https://technojo4.com/)
 
