@@ -14,7 +14,7 @@ description: |-
 
 type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
-value: 3
+value: 2
 
 flags:
   - flag-SaltIsBetterThanPepperfc6a8f57bb1185
