@@ -18,9 +18,10 @@ Dans la tab symbols de x64dbg, on peut voir la fonction getPassword.
 Si on double clique dessus, on est amené à l'adresse de la fonction, ou on peut ajouter un breakpoint.
 
 A la toute fin de l'execution de la fonction, on peut voir le flag dans les registers:
-![flag](image-2.png)
 
-flag: `flag-GDB1sWond3rfu1R1ght?`
+![flag](image-3.png)
+
+flag: `flag-D3buGg3rs4reWonD3rFu1Righ7?`
 ### Solution (English)
 When we run the program, we are asked for the username (flag 1) followed by the password.
 
@@ -40,6 +41,6 @@ If we double click on it, we are taken to the address of the function, where we 
 
 At the very end of the function execution, we can see the flag in the registers:
 
-![flag](image-2.png)
+![flag](image-3.png)
 
-flag: `flag-GDB1sWond3rfu1R1ght?`
+flag: `flag-D3buGg3rs4reWonD3rFu1Righ7?`
