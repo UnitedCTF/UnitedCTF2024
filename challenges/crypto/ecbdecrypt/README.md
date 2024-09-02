@@ -10,7 +10,9 @@ Serez-vous capable de déchiffrer MagicoMath ?
 
 ## Description (english)
 
-I've only given you an encryption function. You won't be able to decrypt the flag, right?
+Among the many attractions offered this year, MagicoMath attracts people with a heart for mathematics. He addresses the audience in a strange language, made up of symbols, numbers, and mysterious words.
+
+Will you be able to decipher MagicoMath?
 
 ## Solution
 
