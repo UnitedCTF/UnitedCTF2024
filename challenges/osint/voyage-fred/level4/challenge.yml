@@ -1,0 +1,48 @@
+name: Fred en voyage 4
+author: Linkster78
+category: OSINT
+type: standard
+# CFSS:0.1/TS:L/E:M/HSFC:N=3-5
+value: 3
+
+description: |-
+  ## Description (fr)
+
+  À l'occasion de son 20e anniversaire, Fred part en voyage aux États-Unis pour faire une tournée de parcs d'attractions.<br>
+  Il en profite pour prendre tout plein de photos qu'il sauvegarde sur son téléphone.
+
+  Dans la file d'attente de quel manège est-ce que Fred attend?
+
+  *Puisque Fred est en voyage, vous pouvez assumer que ce parc est dans une certaine proximité du dernier.*
+
+  Note: Le flag est le nom du manège avec espaces.
+  
+  **Vous n'avez que 3 essais.**
+
+  ## Description (en)
+
+  To celebrate his 20th birthday, Fred goes on a trip throughout the United States to visit a handful of amusement parks.<br>
+  While he's there, he takes a bunch of pictures which he saves on his phone.
+
+  For which ride is Fred waiting in line for?
+
+  *Since Fred is on a trip, you can assume that this park is within the vicinity of the previous one.*
+
+  Note: The flag is the name of the ride with spaces.
+  
+  **Vous n'avez que 3 essais.**
+
+attempts: 3
+
+flags:
+  - {
+    type: 'static',
+    content: 'Laff Trakk',
+    data: 'case_insensitive'
+  }
+
+files:
+  - level4_photo.jpg
+
+tags:
+- osint
