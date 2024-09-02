@@ -2,8 +2,8 @@
 author: Atlantis11656
 category: pwn
 type: standard
-# CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
-value: 6
+# CFSS:0.1/TS:A/E:M/HSFC:Y=10-16
+value: 14
 description: |-
     ## Description (Français)
     Hé! psst! J'ai un défi pour toi... Si tu arrive a imprimer un message sur les 3 écrans devant toi, je t'offre des prix alléchants!
