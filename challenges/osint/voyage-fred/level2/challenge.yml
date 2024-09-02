@@ -36,7 +36,8 @@ attempts: 3
 flags:
   - {
     type: 'static',
-    content: 'Warner LeRoy'
+    content: 'Warner LeRoy',
+    data: 'case_insensitive'
   }
 
 files:

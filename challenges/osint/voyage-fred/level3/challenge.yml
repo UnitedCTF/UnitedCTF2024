@@ -39,7 +39,8 @@ attempts: 3
 flags:
   - {
     type: 'static',
-    content: "Knott's Berry Farm"
+    content: "Knott's Berry Farm",
+    data: 'case_insensitive'
   }
 
 files:

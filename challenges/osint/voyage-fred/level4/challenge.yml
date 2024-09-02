@@ -37,7 +37,8 @@ attempts: 3
 flags:
   - {
     type: 'static',
-    content: 'Laff Trakk'
+    content: 'Laff Trakk',
+    data: 'case_insensitive'
   }
 
 files:
