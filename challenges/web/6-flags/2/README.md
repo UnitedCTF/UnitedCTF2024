@@ -2,7 +2,7 @@
 
 **`Auteur.e`** [Otaphoque](https://github.com/Otaphoque)
 
-## Description (français)
+## Description (english)
 
 6 Flags, by UnitedCTF, just opened its doors! [Here](../Website/templates/index.html) is the promotional website of the new park. Wait a minute, it looks like the developper left some traces when coloring the website...
 
