@@ -4,7 +4,9 @@
 
 ## Description (français)
 
-Je t'ai seulement donné une fonction de chiffrage. Tu seras pas capable de déchiffrer, correct?
+Parmi les nombreuses attractions proposées cette année, MagicoMath attire les personnes avec un cœur pour les mathématiques. Il s'adresse au public dans un langage étrange, composé de symboles, de chiffres et de mots mystérieux.
+
+Serez-vous capable de déchiffrer MagicoMath ?
 
 ## Description (english)
 
