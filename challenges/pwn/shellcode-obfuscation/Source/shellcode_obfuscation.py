@@ -47,7 +47,6 @@ def validate_restricted_bytes(
 def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
     hex = shellcode.hex()
     hex_str = "\\x" + '\\x'.join([''.join([hex[i],hex[i + 1]]) for i in range(0,len(hex),2)])
-    print(hex_str)
     proc = Popen(["./exec_shellcode",hex_str], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     proc.wait(timeout=5)
     out, err = proc.stdout.read(), proc.stderr.read()
@@ -58,10 +57,9 @@ def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
 
 
 def validate_shellcode_output(out: dict[str,str], expected: str) -> tuple[bool, str]:
-    print(out)
     if "error" in out:
         return False, str(out["error"])
     out = str(out["res"])
     if expected in out:
         return True, ""
-    return False, f"Expected output was not printed.\n Output:\n {out}"
+    return False, f"Expected output was not printed.\nOutput:\n{out}"
