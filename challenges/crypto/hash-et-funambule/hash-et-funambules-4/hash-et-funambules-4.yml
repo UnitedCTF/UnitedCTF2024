@@ -13,7 +13,7 @@ description: |-
   You have the plans 🗺️📏, will you be able to retrieve the passwords?
 
 type: standard
-# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 2
 
 flags:
