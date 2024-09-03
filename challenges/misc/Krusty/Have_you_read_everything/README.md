@@ -1,4 +1,4 @@
-# Have you read everything (Krusty Bot 2)
+# Have you read everything (Krusty Bot)
 
 **`Auteur:`** [Youllou](https://youllou.com)
 

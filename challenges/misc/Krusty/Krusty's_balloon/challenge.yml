@@ -1,7 +1,8 @@
-name: Krusty's balloon (Krusty Bot 5)
+name: Krusty's balloon (Krusty Bot)
 author: Youllou
 category: Misc
-
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 6
 description: |-
   ## Description (fr)
   

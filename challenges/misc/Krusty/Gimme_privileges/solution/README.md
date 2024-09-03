@@ -1,4 +1,4 @@
-# Gimme privileges (Krusty Bot 3)
+# Gimme privileges (Krusty Bot)
 
 ## Write-up (français)
 

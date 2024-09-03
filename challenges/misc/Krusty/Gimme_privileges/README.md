@@ -1,4 +1,4 @@
-# Gimme privileges (Krusty Bot 3)
+# Gimme privileges (Krusty Bot)
 
 **`Auteur:`** [Youllou](https://youllou.com)
 

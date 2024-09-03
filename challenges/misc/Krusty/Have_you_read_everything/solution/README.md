@@ -1,4 +1,4 @@
-# Gimme flag (Krusty Bot 2)
+# Gimme flag (Krusty Bot)
 
 ## Write-up (français)
 

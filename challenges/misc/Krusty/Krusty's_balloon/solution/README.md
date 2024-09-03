@@ -1,4 +1,4 @@
-# Krusty's Balloon (Krusty Bot 5)
+# Krusty's Balloon (Krusty Bot)
 
 ## Write-up (français)
 

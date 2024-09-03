@@ -1,4 +1,4 @@
-# The secret balloon (Krusty Bot 4)
+# The secret balloon (Krusty Bot)
 
 **`Auteur:`** [Youllou](https://youllou.com)
 

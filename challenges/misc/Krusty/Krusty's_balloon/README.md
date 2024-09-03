@@ -1,4 +1,4 @@
-# Krusty`s balloon (Krusty Bot 5)
+# Krusty`s balloon (Krusty Bot)
 
 **`Auteur:`** [Youllou](https://youllou.com)
 

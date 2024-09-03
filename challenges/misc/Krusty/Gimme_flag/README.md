@@ -1,4 +1,4 @@
-# Gimme flag (Krusty Bot 1)
+# Gimme flag (Krusty Bot)
 
 **`Auteur:`** [Youllou](https://youllou.com)
 

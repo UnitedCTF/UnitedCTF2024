@@ -1,6 +1,8 @@
-name: Gimme flag (Krusty Bot 1)
+name: Gimme flag (Krusty Bot)
 author: Youllou
 category: Misc
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
 
 description: |-
   ## Description (fr)
