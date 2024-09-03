@@ -6,6 +6,8 @@ services:
 
   client:
     build: ./client/
+    ports:
+    - 22
     networks:
       - sssslithering-venom-vaudeville-net
 
