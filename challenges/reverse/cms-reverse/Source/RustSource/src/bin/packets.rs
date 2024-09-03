@@ -2,8 +2,8 @@ use std::collections::HashMap;
 use base64::Engine;
 use base64::prelude::BASE64_STANDARD;
 use crate::bin::hashing_util;
-use crate::bin::http_handler::do_get_request;
-use crate::bin::packets::Packet::{ F, OID, SanityCheck};
+use crate::bin::http_handler::HTTP_Handler;
+use crate::bin::packets::Packet::{F, OID, SanityCheck};
 
 const SERVER_ID_HASH_KEY:&'static str = "SERVER_ID_HASH";
 //1 byte for packet type, 32 bytes for server id
@@ -163,8 +163,8 @@ impl Packet{
         &self.get_identified_trait().unwrap().get_id()
     }
 
-    async fn init_hash(cache:&mut HashMap<String,String>){
-        match do_get_request("74ba5d54-a5a7-4390-a1a1-4fdde2e66a05").await{
+    async fn init_hash(cache:&mut HashMap<String,String>,http_handler:&HTTP_Handler){
+        match http_handler.do_get_request("74ba5d54-a5a7-4390-a1a1-4fdde2e66a05").await{
           Ok(response) => {
               cache.insert(SERVER_ID_HASH_KEY.to_string(),response);
           },
@@ -172,12 +172,12 @@ impl Packet{
         };
     }
     #[async_recursion::async_recursion]
-    pub async fn validate_server_id(&self,cache:&mut HashMap<String,String>) -> bool{
+    pub async fn validate_server_id(&self,cache:&mut HashMap<String,String>,http_handler: &HTTP_Handler) -> bool{
         match cache.get(SERVER_ID_HASH_KEY) {
             Some(hash) => hashing_util::compare_hash(self.get_id(), hash) ,
             None => {
-                Packet::init_hash(cache).await;
-                self.validate_server_id(cache).await
+                Packet::init_hash(cache,http_handler).await;
+                self.validate_server_id(cache,http_handler).await
             }
         }
     }
