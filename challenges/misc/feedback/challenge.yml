@@ -1,0 +1,25 @@
+name: "Votre appel est important pour nous"
+author: "Deimos"
+category: misc
+description: |-
+  ## Description (français)
+
+  Merci d'avoir participé à l'édition 2024 du 🚩 UnitedCTF. Nous espérons que vous avez eu autant de plaisir que nous avons eu à l'organiser. Nous souhaitons connaître votre avis afin de pouvoir continuer à améliorer notre logistique et notre contenu. Merci de remplir ce questionnaire rapide et de nous faire part de vos impressions.
+
+  <https://forms.gle/UPLgp4w6k9qXQzAV7>
+
+  ## Description (english)
+
+  Thank you for participating in the 2024 edition of 🚩 UnitedCTF. We hope you had as much fun as we had organizing it. We want to hear your feedback so that we can continue to improve our logistics and content.Please fill out this quick survey and let us know what you think.
+
+  <https://forms.gle/UPLgp4w6k9qXQzAV7>
+
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
+
+flags: 
+  - FLAG-M3RC1-P0UR-T4-P4RT1C1P4T10N
+
+tags:
+  - misc

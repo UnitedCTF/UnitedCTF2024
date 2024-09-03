@@ -1,0 +1,29 @@
+name: MagicoMath 2
+author: TechnoJo4
+category: crypto
+
+description: |-
+  ## Description (fr)
+
+  Parmi les nombreuses attractions proposées cette année, MagicoMath attire les personnes avec un cœur pour les mathématiques. Il s'adresse au public dans un langage étrange, composé de symboles, de chiffres et de mots mystérieux.
+
+  Serez-vous capable de déchiffrer MagicoMath ?
+
+  ## Description (en)
+
+  Among the many attractions offered this year, MagicoMath attracts people with a heart for mathematics. He addresses the audience in a strange language, made up of symbols, numbers, and mysterious words.
+
+  Will you be able to decipher MagicoMath?
+
+flags:
+- flag-d0ntl1m1ty0urs3lf
+
+files:
+- ./challenge2.py
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
+
+tags:
+- crypto

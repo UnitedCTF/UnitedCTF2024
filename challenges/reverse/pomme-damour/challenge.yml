@@ -10,11 +10,9 @@ description: |-
 
   We can no longer make candy apple! The machine is bugged and needs a special code to reset it. Can you find it for me? The designer of the machine left us the program and some gibberish. I don't understand it.
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
+value: 9
 
 flags: 
   - flag-javascriptbytecodeisfun

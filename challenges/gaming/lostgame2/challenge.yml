@@ -1,0 +1,28 @@
+name: "Lost Game 2"
+author: jactymilena
+category: gaming
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
+
+description: |-
+  ## Description (fr)
+
+  Il y a foule dans cette arcade ! Pourtant, en me promenant, je remarque ce jeu poussiéreux, sans personne autour. Je décide donc d'essayer d'y jouer !  
+
+  Définitivement, il y a certains détails que seul l'équipe de développement peut voir. 
+
+  ## Description (en)
+
+  This arcade is crowded! Yet, as I walk around, I notice this dusty game with no one around it. So, I decide to give it a try!  
+
+  Definitely, there are certain details that only the development team can see.  
+
+files:
+- game.zip
+
+flags:
+- flag-l0oksL1k3G4m30v3r
+
+tags:
+- gaming

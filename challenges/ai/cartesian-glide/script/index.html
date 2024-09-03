@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas Clicker</title>
+    <style>
+      canvas {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid black;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        font-size: larger;
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: rgb(62, 93, 62);
+        cursor: pointer;
+
+        border: none;
+        border-radius: 5px;
+      }
+      .red {
+        background-color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1920" height="1080"></canvas>
+    <button class="red" onclick="clearCanvas()">clear</button>
+    <button onclick="saveData()">save</button>
+
+    <script>
+      const scatterData = new Set();
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Set the origin to the bottom left
+      ctx.translate(0, canvas.height);
+      ctx.scale(1, -1);
+
+      let isMouseDown = false;
+      let intervalId;
+
+      let x;
+      let y;
+
+      // Add a tuple to the scatter data
+      function addTuple(x, y) {
+        const tuple = JSON.stringify([x, y]);
+        scatterData.add(tuple);
+      }
+
+      // Get the scatter data as an array of tuples
+      function getTuples() {
+        return Array.from(scatterData).map((tuple) => JSON.parse(tuple));
+      }
+
+      canvas.addEventListener("mousedown", (event) => {
+        isMouseDown = true;
+
+        // Left click
+        if (event.button === 0) {
+          intervalId = setInterval(function () {
+            ctx.beginPath();
+            ctx.arc(x, y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = "blue";
+            ctx.fill();
+
+            roundedX = Math.round(x);
+            roundedY = Math.round(y);
+            if (roundedX && roundedY && roundedX >= 0 && roundedY >= 0) {
+              addTuple(roundedX, roundedY);
+            }
+            console.log(`x: ${roundedX}, y: ${roundedY}`);
+          }, 50);
+        }
+      });
+
+      canvas.addEventListener("mouseup", () => {
+        isMouseDown = false;
+        clearInterval(intervalId);
+      });
+
+      // Delete points near the right-clicked point
+      canvas.addEventListener("contextmenu", (event) => {
+        isMouseDown = true;
+        event.preventDefault();
+        intervalId = setInterval(function () {
+          clearPointsNear(x, y);
+        }, 50);
+      });
+
+      // Mouse movement event
+      canvas.addEventListener("mousemove", (event) => {
+        const rect = canvas.getBoundingClientRect();
+        x = event.clientX - rect.left;
+        y = canvas.height - (event.clientY - rect.top); // Invert y coordinate
+      });
+
+      // Clear points near the given point
+      function clearPointsNear(x, y) {
+        const radius = 25;
+        const x1 = x - radius;
+        const y1 = y - radius;
+        const x2 = x + radius;
+        const y2 = y + radius;
+
+        const tuples = getTuples();
+        const newTuples = tuples.filter(([x, y]) => {
+          return x < x1 || x > x2 || y < y1 || y > y2;
+        });
+
+        scatterData.clear();
+        newTuples.forEach(([x, y]) => {
+          addTuple(x, y);
+        });
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        newTuples.forEach(([x, y]) => {
+          ctx.beginPath();
+          ctx.arc(x, y, 2, 0, Math.PI * 2);
+          ctx.fillStyle = "blue";
+          ctx.fill();
+        });
+      }
+
+      // Clear the canvas
+      function clearCanvas() {
+        console.log("Clear canvas");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        scatterData.clear();
+        console.log(scatterData);
+      }
+
+      // Save the canvas data as png and scatter data as csv
+      function saveData() {
+        console.log("Save data");
+
+        // Save canvas data as png
+        const dataUrl = canvas.toDataURL();
+        const a = document.createElement("a");
+        a.href = dataUrl;
+        a.style.backgroundColor = "white";
+        a.download = "canvas-data.png";
+        a.click();
+
+        // Save scatter data as csv
+        const csv = getTuples()
+          .map((tuple) => tuple.join(","))
+          .join("\n");
+
+        const blob = new Blob([csv], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+        const a2 = document.createElement("a");
+        a2.href = url;
+        a2.download = "scatter-data.csv";
+        a2.click();
+      }
+    </script>
+  </body>
+</html>

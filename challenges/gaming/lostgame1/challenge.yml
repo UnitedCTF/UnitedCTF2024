@@ -1,0 +1,28 @@
+name: "Lost Game 1"
+author: jactymilena
+category: gaming
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 2
+
+description: |-
+  ## Description (fr)
+
+  Il y a foule dans cette arcade ! Pourtant, en me promenant, je remarque ce jeu poussiéreux, sans personne autour. Je décide donc d'essayer d'y jouer !  
+
+  Je sais que parfois les apparences peuvent être trompeuses, que ce ne sont pas tous les détails qui sont visibles au premier coup d'œil.
+
+  ## Description (en)
+
+  This arcade is crowded! Yet, as I walk around, I notice this dusty game with no one around it. So, I decide to give it a try!  
+
+  I know that appearances can sometimes be deceiving and that not all details are visible at first glance.
+
+files:
+- game.zip
+
+flags:
+- flag-h1dd3nC4v3
+
+tags:
+- gaming
