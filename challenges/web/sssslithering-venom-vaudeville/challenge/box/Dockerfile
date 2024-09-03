@@ -21,6 +21,6 @@ RUN useradd -m user
 RUN chown user:user log/warning_logfile.log log/master_logfile.log
 
 ENV PORT=80
-EXPOSE 80
+# EXPOSE 80
 
 CMD ["/entrypoint.sh"]

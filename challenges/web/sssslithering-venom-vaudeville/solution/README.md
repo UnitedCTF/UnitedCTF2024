@@ -4,6 +4,38 @@ This challenge is an example of log poisoning and should be used as a whitebox/c
 
 Cookies is a value controlled by the user and is logged without sanitization. This shouldn't be a problem, but the Log file is used in another program. This other program, the cleanup script, looks for `Log file:` and take everything following as the log file. Therefore, a correctly modified cookie can be interpreted by the cleanup script as the wanted file.
 
+## Enumeration
+
+We have initial access using SSH and the provided credential.
+
+```shell
+ssh user@<ip> -p <port>
+```
+
+We know there is a webserver on the same network which is the target. So we start enumerating.
+
+```shell
+ifconfig
+```
+
+We can note the current network and try to find the webserver IP.
+
+![alt text](nmap.png)
+
+Now, we can try to access the webpage using a simple proxy.
+
+```shell
+ssh user@<ip> -p <port> -D 9050
+```
+
+And configure the browser to use this proxy.
+
+![alt text](proxy.png)
+
+![alt text](webpage.png)
+
+## Reverse engineering
+
 The cleanup script has this line, which doesn't have quotes arround $file_path, the potentially controlled variable.
 
 ```bash
