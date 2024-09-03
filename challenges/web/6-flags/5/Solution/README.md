@@ -6,4 +6,4 @@ Le flag est formé en prenant les premières lettres de chaque carte de la deuxi
 
 ## Flag
 
-```FLAGFWWEGMNBD```
+```FLAG-WWEGMNBD```
