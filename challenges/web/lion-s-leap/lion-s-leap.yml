@@ -14,20 +14,21 @@ description: |-
   You have access to a local machine with SSH.
 
 type: standard
-# CFSS:0.1/TS:I/E:M/HSFC/N=6-10
-value: 10
+# CFSS:0.1/TS:I/E:H/HSFC/N=9-14
+value: 12
 
 flags:
   - flag-drakthull1
 
 files:
-  - challenge/lion-s-leap.7z
-  - solution/rockyou.txt.tar.gz
+  - files/lion-s-leap.7z
 
 connection_info:
   - ssh user@<ip>
   - password: marbled-casino-zodiac-composer
-  - Web server: <url>
+
+hints:
+  - "Using ssh TcpForwarding and setup the proxy in your browser can be useful."
 
 tags:
   - hard

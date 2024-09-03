@@ -1,7 +1,5 @@
 FROM ubuntu
 
-EXPOSE 80
-
 RUN apt-get update
 
 # Admin client simulation

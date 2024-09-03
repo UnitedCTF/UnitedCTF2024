@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "[mysqld]" >> /etc/mysql/my.cnf
-echo "bind-address = 0.0.0.0" >> /etc/mysql/my.cnf
+echo "[mysqld]" >>/etc/mysql/my.cnf
+echo "bind-address = 127.0.0.1" >>/etc/mysql/my.cnf
 
 service mariadb start
 echo -e "\nY\nY\n$DB_PASSWORD\n$DB_PASSWORD\nY\nn\nY\nY\n" | mysql_secure_installation
