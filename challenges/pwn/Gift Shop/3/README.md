@@ -1,4 +1,4 @@
-# Gift Shop 3 🛍️
+# Gift Shop 🛍️ 3
 
 **`Auteur.e`** [Otaphoque](https://github.com/Otaphoque)
 

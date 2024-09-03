@@ -1,4 +1,4 @@
-# Gift Shop 2 🛍️
+# Gift Shop 🛍️ 2
 
 ## Write-up
 
