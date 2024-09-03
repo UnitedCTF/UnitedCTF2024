@@ -1,0 +1,33 @@
+name: "Hash & Funambules 4"
+author: "Talgarr"
+category: crypto
+description: |-
+  ## Description (français)
+
+  Les mots de passe de l'équipe se sont retrouvé dans une boite suprise 🤡📦!
+  Vous avez les plans 🗺️📏, seriez-vous retrouvé les mots de passes?
+
+  ## Description (english)
+
+  The team passwords were lost in a Jack-in-the-Box 🤡📦!
+  You have the plans 🗺️📏, will you be able to retrieve the passwords?
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flags:
+  - flag-JackSmashTheBox52e3ec11999a
+
+files:
+  - ./challenge/app/app.go
+  - ./challenge/app/rockyou.txt.tar.gz
+
+connection_info: nc <host> <port>
+
+tags:
+  - difficile
+  - crypto
+
+requirements:
+  - Hash & Funambules 3

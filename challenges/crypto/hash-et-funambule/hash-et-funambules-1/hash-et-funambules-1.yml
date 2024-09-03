@@ -1,0 +1,29 @@
+name: "Hash & Funambules 1"
+author: "Talgarr"
+category: crypto
+description: |-
+  ## Description (français)
+
+  Les mots de passe de l'équipe se sont retrouvé dans une boite suprise 🤡📦!
+  Vous avez les plans 🗺️📏, seriez-vous retrouvé les mots de passes?
+
+  ## Description (english)
+
+  The team passwords were lost in a Jack-in-the-Box 🤡📦!
+  You have the plans 🗺️📏, will you be able to retrieve the passwords?
+
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
+
+flags:
+  - flag-MD5IsNotSecure827391b8ys918hye9
+
+files:
+  - ./challenge/app/app.go
+
+connection_info: nc <host> <port>
+
+tags:
+  - facile
+  - crypto
