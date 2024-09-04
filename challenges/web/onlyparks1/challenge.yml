@@ -13,7 +13,7 @@ description: |-
   NOTE: The schema is the same for all the challenges.
 
 type: standard
-# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+# CFSS:0.1/TS:I/E:L/HSFC:N=4-7
 value: 4
 
 connection_info: https://challenges.unitedctf.ca:5000

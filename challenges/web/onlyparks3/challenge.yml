@@ -15,8 +15,8 @@ description: |-
   It will take more time to correct the vulnerability. In the meantime, the route has been deactivated.
 
 type: standard
-# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
-value: 8
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 6
 
 connection_info: https://challenges.unitedctf.ca:5002
 
