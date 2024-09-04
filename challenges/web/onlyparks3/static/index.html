@@ -1,0 +1,110 @@
+<html style="flex: auto">
+  <head>
+    <title>OnlyParks 📖🎡🎢</title>
+    <style>
+      html {
+        background-image: url("/assets/images/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      body {
+        background-color: rgba(200, 200, 200, 0.8);
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #sidebar {
+        flex-shrink: 1;
+        min-width: 200px;
+        width: 200px;
+        margin-right: 50px;
+      }
+
+      #article {
+        flex-grow: 1;
+        overflow-y: scroll;
+        max-height: 85vh;
+      }
+    </style>
+    <script>
+      async function fetchArticle(query) {
+        return await fetch("/api/article", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(query),
+        })
+          .then((r) => r.json())
+          .then(({ ok, error, results }) => {
+            if (!ok)
+              throw new Error(
+                "Unable to fetch article: " + JSON.stringify(error)
+              );
+            return results;
+          });
+      }
+
+      async function loadArticle(articleId) {
+        const article = document.getElementById("article");
+        const { title, body } = (
+          await fetchArticle({
+            id: articleId,
+          })
+        )[0];
+        article.innerHTML = `<h1>${title}</h1>${body}`;
+        history.pushState(null, "", `?articleId=${articleId}`);
+      }
+
+      window.addEventListener("DOMContentLoaded", async () => {
+        const articles = (await fetchArticle({})).reduce((acc, article) => {
+          const key = article.clowns
+            .map(({ clown: { name } }) => name)
+            .join(" & ");
+          if (!(key in acc)) {
+            acc[key] = [];
+          }
+          acc[key].push({
+            id: article.id,
+            title: article.title,
+            body: article.body,
+          });
+          return acc;
+        }, {});
+
+        const sidebar = document.getElementById("sidebar");
+        for (let authors of Object.keys(articles)) {
+          let clownArticles = `<div style="margin-bottom: 10px;"><h3 style="margin: 0px;">${authors}</h3>`;
+          for (let article of articles[authors]) {
+            clownArticles += `<li onclick=loadArticle(${article.id})><a href="?articleId=${article.id}" onclick="return false;">${article.title}</a></li>`;
+          }
+          clownArticles += "</div>";
+          sidebar.innerHTML += clownArticles;
+        }
+
+        const articleId = new URLSearchParams(location.search).get("articleId");
+        if (!isNaN(articleId)) {
+          await loadArticle(Number(articleId));
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>OnlyParks 📖🎡🎢</h1>
+    <div id="container">
+      <div id="sidebar"></div>
+      <div id="article"><h1>EN MAINTENANCE👷</h1></div>
+    </div>
+  </body>
+</html>
