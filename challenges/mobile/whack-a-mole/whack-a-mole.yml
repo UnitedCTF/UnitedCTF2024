@@ -23,6 +23,7 @@ flags:
   - {
     type: "static",
     content: "flag-AAAF3FKXFA",
+    data: "case_insensitive"
   }
 
 tags:
