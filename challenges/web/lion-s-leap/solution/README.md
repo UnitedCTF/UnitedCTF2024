@@ -8,36 +8,6 @@ Starting by looking through the code, we can note a few interesting things.
 - In the register endpoint, if trying to register with an existing username, it will return the userid of the username in the URL.
 - We can see to the database schema.
 
-## Enumeration
-
-We have initial access using SSH and the provided credential.
-
-```shell
-ssh user@<ip> -p <port>
-```
-
-We know there is a webserver on the same network which is the target. So we start enumerating.
-
-```shell
-ifconfig
-```
-
-We can note the current network and try to find the webserver IP.
-
-![alt text](nmap.png)
-
-Now, we can try to access the webpage using a simple proxy.
-
-```shell
-ssh user@<ip> -p <port> -D 9050
-```
-
-And configure the browser to use this proxy.
-
-![alt text](proxy.png)
-
-![alt text](webpage.png)
-
 For this solution, we can define the IP and port of the server.
 
 ```shell
