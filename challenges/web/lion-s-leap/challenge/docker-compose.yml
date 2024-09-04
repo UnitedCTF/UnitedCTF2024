@@ -1,16 +1,5 @@
 services:
   box:
     build: box
-    networks:
-      - lion-s-leap-net
-
-  client:
-    build: client
-    networks:
-      - lion-s-leap-net
     ports:
-      - "22:22"
-
-networks:
-  lion-s-leap-net:
-    driver: bridge
+      - "80"

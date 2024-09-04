@@ -14,6 +14,8 @@ RUN chmod +x /root/admin_login.sh
 ENV SESSION_KEY="2/BO0t4sH6+FN8r5ttut2KSn0zlSTR5NOHlGZZUyksvKf+jTWn+aj5OmNI+Hk85SawDOiltP7ZVC7nJCNrT1CA=="
 ENV PORT="80"
 
+EXPOSE ${PORT}
+
 RUN mkdir "/app"
 COPY webserver /app/src
 WORKDIR "/app/src"
