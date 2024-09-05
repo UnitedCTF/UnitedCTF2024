@@ -4,13 +4,15 @@ import (
 	"database/sql"
 	"encoding/base64"
 	"errors"
-	"github.com/gorilla/sessions"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strconv"
+	"time"
+
+	"github.com/gorilla/sessions"
 )
 
 func getLang(store *sessions.CookieStore, r *http.Request) string {
@@ -61,6 +63,7 @@ func handlerLogin(w http.ResponseWriter, r *http.Request, db *sql.DB, store *ses
 		log.Println("username: ", username, "\tPassword: ", password)
 		id, err := getUserID(db, username)
 		if err != nil {
+			log.Println("Error:", err)
 			return
 		}
 		if checkUser(db, id, password) {
@@ -71,6 +74,7 @@ func handlerLogin(w http.ResponseWriter, r *http.Request, db *sql.DB, store *ses
 			session.Values["is_admin"] = isAdministrator(db, id)
 			err = session.Save(r, w)
 			if err != nil {
+				log.Println("Error:", err)
 				return
 			}
 			http.Redirect(w, r, "/profile", http.StatusSeeOther)
@@ -286,10 +290,15 @@ func main() {
 	store := sessions.NewCookieStore(key)
 	store.Options = &sessions.Options{MaxAge: 0}
 
-	db, err := createConnection()
-	if err != nil {
-		log.Println("Error:", err)
-		return
+	var db *sql.DB
+	for {
+		db, err = createConnection()
+		if err != nil {
+			log.Println("Error:", err)
+			time.Sleep(3 * time.Second)
+		} else {
+			break
+		}
 	}
 
 	fs := http.FileServer(http.Dir("./static"))

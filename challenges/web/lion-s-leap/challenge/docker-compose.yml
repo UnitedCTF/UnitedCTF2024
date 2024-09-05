@@ -1,5 +1,23 @@
 services:
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_USER: user
+      MARIADB_PASSWORD: GrpLJfnipshQMRBe0
+      MARIADB_DATABASE: userDB
+      MARIADB_ROOT_PASSWORD: 7a3zcPnXe5Fx6HH8b6sh4zvaN
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+
   box:
     build: box
     ports:
       - "80"
+    restart: always
+    healthcheck:
+      test: curl --fail http://localhost/login -X POST -d 'username=admin&password=drakthull1' --insecure
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      start_period: 5s

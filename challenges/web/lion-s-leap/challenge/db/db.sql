@@ -1,14 +1,3 @@
-GRANT ALL PRIVILEGES ON *.* TO '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWORD}' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-
-CREATE DATABASE IF NOT EXISTS userDB;
-
-USE userDB;
-
-DROP TABLE IF EXISTS HashChange;
-DROP TABLE IF EXISTS Users;
-DROP TABLE IF EXISTS HashingAlgorithm;
-
 CREATE TABLE HashingAlgorithm (
     id INT AUTO_INCREMENT PRIMARY KEY,
     algo VARCHAR(255) NOT NULL,
@@ -38,5 +27,5 @@ CREATE TABLE HashChange (
 INSERT INTO HashingAlgorithm (algo, round) VALUES ('bcrypt', 16 );
 INSERT INTO HashingAlgorithm (algo, round) VALUES ('sha256', 64 );
 INSERT INTO HashingAlgorithm (algo, round) VALUES ('blake2b_256', 1 );
-INSERT INTO Users (username, password_hash, salt, hashing_algorithm, profile_name, email, is_admin) VALUES ('admin', '$2a$16$yBzd6w7J/c8zdDFJy3ZoqOos0KuUK9IJkj7hO94vRRa8Z/rLnfGwe', 'c2zSdga1Mu', 1, 'Administrator', 'admin@duckduck.com', TRUE);
+INSERT INTO Users (username, password_hash, salt, hashing_algorithm, profile_name, email, is_admin) VALUES ('admin', '$2a$16$yBzd6w7J/c8zdDFJy3ZoqOos0KuUK9IJkj7hO94vRRa8Z/rLnfGwe', 'c2zSdga1Mu', 1, 'Administrator', 'admin@lionsleap.com', TRUE);
 

@@ -21,9 +21,6 @@ flags:
 files:
   - files/lion-s-leap.7z
 
-hints:
-  - "Rockyou is a good wordlist to start with."
-
 connection_info:
   website: "<url>"
 
