@@ -53,8 +53,8 @@ async def level3(req: Request):
     out = execute(
         req.shellcode_bytes,
         restricted_bytes=[b"\x0f", b"\x05"],
-        number_of_diff_bytes=20,
-        max_length=300
+        number_of_diff_bytes=15,
+        max_length=3000
     )
     v, s = validate_shellcode_output(out, LEVEL3_EXPECTED_OUTPUT)
     if not v:
