@@ -63,21 +63,41 @@ def main():
                 continue
 
             if item == "1":
-                balance -= quantity * 0.99
-                inventory[0] += quantity
-                print(f"You bought {quantity} postcard" + ("s" if quantity > 1 else ""))
+                if (quantity * 0.99) > balance:
+                    print("Not enough money")
+                    print()
+                    continue
+                else:
+                    balance -= quantity * 0.99
+                    inventory[0] += quantity
+                    print(f"You bought {quantity} postcard" + ("s" if quantity > 1 else ""))
             elif item == "2":
-                balance -= quantity * 15.99
-                inventory[1] += quantity
-                print(f"You bought {quantity} plushie" + ("s" if quantity > 1 else ""))
+                if (quantity * 15.99) > balance:
+                    print("Not enough money")
+                    print()
+                    continue
+                else:
+                    balance -= quantity * 15.99
+                    inventory[1] += quantity
+                    print(f"You bought {quantity} plushie" + ("s" if quantity > 1 else ""))
             elif item == "3":
-                balance -= quantity * 29.99
-                inventory[2] += quantity
-                print(f"You bought {quantity} t-shirt" + ("s" if quantity > 1 else ""))
+                if (quantity * 29.99) > balance:
+                    print("Not enough money")
+                    print()
+                    continue
+                else:
+                    balance -= quantity * 29.99
+                    inventory[2] += quantity
+                    print(f"You bought {quantity} t-shirt" + ("s" if quantity > 1 else ""))
             elif item == "4":
-                balance -= quantity * 99.99
-                inventory[3] += quantity
-                print(f"You bought {quantity} flag" + ("s" if quantity > 1 else ""))
+                if (quantity * 99.99) > balance:
+                    print("Not enough money")
+                    print()
+                    continue
+                else:
+                    balance -= quantity * 99.99
+                    inventory[3] += quantity
+                    print(f"You bought {quantity} flag" + ("s" if quantity > 1 else ""))
             else:
                 print("Invalid choice")
             print()
