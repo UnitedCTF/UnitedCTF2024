@@ -54,12 +54,12 @@ class HelpChooser(discord.ui.View):
             title="Commands",
             description="""Here are some commands you can use:
             
-</help:1279478282487726103> `language` : Get help, language can be `English` or `Francais`
+</help:1279538522025365610> `language` : Get help, language can be `English` or `Francais`
 
 __-----------------------------**Balloons**-----------------------------__
-</balloon_register:1279478282487726106> : Join the balloon game ! Who will have the most balloons at the end ?
-</balloon_buy:1279478282487726104> `secret` (Optional) : Buy a new balloon ! (A secret balloon can be obtain with the correct password)
-</balloon_see:1279478282487726105> `player` : Check your (and other's) progression !
+</balloon_register:1279538522025365613> : Join the balloon game ! Who will have the most balloons at the end ?
+</balloon_buy:1279538522025365611> `secret` (Optional) : Buy a new balloon ! (A secret balloon can be obtain with the correct password)
+</balloon_see:1279538522025365612> `player` : Check your (and other's) progression !
 
 
 
@@ -96,12 +96,12 @@ __-----------------------------**Dev Notes**-----------------------------__
             title="Commandes",
             description="""Voici quelques commandes que vous pouvez utiliser :
 
-</help:1279478282487726103> `language` : Obtenez de l'aide, la langue peut être `English` ou `Francais`
+</help:1279538522025365610> `language` : Obtenez de l'aide, la langue peut être `English` ou `Francais`
 
 __-----------------------------**Ballons**-----------------------------__
-</balloon_register:1279478282487726106> : Rejoignez le jeu de ballon ! Qui aura le plus de ballons à la fin ?
-</balloon_buy:1279478282487726104> `secret` (Optionnel) : Achetez un nouveau ballon ! (Un ballon secret peut être obtenu avec le bon mot de passe)
-</balloon_see:1279478282487726105> `player` : Regarde ta progression ! (Ou celle des autres)
+</balloon_register:1279538522025365613> : Rejoignez le jeu de ballon ! Qui aura le plus de ballons à la fin ?
+</balloon_buy:1279538522025365611> `secret` (Optionnel) : Achetez un nouveau ballon ! (Un ballon secret peut être obtenu avec le bon mot de passe)
+</balloon_see:1279538522025365612> `player` : Regarde ta progression ! (Ou celle des autres)
 
 
 __---------------------------**Notes de Dev**--------------------------__

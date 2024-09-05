@@ -3,6 +3,8 @@ from discord.ext import commands
 
 import dotenv
 import os
+import sqlite3
+
 
 commands_ext = (
     'Krusty.commands.Utils',
@@ -47,7 +49,7 @@ async def setup_guild_for_ctf(guild: discord.Guild):
     else:
         ctf_channel = await guild.create_text_channel('what-is-this', overwrites=overwrites)
         # send the message to the channel
-        await ctf_channel.send(os.getenv('CTF_CHANNEL_MESSAGE'))
+        await ctf_channel.send("FLAG: "+os.getenv('CTF_CHANNEL_MESSAGE'))
 
     # give the privileged role to the members who had it before
     for member in privileged_members:
@@ -58,7 +60,42 @@ async def setup_guild_for_ctf(guild: discord.Guild):
         if member not in privileged_members:
             await member.add_roles(unprivileged)
 
-    # create a
+    # setup the db
+    sqlite3.enable_callback_tracebacks(True)
+    try:
+        file = open('./Krusty/data/db/' + str(guild.id) + '.db', 'x')
+        file.close()
+        conn = sqlite3.connect('./Krusty/data/db/' + str(guild.id) + '.db')
+        cursor = conn.cursor()
+        cursor.execute('CREATE TABLE IF NOT EXISTS players ('
+                            'id INTEGER PRIMARY KEY, '
+                            'name TEXT'
+                            ')')
+        cursor.execute(
+            'CREATE TABLE IF NOT EXISTS balloons ('
+            'id INTEGER PRIMARY KEY AUTOINCREMENT, '
+            'emoji CHAR(1), '
+            'points INTEGER, '
+            'description TEXT,'
+            'possessed_by INTEGER, '
+            'FOREIGN KEY (possessed_by) REFERENCES players(id) '
+            ')')
+
+        cursor.execute(
+            "INSERT INTO players (id, name) VALUES (1267654171843231794, 'krusty')"
+        )
+        cursor.execute(
+            "INSERT INTO balloons (emoji, points, possessed_by, description) VALUES ('🚩', 10, 1267654171843231794, ?)",
+            (os.getenv("KRUSTYS_BALLOON"),)
+        )
+        conn.commit()
+        cursor.close()
+        conn.close()
+    except FileExistsError:
+        pass
+    except Exception as e:
+        print(e)
+        raise e
 
 
 class Krusty(commands.Bot):

@@ -23,47 +23,49 @@ class Balloons(commands.Cog):
     @app_commands.describe(secret="The secret password to obtain the secret balloon")
     async def balloons_buy(self, interaction, secret: str = None):
         await interaction.response.defer(ephemeral=True)
-        if secret:
-            conn = sqlite3.connect('./Krusty/data/db/' + str(interaction.guild_id) + '.db')
-            cursor = conn.cursor()
-
-            data = cursor.execute(f"SELECT * FROM players WHERE players.id = '{secret}' AND players.name = 'Krusty';")
-            if data.fetchone() is None:
-                await interaction.followup.send("You are not allowed to buy this balloon", ephemeral=True)
-            else:
-                cursor.close()
-                conn.close()
-                answer = "You bought the secret balloon !\n"
-                answer += ("```\n"
-                           "  emoji  |  points | description\n"
-                           "---------|---------|- \n"
-                           "   🚩    |  100    |"+os.getenv("SECRET_BALLOON"))
-                await interaction.followup.send(answer, ephemeral=True)
-                player_controller = PlayerController(interaction.guild_id)
-                player = player_controller.get_player(interaction.user.id, interaction.user.name)
-                player_controller.give_balloon(player.id, "??", 100, "THE SECRET BALLOON")
-                try:
-                    int(secret)
-                except ValueError:
-                    pass
-                else:
-                    await interaction.user.send("This was not the intended solution but GG still")
-                finally:
-                    return
-        with open('./emojis_list', "r", encoding='utf-8') as emojis_file:
-            emojis = emojis_file.readline().split(',')
         player_controller = PlayerController(interaction.guild_id)
         try:
             player = player_controller.get_player(interaction.user.id, interaction.user.name)
         except NotFoundError:
             await interaction.followup.send(
-                "You are not registered as a player yet ! Use </register:1277792495832662120> to register",
+                "You are not registered as a player yet ! Use </balloon_register:1279538522025365613> to register",
                 ephemeral=True)
         else:
-            choosen = random.choice(emojis)
-            print(player.id)
-            player_controller.give_balloon(player.id, choosen, random.randint(1, 37), "A balloon")
-        await interaction.followup.send("You bought a balloon", ephemeral=True)
+            if secret:
+                conn = sqlite3.connect('./Krusty/data/db/' + str(interaction.guild_id) + '.db')
+                cursor = conn.cursor()
+
+                data = cursor.execute(f"SELECT * FROM players WHERE players.id = '{secret}' AND players.name = 'Krusty';")
+                if data.fetchone() is None:
+                    await interaction.followup.send("You are not allowed to buy this balloon", ephemeral=True)
+                else:
+                    cursor.close()
+                    conn.close()
+                    answer = "You bought the secret balloon !\n"
+                    answer += ("```\n"
+                               "  emoji  |  points | description\n"
+                               "---------|---------|- \n"
+                               "   🚩    |  100    |"+os.getenv("SECRET_BALLOON"))
+                    answer += "```\nCAUTION : This balloon will stored as <CENSORED> in your inventory\n"
+                    await interaction.followup.send(answer, ephemeral=True)
+                    player = player_controller.get_player(interaction.user.id, interaction.user.name)
+                    player_controller.give_balloon(player.id, "🚩", 100, "<CENSORED>")
+                    try:
+                        int(secret)
+                    except ValueError:
+                        pass
+                    else:
+                        await interaction.user.send("This was not the intended solution but GG still")
+                    finally:
+                        return
+            else:
+                with open('./emojis_list', "r", encoding='utf-8') as emojis_file:
+                    emojis = emojis_file.readline().split(',')
+
+                    chosen = random.choice(emojis)
+                    print(player.id)
+                    player_controller.give_balloon(player.id, chosen, random.randint(1, 37), "A balloon")
+                await interaction.followup.send("You bought a balloon", ephemeral=True)
 
     @app_commands.command(name="balloon_see", description="See someone's balloons")
     @app_commands.describe(player="The name of the player you want to see the balloons of")
