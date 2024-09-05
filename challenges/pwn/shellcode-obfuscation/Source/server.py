@@ -3,7 +3,7 @@ from os import getenv
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, FileResponse
 from pydantic import BaseModel
-from shellcode_obfuscation import execute, validate_shellcode_output
+from shellcode_obfuscation import SIZE_RESTRICTIONS, execute, validate_shellcode_output
 
 PORT = int(getenv("PORT", 8000))
 LEVEL1_EXPECTED_OUTPUT = "Barbe à papa"
@@ -53,8 +53,7 @@ async def level3(req: Request):
     out = execute(
         req.shellcode_bytes,
         restricted_bytes=[b"\x0f", b"\x05"],
-        number_of_diff_bytes=15,
-        max_length=3000
+        size_restrictions=[SIZE_RESTRICTIONS(300, 20), SIZE_RESTRICTIONS(600, 15)],
     )
     v, s = validate_shellcode_output(out, LEVEL3_EXPECTED_OUTPUT)
     if not v:

@@ -11,9 +11,8 @@ int main(int argc, char **argv)
 {
     if(argc < 2) return 1;
 
-
     int arg1Length = strlen(argv[1]) - 1;
-    int inputLength = arg1Length < 4096 * 4 ? arg1Length : 4096 * 4;
+    int inputLength = arg1Length < 720 * 4 ? arg1Length : 720 * 4;
     unsigned char* payload = malloc(inputLength / 4);
     for(int i = 0; i < inputLength; i += 4) {
         char *ptr;

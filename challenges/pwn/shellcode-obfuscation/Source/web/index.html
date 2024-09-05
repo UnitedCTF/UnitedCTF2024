@@ -25,12 +25,10 @@
                     le string demandé sur STDOUT.<br />
                     2. Les seuls syscalls permis sont read sur stdin, write sur
                     stdout/stderr, exit et sigreturn.<br />
-                    3. Le shellcode qui va etre executé doit etre en dessous de 75 bytes
-                    de long.<br />
-                    4. L'architecture est AMD64.<br />
-                    5. Le format du shellcode doit etre en hexadécimal
+                    3. L'architecture est AMD64.<br />
+                    4. Le format du shellcode doit etre en hexadécimal
                     (\x00\x01\x02).<br />
-                    6. Le programme qui roule le shellcode à été compilé avec gcc -z execstack -fno-stack-protector -o
+                    5. Le programme qui roule le shellcode à été compilé avec gcc -z execstack -fno-stack-protector -o
                     [executable] [source.c]
                 </div>
             </div>
@@ -40,11 +38,9 @@
                     1. For each level, you must execute code that will print the expected string on STDOUT.<br />
                     2. The only syscalls allowed are read on stdin, write on
                     stdout/stderr, exit and sigreturn.<br />
-                    3. The shellcode that will be executed must be less than 75 bytes
-                    long.<br />
-                    4. The architecture is AMD64.<br />
-                    5. The shellcode format must be in hexadecimal (\x00\x01\x02).<br />
-                    6. The program that runs the shellcode was compiled with gcc -z execstack -fno-stack-protector -o
+                    3. The architecture is AMD64.<br />
+                    4. The shellcode format must be in hexadecimal (\x00\x01\x02).<br />
+                    5. The program that runs the shellcode was compiled with gcc -z execstack -fno-stack-protector -o
                     [executable] [source.c]
                 </div>
             </div>
@@ -53,9 +49,9 @@
             <h3 class="text-center bg-dark text-light py-3">Level 1</h3>
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
-            <p>Il n'y a aucune restriction pour ce niveau.</p>
+            <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
             <h5>Bytecode restrictions:</h5>
-            <p>There are no restrictions for this level.</p>
+            <p>The shellcode that will be executed must be less than 75 bytes long.</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level1_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
@@ -75,8 +71,10 @@
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
             <p>Les bytes suivants sont interdits:\x0f\x05</p>
+            <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
             <h5>Bytecode restrictions:</h5>
             <p>The following bytes are forbidden:\x0f\x05</p>
+            <p>The shellcode that will be executed must be less than 75 bytes long.</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level2_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
@@ -96,12 +94,20 @@
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
             <p>Les bytes suivants sont interdits:\x0f\x05</p>
+            <h6><strong>Restriction A:</strong></h6>
             <p>Maximum 15 bytes distinct autorisés</p>
-            <p>Longueur maximale de 3000 bytes</p>
+            <p>Longueur maximale de 600 bytes</p>
+            <h6><strong>Restriction B:</strong></h6>
+            <p>Maximum 20 bytes distinct autorisés</p>
+            <p>Longueur maximale de 300 bytes</p>
             <h5>Bytecode restrictions:</h5>
             <p>The following bytes are forbidden:\x0f\x05</p>
+            <h6><strong>Restriction A:</strong></h6>
             <p>Maximum 15 distinct bytes allowed</p>
-            <p>Maximum length of 3000 bytes</p>
+            <p>Maximum length of 600 bytes</p>
+            <h6><strong>Restriction B:</strong></h6>
+            <p>Maximum 20 distinct bytes allowed</p>
+            <p>Maximum length of 300 bytes</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
