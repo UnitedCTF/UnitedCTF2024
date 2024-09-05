@@ -1,5 +1,5 @@
 # Shellcode Obfuscation 1
-**`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
+**`Auteurs:`** [Atlantis11656](https://github.com/MassinissaDjellouli) && [Linkster78](https://github.com/linkster78)
 
 ## Description (Français)
 Hé! psst! J'ai un défi pour toi... Si tu arrive a imprimer un message sur les 3 écrans devant toi, je t'offre des prix alléchants!
