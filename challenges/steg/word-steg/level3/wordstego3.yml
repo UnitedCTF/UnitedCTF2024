@@ -6,9 +6,9 @@ type: standard
 value: 4
 description: |-
     ## Description (Français)
-    Nous avons caché une message dans la carte du parc. Trouve le message et rapporte le pour gagner un prix!
+    Nous avons caché un message dans un des niveaux de la carte du parc. Trouve le message et rapporte le pour gagner un prix!
     ## Description (English)
-    We have hidden a message in the park map. Find the message and report it to win a prize!
+    We have hidden a message in one of the levels of the park map. Find the message and report it to win a prize!
 
 flags:
     - flag-UF0und7heTr3asuR3M4p
@@ -16,5 +16,3 @@ flags:
 tags:
     - steg
     - word
-
-requirements: WordStego 1

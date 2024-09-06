@@ -10,7 +10,11 @@ description: |-
     ## Description (English)
     Welcome to our amusement park! Here is a pamphlet to help you get around. But be careful, there is a secret message hidden in this document. Find it to win a prize!
 flags:
-    - flag-welcometothenewworld
+    - {
+        type: "static",
+        content: "flag-welcometothenewworld",
+        data: "case_insensitive"
+    }
    
 tags:
     - steg

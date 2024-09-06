@@ -16,5 +16,3 @@ flags:
 tags:
     - steg
     - word
-
-requirements: WordStego 1
