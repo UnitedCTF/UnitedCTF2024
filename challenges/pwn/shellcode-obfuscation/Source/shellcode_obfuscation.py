@@ -35,7 +35,6 @@ def execute(
             max_length = sr.max_length
             if bytecode_len > max_length:
                 continue
-            print(bytecode_len, max_length)
             if len(list) > sr.max_diff_bytes:
                 return {"error": f"Too many different bytes ({str(len(list))}). Max number of different bytes for shellcode of length {str(max_length)} and more is {str(sr.max_diff_bytes)}"}
             valid = True
@@ -61,7 +60,10 @@ def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
     hex = shellcode.hex()
     hex_str = "\\x" + '\\x'.join([''.join([hex[i],hex[i + 1]]) for i in range(0,len(hex),2)])
     proc = Popen(["./exec_shellcode",hex_str], stdin=PIPE, stdout=PIPE, stderr=PIPE)
-    proc.wait(timeout=5)
+    try:
+        proc.wait(timeout=3)
+    except Exception:
+        return "Execution timed out after 3 seconds", ""
     out, err = proc.stdout.read(), proc.stderr.read()
     try:
         return err.decode("latin-1"), out.decode("latin-1")
@@ -70,6 +72,7 @@ def execute_shellcode(shellcode: bytes) -> tuple[str, str]:
 
 
 def validate_shellcode_output(out: dict[str,str], expected: str) -> tuple[bool, str]:
+    print(out)
     if "error" in out:
         return False, str(out["error"])
     out = str(out["res"])

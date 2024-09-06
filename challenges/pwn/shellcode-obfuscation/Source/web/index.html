@@ -57,7 +57,7 @@
             </div>
             <h3>To print: Barbe à papa</h3>
             <div class="row d-flex justify-content-center">
-                <button class="btn btn-primary mt-4 col-5" onclick="execute(1)">
+                <button id="execute_button_1" class="btn btn-primary mt-4 col-5" onclick="execute(1)">
                     Execute
                 </button>
             </div>
@@ -70,17 +70,17 @@
             <h3 class="text-center bg-dark text-light py-3">Level 2</h3>
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x0f\x05</p>
+            <p>Les bytes suivants sont interdits:\x05\x0f</p>
             <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
             <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x0f\x05</p>
+            <p>The following bytes are forbidden:\x05\x0f</p>
             <p>The shellcode that will be executed must be less than 75 bytes long.</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level2_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
-            <h3>To print: Manèges</h3>
+            <h3>To print: Popcorn</h3>
             <div class="row d-flex justify-content-center">
-                <button class="btn btn-primary mt-4 col-5" onclick="execute(2)">
+                <button id="execute_button_2" class="btn btn-primary mt-4 col-5" onclick="execute(2)">
                     Execute
                 </button>
             </div>
@@ -89,8 +89,32 @@
                 <textarea id="level2_output" class="form-control col-12" rows="3" readonly></textarea>
             </div>
         </div>
-        <div class="level3 row mt-5 pb-5 p-0">
+        
+        <div class="level3 row mt-5 p-0">
             <h3 class="text-center bg-dark text-light py-3">Level 3</h3>
+            <h4 class="col-12">Bytes:</h4>
+            <h5>Restrictions sur le bytecode:</h5>
+            <p>Les bytes suivants sont interdits:\x00 à \x0f\x31\x89\x00</p>
+            <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
+            <h5>Bytecode restrictions:</h5>
+            <p>The following bytes are forbidden:\x00 to \x0f\x31\x89</p>
+            <p>The shellcode that will be executed must be less than 75 bytes long.</p>
+            <div class="d-flex justify-content-center">
+                <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
+            </div>
+            <h3>To print: Manèges</h3>
+            <div class="row d-flex justify-content-center">
+                <button id="execute_button_3" class="btn btn-primary mt-4 col-5" onclick="execute(3)">
+                    Execute
+                </button>
+            </div>
+            <h4 class="col-12">Output:</h4>
+            <div class="d-flex justify-content-center">
+                <textarea id="level3_output" class="form-control col-12" rows="3" readonly></textarea>
+            </div>
+        </div>
+        <div class="level4 row mt-5 pb-5 p-0">
+            <h3 class="text-center bg-dark text-light py-3">Level 4</h3>
             <h4 class="col-12">Bytes:</h4>
             <h5>Restrictions sur le bytecode:</h5>
             <p>Les bytes suivants sont interdits:\x0f\x05</p>
@@ -109,17 +133,17 @@
             <p>Maximum 20 distinct bytes allowed</p>
             <p>Maximum length of 300 bytes</p>
             <div class="d-flex justify-content-center">
-                <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
+                <textarea id="level4_bytes" class="form-control col-12" rows="3"></textarea>
             </div>
             <h3>To print: UnitedCTF</h3>
             <div class="row d-flex justify-content-center">
-                <button class="btn btn-primary mt-4 col-5" onclick="execute(3)">
+                <button id="execute_button_4" class="btn btn-primary mt-4 col-5" onclick="execute(4)">
                     Execute
                 </button>
             </div>
             <h4 class="col-12">Output:</h4>
             <div class="d-flex justify-content-center">
-                <textarea id="level3_output" class="form-control col-12" rows="3" readonly></textarea>
+                <textarea id="level4_output" class="form-control col-12" rows="3" readonly></textarea>
             </div>
         </div>
     </div>

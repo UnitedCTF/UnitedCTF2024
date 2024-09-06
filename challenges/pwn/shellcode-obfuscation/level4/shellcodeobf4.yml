@@ -1,22 +1,23 @@
-﻿name: Shellcode Obfuscation 3
+﻿name: Shellcode Obfuscation 4
 author: Atlantis11656
 category: pwn
 type: standard
-# CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
-value: 7
+# CFSS:0.1/TS:I/E:H/HSFC:Y=10-16
+value: 11
 description: |-
     ## Description (Français)
     Hé! psst! J'ai un défi pour toi... Si tu arrive a imprimer un message sur les 4 écrans devant toi, je t'offre des prix alléchants!
 
-    Essaie d'imprimer sur le troisième écran pour avoir un coupon rabais pour les manèges!
+    Si tu réussis a imprimer sur le dernier écran, je t'offre un coupon rabais pour tout dans le parc d'attraction!
     Flag format: `flag-[a-zA-Z0-9]+`
     ## Description (English)
     Hey! psst! I have a challenge for you... If you can print a message on the 4 screens in front of you, I'll give you some attractive prizes!
 
-    Try to print on the third screen to get a discount coupon for the rides!
+    If you manage to print on the last screen, I'll give you a discount coupon for everything in the amusement park!
     Flag format: `flag-[a-zA-Z0-9]+`
 flags:
-    - flag-ML5V9JD3K8WTYQZA7R6YA2C3DZ8V7T1B
+    - flag-R6YA2C3DZ8V7T9JPX9F3K7ZQ2JPXLMN4
 
 tags:
     - pwn
+    - advanced
