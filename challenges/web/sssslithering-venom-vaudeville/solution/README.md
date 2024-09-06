@@ -129,9 +129,9 @@ Open a listener:
 nc -lvnp <port>
 ```
 
-Set the cookie to our payload and get the page.
+Set the cookie to our payload and get the page /flag.
 ![cookie](cookie.png)
 
 ![listener](listener.png)
 
-Succes! We have a reverse shell, we can `ls` and `cat` the flag!
+Success! We have a reverse shell, we can `ls` and `cat` the flag!
