@@ -1105,10 +1105,9 @@ INSERT INTO tokens (token, user_id) VALUES ('204f512a48f5af63a7c6c7634de66a38234
 INSERT INTO tokens (token, user_id) VALUES ('65a73ac0d7baeab59f35f60ab4564d530ca38e9db7532c5366b1fd4420966e2a',43);
 INSERT INTO tokens (token, user_id) VALUES ('51b378976cda21ef2af02faeae21ba81b960a0f6885474c17d5a46888ccb5663',3);
 
-INSERT INTO flags (flag, user_id) VALUES ('flag-PHP_m4g1c_h4sh_3897568204d82619', (SELECT id FROM users WHERE username = 'EthanClark'));
-INSERT INTO flags (flag, user_id) VALUES ('flag-P4ssw0rd_Spr4y_3cb3029478777704167e1a', (SELECT id FROM users WHERE username = 'ZoeWright'));
-INSERT INTO flags (flag, user_id) VALUES ('flag-S3ssi0n_H1jack1ng_7d73cacb3dd28', (SELECT id FROM users WHERE username = 'HarperWatkins'));
-INSERT INTO flags (flag, user_id) VALUES ('flag-R4c3_c0d1tion_91de6d9165949e', (SELECT id FROM users WHERE username = 'CarterMorris'));
+INSERT INTO flags (flag, user_id) VALUES ('flag-PHP_m4g1c_h4sh_3897568204d82619_4', (SELECT id FROM users WHERE username = 'EthanClark'));
+INSERT INTO flags (flag, user_id) VALUES ('flag-P4ssw0rd_Spr4y_3cb3029478777704167e1a_2', (SELECT id FROM users WHERE username = 'ZoeWright'));
+INSERT INTO flags (flag, user_id) VALUES ('flag-S3ssi0n_H1jack1ng_7d73cacb3dd28_3', (SELECT id FROM users WHERE username = 'HarperWatkins'));
 
 INSERT INTO attractions (name, status, calendar) VALUES ('Alien Autopsy','open','Monday: 8:00 AM - 6:00 PM
 Tuesday: 8:00 AM - 6:00 PM
