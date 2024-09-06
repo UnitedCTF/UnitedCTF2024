@@ -3,12 +3,10 @@ author: "Talgarr"
 category: reverse
 description: |-
   ## Description (français)
-  Les mots de passe de l'équipe se sont retrouvé dans une boite suprise 🤡📦!
-  Vous avez les plans 🗺️📏, seriez-vous retrouvé les mots de passes?
+  Les plans du logiciel de gestion des horaires du parc ainsi que sa base de donnée à été fuité 🗺️📏! Une chance que le fichier est sécurisé!
 
   ## Description (english)
-  The team passwords were lost in a Jack-in-the-Box 🤡📦!
-  You have the plans 🗺️📏, will you be able to retrieve the passwords?
+  The plans for the park's scheduling software and its database have been leaked 🗺️📏! Fortunately, the file is secure!
 
 type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
