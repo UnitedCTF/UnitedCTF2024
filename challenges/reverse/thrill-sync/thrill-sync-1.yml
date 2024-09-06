@@ -4,16 +4,18 @@ category: reverse
 description: |-
   ## Description (français)
   Les plans du logiciel de gestion des horaires du parc ainsi que sa base de donnée à été fuité 🗺️📏! Une chance que le fichier est sécurisé!
+  Ce flag termine par 1.
 
   ## Description (english)
   The plans for the park's scheduling software and its database have been leaked 🗺️📏! Fortunately, the file is secure!
+  This flag ends with 1.
 
 type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 2
 
 flags:
-  - flag-2b32a6c11b1443459c8fc43133f12d1e
+  - flag-2b32a6c11b1443459c8fc43133f12d1e_1
 
 files:
   - ./files/data_leaked.7z
