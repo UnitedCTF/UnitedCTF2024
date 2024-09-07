@@ -18,7 +18,7 @@ type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
 value: 6
 
-connection_info: https://challenges.unitedctf.ca:5002
+connection_info: https://onlyparks2.c.unitedctf.ca
 
 flags:
   - flag-08826f5b2a0fb34674c7a808757173e5
@@ -30,5 +30,4 @@ tags:
   - web
 
 requirements:
-  - "OnlyParks 1 📖🎡🎢"
   - "OnlyParks 2 📖🎡🎢"

@@ -18,7 +18,7 @@ type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 4
 
-connection_info: https://challenges.unitedctf.ca:5000
+connection_info: https://onlyparks2.c.unitedctf.ca
 
 flags:
   - flag-89a5178d28493b04d91bb0e2296d15c7

@@ -3,7 +3,6 @@ FROM node:20
 WORKDIR /app
 
 COPY ./package* .
-COPY ./node_modules node_modules
 COPY ./schema.prisma .
 
 COPY ./index.ts .
