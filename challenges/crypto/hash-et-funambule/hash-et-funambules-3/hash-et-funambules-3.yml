@@ -23,7 +23,7 @@ files:
   - ./challenge/app/app.go
   - ./challenge/app/rockyou.txt.tar.gz
 
-connection_info: nc <host> <port>
+connection_info: nc c.unitedctf.ca 10003
 
 tags:
   - moyen

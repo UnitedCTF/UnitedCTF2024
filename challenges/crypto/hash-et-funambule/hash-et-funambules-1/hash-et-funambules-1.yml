@@ -22,7 +22,7 @@ flags:
 files:
   - ./challenge/app/app.go
 
-connection_info: nc <host> <port>
+connection_info: nc c.unitedctf.ca 10001
 
 tags:
   - facile
