@@ -1,4 +1,4 @@
-name: "Escape room 3"
+name: "Escape Room 3"
 author: "KptCheeseWhiz"
 category: Jail
 description: |-
@@ -6,15 +6,17 @@ description: |-
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. et certaines fonctions bloquées. Ça ne peut pas être si difficile?
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
   ## Description (en)
 
   A room, a terminal, a locked door requiring a secret code... and certain functions blocked. How hard can it be?
 
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
 type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
 value: 4
-
-connection_info: nc challenges.unitedctf.ca 1237
 
 flags: 
   - flag-1310d81cb545ee06af252f9191af473b
@@ -23,6 +25,4 @@ tags:
   - jail
 
 requirements:
-  - "Escape room 0"
-  - "Escape room 1"
-  - "Escape room 2"
+  - "Escape Room 2"

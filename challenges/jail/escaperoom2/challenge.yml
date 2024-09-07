@@ -1,4 +1,4 @@
-name: "Escape room 2"
+name: "Escape Room 2"
 author: "KptCheeseWhiz"
 category: Jail
 description: |-
@@ -6,15 +6,17 @@ description: |-
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. et un clavier brisé dont les lettres et les chiffres ne fonctionnent plus. Ça ne peut pas être si difficile?
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
   ## Description (en)
 
   A room, a terminal, a locked door asking for a secret code... and a broken keyboard whose letters and numbers no longer work. How hard can it be?
 
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
 type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 2
-
-connection_info: nc challenges.unitedctf.ca 1236
 
 flags: 
   - flag-1e4011697d0ea15fc6a3cf37baaf2d5f
@@ -26,5 +28,4 @@ tags:
   - jail
 
 requirements:
-  - "Escape room 0"
-  - "Escape room 1"
+  - "Escape Room 1"

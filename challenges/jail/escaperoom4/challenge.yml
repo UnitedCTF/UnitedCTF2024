@@ -1,4 +1,4 @@
-name: "Escape room 4"
+name: "Escape Room 4"
 author: "KptCheeseWhiz"
 category: Jail
 description: |-
@@ -6,15 +6,17 @@ description: |-
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. et les fonctions sont désactivées. Ça ne peut pas être si difficile?
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
   ## Description (en)
 
   A room, a terminal, a locked door asking for a secret code... and the functions are disabled. How hard can it be?
 
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
 type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
 value: 6
-
-connection_info: nc challenges.unitedctf.ca 1238
 
 flags: 
   - flag-108a55858ba2f0a498fb14666bab109f
@@ -23,7 +25,4 @@ tags:
   - jail
 
 requirements:
-  - "Escape room 0"
-  - "Escape room 1"
-  - "Escape room 2"
-  - "Escape room 3"
+  - "Escape Room 3"
