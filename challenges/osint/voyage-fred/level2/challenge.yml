@@ -13,9 +13,7 @@ description: |-
 
   Quel est le nom de l'homme d'affaires qui a fondé le parc dans lequel cette photo a été prise?
 
-  Note: Le flag est le nom de l'homme d'affaires avec des espaces.
-  
-  **Vous n'avez que 3 essais.**
+  **Note: Le flag est le nom de l'homme d'affaires avec des espaces.**
 
   *Voici [une vidéo](https://www.youtube.com/watch?v=EbXSbP-wEFU) pour vous mettre dans l'ambiance.*
 
@@ -25,9 +23,7 @@ description: |-
 
   What is the name of the businessman that founded the parc in which this photo was taken?
 
-  Note: The flag is the name of the businessman with spaces.
-  
-  **You only have 3 attempts.**
+  **Note: The flag is the name of the businessman with spaces.**
   
   *Here's [a video](https://www.youtube.com/watch?v=EbXSbP-wEFU) to get you in the mood.*
 
@@ -45,3 +41,6 @@ files:
 
 tags:
 - osint
+
+requirements:
+  - "Fred en voyage 1"

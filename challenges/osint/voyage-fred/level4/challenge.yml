@@ -46,3 +46,6 @@ files:
 
 tags:
 - osint
+
+requirements:
+  - "Fred en voyage 3"
