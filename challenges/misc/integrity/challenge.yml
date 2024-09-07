@@ -14,7 +14,7 @@ description: |-
   sur un projet nommé "Intégrité". Après un premier manquement à l'intégrité, nous avons réussi à obtenir 
   une archive de ce projet. Que pourrions-nous en faire ?
 
-  ## Descripption (en)
+  ## Description (en)
 
   It seems that copying and pasting your password with Ctrl+C can cause some issues...
 
@@ -22,7 +22,7 @@ description: |-
   called "Integrity." After an initial breach of integrity, we managed to obtain an archive of this project. 
   What could we do with it?
 
-connection_info: nc challenges.unitedctf.ca:8080
+connection_info: nc c.unitedctf.ca 10009
 
 files:
   - integrity.zip
