@@ -11,6 +11,8 @@ description: |-
 
   ## Description (en)
 
+  Among the many attractions offered this year, MagicoMath attracts people with a heart for mathematics. He addresses the audience in a strange language, made up of symbols, numbers, and mysterious words.
+
   I've only given you an encryption function. You won't be able to decrypt the flag, right?
 
 flags:
@@ -22,6 +24,8 @@ files:
 type: standard
 # CFSS:0.1/TS:I/E:M/HSFC:N=6-10
 value: 7
+
+connection_info: nc c.unitedctf.ca 10005
 
 tags:
 - crypto

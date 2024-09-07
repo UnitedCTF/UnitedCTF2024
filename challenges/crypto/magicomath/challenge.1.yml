@@ -25,5 +25,10 @@ type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 3
 
+connection_info: nc c.unitedctf.ca 10005
+
 tags:
 - crypto
+
+requirements:
+- "MagicoMath 1"
