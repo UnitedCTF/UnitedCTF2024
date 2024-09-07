@@ -14,11 +14,8 @@ description: |-
   I just wanted to eat a nice mustard and ketchup hot dog 🌭...
   Can you help me? I'm so hungry!
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
 
 flags:
   - flag-R0T3UX-4-M3
