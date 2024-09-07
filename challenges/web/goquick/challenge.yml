@@ -5,6 +5,8 @@ type: standard
 # CFSS:0.1/TS:I/E:M/HSFC:N=6-10
 value: 7
 
+connection_info: https://goquick.c.unitedctf.ca
+
 description: |-
   ## Description (fr)
 
