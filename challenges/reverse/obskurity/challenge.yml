@@ -13,11 +13,10 @@ description: |-
   For safety reasons, we need to audit our rides. For safety reasons, the logs are encrypted. For "safety" reasons... we use [a weird obscure language I don't know](https://razetime.github.io/ngn-k-tutorial/). We lost the decryption algorithm. Oops.
 
   [Online interpreter](https://ngn.codeberg.page/k#eJwljctugzAQRfd8RRwWzCSuDFZIYUaR+AV2lgBFcUOzYcGjCyPL+fZa7fbonHstValmQ/C+oeKRrHrflO0zySt511RiP4sq8ERedryn+bDfXUg20uXFw8wLkmMwALbXn3g6zTzz1M1cDMhdS4s34CJwvA8YVHHQhwsbaDn6ddRbjLiPdzotkv+5s1VZtvFGALmcUdS19FaZBmRMapSxdLgqEmXIFmyELq9J7rdm/DsJ/fF7erw+1vH5+PoZn8fkF+P6P3w=)
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-11
+value: 9
 
 flags:
   - flag-h0peUd1dntR34Dev3erything
