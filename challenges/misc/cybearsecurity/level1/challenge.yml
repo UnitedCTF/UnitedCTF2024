@@ -2,6 +2,9 @@ name: Cybear Security 1
 author: mkuroni
 category: Misc
 
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
 description: |-
   ## Description (fr)
 
@@ -21,4 +24,4 @@ tags:
 - accessibility
 
 files:
-- ./lvl1.svg
+- ./lvl1.png
