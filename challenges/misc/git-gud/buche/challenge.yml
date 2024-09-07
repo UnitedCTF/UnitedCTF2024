@@ -1,6 +1,6 @@
 name: "Git Gud - Bûche"
 author: "Deimos"
-category: web
+category: misc
 description: |-
   ## Description (français)
 
@@ -24,7 +24,7 @@ flags:
   - flag-C4-8UCH3-F027
 
 files:
-  - ./git-gud-challenge.zip
+  - ../git-gud-challenge.zip
 
 tags:
   - misc

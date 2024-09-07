@@ -1,6 +1,6 @@
 name: "Git Gud - Branche-toi"
 author: "Deimos"
-category: web
+category: misc
 description: |-
   ## Description (français)
 
@@ -24,7 +24,7 @@ flags:
   - flag-4W350M3-D35C21P710N
 
 files:
-  - ./git-gud-challenge.zip
+  - ../git-gud-challenge.zip
 
 tags:
   - misc

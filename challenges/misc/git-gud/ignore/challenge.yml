@@ -1,6 +1,6 @@
 name: "Git Gud - Ignore ça"
 author: "Deimos"
-category: web
+category: misc
 description: |-
   ## Description (français)
 
@@ -24,7 +24,7 @@ flags:
   - flag-ParcAventureExtreme2000
 
 files:
-  - ./git-gud-challenge.zip
+  - ../git-gud-challenge.zip
 
 tags:
   - misc

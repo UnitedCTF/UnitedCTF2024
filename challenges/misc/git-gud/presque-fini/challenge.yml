@@ -1,6 +1,6 @@
 name: "Git Gud - Presque fini"
 author: "Deimos"
-category: web
+category: misc
 description: |-
   ## Description (français)
 
@@ -24,7 +24,7 @@ flags:
   - flag-T0D0-TH3-T0D0
 
 files:
-  - ./git-gud-challenge.zip
+  - ../git-gud-challenge.zip
 
 tags:
   - misc
