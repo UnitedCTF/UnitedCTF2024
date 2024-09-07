@@ -19,7 +19,9 @@ type: standard
 value: 1
 
 flags: 
-  - FLAG-M3RC1-P0UR-T4-P4RT1C1P4T10N
+  - flag-M3RC1-P0UR-T4-P4RT1C1P4T10N
 
 tags:
   - misc
+
+state: hidden
