@@ -7,9 +7,13 @@ description: |-
 
   Peux-tu trouver la clé qui permet de générer les fastpass?
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
   ## Description (en)
 
   Can you find the key used to generate the fastpasses?
+
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
 
 flags:
 - flag-go-enjoy-the-rides-995cc32a

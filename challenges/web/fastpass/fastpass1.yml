@@ -7,9 +7,13 @@ description: |-
 
   Le site permettant la génération de "Fast pass", des billets pour éviter les files d'attentes, est à capacité pour aujourd'hui. Il refuse de générer de nouvelles "Fast pass". Mais toi, tu veux VRAIMENT éviter les files d'attentes... On a retrouvé l'API disponible à l'URL ci-dessous.
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
   ## Description (en)
 
   The website that generates fast passes, special tickets to skip wait lines for attractions, is at capacity for the day. No more fast passes can be generated. But you, you REALLY want to skip wait lines... We traced back the API to the URL below.
+
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
 
 flags:
 - flag-4ctu4t0r5-ftw-a6c331fd0
