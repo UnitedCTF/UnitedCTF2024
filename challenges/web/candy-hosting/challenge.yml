@@ -6,15 +6,17 @@ description: |-
 
   Fatigué du nuage blanc normal? Hébergez votre site web directement sur nos serveurs alimentés en barbe à papa!
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
   ## Description (english)
 
   Tired of the normal plain white cloud? Host your website directly into our cotton candy powered servers!
 
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
 type: standard
 # CFSS:0.1/TS:I/E:M/HSFC:N=6-10
 value: 7
-
-connection_info: https://challenges.unitedctf.ca:8080
 
 flags: 
   - flag-684385ac3cefd18c73705c87ab7ff6ae
