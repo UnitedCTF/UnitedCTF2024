@@ -1,10 +1,11 @@
-name: CircusFlyer
+name: Circus Flyer
 author: Capucinoxx
 category: Web
 type: standard
 # CFSS:0.1/TS:I/E:L/HSFC:N=4-7
 value: 6
 
+connection_info: https://circusflyer.c.unitedctf.ca
 
 description: |-
   ## Description (fr)
