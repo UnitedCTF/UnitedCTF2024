@@ -29,6 +29,8 @@ description: |-
 
   Flag format: `flag-[0-9a-zA-Z_]*`
 
+connection_info: nc c.unitedctf.ca 10018
+
 flags:
   - flag-brut3_f0rc3_1s_n07_Th3_0nly_w4y
 
