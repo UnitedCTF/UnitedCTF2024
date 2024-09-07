@@ -22,8 +22,7 @@ tags:
 - privesc
 
 requirements:
-- fastpass1
-- fastpass2
+- "Fastpass 2"
 
 type: standard
 

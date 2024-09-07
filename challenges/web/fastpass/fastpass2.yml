@@ -22,8 +22,8 @@ tags:
 - privesc
 
 requirements:
-- fastpass1
+- "Fastpass 1"
 
 type: standard
 
-value: 2 #CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 3 #CFSS:0.1/TS:B/E:L/HSFC:N=2-4
