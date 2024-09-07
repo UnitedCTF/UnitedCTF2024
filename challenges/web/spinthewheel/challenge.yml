@@ -2,6 +2,10 @@ name: Roue de fortune
 author: Linkster78
 category: Web
 
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 4
+
 description: |-
   ## Description (fr)
 
