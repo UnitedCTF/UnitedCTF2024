@@ -16,6 +16,8 @@ type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
 value: 5
 
+connection_info: nc c.unitedctf.ca 10011
+
 flag:
 - flag-Th3F0r7un3C00ki3IsN07ALi3
 
