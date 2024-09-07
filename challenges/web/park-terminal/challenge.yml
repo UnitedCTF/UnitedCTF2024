@@ -23,6 +23,7 @@ description: |
   Unfortunately, this terminal session doesn’t have the necessary access to give me a ticket. All I know is that 
   the ticket generation file is at the root.
 
+connection_info: https://parkterminal.c.unitedctf.ca
 
 flags:
   - flag-HoHoPHPOupsiiii

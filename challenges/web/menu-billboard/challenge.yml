@@ -17,7 +17,7 @@ description: |-
 type: standard
 value: 2
 
-connection_info: à compléter
+connection_info: https://menubillboard.c.unitedctf.ca
 
 flags: 
   - flag-s0urc3m4p5_r3v34l_th3_c0d3_0aab131d

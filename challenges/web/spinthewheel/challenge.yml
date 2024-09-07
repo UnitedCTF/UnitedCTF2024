@@ -13,6 +13,8 @@ description: |-
   Do you like games of chance? Well you're in luck!<br>
   [Be reasonable...](https://www.youtube.com/watch?v=3MICRFzyrVA)
 
+connection_info: https://spinthewheel.c.unitedctf.ca
+
 flags:
 - flag-Fl4skNS7uff
 
