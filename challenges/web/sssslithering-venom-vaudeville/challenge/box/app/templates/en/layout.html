@@ -13,9 +13,9 @@
       <nav>
         <a href="/flag">Flag</a>
         <a href="/">Reception</a>
-        <a href="/secret">Secret</a>
         <a href="/log">Log</a>
-        {{if eq .Lang "fr"}} <a href="/lang?l=en">EN</a> {{else}} <a href="/lang?l=fr">FR</a> {{end}}
+        {{if eq .Lang "fr"}} <a href="/lang?l=en">EN</a> {{else}}
+        <a href="/lang?l=fr">FR</a> {{end}}
       </nav>
     </header>
     <main class="main-content">{{template "body" .}}</main>

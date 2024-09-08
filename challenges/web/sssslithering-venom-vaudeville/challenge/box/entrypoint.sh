@@ -7,5 +7,5 @@ while true; do
     echo "Start cleanup"
     sudo -u user timeout 30 ./cleanup.sh
     echo "Cleanup finished"
-    sleep 5
+    sleep 60
 done

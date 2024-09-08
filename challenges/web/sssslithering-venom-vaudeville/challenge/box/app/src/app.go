@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/google/uuid"
 	"html/template"
 	"io"
 	"log"
@@ -12,6 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 	"unsafe"
+
+	"github.com/google/uuid"
 )
 
 const (
@@ -123,26 +124,6 @@ func handlerFlag(w http.ResponseWriter, r *http.Request) {
 	serveTemplate(w, r, "flag.html", nil)
 }
 
-func handlerSecret(w http.ResponseWriter, r *http.Request) {
-
-	log.Println(string(
-		[]byte{
-			((((EAX<<EAX|EAX)<<EAX|EAX)<<EAX<<EAX<<EAX|EAX)<<EAX ^ EAX),
-			(((((EAX<<EAX|EAX)<<EAX<<EAX|EAX)<<EAX|EAX)<<EAX^EAX)<<EAX | EAX),
-			((((EAX<<EAX|EAX)<<EAX<<EAX|EAX)<<EAX|EAX)<<EAX<<EAX ^ EAX),
-			(((EAX<<EAX|EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX | EAX),
-			EAX << EAX << EAX << EAX << EAX << EAX,
-			((((EAX<<EAX|EAX)<<EAX|EAX)<<EAX<<EAX<<EAX|EAX)<<EAX ^ EAX),
-			(((EAX<<EAX|EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX | EAX),
-			(((EAX<<EAX|EAX)<<EAX<<EAX<<EAX<<EAX|EAX)<<EAX | EAX),
-			(((EAX<<EAX|EAX)<<EAX|EAX)<<EAX<<EAX<<EAX | EAX) << EAX,
-			(((EAX<<EAX|EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX | EAX),
-			(((EAX<<EAX|EAX)<<EAX|EAX)<<EAX<<EAX | EAX) << EAX << EAX,
-		},
-	))
-	http.Redirect(w, r, "/", http.StatusSeeOther)
-}
-
 func handlerLog(w http.ResponseWriter, r *http.Request) {
 	fp := filepath.Join("log", "master_logfile.log")
 
@@ -175,7 +156,6 @@ func main() {
 	http.HandleFunc("/", handleIndex)
 	http.HandleFunc("/lang", handlerLang)
 	http.HandleFunc("/flag", handlerFlag)
-	http.HandleFunc("/secret", handlerSecret)
 	http.HandleFunc("/log", handlerLog)
 
 	// Ensure the log file exists
