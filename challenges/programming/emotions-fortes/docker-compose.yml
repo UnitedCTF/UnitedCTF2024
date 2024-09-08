@@ -1,0 +1,6 @@
+services:
+  server:
+    build: .
+    ports:
+      - 10000:1000
+      - 10001:1001

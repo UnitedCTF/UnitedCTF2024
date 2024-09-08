@@ -1,0 +1,33 @@
+name: Émotions Fortes 2
+author: Capucinoxx & Linkster78
+category: Programming
+
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 5
+
+description: |-
+  ## Description (français)
+
+  Nous étudions maintenant la répartition sociale des visiteurs de certains parcs. L'ensemble des visiteurs ont été catégorisés en trois groupes de manière arbitraire.
+
+  Encore une fois, la plupart des parcs ne réussissent qu'à réunir des visiteurs de deux groupes à la fois, sauf un parc qui a réunit des visiteurs des trois groupes.
+
+  Pouvez-vous l'identifier?
+
+  *Voici quelques représentants venant de chaque groupe: 😀🦨😉🦔😜😨, 🥲🦐😡📎🥸, 🤣👾😰🦩😈.*
+
+  ## Description (english)
+
+  We now study the social distribution of the visitors in certain parks. Every visitor has been assigned to one of three groups arbitrarily.
+
+  Again, most of the parcs only manage to get visitors from two groups at a time, except for one park which has visitors of all three groupes.
+
+  Can you identify it?
+
+  *Here are a few representatives from each group: 😀🦨😉🦔😜😨, 🥲🦐😡📎🥸, 🤣👾😰🦩😈.*
+
+flags:
+- flag-s3tTh30ryMuch
+
+tags:
+- programming
