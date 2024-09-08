@@ -5,14 +5,15 @@ type: standard
 # CFSS:0.1/TS:B/E:l/HSFC:N=2-4
 value: 2
 description: |-
-    ## Description (Français)
-    On a caché un message invisible dans le document. Trouve le message et rapporte le pour gagner un prix!
-    ## Description (English)
+    ## Description (français)
+    On a caché un message invisible dans le document. Trouve le message et rapporte-le pour gagner un prix!
+
+    ## Description (english)
     We have hidden an invisible message in the document. Find the message and report it to win a prize!
 
 flags:
     - flag-W0WH0wD1dUF1ndM3
-   
+
 tags:
     - steg
     - word
