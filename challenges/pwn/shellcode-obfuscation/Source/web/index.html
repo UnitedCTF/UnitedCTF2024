@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shellcode Obfuscation</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <script src="/index.js"></script>
+</head>
+
+<body>
+    <div class="container bg-light mb-5">
+        <h1 class="text-center">Shellcode Obfuscation</h1>
+        <div class="row instructions d-flex">
+            <h3 class="text-center">Instructions</h3>
+            <div class="row d-flex justify-content-center">
+                <div class="col-6">
+                    1. Pour chaque niveau, vous devrez exécuter du code qui va imprimer
+                    le string demandé sur STDOUT.<br />
+                    2. Les seuls syscalls permis sont read sur stdin, write sur
+                    stdout/stderr, exit et sigreturn.<br />
+                    3. L'architecture est AMD64.<br />
+                    4. Le format du shellcode doit être en hexadécimal
+                    (\x00\x01\x02).<br />
+                    5. Le programme qui roule le shellcode a été compilé avec gcc -z execstack -fno-stack-protector -o
+                    [executable] [source.c]
+                </div>
+            </div>
+            <h3 class="text-center">Instructions</h3>
+            <div class="row d-flex justify-content-center">
+                <div class="col-6">
+                    1. For each level, you must execute code that will print the expected string on STDOUT.<br />
+                    2. The only syscalls allowed are read on stdin, write on
+                    stdout/stderr, exit and sigreturn.<br />
+                    3. The architecture is AMD64.<br />
+                    4. The shellcode format must be in hexadecimal (\x00\x01\x02).<br />
+                    5. The program that runs the shellcode was compiled with gcc -z execstack -fno-stack-protector -o
+                    [executable] [source.c]
+                </div>
+            </div>
+        </div>
+        <div class="level1 row mt-5 p-0">
+            <h3 class="text-center bg-dark text-light py-3">Level 1</h3>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Le shellcode qui sera exécuté doit faire au plus 75 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The shellcode that will be executed must be at most 75 bytes long.</p>
+            <div class="d-flex justify-content-center">
+                <textarea id="level1_bytes" class="form-control col-12" rows="3"></textarea>
+            </div>
+            <h3>To print: Barbe à papa</h3>
+            <div class="row d-flex justify-content-center">
+                <button id="execute_button_1" class="btn btn-primary mt-4 col-5" onclick="execute(1)">
+                    Execute
+                </button>
+            </div>
+            <h4 class="col-12">Output:</h4>
+            <div class="d-flex justify-content-center">
+                <textarea id="level1_output" class="form-control col-12" rows="7" readonly></textarea>
+            </div>
+        </div>
+        <div class="level2 row mt-5 p-0">
+            <h3 class="text-center bg-dark text-light py-3">Level 2</h3>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Les bytes suivants sont interdits: \x05\x0f.</p>
+            <p>Le shellcode qui sera exécuté doit faire au plus 75 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The following bytes are forbidden: \x05\x0f/</p>
+            <p>The shellcode that will be executed must be at most 75 bytes long.</p>
+            <div class="d-flex justify-content-center">
+                <textarea id="level2_bytes" class="form-control col-12" rows="3"></textarea>
+            </div>
+            <h3>To print: Popcorn</h3>
+            <div class="row d-flex justify-content-center">
+                <button id="execute_button_2" class="btn btn-primary mt-4 col-5" onclick="execute(2)">
+                    Execute
+                </button>
+            </div>
+            <h4 class="col-12">Output:</h4>
+            <div class="d-flex justify-content-center">
+                <textarea id="level2_output" class="form-control col-12" rows="7" readonly></textarea>
+            </div>
+        </div>
+        
+        <div class="level3 row mt-5 p-0">
+            <h3 class="text-center bg-dark text-light py-3">Level 3</h3>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Les bytes suivants sont interdits: \x00 à \x0f et \x31\x89\x00/</p>
+            <p>Le shellcode qui sera exécuté doit faire au plus 75 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The following bytes are forbidden: \x00 to \x0f et \x31\x89/</p>
+            <p>The shellcode that will be executed must be at most 75 bytes long.</p>
+            <div class="d-flex justify-content-center">
+                <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
+            </div>
+            <h3>To print: Manèges</h3>
+            <div class="row d-flex justify-content-center">
+                <button id="execute_button_3" class="btn btn-primary mt-4 col-5" onclick="execute(3)">
+                    Execute
+                </button>
+            </div>
+            <h4 class="col-12">Output:</h4>
+            <div class="d-flex justify-content-center">
+                <textarea id="level3_output" class="form-control col-12" rows="7" readonly></textarea>
+            </div>
+        </div>
+        <div class="level4 row mt-5 pb-5 p-0">
+            <h3 class="text-center bg-dark text-light py-3">Level 4</h3>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Les bytes suivants sont interdits: \x0f\x05.</p>
+            <p><em>Pour ce niveau, vous pouvez choisir un ensemble de restrictions entre les deux suivantes.</em></p>
+            <h6><strong>Restrictions A:</strong></h6>
+            <p>Maximum 15 bytes distinct autorisés et longueur maximale de 600 bytes.</p>
+            <h6><strong>Restrictions B:</strong></h6>
+            <p>Maximum 20 bytes distincts autorisés et longueur maximale de 300 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The following bytes are forbidden: \x0f\x05.</p>
+            <p><em>For this level, you can choose a set of restrictions between the two following.</em></p>
+            <h6><strong>Restrictions A:</strong></h6>
+            <p>Maximum 15 distinct bytes allowed and maximum length of 600 bytes.</p>
+            <h6><strong>Restrictions B:</strong></h6>
+            <p>Maximum 20 distinct bytes allowed and maximum length of 300 bytes.</p>
+            <div class="d-flex justify-content-center">
+                <textarea id="level4_bytes" class="form-control col-12" rows="3"></textarea>
+            </div>
+            <h3>To print: UnitedCTF</h3>
+            <div class="row d-flex justify-content-center">
+                <button id="execute_button_4" class="btn btn-primary mt-4 col-5" onclick="execute(4)">
+                    Execute
+                </button>
+            </div>
+            <h4 class="col-12">Output:</h4>
+            <div class="d-flex justify-content-center">
+                <textarea id="level4_output" class="form-control col-12" rows="7" readonly></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

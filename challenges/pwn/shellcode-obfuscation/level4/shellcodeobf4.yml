@@ -1,0 +1,23 @@
+﻿name: Shellcode Obfuscation 4
+author: Atlantis11656
+category: PWN
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
+value: 9
+description: |-
+    ## Description (français)
+    Hé! psst! J'ai un défi pour toi... Si tu arrives à imprimer un message sur les 4 écrans devant toi, je t'offre des prix alléchants!
+
+    Si tu réussis à imprimer sur le dernier écran, je t'offre un coupon rabais pour tout dans le parc d'attractions!
+
+    ## Description (english)
+    Hey! psst! I have a challenge for you... If you can print a message on the 4 screens in front of you, I'll give you some attractive prizes!
+
+    If you manage to print on the last screen, I'll give you a discount coupon for everything in the amusement park!
+
+flags:
+    - flag-R6YA2C3DZ8V7T9JPX9F3K7ZQ2JPXLMN4
+
+tags:
+    - pwn
+    - shellcoding
