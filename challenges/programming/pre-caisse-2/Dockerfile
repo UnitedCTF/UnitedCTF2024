@@ -6,7 +6,7 @@ RUN apk update && \
     apk add --no-cache socat
 
 COPY src/main.py .
-COPY entrypoint.sh .
+COPY --chmod=711 entrypoint.sh .
 
 EXPOSE 1337
 CMD ["./entrypoint.sh"]

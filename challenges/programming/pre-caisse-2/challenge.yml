@@ -13,6 +13,8 @@ description: |-
 
 type: standard
 
+connection_info: nc c.unitedctf.ca 10026
+
 # CFSS:0.1/TS:B/E:M/HSFC:N=4-7
 value: 4
 
@@ -21,3 +23,6 @@ flag:
 
 tags:
 - programming
+
+requirements:
+- "Pre-caisse 1"
