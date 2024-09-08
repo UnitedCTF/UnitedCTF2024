@@ -1,0 +1,28 @@
+name: United Slots 2
+author: Ch0ufleur
+category: Pwn
+
+description: |-
+  ## Description (fr)
+
+  Après votre précédente intrusion, des vérifications plus robustes ont été effectuées pour protéger l'accès non autorisé au override de développement.
+
+  ## Description (en)
+
+  After your previous intrusion, more robust verifications are now done to protect against unauthorized access to the development override.
+
+flags:
+- flag-null-byt3-buff35-0verfl0w-44a21c
+
+tags:
+- pwn
+
+files:
+- unitedslots2.cpp
+
+requirements:
+- United Slots 1
+
+type: standard
+
+value: 4 #CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
