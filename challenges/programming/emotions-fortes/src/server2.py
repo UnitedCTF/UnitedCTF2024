@@ -18,8 +18,6 @@ for round in range(ROUND_COUNT):
     random.shuffle(flag_park_emojis)
     flag_park_idx = random.randint(0, PARK_COUNT-1)
 
-    print(flag_park_idx)
-
     parks = []
 
     for i in range(PARK_COUNT):

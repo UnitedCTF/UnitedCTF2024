@@ -26,8 +26,13 @@ description: |-
 
   *Here are a few representatives from each group: 😀🦨😉🦔😜😨, 🥲🦐😡📎🥸, 🤣👾😰🦩😈.*
 
+connection_info: nc c.unitedctf.ca 10025
+
 flags:
 - flag-s3tTh30ryMuch
 
 tags:
 - programming
+
+requirements:
+- "Émotions Fortes 1"

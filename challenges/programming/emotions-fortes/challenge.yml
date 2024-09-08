@@ -22,6 +22,8 @@ description: |-
 
   Can you identify it?
 
+connection_info: nc c.unitedctf.ca 10024
+
 flags:
 - flag-wwwwoo0ooOOOaAAa4ah
 
