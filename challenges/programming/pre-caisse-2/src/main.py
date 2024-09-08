@@ -100,5 +100,5 @@ def timeout(signum, frame):
 
 if __name__ == '__main__':
     os_signal.signal(os_signal.SIGALRM, timeout)
-    os_signal.alarm(2)
+    os_signal.alarm(10)
     chal()
