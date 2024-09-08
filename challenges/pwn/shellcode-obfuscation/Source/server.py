@@ -1,73 +1,138 @@
 from uvicorn import run
-from os import getenv
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
-from shellcode_obfuscation import SIZE_RESTRICTIONS, execute, validate_shellcode_output
+import subprocess
+import re
+import os
 
-PORT = int(getenv("PORT", 8000))
-LEVEL1_EXPECTED_OUTPUT = "Barbe à papa"
-LEVEL2_EXPECTED_OUTPUT = "Popcorn"
-LEVEL3_EXPECTED_OUTPUT = "Manèges"
-LEVEL4_EXPECTED_OUTPUT = "UnitedCTF"
+PORT = int(os.getenv('PORT', 8000))
+
+LEVEL1_EXPECTED_OUTPUT = 'Barbe à papa'
+LEVEL2_EXPECTED_OUTPUT = 'Popcorn'
+LEVEL3_EXPECTED_OUTPUT = 'Manèges'
+LEVEL4_EXPECTED_OUTPUT = 'UnitedCTF'
+
+BYTES_REGEX = r'\\x[\da-fA-F]+'
+DEFAULT_MAX_LENGTH = 75
+EXECUTION_TIMEOUT = 3
+
+
+def format_bytes(bts: list[int]) -> str:
+    return ''.join(['\\x{:02x}'.format(b) for b in bts])
+
+def execute_shellcode(shellcode: str) -> tuple[str, str]:
+    proc = subprocess.Popen(['./exec_shellcode', shellcode], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    try:
+        proc.wait(timeout=EXECUTION_TIMEOUT)
+    except Exception:
+        return '', f'Execution timed out after {EXECUTION_TIMEOUT} seconds.'
+    out, err = proc.stdout.read(), proc.stderr.read()
+    if proc.returncode == -11:
+        if not err:
+            err = b'Segmentation fault'
+        else:
+            err += b'\nSegmentation fault'
+    try:
+        return out.decode('latin-1'), err.decode('latin-1')
+    except Exception:
+        return str(out), str(err)
 
 
 class Request(BaseModel):
     shellcode_bytes: str
 
-
 app = FastAPI()
 
 
-@app.get("/")
+@app.get('/')
 async def root():
-    index = open("web/index.html", "r").read()
-    return HTMLResponse(content=index, status_code=200)
+    return FileResponse(path='web/index.html', status_code=200, media_type='text/html')
 
-
-@app.get("/index.js")
+@app.get('/index.js')
 async def index_js():
-    return FileResponse(
-        path="web/index.js", status_code=200, media_type="application/javascript"
-    )
+    return FileResponse(path='web/index.js', status_code=200, media_type='application/javascript')
 
-
-@app.post("/level1")
+@app.post('/level1')
 async def level1(req: Request):
-    out = execute(req.shellcode_bytes)
-    v, s = validate_shellcode_output(out, LEVEL1_EXPECTED_OUTPUT)
-    if not v:
-        return {"error": s}
-    return {"flag": getenv("FLAG1")}
+    shellcode = req.shellcode_bytes
+    shellcode_len = len(req.shellcode_bytes) // 4
 
-@app.post("/level2")
+    if not re.match(BYTES_REGEX, shellcode):
+        return {'error': 'Invalid input.'}
+    if shellcode_len > DEFAULT_MAX_LENGTH:
+        return {'error': f'Shellcode is too long, max length is {DEFAULT_MAX_LENGTH} bytes.'}
+
+    out, err = execute_shellcode(shellcode)
+    if LEVEL1_EXPECTED_OUTPUT not in out:
+        return {'error': f'Output did not contain "{LEVEL1_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+
+    return {'flag': os.getenv('FLAG1')}
+
+@app.post('/level2')
 async def level2(req: Request):
-    out = execute(req.shellcode_bytes, restricted_bytes=[b"\x05",b"\x0f"])
-    v, s = validate_shellcode_output(out, LEVEL2_EXPECTED_OUTPUT)
-    if not v:
-        return {"error": s}
-    return {"flag": getenv("FLAG2")}
+    shellcode = req.shellcode_bytes
+    shellcode_len = len(req.shellcode_bytes) // 4
 
-@app.post("/level3")
+    if not re.match(BYTES_REGEX, shellcode):
+        return {'error': 'Invalid input.'}
+    if shellcode_len > DEFAULT_MAX_LENGTH:
+        return {'error': f'Shellcode is too long, max length is {DEFAULT_MAX_LENGTH} bytes.'}
+    
+    shellcode_bytes = set(bytes.fromhex(shellcode.replace('\\x', '')))
+    restricted_bytes = shellcode_bytes & {0x05, 0x0f}
+    if restricted_bytes:
+        return {'error': f'Restricted bytes were found in your shellcode: {format_bytes(restricted_bytes)}.'}
+
+    out, err = execute_shellcode(shellcode)
+    if LEVEL2_EXPECTED_OUTPUT not in out:
+        return {'error': f'Output did not contain "{LEVEL2_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+
+    return {'flag': os.getenv('FLAG2')}
+
+@app.post('/level3')
 async def level3(req: Request):
-    out = execute(req.shellcode_bytes, restricted_bytes=[b"\x00",b"\x01",b"\x02",b"\x03",b"\x04", b"\x05",b"\x06",b"\x07",b"\x08",b"\x09",b"\x0a",b"\x0b",b"\x0c",b"\x0d",b"\x0e",b"\x0f" b"\x31", b"\x89"])
-    v, s = validate_shellcode_output(out, LEVEL3_EXPECTED_OUTPUT)
-    if not v:
-        return {"error": s}
-    return {"flag": getenv("FLAG3")}
+    shellcode = req.shellcode_bytes
+    shellcode_len = len(req.shellcode_bytes) // 4
 
-@app.post("/level4")
+    if not re.match(BYTES_REGEX, shellcode):
+        return {"error": 'Invalid input.'}
+    if shellcode_len > DEFAULT_MAX_LENGTH:
+        return {'error': f'Shellcode is too long, max length is {DEFAULT_MAX_LENGTH} bytes.'}
+    
+    shellcode_bytes = set(bytes.fromhex(shellcode.replace('\\x', '')))
+    restricted_bytes = shellcode_bytes & (set(range(0x00, 0x0f+1)) | {0x31, 0x89})
+    if restricted_bytes:
+        return {'error': f'Restricted bytes were found in your shellcode: {format_bytes(restricted_bytes)}.'}
+
+    out, err = execute_shellcode(shellcode)
+    if LEVEL3_EXPECTED_OUTPUT not in out:
+        return {'error': f'Output did not contain "{LEVEL3_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+
+    return {'flag': os.getenv('FLAG3')}
+
+@app.post('/level4')
 async def level4(req: Request):
-    out = execute(
-        req.shellcode_bytes,
-        restricted_bytes=[b"\x0f", b"\x05"],
-        size_restrictions=[SIZE_RESTRICTIONS(300, 20), SIZE_RESTRICTIONS(600, 15)],
-    )
-    v, s = validate_shellcode_output(out, LEVEL4_EXPECTED_OUTPUT)
-    if not v:
-        return {"error": s}
-    return {"flag": getenv("FLAG4")}
+    shellcode = req.shellcode_bytes
+    shellcode_len = len(req.shellcode_bytes) // 4
+
+    if not re.match(BYTES_REGEX, shellcode):
+        return {"error": 'Invalid input.'}
+
+    shellcode_bytes = set(bytes.fromhex(shellcode.replace('\\x', '')))
+    restricted_bytes = shellcode_bytes & {0x05, 0x0f}
+    if restricted_bytes:
+        return {'error': f'Restricted bytes were found in your shellcode: {format_bytes(restricted_bytes)}.'}
+
+    if (len(shellcode_bytes) > 15 or shellcode_len > 600) and (len(shellcode_bytes) > 20 or shellcode_len > 300):
+        return {'error': f'Your shellcode did not respect either of the sets of restrictions: {len(shellcode)} bytes long, {len(shellcode_bytes)} distinct bytes.'}
+
+    out, err = execute_shellcode(shellcode)
+    if LEVEL4_EXPECTED_OUTPUT not in out:
+        return {'error': f'Output did not contain "{LEVEL4_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+
+    return {'flag': os.getenv('FLAG4')}
 
 
-if __name__ == "__main__":
-    run(app, host="0.0.0.0", port=PORT)
+if __name__ == '__main__':
+    run(app, host='0.0.0.0', port=PORT)
