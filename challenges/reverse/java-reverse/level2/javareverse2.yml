@@ -1,0 +1,33 @@
+﻿name: JavaReverse 2
+author: Atlantis11656
+category: Reverse
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
+value: 3
+
+description: |-
+    ## Description (français)
+    Merci de nous avoir rapporté le vieux CD que Krusty vous a donné. Nous avons reçu la version la plus récente du logiciel, mais Krusty ne se souvient plus du numéro de série... Pensez-vous pouvoir le retrouver pour nous?
+
+    Java 11+ requis
+    Rouler le programme avec launcher.bat
+
+    ## Description (english)
+    Thank you for bringing back the old CD that Krusty gave you. We received the latest version of the software, but Krusty can't remember the serial number... Do you think you could find it for us?
+
+    Java 11+ required
+    Run the program with launcher.bat
+
+flags:
+    - flag-D0ntPuT5ecr3ts1nC0d3
+
+tags:
+    - beginner
+    - reverse
+    - java
+
+files:
+    - RideManager-2.2.1.zip
+
+requirements:
+    - JavaReverse 1
