@@ -46,7 +46,7 @@ files:
 # Accepts dictionaries or strings
 hints:
     - Ça n'est qu'une dimension de plus!
-    - Plusieurs solutions peuvent mener au bon résultat.
+    - Plusieurs solutions peuvent mener au bon résultat. Vous pouvez construire sur votre solution précédente ou en explorer d'autres.
 
 # Requirements are used to make a challenge require another challenge to be
 # solved before being available.
