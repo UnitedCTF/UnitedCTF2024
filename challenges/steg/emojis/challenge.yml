@@ -1,0 +1,30 @@
+name: Emojis
+author: capucinoxx
+category: Steganography
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
+
+description: |-
+  ## Description (fr)
+
+  Après avoir vécu quelques sensations fortes dans les manèges, je m'installe sur un banc. 
+  En ouvrant mon téléphone, je remarque un message étrange.
+
+  ## Description (en)
+
+  After experiencing some thrills on the rides, I sit down on a bench. As I open my phone, 
+  I notice a strange message.
+
+files:
+- image.png
+
+flags:
+- {
+  type: "static",
+  content: "flag-discordissus",
+  data: "case_insensitive"
+}
+
+tags:
+- steg
