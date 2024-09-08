@@ -15,6 +15,8 @@ description: |-
 
     If you manage to print on the last screen, I'll give you a discount coupon for everything in the amusement park!
 
+connection_info: https://shellcoding.c.unitedctf.ca
+
 flags:
     - flag-R6YA2C3DZ8V7T9JPX9F3K7ZQ2JPXLMN4
 

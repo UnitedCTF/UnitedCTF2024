@@ -15,6 +15,7 @@ description: |-
 
     Try to print on the third screen to get a discount coupon for the rides!
 
+connection_info: https://shellcoding.c.unitedctf.ca
 
 flags:
     - flag-ML5V9JD3K8WTYQZA7R6YA2C3DZ8V7T1B
