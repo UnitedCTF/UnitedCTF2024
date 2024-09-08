@@ -46,7 +46,7 @@ files:
 # Accepts dictionaries or strings
 hints:
     - Ça n'est qu'une dimension de plus!
-    - Si vous avez bien fais le premier niveau, le second devrait être facile.
+    - Plusieurs solutions peuvent mener au bon résultat.
 
 # Requirements are used to make a challenge require another challenge to be
 # solved before being available.

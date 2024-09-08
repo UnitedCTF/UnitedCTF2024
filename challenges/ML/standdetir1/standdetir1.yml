@@ -45,7 +45,7 @@ files:
 # Can be removed if unused
 # Accepts dictionaries or strings
 hints:
-    - Pensez en termes de voisinage
+    - On recommande d'utiliser l'algorithme KNN pour ces défis.
 
 # The state of the challenge.
 # If the field is omitted, the challenge is visible by default.

@@ -6,7 +6,7 @@ name: "Stand de tir 3"
 author: "Bonsoir"
 category: "ML"
 description: "Classifier des coordonées à travers toutes les dimensions! 0.O"
-value: 5 #selon moi : Beginner / Low / No
+value: 3 #selon moi : Beginner / Low / No
 type: standard
 
 # The extra field provides additional fields for data during the install/sync commands/
