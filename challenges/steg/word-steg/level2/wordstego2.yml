@@ -1,0 +1,19 @@
+name: WordStego 2
+author: Atlantis11656
+category: Steganography
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+description: |-
+    ## Description (français)
+    Une image est cachée, rapporte-la pour gagner un prix!
+
+    ## Description (english)
+    An image is hidden, report it to win a prize!
+
+flags:
+    - flag-1sKrus7yR34l?
+
+tags:
+    - steg
+    - word

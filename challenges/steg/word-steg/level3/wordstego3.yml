@@ -1,0 +1,19 @@
+name: WordStego 3
+author: Atlantis11656
+category: Steganography
+type: standard
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-6
+value: 4
+description: |-
+    ## Description (français)
+    Nous avons caché un message dans un des niveaux de la carte du parc. Trouve le message et rapporte-le pour gagner un prix!
+
+    ## Description (english)
+    We have hidden a message in one of the levels of the park map. Find the message and report it to win a prize!
+
+flags:
+    - flag-UF0und7heTr3asuR3M4p
+
+tags:
+    - steg
+    - word
