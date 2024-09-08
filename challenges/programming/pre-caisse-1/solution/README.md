@@ -11,3 +11,5 @@ Exemple d'opérations :
 32 / 7 = ?
 36 - 67 = ?
 ```
+
+Voir le [script de solution](./solution.py) pour plus de détails.

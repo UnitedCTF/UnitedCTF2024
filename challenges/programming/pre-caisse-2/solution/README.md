@@ -13,3 +13,5 @@ one hundred ninety eight plus one hundred sixty nine = ?
 fifty four times four hundred ninety four = ?
 five hundred fifty seven divided by one hundred fifty eight = ?
 ```
+
+Voir le [script de solution](./solution.py) pour plus de détails.
