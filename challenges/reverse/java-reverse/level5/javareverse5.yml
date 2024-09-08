@@ -1,4 +1,4 @@
-﻿name: JavaReverse 5
+﻿name: Ride Management System 5
 author: Atlantis11656
 category: Reverse
 type: standard
@@ -26,4 +26,4 @@ tags:
     - java
 
 requirements:
-    - JavaReverse 4
+    - Ride Management System 4

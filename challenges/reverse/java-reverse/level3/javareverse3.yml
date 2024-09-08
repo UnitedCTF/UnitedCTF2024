@@ -1,4 +1,4 @@
-﻿name: JavaReverse 3
+﻿name: Ride Management System 3
 author: Atlantis11656
 category: Reverse
 type: standard
@@ -28,4 +28,4 @@ tags:
     - java
 
 requirements:
-    - JavaReverse 1
+    - Ride Management System 1

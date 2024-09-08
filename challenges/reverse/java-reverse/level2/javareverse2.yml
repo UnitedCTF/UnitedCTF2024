@@ -1,4 +1,4 @@
-﻿name: JavaReverse 2
+﻿name: Ride Management System 2
 author: Atlantis11656
 category: Reverse
 type: standard
@@ -30,4 +30,4 @@ files:
     - RideManager-2.2.1.zip
 
 requirements:
-    - JavaReverse 1
+    - Ride Management System 1
