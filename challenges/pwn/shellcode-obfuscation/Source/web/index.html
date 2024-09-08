@@ -21,14 +21,14 @@
             <h3 class="text-center">Instructions</h3>
             <div class="row d-flex justify-content-center">
                 <div class="col-6">
-                    1. Pour chaque niveau, vous devez executer du code qui va imprimer
+                    1. Pour chaque niveau, vous devrez exécuter du code qui va imprimer
                     le string demandé sur STDOUT.<br />
                     2. Les seuls syscalls permis sont read sur stdin, write sur
                     stdout/stderr, exit et sigreturn.<br />
                     3. L'architecture est AMD64.<br />
-                    4. Le format du shellcode doit etre en hexadécimal
+                    4. Le format du shellcode doit être en hexadécimal
                     (\x00\x01\x02).<br />
-                    5. Le programme qui roule le shellcode à été compilé avec gcc -z execstack -fno-stack-protector -o
+                    5. Le programme qui roule le shellcode a été compilé avec gcc -z execstack -fno-stack-protector -o
                     [executable] [source.c]
                 </div>
             </div>
@@ -48,9 +48,9 @@
         <div class="level1 row mt-5 p-0">
             <h3 class="text-center bg-dark text-light py-3">Level 1</h3>
             <h4 class="col-12">Bytes:</h4>
-            <h5>Restrictions sur le bytecode:</h5>
-            <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
-            <h5>Bytecode restrictions:</h5>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Le shellcode qui sera exécuté doit faire moins de 75 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
             <p>The shellcode that will be executed must be less than 75 bytes long.</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level1_bytes" class="form-control col-12" rows="3"></textarea>
@@ -69,11 +69,11 @@
         <div class="level2 row mt-5 p-0">
             <h3 class="text-center bg-dark text-light py-3">Level 2</h3>
             <h4 class="col-12">Bytes:</h4>
-            <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x05\x0f</p>
-            <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
-            <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x05\x0f</p>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Les bytes suivants sont interdits: \x05\x0f</p>
+            <p>Le shellcode qui sera exécuté doit faire moins de 75 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The following bytes are forbidden: \x05\x0f</p>
             <p>The shellcode that will be executed must be less than 75 bytes long.</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level2_bytes" class="form-control col-12" rows="3"></textarea>
@@ -93,11 +93,11 @@
         <div class="level3 row mt-5 p-0">
             <h3 class="text-center bg-dark text-light py-3">Level 3</h3>
             <h4 class="col-12">Bytes:</h4>
-            <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x00 à \x0f\x31\x89\x00</p>
-            <p>Le shellcode qui sera executé doit faire moins de 75 bytes.</p>
-            <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x00 to \x0f\x31\x89</p>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Les bytes suivants sont interdits: \x00 à \x0f et \x31\x89\x00</p>
+            <p>Le shellcode qui sera exécuté doit faire moins de 75 bytes.</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The following bytes are forbidden: \x00 to \x0f et \x31\x89</p>
             <p>The shellcode that will be executed must be less than 75 bytes long.</p>
             <div class="d-flex justify-content-center">
                 <textarea id="level3_bytes" class="form-control col-12" rows="3"></textarea>
@@ -116,16 +116,18 @@
         <div class="level4 row mt-5 pb-5 p-0">
             <h3 class="text-center bg-dark text-light py-3">Level 4</h3>
             <h4 class="col-12">Bytes:</h4>
-            <h5>Restrictions sur le bytecode:</h5>
-            <p>Les bytes suivants sont interdits:\x0f\x05</p>
+            <h5>Restrictions sur le shellcode:</h5>
+            <p>Les bytes suivants sont interdits: \x0f\x05</p>
+            <p><em>Pour ce niveau, vous pouvez choisir un ensemble de restrictions entre les deux suivantes.</em></p>
             <h6><strong>Restriction A:</strong></h6>
             <p>Maximum 15 bytes distinct autorisés</p>
             <p>Longueur maximale de 600 bytes</p>
             <h6><strong>Restriction B:</strong></h6>
-            <p>Maximum 20 bytes distinct autorisés</p>
+            <p>Maximum 20 bytes distincts autorisés</p>
             <p>Longueur maximale de 300 bytes</p>
-            <h5>Bytecode restrictions:</h5>
-            <p>The following bytes are forbidden:\x0f\x05</p>
+            <h5>Shellcode restrictions:</h5>
+            <p>The following bytes are forbidden: \x0f\x05</p>
+            <p><em>For this level, you can choose a set of restrictions between the two following.</em></p>
             <h6><strong>Restriction A:</strong></h6>
             <p>Maximum 15 distinct bytes allowed</p>
             <p>Maximum length of 600 bytes</p>

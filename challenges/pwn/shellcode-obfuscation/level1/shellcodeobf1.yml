@@ -1,22 +1,23 @@
 ﻿name: Shellcode Obfuscation 1
 author: Atlantis11656
-category: pwn
+category: PWN
 type: standard
-# CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
-value: 3
+# CFSS:0.1/TS:B/E:L/HSFC:N=3-6
+value: 4
 description: |-
     ## Description (Français)
-    Hé! psst! J'ai un défi pour toi... Si tu arrive a imprimer un message sur les 4 écrans devant toi, je t'offre des prix alléchants!
+    Hé! psst! J'ai un défi pour toi... Si tu arrives à imprimer un message sur les 4 écrans devant toi, je t'offre des prix alléchants!
 
-    Commence avec le premier pour obtenir un coupon rabais sur la barbe a papa!
-    Flag format: `flag-[a-zA-Z0-9]+`
+    Commence avec le premier pour obtenir un coupon rabais sur la barbe à papa!
+
     ## Description (English)
     Hey! psst! I have a challenge for you... If you can print a message on the 4 screens in front of you, I'll give you some attractive prizes!
 
     Start with the first one to get a discount coupon for cotton candy!
-    Flag format: `flag-[a-zA-Z0-9]+`
+
 flags:
     - flag-X9F3K7ZQ2JPXLMN4V5QW8TYC6DZ8JR6A
-   
+
 tags:
     - pwn
+    - shellcoding
