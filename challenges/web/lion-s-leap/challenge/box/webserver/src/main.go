@@ -64,6 +64,7 @@ func handlerLogin(w http.ResponseWriter, r *http.Request, db *sql.DB, store *ses
 		id, err := getUserID(db, username)
 		if err != nil {
 			log.Println("Error:", err)
+			http.Redirect(w, r, "/login?invalidCredentials", http.StatusSeeOther)
 			return
 		}
 		if checkUser(db, id, password) {
