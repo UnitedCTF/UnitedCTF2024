@@ -1,0 +1,29 @@
+name: Émotions Fortes 1
+author: Capucinoxx & Linkster78
+category: Programming
+
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
+
+description: |-
+  ## Description (français)
+
+  On a recensé les émotions ressenties par des visiteurs en visitant certains parcs. On les a ensuite catégorisés en trois catégories, soit les émotions positives, les émotions négatives et les émotions _autres_.
+
+  La plupart des parcs ne réussissent qu'à provoquer des émotions figurant dans deux de ces catégories à la fois, sauf pour un parc qui a provoqué les trois catégories.
+
+  Pouvez-vous l'identifier?
+
+  ## Description (english)
+
+  We conducted a survey of the emotions felt by the visitors of certain parks. We then categorised them into three categories, the positive emotions, the negative emotions and the _other_ emotions.
+
+  Most of the parcs only managed to provoke emotions figuring in two categories at a time, except for one park which provoked all three categories.
+
+  Can you identify it?
+
+flags:
+- flag-wwwwoo0ooOOOaAAa4ah
+
+tags:
+- programming
