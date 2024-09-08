@@ -21,22 +21,17 @@ EXECUTION_TIMEOUT = 3
 def format_bytes(bts: list[int]) -> str:
     return ''.join(['\\x{:02x}'.format(b) for b in bts])
 
-def execute_shellcode(shellcode: str) -> tuple[str, str]:
+def execute_shellcode(shellcode: str) -> tuple[int, str, str]:
     proc = subprocess.Popen(['./exec_shellcode', shellcode], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     try:
         proc.wait(timeout=EXECUTION_TIMEOUT)
     except Exception:
         return '', f'Execution timed out after {EXECUTION_TIMEOUT} seconds.'
     out, err = proc.stdout.read(), proc.stderr.read()
-    if proc.returncode == -11:
-        if not err:
-            err = b'Segmentation fault'
-        else:
-            err += b'\nSegmentation fault'
     try:
-        return out.decode('latin-1'), err.decode('latin-1')
+        return proc.returncode, out.decode('latin-1'), err.decode('latin-1')
     except Exception:
-        return str(out), str(err)
+        return proc.returncode, str(out), str(err)
 
 
 class Request(BaseModel):
@@ -63,9 +58,9 @@ async def level1(req: Request):
     if shellcode_len > DEFAULT_MAX_LENGTH:
         return {'error': f'Shellcode is too long, max length is {DEFAULT_MAX_LENGTH} bytes.'}
 
-    out, err = execute_shellcode(shellcode)
+    ret, out, err = execute_shellcode(shellcode)
     if LEVEL1_EXPECTED_OUTPUT not in out:
-        return {'error': f'Output did not contain "{LEVEL1_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+        return {'error': f'Output did not contain "{LEVEL1_EXPECTED_OUTPUT}".\nRETURN CODE: {ret}\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
 
     return {'flag': os.getenv('FLAG1')}
 
@@ -84,9 +79,9 @@ async def level2(req: Request):
     if restricted_bytes:
         return {'error': f'Restricted bytes were found in your shellcode: {format_bytes(restricted_bytes)}.'}
 
-    out, err = execute_shellcode(shellcode)
+    ret, out, err = execute_shellcode(shellcode)
     if LEVEL2_EXPECTED_OUTPUT not in out:
-        return {'error': f'Output did not contain "{LEVEL2_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+        return {'error': f'Output did not contain "{LEVEL2_EXPECTED_OUTPUT}".\nRETURN CODE: {ret}\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
 
     return {'flag': os.getenv('FLAG2')}
 
@@ -105,9 +100,9 @@ async def level3(req: Request):
     if restricted_bytes:
         return {'error': f'Restricted bytes were found in your shellcode: {format_bytes(restricted_bytes)}.'}
 
-    out, err = execute_shellcode(shellcode)
+    ret, out, err = execute_shellcode(shellcode)
     if LEVEL3_EXPECTED_OUTPUT not in out:
-        return {'error': f'Output did not contain "{LEVEL3_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+        return {'error': f'Output did not contain "{LEVEL3_EXPECTED_OUTPUT}".\nRETURN CODE: {ret}\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
 
     return {'flag': os.getenv('FLAG3')}
 
@@ -127,9 +122,9 @@ async def level4(req: Request):
     if (len(shellcode_bytes) > 15 or shellcode_len > 600) and (len(shellcode_bytes) > 20 or shellcode_len > 300):
         return {'error': f'Your shellcode did not respect either of the sets of restrictions: {len(shellcode)} bytes long, {len(shellcode_bytes)} distinct bytes.'}
 
-    out, err = execute_shellcode(shellcode)
+    ret, out, err = execute_shellcode(shellcode)
     if LEVEL4_EXPECTED_OUTPUT not in out:
-        return {'error': f'Output did not contain "{LEVEL4_EXPECTED_OUTPUT}".\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
+        return {'error': f'Output did not contain "{LEVEL4_EXPECTED_OUTPUT}".\nRETURN CODE: {ret}\nSTDOUT:\n{out}\nSTDERR:\n{err}'}
 
     return {'flag': os.getenv('FLAG4')}
 
