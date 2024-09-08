@@ -1,4 +1,4 @@
-# Stand de tir 2
+# Stand de tir 3
 
 **`Auteur`** [Bonsoir](https://github.com/florentduchesne)
 
