@@ -1,0 +1,23 @@
+name: Pre-caisse 2
+author: jactymilena
+category: Programming
+
+description: |-
+  ## Description (fr)
+
+  Il semblerait que le caissier de la Grande Roue a encore des problèmes de calcul. On te demande de l'aider. Une récompense t'attend. J'espère que tu ne manqueras pas de temps... 
+  
+  ## Description (en)
+
+  It seems that the cashier at the Grande Roue is having once again calculation problems. You are asked to help them. A reward awaits you. I hope you won't run out of time...
+
+type: standard
+
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 4
+
+flag:
+- flag-4n0th3rR3w4rdY0uD1d1t0nc3Ag41n
+
+tags:
+- programming
