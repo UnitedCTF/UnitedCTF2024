@@ -1,0 +1,33 @@
+name: "OnlyParks 2 📖🎡🎢"
+author: "KptCheeseWhiz"
+category: Web
+description: |-
+  ## Description (français)
+
+  Bienvenue au seul site Web fait pour les clowns par des clowns pour héberger des articles sur les parcs d'attraction.
+
+  La vulnérabilité a été corrigée, les champs selectionnés sont maintenant imposés.
+
+  ## Description (english)
+
+  Welcome to the only website made for clowns by clowns to host articles about amusement parks.
+
+  The vulnerability has been corrected: selected fields are now imposed.
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 4
+
+connection_info: https://onlyparks2.c.unitedctf.ca
+
+flags:
+  - flag-89a5178d28493b04d91bb0e2296d15c7
+
+files:
+  - index.ts
+
+tags:
+  - web
+
+requirements:
+  - "OnlyParks 1 📖🎡🎢"

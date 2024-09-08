@@ -1,0 +1,30 @@
+name: "Git Gud - Ignore ça"
+author: "Deimos"
+category: Miscellaneous
+description: |-
+  ## Description (français)
+
+  Bienvenue chez nous, on est tellement enthousiaste de t'avoir en stage pour continuer le site web du parc d'attraction!!
+  C'est assez simple, prend ce que l'autre stagiaire a fait et continue, tout est dans le [git](https://git-scm.com/)!
+
+  En effet, tout est vraiment là, même le mot de passe du wifi! C'est censé être secret, mais bon, y'a eu un petit pépin.
+
+  ## Description (english)
+
+  Welcome to our place, we are so excited to have you as an intern to continue the theme park website!
+  It's pretty simple, take what the other intern did and keep going, it's all in the [git](https://git-scm.com/)!
+
+  Indeed, everything is really there, even the wifi password! It's supposed to be secret, but hey, there was a little glitch.
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flags: 
+  - flag-ParcAventureExtreme2000
+
+files:
+  - ../git-gud-challenge.zip
+
+tags:
+  - misc

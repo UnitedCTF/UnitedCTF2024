@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roue de fortune</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="center">
+        {% if flag %}
+        <p>Bravo! Voici votre récompense:<br>flag-Fl4skNS7uff</p>
+        {% else %}
+        <p>Vous n'avez pas 10,000$!</p>
+        {% endif %}
+        <a href="/">Retourner à la roue</a>
+    </main>
+</body>
+</html>

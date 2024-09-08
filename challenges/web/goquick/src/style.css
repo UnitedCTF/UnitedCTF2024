@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+    background-image: url(assets/background.jpg);
+    font-family: "Acme", sans-serif;
+}
+
+main {
+    background-color: #0004;
+    padding: .5rem;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    padding: 0 2rem 0 0;
+}
+
+.waiting {
+    padding: 0.5rem;
+    display: inline-block;
+    background-color: #fc5b;
+}
+
+.success {
+    padding: 0.5rem;
+    display: inline-block;
+    background-color: #7f7b;
+}
+
+.error {
+    padding: 0.5rem;
+    display: inline-block;
+    background-color: #f77b;
+}

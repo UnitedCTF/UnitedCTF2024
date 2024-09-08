@@ -1,6 +1,11 @@
 name: Guess My Numbers
 author: Linkster78
-category: Misc
+category: Programming
+
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
+
+connection_info: nc c.unitedctf.ca 10007
 
 description: |-
   ## Description (fr)
@@ -19,5 +24,5 @@ flags:
 - flag-L3sM4th5C3s7F4c1l3
 
 tags:
-- misc
 - programming
+- misc

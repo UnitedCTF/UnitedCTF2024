@@ -1,0 +1,7 @@
+# docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+services:
+  web-candyhosting:
+    healthcheck:
+      disable: true
+    volumes:
+     - ./html:/var/www/html

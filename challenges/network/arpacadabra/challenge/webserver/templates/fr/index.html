@@ -1,0 +1,16 @@
+{{define "body"}}
+<div class="container">
+    <div class="card">
+        <h1>Ceci est un cool bouton</h1>
+        <button class="button" onclick="window.location.href='/flag'">Cliquez-moi</button>
+    </div>
+    <div class="card">
+        <h1>Cela pourrait être inutile</h1>
+        <button class="button" onclick="alert('Vous venez de gaspiller un clic !')">Ne cliquez pas ici</button>
+        <button class="button" onclick="alert('Ce bouton ne fait absolument rien !')">Appuyez sans raison</button>
+        <button class="button" onclick="this.innerText = 'Oups, réessayez !'">Auto-destruction</button>
+        <button class="button" onclick="alert('404 : Objectif non trouvé')">Cliquez pour une surprise</button>
+        <button class="button" onclick="alert('Pourquoi continuez-vous à cliquer ?')">Arrêtez de cliquer sur moi</button>
+    </div>
+</div>
+{{end}}

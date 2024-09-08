@@ -1,0 +1,24 @@
+name: Wally
+author: jactymilena
+category: Miscellaneous
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 3
+
+description: |-
+  ## Description (français)
+
+  Voulant gagner à tout prix ce fabuleux toutou Wally, je me focusais sans relâche sur ce jeu. À un tel point que je n'avais même pas remarqué que le toutou avait mangé mon ticket...
+
+  ## Description (english)
+
+  Wanting to win that fabulous stuffed animal Wally at all costs, I focused relentlessly on the game. To the point that I didn't even notice the stuffed animal had eaten my ticket...
+
+files:
+  - wally.tar
+
+flags:
+  - flag-Th3Wh4l3AteMyT1ck3t
+
+tags:
+  - misc

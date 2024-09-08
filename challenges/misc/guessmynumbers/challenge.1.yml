@@ -1,6 +1,11 @@
 name: Guess My Numbers (Reloaded)
 author: Linkster78
-category: Misc
+category: Miscellaneous
+
+# CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+value: 4
+
+connection_info: nc c.unitedctf.ca 10008
 
 description: |-
   ## Description (fr)

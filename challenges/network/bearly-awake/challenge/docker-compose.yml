@@ -1,0 +1,21 @@
+services:
+  beary:
+    build: beary
+    ports:
+    - 22
+    networks:
+      bearly-awake-network:
+        ipv4_address: 172.99.53.15
+
+  webserver:
+    build: webserver
+    networks:
+      bearly-awake-network:
+        ipv4_address: 172.99.53.183
+
+networks:
+  bearly-awake-network:
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.99.53.0/24

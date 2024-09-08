@@ -1,0 +1,25 @@
+services:
+  web-onlyparks3-app:
+    build: .
+    restart: unless-stopped
+    networks:
+      - external
+      - internal
+    ports:
+      - 5002:5000
+    environment:
+      DATABASE_URL: postgres://postgres@web-onlyparks3-db:5432/postgres
+      FLAG: flag-08826f5b2a0fb34674c7a808757173e5
+
+  web-onlyparks3-db:
+    image: postgres:16
+    restart: unless-stopped
+    networks:
+      - internal
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+networks:
+  external:
+  internal:
+    internal: true

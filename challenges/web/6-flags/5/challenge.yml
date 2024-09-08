@@ -1,0 +1,30 @@
+name: "6 Flags ⛳️ 5"
+author: Otaphoque
+category: Web
+type: standard
+value: 1
+
+description: |-
+  ## Description (français)
+
+  6 Flags, by UnitedCTF, vient tout juste d'ouvrir ses portes!
+  
+  Tiens donc, on dirait que le développeur a laissé quelques traces au travers des activités...
+
+  ## Description (english)
+
+  6 Flags, by UnitedCTF, just opened its doors!
+  
+  Wait a minute, it looks like the developper left some traces through all the activities...
+
+connection_info: "https://sixflags.c.unitedctf.ca"
+
+flags:
+- {
+        type: "static",
+        content: "flag-WWEGMNBD",
+        data: "case_insensitive",
+}
+
+tags:
+- web

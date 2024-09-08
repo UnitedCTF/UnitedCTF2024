@@ -1,0 +1,23 @@
+name: "Lost and found 🎈"
+author: "KptCheeseWhiz"
+category: Web
+description: |-
+  ## Description (français)
+
+  Timmy a perdu son ballon, est-ce que tu serais en mesure de le retrouver?
+
+  ## Description (english)
+
+  Timmy has lost his balloon, would you be able to find it?
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 4
+
+connection_info: https://lostandfound.c.unitedctf.ca
+
+flags: 
+  - flag-n0th1ng1sl0st1nr3fl0g
+
+tags:
+  - web

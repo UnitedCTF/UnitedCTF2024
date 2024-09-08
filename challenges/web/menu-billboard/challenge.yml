@@ -1,0 +1,26 @@
+name: "Menu billboard"
+author: "Ch0ufleur"
+category: Web
+description: |-
+  ## Description (français)
+
+  Notre stagiaire a codé une page web qui doit être affichée sur des écrans dans la cantine.
+  On l'a mis en production vraiment rapidement, peut-être un peu trop rapidement...
+  Initialement, on voulait un carrousel d'images de la fête foraine, mais on a dû se résoudre à en avoir juste une, c'était trop compliqué sinon.
+  
+  ## Description (english)
+
+  Our intern coded this little webpage that will be displayed on screens in the cafeteria.
+  We had to put it in production, but maybe we did so too fast...
+  Initially, the goal was to have a rotating display of various images from the attraction park, but we had to settle with just the one: it was too complex otherwise.
+
+type: standard
+value: 2
+
+connection_info: https://menubillboard.c.unitedctf.ca
+
+flags: 
+  - flag-s0urc3m4p5_r3v34l_th3_c0d3_0aab131d
+
+tags:
+  - web

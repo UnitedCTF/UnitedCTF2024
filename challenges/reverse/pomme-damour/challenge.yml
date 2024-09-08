@@ -1,0 +1,30 @@
+name: "Pomme d'amour 🍭🍎❤️"
+author: "KptCheeseWhiz"
+category: Reverse
+description: |-
+  ## Description (français)
+
+  On ne peut plus faire de pommes d'amour! La machine est buggée et il faut un code spécial pour la réinitialiser. Pourrais-tu le retrouver pour moi? Le concepteur de la machine nous a laissé le programme et du charabia, je n'y comprends rien.
+
+  ## Description (english)
+
+  We can no longer make candy apple! The machine is bugged and needs a special code to reset it. Can you find it for me? The designer of the machine left us the program and some gibberish. I don't understand it.
+
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
+value: 9
+
+flags: 
+  - flag-javascriptbytecodeisfun
+
+hints:
+  - You do not have to reverse the whole binary, it is a copy of the NodeJS binary with additional data that is delimited by special markers.
+  - Search for ways to create a single executable application with NodeJS.
+
+# Run 'npm run build' to generate the challenge
+files:
+  - bin/challenge
+  - bin/bytecode.txt
+
+tags:
+  - reverse

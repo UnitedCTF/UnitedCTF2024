@@ -12,11 +12,17 @@
         - author
         - category
         - description (en + fr)
+        - type
+            - "standard" (valeur fixe)
+        - value
+            - score fixe estimé selon la norme [CFSS](https://tricolor-question-028.notion.site/Common-Flag-Scoring-System-CFSS-751f71c34c7d4c1db661cbd7365af71f)
+            - c'est pas grave si c'est pas exact, ça va être validé au QA, mais laissez un commentaire à côté de l'estimation avec les critères CFSS
         - flag(s)
         - tags
         - files (si applicable)
         - hints (si applicable)
         - requirements (si le challenge suit un autre)
+    - Pour le fichier ctfcli `.yml`, vous pouvez prendre `challenge/web/goquick` comme exemple.
     - Un document similaire au README pour décrire votre solution avec des étapes. Si la solution peut être automatisée, un script de vérification automatique serait grandement apprécié.
     - Si le challenge nécessite un déploiement:
         - Un `Dockerfile` pour le défi avec une directive `EXPOSE` pour clairement identifier le port qui doit être exposé par l'infrastructure. Si le challenge nécessite plusieurs conteneurs, fournissez un `docker-compose.yml` avec les services nécessaires.

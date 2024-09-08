@@ -1,0 +1,8 @@
+services:
+  web-lostandfound:
+    build:
+      context: .
+    container_name: web-lostandfound
+    hostname: web-lostandfound
+    ports:
+      - "8888:80"

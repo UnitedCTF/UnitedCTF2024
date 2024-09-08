@@ -1,0 +1,23 @@
+name: Circus Flyer
+author: Capucinoxx
+category: Web
+type: standard
+# CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+value: 6
+
+connection_info: https://circusflyer.c.unitedctf.ca
+
+description: |-
+  ## Description (fr)
+
+  Le cirque est au bord de la faillite. Il faut marquer le coup pour notre dernière représentation. Pourquoi ne pas redesigner notre flyer pour attirer plus de spectateur.ice.s ?
+
+  ## Description (en)
+
+  The circus is on the verge of bankruptcy. We need to make a big impression for our last show. Why not redesign our flyer to attract more spectators?
+
+flags:
+- flag-mongoissomagic
+
+tags:
+- web

@@ -1,0 +1,6 @@
+ 
+/.dockerignore
+/Dockerfile
+/README.md
+/solution
+/challenge.yml

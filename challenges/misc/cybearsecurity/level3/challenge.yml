@@ -1,6 +1,9 @@
 name: Cybear Security 3
 author: mkuroni
-category: Misc
+category: Miscellaneous
+
+# CFSS:0.1/TS:L/E:L/HSFC:N=2-4
+value: 1
 
 description: |-
   ## Description (fr)
@@ -21,7 +24,7 @@ tags:
 - accessibility
 
 files:
-- ./lvl3.svg
+- ./lvl3.png
 
 requirements:
 - Cybear Security 2

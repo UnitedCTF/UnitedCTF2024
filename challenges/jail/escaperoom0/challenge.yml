@@ -1,24 +1,26 @@
-name: "Escape room 0"
+name: "Escape Room 0"
 author: "KptCheeseWhiz"
-category: jail
+category: Jail
 description: |-
   ## Description (fr)
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. Ça ne peut pas être si difficile?
+  
   NOTE: Le flag est dans le fichier `./flag.txt`
+
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
 
   ## Description (en)
 
   A room, a terminal, a locked door asking for a secret code... How hard can it be?
+
   NOTE: The flag is in the `./flag.txt` file
 
-type: dynamic
-extra:
-  initial: 500
-  decay: 100
-  minimum: 50
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
 
-connection_info: nc challenges.unitedctf.ca 1234
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
 
 flags: 
   - flag-6e9e2e450d06b87f7bf73cb0a4d4c75d

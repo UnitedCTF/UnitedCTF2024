@@ -1,0 +1,26 @@
+name: Roue de fortune
+author: Linkster78
+category: Web
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 4
+
+description: |-
+  ## Description (fr)
+
+  Vous aimez les jeux de hasard? Eh bien, c'est votre jour de chance!<br>
+  [Soyez raisonnables...](https://www.youtube.com/watch?v=3MICRFzyrVA)
+
+  ## Description (en)
+
+  Do you like games of chance? Well you're in luck!<br>
+  [Be reasonable...](https://www.youtube.com/watch?v=3MICRFzyrVA)
+
+connection_info: https://spinthewheel.c.unitedctf.ca
+
+flags:
+- flag-Fl4skNS7uff
+
+tags:
+- web

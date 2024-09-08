@@ -3,9 +3,9 @@
 .vscode
 
 .gdb_history
+.history
 
 # Macos files
 .DS_Store
 
 node_modules
-challenges/reverse/java-reverse-test

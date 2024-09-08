@@ -1,0 +1,28 @@
+name: Fortune l33t3r 2
+author: Yxène
+category: Programming
+
+description: |-
+  ## Description (fr)
+
+  Après votre succès, le vieil automate semble reprendre du poil de la bête ! Il se met à communiquer plus rapidement et la traduction de certains mots vous paraît incertaine. Heuresement vous vous baladez toujours avec votre dictionnaire anglais sur vous.
+
+  ## Description (en)
+
+  After your success, the old fortune-telling machine seems to regain its vigor! It starts communicating more quickly, and the translation of some words seems uncertain to you. Fortunately, you always carry your English dictionary with you.
+
+type: standard
+
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 5
+
+connection_info: nc c.unitedctf.ca 10011
+
+flag:
+- flag-Th3F0r7un3C00ki3IsN07ALi3
+
+tags:
+- programming
+
+requirements:
+- "Fortune l33t3r 1"

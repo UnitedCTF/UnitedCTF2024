@@ -1,0 +1,19 @@
+{
+  "name": "pomme-damour",
+  "version": "1.0.0",
+  "description": "",
+  "main": "challenge.js",
+  "scripts": {
+    "prebuild": "./scripts/toBytecode.js challenge.js && ./scripts/stageBytecode.js challenge.jsc challenge.jsc.js && node --experimental-sea-config sea-config.json",
+    "build": "mkdir -p bin && cp $(which node) bin/challenge && npx -y postject bin/challenge NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+    "postbuild": "rm challenge.jsc challenge.jsc.js sea-prep.blob && npm run bytecode",
+    "bytecode": "mkdir -p bin && (echo \"NodeJS version: $(node -v)\" && node --print-bytecode --print-bytecode-filter=challenge challenge.js) | tee bin/bytecode.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
+  }
+}
