@@ -23,8 +23,8 @@
                 <div class="col-6">
                     1. Pour chaque niveau, vous devrez exécuter du code qui va imprimer
                     le string demandé sur STDOUT.<br />
-                    2. Les seuls syscalls permis sont read sur stdin, write sur
-                    stdout/stderr, exit et sigreturn.<br />
+                    2. Les seuls syscalls write sur
+                    stdout and exit.<br />
                     3. L'architecture est AMD64.<br />
                     4. Le format du shellcode doit être en hexadécimal
                     (\x00\x01\x02).<br />
@@ -36,8 +36,8 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-6">
                     1. For each level, you must execute code that will print the expected string on STDOUT.<br />
-                    2. The only syscalls allowed are read on stdin, write on
-                    stdout/stderr, exit and sigreturn.<br />
+                    2. The only syscalls allowed are write on
+                    stdout and exit.<br />
                     3. The architecture is AMD64.<br />
                     4. The shellcode format must be in hexadecimal (\x00\x01\x02).<br />
                     5. The program that runs the shellcode was compiled with gcc -z execstack -fno-stack-protector -o
