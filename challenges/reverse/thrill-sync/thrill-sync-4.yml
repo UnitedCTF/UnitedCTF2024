@@ -1,0 +1,33 @@
+name: "Thrill Sync 4"
+author: "Talgarr"
+category: reverse
+description: |-
+  ## Description (français)
+  Quelques utilisateur avaient des flags enregistrés dans leur compte. 
+  Êtes vous capable de vous connecter avec leurs nom d'utiliateur? 
+  La bonne nouvelle est que le serveur en PHP a permis de nettoyer la majorité de la base de donnée! 🤡📦
+  Ce flag termine par 4.
+
+  ## Description (english)
+  Some users had flags stored in their accounts. 
+  Are you able to log in with their usernames? 
+  The good news is that the PHP server allowed us to clean up most of the database! 🤡📦
+  This flag ends with 4.
+
+type: standard
+# CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+value: 6
+
+flags:
+  - flag-PHP_m4g1c_h4sh_3897568204d82619_4
+
+files:
+  - ./files/data_leaked.7z
+
+connection_info: python client.py --host <host> --port <port>
+
+tags:
+  - reverse
+
+requirements:
+  - Thrill Sync 1

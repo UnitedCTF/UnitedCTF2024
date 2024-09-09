@@ -1,0 +1,33 @@
+name: "Thrill Sync 2"
+author: "Talgarr"
+category: reverse
+description: |-
+  ## Description (français)
+  Quelques utilisateur avaient des flags enregistrés dans leur compte. Êtes vous capable de vous connecter avec leurs nom d'utiliateur? La bonne nouvelle est que le serveur en PHP a permis de nettoyer la majorité de la base de donnée! 🤡📦
+  Ce flag termine par 2.
+
+  ## Description (english)
+  Some users had flags stored in their accounts. Are you able to log in with their usernames? The good news is that the PHP server allowed us to clean up most of the database! 🤡📦
+  This flag ends with 2.
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 2
+
+flags:
+  - flag-P4ssw0rd_Spr4y_3cb3029478777704167e1a_2
+
+files:
+  - ./files/data_leaked.7z
+
+hints:
+  - title: "Wordlist"
+    content: "Rockyou.txt is a good wordlist to start with. See Seclists: https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz"
+
+connection_info: python client.py --host <host> --port <port>
+
+tags:
+  - reverse
+
+requirements:
+  - Thrill Sync 1
