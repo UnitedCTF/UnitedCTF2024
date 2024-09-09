@@ -1,14 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"crypto/md5"
-	"crypto/rand"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"log"
-	"math/big"
 	"net"
 	"os"
 	"strconv"
@@ -59,27 +56,6 @@ func chooseLanguage(conn net.Conn) (string, error) {
 	}
 }
 
-func readFile(filePath string) []string {
-	// Read passwords from file
-	passwords := make([]string, 0)
-	file, err := os.Open(filePath)
-	if err != nil {
-		log.Println("Error opening file:", err.Error())
-		return passwords
-	}
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		passwords = append(passwords, scanner.Text())
-	}
-	if err := scanner.Err(); err != nil {
-		log.Println("Error reading file:", err.Error())
-	}
-	defer func(file *os.File) {
-		file.Close()
-	}(file)
-	return passwords
-}
-
 func listen(flag string) {
 	listener, err := net.Listen("tcp", ":5000")
 	if err != nil {
@@ -88,10 +64,6 @@ func listen(flag string) {
 	}
 	defer listener.Close()
 	log.Println("Server is listening on port 5000")
-
-	passwords := readFile("rockyou.txt")
-
-	log.Println("Loaded", len(passwords), "passwords")
 
 	for {
 		// Wait for a connection
@@ -102,7 +74,7 @@ func listen(flag string) {
 		}
 
 		// Handle the connection in a new goroutine
-		go handleConnection(conn, flag, passwords)
+		go handleConnection(conn, flag)
 	}
 }
 
@@ -112,26 +84,28 @@ func md5_hash(data []byte) string {
 	return hex.EncodeToString(hasher.Sum(nil))
 }
 
-func handleConnection(conn net.Conn, flag string, passwords []string) {
+func handleConnection(conn net.Conn, flag string) {
 	defer conn.Close()
 	log.Println("Accepted new connection")
+  fileReader, err := NewFileReader("rockyou.txt")
+  if err != nil {
+    return
+  }
+
 	lang, err := chooseLanguage(conn)
 	if err != nil {
 		return
 	}
 
-	for i := 1; i <= 1000; i++ {
+	for i := 0; i < 1000; i++ {
 		// Echo back received data
 		buffer := make([]byte, 1024)
 
-		// Generate random number to select a password
-		value, err := rand.Int(rand.Reader, big.NewInt(int64(len(passwords))))
-		if err != nil {
-			log.Println("Error generating random number:", err.Error())
-			return
-		}
-
-		password := passwords[value.Int64()%int64(len(passwords))]
+    password, err := fileReader.RandomLine()
+    if err != nil {
+      log.Println("Error generating random number:", err.Error())
+      return
+    }
 
 		hash := md5_hash([]byte(password))
 		conn.Write([]byte(TEXT[lang]["hash"] + strconv.Itoa(i) + " : " + hash + TEXT[lang]["password"]))
