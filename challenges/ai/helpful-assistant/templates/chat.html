@@ -73,16 +73,14 @@
     <div class="user-message message-box">
       <span class="message-text">{{user_message}}</span>
     </div>
-    {% endif %}
-
-    {% if llm_message != None %}
+    {% endif %} {% if llm_message != None %}
     <div class="llm-message message-box">
       <span class="message-author">></span>
       <span class="message-text" id="llm-message"></span>
     </div>
     {% endif %}
   </div>
-  <form class="input-container" action="/send_message" method="post">
+  <form class="input-container" action="/send_message_v2" method="post">
     <input
       id="message"
       name="message"
@@ -97,7 +95,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <script>
-const llmResponse = `{{ llm_message }}`;
+  const llmResponse = `{{ llm_message }}`;
   if (llmResponse !== "None") {
     var typed = new Typed("#llm-message", {
       strings: [llmResponse],

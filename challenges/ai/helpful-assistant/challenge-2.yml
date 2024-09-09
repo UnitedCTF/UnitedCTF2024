@@ -1,0 +1,27 @@
+name: Helpful Assistant Chat
+author: Hannibal119
+category: ai
+# CFSS:0.1/TS:L/E:M/HSFC:N=2-4
+value: 2
+
+description: |-
+  ## Description (français)
+
+  Lors de l'exploration du site, un administrateur a découvert un mot de passe d'accès : `c0mpl3x_p4ssphr4se`. Ce mot de passe est censé déverrouiller une version avancée cachée du chatbot.
+
+  Format du flag: `flag-[0-9a-zA-Z_]*`
+
+  ## Description (english)
+
+  While exploring the site, an admin has discovered an access passphrase: `c0mpl3x_p4ssphr4se`. This passphrase is believed to unlock a hidden, advanced version of the chatbot.
+
+  Flag format: `flag-[0-9a-zA-Z_]*`
+
+flags:
+  - flag-if_oNlY_you_w3re_n0t_try1ng_t0_st3al_th3_fl4g
+
+tags:
+  - llm
+
+requirements:
+  - Helpful Assistant Access
