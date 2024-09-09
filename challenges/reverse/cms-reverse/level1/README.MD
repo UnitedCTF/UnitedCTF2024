@@ -7,7 +7,9 @@ Depuis que Krusty, notre gérant de clown a été accusé de blanchiment d'argen
 Malheureusement, on a perdu le compte administrateur pour accéder au logiciel. Pouvez-vous nous aider à le retrouver ?
 
 Lancez le logiciel avec le fichier run.bat
+
 VCRUNTIME140d.dll est requis, vous pouvez installer VisualStudio avec le kit Developpement pour l'obtenir.
+
 Petit indice : Tout les flags de la track sont dans CMS-PRO_CLIENT.exe
 ## Description (English)
 Since Krusty, our clown manager, was accused of money laundering, we decided to create a clown management software to replace him.
@@ -15,7 +17,9 @@ Since Krusty, our clown manager, was accused of money laundering, we decided to 
 Unfortunately, we lost the administrator account to access the software. Can you help us find it?
 
 Run the software with the run.bat file
+
 VCRUNTIME140d.dll is required, you can install VisualStudio with the Develppement kit to have it.
+
 Little hint: All the flags of the track are in CMS-PRO_CLIENT.exe
 
 ## Solution
