@@ -22,9 +22,6 @@ flags:
 files:
   - challenge/sssslithering-venom-vaudeville.7z
 
-hints:
-  - "Using ssh TcpForwarding and setup the proxy in your browser can be useful."
-
 tags:
   - difficile
   - web

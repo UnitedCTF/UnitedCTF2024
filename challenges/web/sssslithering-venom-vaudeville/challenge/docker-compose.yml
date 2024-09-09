@@ -3,6 +3,8 @@ services:
     build: ./box/
     networks:
       - sssslithering-venom-vaudeville-net
+    ports:
+      - 80
 
   client:
     build: ./client/
