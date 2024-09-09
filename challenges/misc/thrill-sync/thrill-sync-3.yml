@@ -1,0 +1,32 @@
+name: "Thrill Sync 3"
+author: "Talgarr"
+category: Miscellaneous
+description: |-
+  ## Description (français)
+  Quelques utilisateur avaient des flags enregistrés dans leur compte. Êtes vous capable de vous connecter avec leurs nom d'utiliateur? 
+  
+  La bonne nouvelle est que le serveur en PHP a permis de nettoyer la majorité de la base de donnée! 🤡📦
+  
+  Ce flag termine par 3.
+
+  ## Description (english)
+  Some users had flags stored in their accounts. Are you able to log in with their usernames? 
+  
+  The good news is that the PHP server allowed us to clean up most of the database! 🤡📦
+  
+  This flag ends with 3.
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+value: 4
+
+flags:
+  - flag-S3ssi0n_H1jack1ng_7d73cacb3dd28_3
+
+files:
+  - ./files/data_leaked.7z
+
+connection_info: python client.py --host c.unitedctf.ca --port 10028
+
+requirements:
+  - Thrill Sync 1
