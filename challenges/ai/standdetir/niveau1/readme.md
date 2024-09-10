@@ -34,8 +34,6 @@ Le flag est une concaténation du score de tous les points du jeu de test dans l
 ![Données d'entraînement](Data_challenge_1.png)  
 **Données de test**:  
 ![Données de test](Data_challenge_1_test.png)  
-**Données plus détaillées**:  
-![Représentation de l'espace détaillé](Data_challenge_1_detaille.png)  
 
 ## Description (english)
 
