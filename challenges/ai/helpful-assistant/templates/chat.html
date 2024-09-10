@@ -67,7 +67,7 @@
 </style>
 
 <div class="boxContent">
-  <div class="greeting">{{get_greeting_message()}}</div>
+  <div class="greeting">{{get_greeting_message()}} {% if is_v2 %}v2{% endif %}</div>
   <div class="messages">
     {% if user_message != None %}
     <div class="user-message message-box">
@@ -80,7 +80,7 @@
     </div>
     {% endif %}
   </div>
-  <form class="input-container" action="/send_message_v2" method="post">
+  <form class="input-container" action="/send_message" method="post">
     <input
       id="message"
       name="message"

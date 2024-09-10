@@ -95,8 +95,8 @@ def get_greeting_message():
     return "Hello, I am your helpful assistant. How can I help you?"
 
 
-@app.route("/send_message_v2", methods=["POST"])
-def send_message_v2():
+@app.route("/send_message", methods=["POST"])
+def send_message():
 
     access_passphrase = flask.session.get("access_passphrase", "")
     message = flask.request.form["message"]
@@ -150,6 +150,8 @@ def request_access_post():
 @app.route("/chat", methods=["GET"])
 def chat():
 
+    access_passphrase = flask.session.get("access_passphrase", "")
+    is_v2 = access_passphrase == CHAT_V2_PASSPHRASE
     message = flask.session.get("message")
     answer = flask.session.get("answer")
     return flask.render_template(
@@ -157,6 +159,7 @@ def chat():
         get_greeting_message=get_greeting_message,
         user_message=message,
         llm_message=answer,
+        is_v2=is_v2
     )
 
 
