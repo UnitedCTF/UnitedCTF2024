@@ -45,7 +45,7 @@ def knn_sklearn(points_train, scores_train, points_test, k=3):
     return scores_test
 
 def mlp_sklearn(points_train, scores_train, points_test):
-    mlp = MLPClassifier()
+    mlp = MLPClassifier((100, 100), max_iter=1000)
     mlp.fit(points_train, scores_train)
     scores_test = [mlp.predict([pt])[0] for pt in points_test]
     return scores_test
