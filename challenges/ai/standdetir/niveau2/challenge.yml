@@ -2,11 +2,11 @@
 # other tools to install and deploy your challenge.
 
 # Required sections
-name: "Stand de tir 1"
+name: "Stand de tir 2"
 author: "Bonsoir"
 category: "ML"
 description: "Classifier des coordonées à travers toutes les dimensions! 0.O"
-value: 5 #selon moi : Beginner / Medium / No
+value: 4 #selon moi : Beginner / Medium / No
 type: standard
 
 # The extra field provides additional fields for data during the install/sync commands/
@@ -24,7 +24,7 @@ type: standard
 # Accepts strings or dictionaries of CTFd API data
 flags:
     # A static case sensitive flag
-    - flag-008440048046886046810
+    - flag-592565297893942921061
 
 # Tags are used to provide additional public tagging to a challenge
 # Can be removed if unused
@@ -37,15 +37,23 @@ tags:
 # Provide paths to files from the same directory that this file is in
 # Accepts strings
 files:
-    - dataset/dataset_test_1.csv
-    - dataset/dataset_train_1.csv
+    - dataset/dataset_test_2.csv
+    - dataset/dataset_train_2.csv
 
 # Hints are used to give players a way to buy or have suggestions. They are not
 # required but can be nice.
 # Can be removed if unused
 # Accepts dictionaries or strings
 hints:
-    - On recommande d'utiliser l'algorithme KNN pour ces défis.
+    - Ça n'est qu'une dimension de plus!
+    - Plusieurs solutions peuvent mener au bon résultat. Vous pouvez construire sur votre solution précédente ou en explorer d'autres.
+
+# Requirements are used to make a challenge require another challenge to be
+# solved before being available.
+# Can be removed if unused
+# Accepts challenge names as strings or challenge IDs as integers
+requirements:
+    - "Standdetir1"
 
 # The state of the challenge.
 # If the field is omitted, the challenge is visible by default.
