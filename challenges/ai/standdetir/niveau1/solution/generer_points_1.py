@@ -36,6 +36,8 @@ def creer_dataset_random(taille):
         score, dist = score_point(point)
         scores.append(score)
         
+    #plt.scatter([p[0] for p in points], [p[1] for p in points], c=scores)
+    #plt.show()
     return points, scores
 
 def creer_dataset_test():
@@ -60,8 +62,6 @@ def creer_dataset_test():
     points.append((0.7, 0.6))
     points.append((0.5, 0.4))
     points.append((0.5, 0.5))
-    plt.scatter([p[0] for p in points], [p[1] for p in points])
-    plt.show()
     return points
 
 def main():
