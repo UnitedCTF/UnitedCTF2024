@@ -16,7 +16,7 @@ description: |-
 
 type: standard
 # CFSS:0.1/TS:I/E:M/HSFC:N=6-10
-value: 7
+value: 8
 
 flags: 
   - flag-684385ac3cefd18c73705c87ab7ff6ae
