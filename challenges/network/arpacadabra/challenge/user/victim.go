@@ -11,11 +11,9 @@ import (
 )
 
 func main() {
-	targetIP := os.Getenv("WEBSERVER_IP")
-	port := os.Getenv("PORT")
 	username := "admin"
 	password := os.Getenv("PASSWORD")
-	targetURL := "http://" + targetIP + ":" + port + "/login"
+	targetURL := "http://webserver:80/login"
 	body := "username=" + username + "&password=" + password
 	for {
 		log.Println("Trying to login to the web server at " + targetURL + "...")

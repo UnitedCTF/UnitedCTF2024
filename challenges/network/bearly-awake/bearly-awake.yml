@@ -19,9 +19,6 @@ value: 5
 flags:
   - flag-SOCKSProxyIsUsefulToHack
 
-files:
-  - files/docker-compose.yml
-
 tags:
   - hard
   - web
