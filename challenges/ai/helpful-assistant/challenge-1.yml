@@ -17,6 +17,8 @@ description: |-
 
   Flag format: `flag-[0-9a-zA-Z_]*`
 
+connection_info: https://helpfulassistant.c.unitedctf.ca
+
 flags:
   - flag-I_sh0uld_h4ve_been_4_r0ll3r_c04st3r_d3sign3r
 
