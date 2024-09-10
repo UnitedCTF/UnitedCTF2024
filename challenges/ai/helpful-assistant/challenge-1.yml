@@ -1,0 +1,24 @@
+name: Helpful Assistant Chat
+author: Hannibal119
+category: AI
+# CFSS:0.1/TS:L/E:M/HSFC:N=2-4
+value: 4
+
+description: |-
+  ## Description (français)
+
+  Vous êtes tombé sur un site web mystérieux qui promet l'accès à un modèle de langage inégalé. Ce chatbot AI est conçu pour fournir aux visiteurs du parc des informations complètes, mais il y a une suspicion croissante qu'il cache un secret.
+
+  Format du flag: `flag-[0-9a-zA-Z_]*`
+
+  ## Description (english)
+
+  You've stumbled upon a mysterious website that promises access to an unparalleled language model. This AI chatbot is designed to provide park visitors with comprehensive information, but there's a growing suspicion that it's hiding a secret.
+
+  Flag format: `flag-[0-9a-zA-Z_]*`
+
+flags:
+  - flag-I_sh0uld_h4ve_been_4_r0ll3r_c04st3r_d3sign3r
+
+tags:
+  - llm

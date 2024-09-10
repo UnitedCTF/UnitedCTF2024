@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Helpful Assistant</title>
+    <style>
+      body {
+        margin: 0;
+        background-image: url("{{url_for('static', filename='background.jpg')}}");
+        background-size: cover;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10% auto 5%;
+        width: 50%;
+      }
+      .boxContent {
+        width: 50%;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: #afafaf;
+        opacity: 0.9;
+      }
+      label {
+        display: block;
+        margin-top: 20px;
+        font-size: large;
+        font-weight: 600;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .nice-button {
+        font-size: large;
+        justify-content: center;
+        display: flex;
+        width: 25%;
+        padding: 10px 20px;
+        margin: 10px auto;
+        background-color: #5d02a2;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      #output,
+      #bad_password {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 18px;
+        width: 50%;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 5px;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: #afafaf;
+        opacity: 0.9;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5d02a2;
+        color: white;
+        padding: 10px 20px;
+        .right {
+          display: flex;
+          gap: 30px;
+        }
+
+        svg {
+          cursor: pointer;
+        }
+      }
+      .subtitle {
+        color: rgb(69, 69, 69);
+        font-weight: 300;
+        font-style: italic;
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <svg
+          onclick="window.location.href = '/';"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div class="right">
+        <svg
+          onclick="window.location.href = '/login';"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.4857 20H19.4857C20.5903 20 21.4857 19.1046 21.4857 18V6C21.4857 4.89543 20.5903 4 19.4857 4H15.4857V6H19.4857V18H15.4857V20Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.1582 17.385L8.73801 15.9768L12.6572 12.0242L3.51428 12.0242C2.96199 12.0242 2.51428 11.5765 2.51428 11.0242C2.51429 10.4719 2.962 10.0242 3.51429 10.0242L12.6765 10.0242L8.69599 6.0774L10.1042 4.6572L16.4951 10.9941L10.1582 17.385Z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          onclick="window.location.href = '/admin';"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          onclick="window.location.href = '/request_access';"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6 8C4.34315 8 3 9.34315 3 11V13C3 14.6569 4.34315 16 6 16C7.65685 16 9 14.6569 9 13H15V15H17V13H18V15H20V11H9C9 9.34315 7.65685 8 6 8ZM7 13V11C7 10.4477 6.55228 10 6 10C5.44772 10 5 10.4477 5 11V13C5 13.5523 5.44772 14 6 14C6.55228 14 7 13.5523 7 13Z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          onclick="window.location.href = '/chat';"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M17 9H7V7H17V9Z" fill="currentColor" />
+          <path d="M7 13H17V11H7V13Z" fill="currentColor" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 18V2H22V18H16V22H14C11.7909 22 10 20.2091 10 18H2ZM12 16V18C12 19.1046 12.8954 20 14 20V16H20V4H4V16H12Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>

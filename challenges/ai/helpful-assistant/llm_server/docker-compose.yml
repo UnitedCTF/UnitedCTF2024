@@ -1,0 +1,36 @@
+services:
+  llm_server:
+    container_name: united_llm_server
+    build: .
+    volumes:
+      - .env:/app/.env
+    ports:
+      - 5001:5001
+    restart: unless-stopped
+    networks:
+      - united_challenge
+  
+  ollama:
+    container_name: united_ollama
+    image: ollama/ollama:latest
+    volumes:
+      - ./ollama/ollama:/root/.ollama
+    ports:
+      - 11434:11434
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+    pull_policy: always
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    networks:
+      - united_challenge
+
+networks:
+  united_challenge:

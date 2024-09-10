@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+<style>
+  #flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto 5%;
+    width: 50%;
+    word-break: break-all;
+    text-align: center;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<div id="flag" class="boxContent"></div>
+<script>
+  const flag = "{{ flag }}";
+  if (flag) {
+    const jsConfetti = new JSConfetti();
+
+    jsConfetti.addConfetti();
+    var typed = new Typed("#flag", {
+      strings: [flag],
+      typeSpeed: 50,
+      showCursor: false,
+    });
+  }
+</script>
+{% endblock %}

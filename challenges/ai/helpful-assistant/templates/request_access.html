@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block content %}
+<style>
+  .info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .passphrase-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .nice-button {
+    width: 100%;
+  }
+</style>
+<div class="boxContent">
+  <form class="input-container" action="/request_access" method="post">
+    <div class="info">
+      {% if access_passphrase != 'c0mpl3x_p4ssphr4se' %}
+      <span> Enter the access passphrase to access the V2 of the chat </span>
+      {% else %}
+      <span> Congrats! You now have access to the V2 of the chat </span>
+      <button class="nice-button" onclick="window.location.href = '/chat';">Go chat</button>
+      {% endif %}
+    </div>
+    <input
+      id="message"
+      name="access_passphrase"
+      type="text"
+      class="passphrase-input"
+      placeholder="Access passphrase required to access V2 of the chat"
+    />
+    <button class="nice-button" type="submit">Send</button>
+  </form>
+</div>
+{% endblock %}

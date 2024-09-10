@@ -1,0 +1,108 @@
+{% extends "base.html" %} {% block content %}
+<style>
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .message-input {
+    flex-grow: 1;
+    border-radius: 3px;
+    padding: 5px 10px;
+    height: 22px;
+  }
+
+  .send-button {
+    width: 25%;
+    padding: 10px 20px;
+    background-color: #5d02a2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .user-message {
+    text-align: right;
+    align-self: flex-end;
+    max-width: 80%;
+  }
+
+  .message-box {
+    margin: 10px;
+    background: grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    width: fit-content;
+    word-wrap: break-word;
+  }
+
+  .llm-message {
+    margin-top: 10px;
+    max-width: 80%;
+  }
+</style>
+
+<div class="boxContent">
+  <div class="greeting">{{get_greeting_message()}} {% if is_v2 %}v2{% endif %}</div>
+  <div class="messages">
+    {% if user_message != None %}
+    <div class="user-message message-box">
+      <span class="message-text">{{user_message}}</span>
+    </div>
+    {% endif %} {% if llm_message != None %}
+    <div class="llm-message message-box">
+      <span class="message-author">></span>
+      <span class="message-text" id="llm-message"></span>
+    </div>
+    {% endif %}
+  </div>
+  <form class="input-container" action="/send_message" method="post">
+    <input
+      id="message"
+      name="message"
+      type="text"
+      class="message-input"
+      placeholder="Message LLM"
+      value="{{ message }}"
+    />
+    <button class="send-button" type="submit">Send</button>
+  </form>
+</div>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+  const llmResponse = `{{ llm_message }}`;
+  if (llmResponse !== "None") {
+    var typed = new Typed("#llm-message", {
+      strings: [llmResponse],
+      typeSpeed: 10,
+      showCursor: false,
+    });
+  }
+</script>
+
+{% endblock %}
