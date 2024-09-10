@@ -30,6 +30,7 @@ void session(tcp::socket sock)
     char password[max_length];
     boost::system::error_code error;
     size_t length = 0;
+    bool shouldStopReading = false;
     for (;;)
     {
       length += sock.read_some(boost::asio::buffer(password + length, 100), error);
@@ -38,15 +39,29 @@ void session(tcp::socket sock)
         break; // Connection closed cleanly by peer.
       else if (error)
         throw boost::system::system_error(error); // Some other error.
-
-      if(length >= 25) {
+      
+      for(int i=0; i<length; i++){
+        if(password[i]=='\n') {
+          shouldStopReading = true;
+        }
+      }
+      if(shouldStopReading){
         break;
       }
     }
-    printf(password);
-    if(strcmp(password, "fakepassword")==0 || override[0]=='y'){
+
+    char* envPassword = getenv("PASSWORD1");
+    if(envPassword == nullptr){
+        exit(1);
+    }
+
+    if(strcmp(password, envPassword)==0 || override[0]=='y'){
       boost::asio::write(sock, boost::asio::buffer("Accès autorisé! Authorized access!"));
-      boost::asio::write(sock, boost::asio::buffer("flag-fake\n"));
+      char* flag = getenv("FLAG1");
+      if(flag == nullptr){
+        exit(1);
+      }
+      boost::asio::write(sock, boost::asio::buffer(flag, strlen(flag)));
     }
     else {
       boost::asio::write(sock, boost::asio::buffer("Bye bye!\n"));

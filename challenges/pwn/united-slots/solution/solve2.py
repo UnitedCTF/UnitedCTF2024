@@ -11,7 +11,7 @@ try:
     sock.connect(server_address)
     
     # Prepare the message
-    message = "abcdefghijy" + "\0" + "\n" + "abcdefghijkm"
+    message = "abcdefghijy" + "\0" + "\n"
     
     # Send the message
     sock.sendall(message.encode())
