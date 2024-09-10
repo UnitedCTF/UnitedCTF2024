@@ -6,8 +6,13 @@ from typing import Dict
 import flask
 import requests
 
-from const import (ADMIN_PASSWORD, ADMIN_PASSWORD_FLAG, CHAT_V2_PASSPHRASE,
-                   FLAG_01_VALIDATION_PASSWORD, FLAG_02_VALIDATION_PASSWORD)
+from const import (
+    ADMIN_PASSWORD,
+    ADMIN_PASSWORD_FLAG,
+    CHAT_V2_PASSPHRASE,
+    FLAG_01_VALIDATION_PASSWORD,
+    FLAG_02_VALIDATION_PASSWORD,
+)
 from utils import call_cloud_function, get_logs
 
 app = flask.Flask(__name__, static_url_path="/static")
@@ -111,7 +116,7 @@ def send_message_v2():
 
     answer = response.content.decode("utf-8")
 
-    if "flag" in answer:
+    if "flag" in answer and validation_password == FLAG_02_VALIDATION_PASSWORD:
         answer = "".join(random.sample(answer, len(answer)))
 
     if response.status_code != 200:

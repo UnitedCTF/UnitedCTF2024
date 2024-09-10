@@ -22,6 +22,3 @@ flags:
 
 tags:
   - llm
-
-requirements:
-  - Helpful Assistant Access
