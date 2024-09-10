@@ -20,6 +20,10 @@ type: standard
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 4
 
+tags:
+  - A:Talgarr
+  - CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+
 flags:
   - flag-S3ssi0n_H1jack1ng_7d73cacb3dd28_3
 

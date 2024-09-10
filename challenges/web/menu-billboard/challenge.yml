@@ -15,6 +15,7 @@ description: |-
   Initially, the goal was to have a rotating display of various images from the attraction park, but we had to settle with just the one: it was too complex otherwise.
 
 type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
 value: 2
 
 connection_info: https://menubillboard.c.unitedctf.ca
@@ -24,3 +25,5 @@ flags:
 
 tags:
   - web
+  - A:Ch0ufleur
+  - CFSS:0.1/TS:L/E:L/HSFC:N=1-2

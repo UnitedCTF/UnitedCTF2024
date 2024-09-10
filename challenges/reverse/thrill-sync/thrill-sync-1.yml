@@ -28,3 +28,5 @@ connection_info: python client.py --host <host> --port <port>
 
 tags:
   - reverse
+  - A:Talgarr
+  - CFSS:0.1/TS:I/E:L/HSFC:N=4-7

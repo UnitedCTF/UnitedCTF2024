@@ -15,10 +15,12 @@ description: |-
     Flag format: `flag-[A-Z0-9]+`
 flags:
     - flag-V3K7M5Y1Q9L8Z4P2C7T6W3R8F1K9J5B2
-   
+
 tags:
     - steg
     - audio
+    - A:Atlantis11656
+    - CFSS:0.1/TS:B/E:M/HSFC:N=4-7
 
 files:
     - UnitedMusique.mp3

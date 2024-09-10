@@ -28,6 +28,8 @@ connection_info: nc c.unitedctf.ca 10003
 tags:
   - moyen
   - crypto
+  - A:Talgarr
+  - CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 
 requirements:
   - Hash & Funambules 2

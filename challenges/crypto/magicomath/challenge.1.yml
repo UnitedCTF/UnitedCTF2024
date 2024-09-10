@@ -29,6 +29,8 @@ connection_info: nc c.unitedctf.ca 10005
 
 tags:
 - crypto
+- A:TechnoJo4
+- CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 
 requirements:
 - "MagicoMath 1"

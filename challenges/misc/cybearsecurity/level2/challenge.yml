@@ -22,6 +22,8 @@ flags:
 tags:
 - misc
 - accessibility
+- A:mkuroni
+- CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 
 files:
 - ./lvl2.png

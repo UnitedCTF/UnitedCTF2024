@@ -24,6 +24,8 @@ flags:
 tags:
 - misc
 - quirk
+- A:Linkster78
+- CFSS:0.1/TS:I/E:L/HSFC:N=4-7
 
 files:
 - ./src/server2.py

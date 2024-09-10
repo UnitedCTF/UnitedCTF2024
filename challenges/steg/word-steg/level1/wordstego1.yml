@@ -21,6 +21,8 @@ flags:
 tags:
     - steg
     - word
+    - A:Atlantis11656
+    - CFSS:0.1/TS:L/E:L/HSFC:N=1-2
 
 files:
     - pamphlet.docx

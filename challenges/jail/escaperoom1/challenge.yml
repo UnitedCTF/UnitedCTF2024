@@ -23,6 +23,8 @@ flags:
 
 tags:
   - jail
+  - A:KptCheeseWhiz
+  - CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 
 requirements:
   - "Escape Room 0"

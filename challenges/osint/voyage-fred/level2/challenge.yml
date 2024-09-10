@@ -41,6 +41,8 @@ files:
 
 tags:
 - osint
+- A:Linkster78
+- CFSS:0.1/TS:L/E:L/HSFC:N=1-2
 
 requirements:
   - "Fred en voyage 1"

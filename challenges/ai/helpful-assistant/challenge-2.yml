@@ -24,6 +24,8 @@ flags:
 
 tags:
   - llm
+  - A:Hannibal119
+  - CFSS:0.1/TS:L/E:M/HSFC:N=2-4
 
 requirements:
   - Helpful Assistant Chat

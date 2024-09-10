@@ -23,6 +23,8 @@ flags:
 tags:
     - pwn
     - shellcoding
+    - A:Atlantis11656
+    - CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
 
 requirements:
     - Shellcode Obfuscation 3

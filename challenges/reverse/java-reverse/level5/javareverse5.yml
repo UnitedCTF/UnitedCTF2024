@@ -24,6 +24,8 @@ flags:
 tags:
     - reverse
     - java
+    - A:Atlantis11656
+    - CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
 
 requirements:
     - Ride Management System 4

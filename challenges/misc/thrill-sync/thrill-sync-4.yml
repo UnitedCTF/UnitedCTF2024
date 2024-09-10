@@ -20,6 +20,10 @@ type: standard
 # CFSS:0.1/TS:I/E:L/HSFC:N=4-7
 value: 6
 
+tags:
+  - A:Talgarr
+  - CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+
 flags:
   - flag-PHP_m4g1c_h4sh_3897568204d82619_4
 

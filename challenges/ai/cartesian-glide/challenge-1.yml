@@ -37,6 +37,8 @@ flags:
 tags:
   - programming
   - ai/ml
+  - CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+  - A:Hannibal119
 
 requirements:
   - Cartesian Glide

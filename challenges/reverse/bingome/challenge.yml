@@ -19,8 +19,10 @@ flags:
     - flag-!2s3cur3
 
 tags:
-    - reverse 
-    - static analysis 
+    - reverse
+    - static analysis
+    - A:MyMelody1242
+    - CFSS:0.1/TS:I/E:M/HSFC:Y=7-12
 
 hints:
     - Le --help peut parfois être trompeur. / The --help may not always tell the truth.

@@ -1,5 +1,5 @@
 name: Emojis
-author: capucinoxx
+author: Capucinoxx
 category: Steganography
 type: standard
 # CFSS:0.1/TS:L/E:L/HSFC:N=1-2
@@ -28,3 +28,5 @@ flags:
 
 tags:
 - steg
+- A:Capucinoxx
+- CFSS:0.1/TS:L/E:L/HSFC:N=1-2

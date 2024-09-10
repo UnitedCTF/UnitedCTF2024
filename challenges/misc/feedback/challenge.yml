@@ -23,5 +23,7 @@ flags:
 
 tags:
   - misc
+  - A:Deimos
+  - CFSS:0.1/TS:L/E:L/HSFC:N=1-2
 
 state: hidden
