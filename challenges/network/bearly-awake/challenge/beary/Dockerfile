@@ -11,7 +11,7 @@ RUN cat > /usr/bin/sleep.sh <<EOF
 
 echo
 echo "The bear is currently resting in this area:"
-ip addr show 
+ip addr show eth0
 echo
 echo 🐻💤💤💤
 
