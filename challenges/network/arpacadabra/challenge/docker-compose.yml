@@ -1,29 +1,20 @@
 services:
   user:
     build: user
-    mac_address: 00:00:00:00:00:01
     networks:
       arpacadabra:
-        ipv4_address: 172.80.183.2
-    environment:
-      - WEBSERVER_IP=172.80.183.3
 
   webserver:
     build: webserver
-    mac_address: 00:00:00:00:00:02
     networks:
       arpacadabra:
-        ipv4_address: 172.80.183.3
 
   attacker:
     build: attacker
-    mac_address: 00:00:00:00:00:03
+    ports:
+      - "2022:22"
     networks:
       arpacadabra:
-        ipv4_address: 172.80.183.4
 
 networks:
   arpacadabra:
-    ipam:
-      config:
-        - subnet: 172.80.183.0/24
