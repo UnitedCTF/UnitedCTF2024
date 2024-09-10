@@ -2,7 +2,7 @@
 
 **`Auteur:`** [Ch0ufleur](https://ch0ufleur.dev/)
 
-### Déploiement par Docker - voir avec moi pour le lien de la snapshot (ports exposes : 12366 pour le premier, 12367 pour le deuxieme)
+### Déploiement par Docker (ports exposes : 12366 pour le premier, 12367 pour le deuxieme)
 
 ## Description (français)
 
