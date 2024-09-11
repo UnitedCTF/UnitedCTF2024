@@ -1,23 +1,15 @@
 name: Audiovisuel Visuel
 author: Ch0ufleur
-category: Steg
+category: Stéganographie
 
 description: |-
   ## Description (fr)
 
-  Le parc d'amusement lance un concours! Celui ou celle qui sera en mesure de trouver toutes les informations cachées dans cet extrait audiovisuel gagnera... un gomme balloune Bazooka! À qui la chance?
-  
-  Le flag EST dans un format standard
-  
-  Obtenir le fichier ici 
+  Le parc d'attractions lance un concours! Celui ou celle qui sera en mesure de trouver toutes les informations cachées dans cet extrait audiovisuel gagnera... une gomme balloune Bazooka! À qui la chance?
 
   ## Description (en)
 
   The amusement park has launched a contest! The one that's able to find all the information hidden in this video and audio file will win... a Bazooka bubble gum! Who wants to try?
-  
-  The flag IS in a standard format (but almost)
-  
-  Obtain the file here 
 
 flags:
   - {
@@ -25,11 +17,9 @@ flags:
     content: "flag-W4TCH-TH3-GL45535-AAA1",
     data: "case_insensitive"
   }
-  - {
-    type: "static",
-    content: "flag-W4TCH-TH3-GL45535-AAA7",
-    data: "case_insensitive"
-  }
+
+files:
+  - Audiovisuel.mp4
 
 tags:
 - steg
