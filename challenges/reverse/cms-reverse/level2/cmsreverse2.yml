@@ -1,27 +1,29 @@
 ﻿name: Clown Management Software 2
 author: Atlantis11656
-category: Reverse
+category: Rétro-ingénierie
 type: standard
 # CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
-value: 8
+value: 5
 
 description: |-
-    ## Description (Français)
-    Serait tu également capable d'obtenir le mot de passe de l'administrateur ?
+    ## Description (français)
+    Serais-tu également capable d'obtenir le mot de passe de l'administrateur ?
 
-    Assure toi de toujours lancer CMS-PRO_BACKEND.exe quand tu roule le CMS-PRO_CLIENT.exe
+    Assure-toi de toujours lancer CMS-PRO_BACKEND.exe quand tu roules le CMS-PRO_CLIENT.exe
 
-    ## Description (English)
+    ## Description (english)
     Would you also be able to get the administrator's password?
 
     Make sure to always run CMS-PRO_BACKEND.exe when you run CMS-PRO_CLIENT.exe
 
 flags:
     - flag-D3buGg3rs4reWonD3rFu1Righ7?
-   
+
 tags:
     - reverse
     - C
+    - A:Atlantis11656
+    - CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
 
 requirements:
     - Clown Management Software 1

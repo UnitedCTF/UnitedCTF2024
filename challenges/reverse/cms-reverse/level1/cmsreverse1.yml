@@ -1,12 +1,12 @@
 ﻿name: Clown Management Software 1
 author: Atlantis11656
-category: Reverse
+category: Rétro-ingénierie
 type: standard
 # CFSS:0.1/TS:L/E:L/HSFC:Y=2-4
 value: 2
 
 description: |-
-   ## Description (Français)
+    ## Description (français)
     Depuis que Krusty, notre gérant de clown a été accusé de blanchiment d'argent, on a décidé de créer un logiciel de gestion de clown pour le remplacer. 
 
     Malheureusement, on a perdu le compte administrateur pour accéder au logiciel. Pouvez-vous nous aider à le retrouver ?
@@ -15,8 +15,9 @@ description: |-
     
     VCRUNTIME140d.dll est requis, vous pouvez installer VisualStudio avec le kit Developpement pour l'obtenir.
     
-    Petit indice : Tout les flags de la track sont dans CMS-PRO_CLIENT.exe
-    ## Description (English)
+    Petit indice : Tous les flags de la track sont dans CMS-PRO_CLIENT.exe
+
+    ## Description (english)
     Since Krusty, our clown manager, was accused of money laundering, we decided to create a clown management software to replace him.
 
     Unfortunately, we lost the administrator account to access the software. Can you help us find it?
@@ -29,11 +30,13 @@ description: |-
 
 flags:
     - flag-U5e3nv1r0n3mentV4ria8l3sF0rS3cre7s
-   
+
 tags:
     - beginner
     - reverse
     - C
+    - A:Atlantis11656
+    - CFSS:0.1/TS:L/E:L/HSFC:Y=2-4
 
 files:
     - CMS.zip
