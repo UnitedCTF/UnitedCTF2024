@@ -2,12 +2,13 @@ package main
 
 import (
 	"encoding/base64"
-	"github.com/gorilla/sessions"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
+
+	"github.com/gorilla/sessions"
 )
 
 func getLang(store *sessions.CookieStore, r *http.Request) string {
@@ -125,7 +126,8 @@ func serveTemplate(w http.ResponseWriter, r *http.Request, store *sessions.Cooki
 
 func main() {
 	port := os.Getenv("PORT")
-	key, err := base64.StdEncoding.DecodeString(os.Getenv("SESSION_KEY"))
+	session_key := os.Getenv("SESSION_KEY")
+	key, err := base64.StdEncoding.DecodeString(session_key)
 	if err != nil {
 		log.Println("Error:", err)
 		return

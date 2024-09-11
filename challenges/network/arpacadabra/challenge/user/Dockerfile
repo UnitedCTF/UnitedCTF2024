@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM golang
+FROM golang:alpine3.20 AS build
 
 # Set destination for COPY
 WORKDIR /app
@@ -13,10 +13,14 @@ RUN go mod download
 COPY *.go ./
 
 # Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o /victim
+RUN CGO_ENABLED=0 GOOS=linux go build -o victim
 
-ENV PORT=80
+
+FROM scratch
+
+ENV USERNAME=admin
 ENV PASSWORD=BW0mM85LgQhY2VcjDakO@l^HU
+ENV WEBSERVER_URL=http://webserver:80
 
-# Run
-CMD ["/victim"]
+COPY --from=build /app/victim /victim
+ENTRYPOINT ["/victim"]
