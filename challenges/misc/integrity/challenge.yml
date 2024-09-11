@@ -6,7 +6,7 @@ type: standard
 value: 4
 
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Il paraît que faire un copier-coller de son mot de passe avec Ctrl+C peut causer quelques soucis...
 
@@ -14,7 +14,7 @@ description: |-
   sur un projet nommé "Intégrité". Après un premier manquement à l'intégrité, nous avons réussi à obtenir 
   une archive de ce projet. Que pourrions-nous en faire ?
 
-  ## Description (en)
+  ## Description (english)
 
   It seems that copying and pasting your password with Ctrl+C can cause some issues...
 

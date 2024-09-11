@@ -2,7 +2,7 @@ name: "Escape Room 0"
 author: "KptCheeseWhiz"
 category: Prison
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. Ça ne peut pas être si difficile?
   
@@ -10,7 +10,7 @@ description: |-
 
   **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
 
-  ## Description (en)
+  ## Description (english)
 
   A room, a terminal, a locked door asking for a secret code... How hard can it be?
 

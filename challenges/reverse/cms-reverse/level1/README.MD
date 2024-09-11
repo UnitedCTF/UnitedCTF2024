@@ -1,7 +1,7 @@
 # Clown Management Software 1
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
-## Description (Français)
+## Description (français)
 Depuis que Krusty, notre gérant de clown a été accusé de blanchiment d'argent, on a décidé de créer un logiciel de gestion de clown pour le remplacer. 
 
 Malheureusement, on a perdu le compte administrateur pour accéder au logiciel. Pouvez-vous nous aider à le retrouver ?
@@ -11,7 +11,7 @@ Lancez le logiciel avec le fichier run.bat
 VCRUNTIME140d.dll est requis, vous pouvez installer VisualStudio avec le kit Developpement pour l'obtenir.
 
 Petit indice : Tout les flags de la track sont dans CMS-PRO_CLIENT.exe
-## Description (English)
+## Description (english)
 Since Krusty, our clown manager, was accused of money laundering, we decided to create a clown management software to replace him.
 
 Unfortunately, we lost the administrator account to access the software. Can you help us find it?

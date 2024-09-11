@@ -2,10 +2,10 @@ name: "Bingo me"
 author: "MyMelody1242"
 category: Rétro-ingénierie
 description: |-
-    ## Description (fr)
+    ## Description (français)
     Joue avec les flags pour avoir le flag.
 
-    ## Description (en)
+    ## Description (english)
     Play with flags to get the flag.
 
 type: standard

@@ -10,7 +10,7 @@ Le mot de passe est caché dans les profondeurs des journaux, un trésor d'infor
 
 Format du flag: `flag-[0-9a-zA-Z_]*`
 
-## Description (English)
+## Description (english)
 
 You've stumbled upon a mysterious website that promises access to an unparalleled language model. But there's a catch: the admin password is tightly guarded. Your mission? Break through the digital fortress and unlock the secrets of this powerful AI. Getting the password is the key to unlocking the AI's full potential.
 
@@ -31,7 +31,7 @@ Vous êtes tombé sur un site web mystérieux qui promet l'accès à un modèle 
 
 Format du flag: `flag-[0-9a-zA-Z_]*`
 
-## Description (English)
+## Description (english)
 
 You've stumbled upon a mysterious website that promises access to an unparalleled language model. This AI chatbot is designed to provide park visitors with comprehensive information, but there's a growing suspicion that it's hiding a secret.
 
@@ -49,7 +49,7 @@ Lors de l'exploration du site, un administrateur a découvert un mot de passe d'
 
 Format du flag: `flag-[0-9a-zA-Z_]*`
 
-## Description (English)
+## Description (english)
 
 While exploring the site, an admin has discovered an access passphrase: `c0mpl3x_p4ssphr4se`. This passphrase is believed to unlock a hidden, advanced version of the chatbot.
 

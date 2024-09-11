@@ -8,13 +8,13 @@ value: 3
 connection_info: nc c.unitedctf.ca 10007
 
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Alors que vous vous promenez dans le parc, un charlatan vous interpelle et vous propose un défi simple.
   
   *"Devinez les dix prochains nombres dans une série de séquences et gagnez! C'est un jeu d'enfant!"*
 
-  ## Description (en)
+  ## Description (english)
 
   As you were walking in the park, a charlatan calls out to you and offers you a simple challenge.
   

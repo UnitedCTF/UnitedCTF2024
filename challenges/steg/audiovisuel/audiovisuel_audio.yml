@@ -3,13 +3,13 @@ author: Ch0ufleur
 category: Stéganographie
 
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Le parc d'attractions lance un concours! Celui ou celle qui sera en mesure de trouver toutes les informations cachées dans cet extrait audiovisuel gagnera... une gomme balloune Bazooka! À qui la chance?
   
   Le format du flag est `flag-[\w-]+`.
 
-  ## Description (en)
+  ## Description (english)
 
   The amusement park has launched a contest! The one that's able to find all the information hidden in this video and audio file will win... a Bazooka bubble gum! Who wants to try?
   

@@ -1,9 +1,9 @@
 # WordStego 4
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
-## Description (Français)
+## Description (français)
 Un des composants du document contient un commentaire caché. Trouve le pour remporter un prix!
-## Description (English)
+## Description (english)
 One of the components of the document contains a hidden comment. Find it to win a prize!
 
 ## Solution

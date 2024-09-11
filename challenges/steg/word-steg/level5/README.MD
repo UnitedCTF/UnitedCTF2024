@@ -1,9 +1,9 @@
 # WordStego 5
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
-## Description (Français)
+## Description (français)
 On a caché un message invisible dans le document. Trouve le message et rapporte le pour gagner un prix!
-## Description (English)
+## Description (english)
 We have hidden an invisible message in the document. Find the message and report it to win a prize!
 
 ## Solution

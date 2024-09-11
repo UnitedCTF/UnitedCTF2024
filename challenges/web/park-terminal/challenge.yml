@@ -6,7 +6,7 @@ type: standard
 value: 3
 
 description: |
-  ## Description (fr)
+  ## Description (français)
 
   On est jamais mieux servi que par soi-même ! Lorsque je suis arrivé au Parc d'attraction, il n'y avait 
   personne pour m'acceuillir. Je me suis donc servi et j'ai voulu prendre un ticket pour moi.
@@ -15,7 +15,7 @@ description: |
   c'est que le fichier de génération de ticket est à la racine.
 
 
-  ## Description (en)
+  ## Description (english)
 
   You're never better served than by yourself! When I arrived at the amusement park, there was no one to 
   greet me. So, I helped myself and tried to get a ticket.

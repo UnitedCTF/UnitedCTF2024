@@ -3,13 +3,13 @@ author: Ch0ufleur
 category: Web
 
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Le site permettant la génération de "Fast pass", des billets pour éviter les files d'attentes, est à capacité pour aujourd'hui. Il refuse de générer de nouvelles "Fast pass". Mais toi, tu veux VRAIMENT éviter les files d'attentes... On a retrouvé l'API disponible à l'URL ci-dessous.
 
   **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
 
-  ## Description (en)
+  ## Description (english)
 
   The website that generates fast passes, special tickets to skip wait lines for attractions, is at capacity for the day. No more fast passes can be generated. But you, you REALLY want to skip wait lines... We traced back the API to the URL below.
 

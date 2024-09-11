@@ -2,13 +2,13 @@ name: "Escape Room 2"
 author: "KptCheeseWhiz"
 category: Prison
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Une pièce, un terminal, une porte barrée demandant un code secret.. et un clavier brisé dont les lettres et les chiffres ne fonctionnent plus. Ça ne peut pas être si difficile?
 
   **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
 
-  ## Description (en)
+  ## Description (english)
 
   A room, a terminal, a locked door asking for a secret code... and a broken keyboard whose letters and numbers no longer work. How hard can it be?
 
