@@ -1,4 +1,4 @@
-FROM golang
+FROM golang:alpine3.20 AS build
 
 # Set destination for COPY
 WORKDIR /app
@@ -9,13 +9,16 @@ COPY . ./
 
 # Build
 RUN go mod download
-RUN go build -o webserver .
-RUN chmod +x webserver
+RUN CGO_ENABLED=0 GOOS=linux go build -o webserver
 
+
+FROM scratch
+COPY --from=build /app/webserver /webserver
+COPY --from=build /app/static /static
+COPY --from=build /app/templates /templates
+
+ENV SESSION_KEY="/nHBGyd8CnFqp3od9seRbwnti+1EZAmeYspgZr+oBn8="
 ENV PORT=80
 EXPOSE $PORT
 
-ENV SESSION_KEY="/nHBGyd8CnFqp3od9seRbwnti+1EZAmeYspgZr+oBn8="
-
-# Run
-CMD ["/app/webserver"]
+ENTRYPOINT ["/webserver"]
