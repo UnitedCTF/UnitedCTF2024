@@ -1,0 +1,25 @@
+name: Règles
+author: ???
+category: Varia
+type: standard
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 1
+
+connection_info: https://ctf.unitedctf.ca/rules
+
+description: |-
+  ## Description (fr)
+
+  On s'amuse mieux après avoir lu les règlements !
+
+
+  ## Description (en)
+  
+  You have more fun after reading the rules !
+
+flags:
+- flag-RTFMPLZZZZZ
+
+tags:
+- A:???
+- CFSS:0.1/TS:L/E:L/HSFC:N=1-2 
