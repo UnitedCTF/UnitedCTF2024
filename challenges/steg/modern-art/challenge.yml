@@ -1,0 +1,27 @@
+name: Modern Art
+author: euphoria
+category: steg
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 4
+
+description: |-
+  ## Description (fr)
+
+  Parmi les nombreuses activités du parc d'attraction, l'une se démarque. Au centre de la plaza, une exposition d'art moderne. La pièce? Un poème accompagné d'une inscription mystérieuse:
+  "Lorsque la neige tombe, le blanc du sol et du ciel se confondent"
+
+
+  ## Description (en)
+
+  Among the many activities in the amusement park, there is one that stands out. In the middle of the plaza, an exposition of modern art. The piece? A poem with a mysterious inscription:
+  "When the snow falls, the white of the ground and sky merge into one"
+
+files:
+  - "Le parc d'attraction.txt"
+  - "The amusement park.txt"
+
+flags:
+  - flag-h1dd3n-1n-th3-cl0ud5
+
+tags:
+  - steg
