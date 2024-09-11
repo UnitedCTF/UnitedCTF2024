@@ -13,8 +13,8 @@ description: |-
   You have access to a local machine with SSH: `user:traps-sizably-jogger-scrimmage2`
 
 type: standard
-# CFSS:0.1/TS:I/E:H/HSFC:N=9-14
-value: 12
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 10
 
 flags:
   - flag-LogPoisoningIsAnIntegrationHell
