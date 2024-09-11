@@ -25,5 +25,6 @@ RUN echo "user:$PASSWORD" | chpasswd
 RUN mkdir /var/run/sshd
 
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+RUN sed -i 's/AllowTcpForwarding no/AllowTcpForwarding yes/' /etc/ssh/sshd_config
 
 CMD ["/usr/sbin/sshd", "-D"]
