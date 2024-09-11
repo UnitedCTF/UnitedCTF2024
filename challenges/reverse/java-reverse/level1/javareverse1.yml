@@ -10,16 +10,14 @@ description: |-
 
     Ta mission est de le tester et de découvrir d'éventuels bogues. Peux-tu relever le défi et nous aider à améliorer notre système de gestion des manèges ?
 
-    Java 11+ requis
-    Rouler le programme avec launcher.bat
+    Java 11+ requis / Rouler le programme avec launcher.bat
 
     ## Description (english)
     With the expansion of the amusement park, we are no longer able to manage all the rides manually. Fortunately, our intern Krusty has provided us with a CD containing a ride management software that he developed himself.
 
     Your mission is to test it and discover any potential bugs. Can you rise to the challenge and help us improve our ride management system?
 
-    Java 11+ 
-    Run the program with launcher.bat
+    Java 11+ / Run the program with launcher.bat
 
 flags:
     - flag-DontPrintTheStackTrace
