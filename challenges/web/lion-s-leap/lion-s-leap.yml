@@ -12,8 +12,8 @@ description: |-
   The format of this flag is : `flag-<admin_password>`
 
 type: standard
-# CFSS:0.1/TS:I/E:H/HSFC/N=9-14
-value: 12
+# CFSS:0.1/TS:I/E:M/HSFC/N=6-10
+value: 9
 
 flags:
   - flag-drakthull1
