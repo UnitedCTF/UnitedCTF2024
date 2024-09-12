@@ -54,3 +54,20 @@
 7. The location of the key was indicated in the .csv file in the second flag.
 
 `flag-go-enjoy-the-rides-995cc32a`
+
+# Fastpass Rebooted
+
+## Write-up (français)
+
+1. Le service API Spring fonctionne sous l'utilisateur root.
+2. Remplacer le fichier jar exécuté par le service par un exécutable permettant l'escalade de privilège est la clé du défi.
+3. Il faut ensuite redémarrer le conteneur depuis le instanceur pour que le service redémarre aussi sans avoir besoin de permissions root pour ce faire.
+
+
+## Write-up (english)
+
+1. The API Spring Service runs as the root user.
+2. Replacing the jar file executed by the service with an executable that can allow privilege escalation is the key to the challenge.
+3. The container must then be restarted with the Instancer, so that the service will aslo restart, without needing to be root to do so.
+
+`flag-wh4t-a-r0ll3r-c04st3r-111a13`
