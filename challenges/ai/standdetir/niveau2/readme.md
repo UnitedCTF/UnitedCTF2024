@@ -2,7 +2,7 @@
 
 **`Auteur`** [Bonsoir](https://github.com/florentduchesne)
 
-<img src="cible.jpg" width="100%">  
+![Cible](cible.jpg)
 
 ## Description (français)
 
@@ -11,7 +11,7 @@ Vous fouillez un peu plus dans vos affaires, et trouvez quelque chose de pour le
 
 Ce défi est exactement le même qu'au niveau 1, à la différence que les coordonnées sont maintenant en 3D, et que la forme que prennent les scores est différente. La distance euclidienne est toujours recommandée.
 
-**Format du flag**: `flag-{[0-9]{20,40}}`
+**Format du flag**: `flag-[0-9]{20,40}`
 
 Le flag suit le même format qu'au niveau précédent.
 
@@ -20,10 +20,6 @@ Le flag suit le même format qu'au niveau précédent.
 <img src="Data_challenge_2.png" width="100%">  
 **Données d'entraînement d'un autre point de vue**:  
 <img src="Data_challenge_2-2.png" width="100%">  
-
-## Solution
-
-La solution du défi peut être trouvée [ici](solution/).
 
 ## Description (english)
 
@@ -36,3 +32,7 @@ This challenge is exactly the same as Level 1, except that the coordinates are n
 
 The flag follow the same format as with the previous level.
 
+
+## Solution
+
+La solution du défi peut être trouvée [ici](solution/).

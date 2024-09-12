@@ -2,7 +2,7 @@
 
 **`Auteur`** [Bonsoir](https://github.com/florentduchesne)
 
-<img src="cible.jpg" width="100%">  
+![Cible](cible.jpg)
 
 ## Description (français)
 
@@ -16,7 +16,7 @@ Pour ce défi vous sont fournis deux fichiers CSV; le premier contient un ensemb
 
 Les coordonnées sont contenues entre zéro et un. Pour ce que vous en savez, l'espace autour de vous vous semble euclidien. Il serait donc adéquat de calculer les distances ainsi.
 
-**Format du flag**: `flag-{[0-9]{20,40}}`
+**Format du flag**: `flag-[0-9]{20,40}`
 
 Le flag est une concaténation du score de tous les points du jeu de test dans l'ordre. Par exemple, si votre jeu de test comporte trois points valant 8, 4 et 10 respectivement, votre flag sera `flag-8410`.
 
@@ -35,8 +35,6 @@ If it's difficult for you to establish a general rule with a cloud of points, th
 For this challenge, you are provided with two CSV files; the first contains a set of 2D coordinates each associated with a score. This is your training dataset. The second file contains only a set of coordinates. This is your evaluation dataset. You want to assess the score of each coordinate in the evaluation dataset.
 
 The coordinates range between zero and one. As far as you know, the space around you seems Euclidean. Therefore, it would be appropriate to calculate distances this way.
-
-**\*No time were harmed during the writing of this scenario**
 
 **Flag format**: `flag-{[0-9]{20,40}}`
 
