@@ -5,13 +5,17 @@ category: Web
 description: |-
   ## Description (français)
 
-  Le parc d'amusement a amélioré sa sécurité! Peux-tu trouver la nouvelle clé qui génère les fastpass?
+  Le parc d'attractions a amélioré sa sécurité! Nous avons retiré l'accès privilégié à `python3` et changé la clé.
+
+  Pouvez-vous la trouver à nouveau?
 
   **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
 
   ## Description (english)
 
-  The amusement park has improved security! Can you find the new key that generates the fastpasses?
+  The amusement park has improved its security! We took away the privileged access to `python3` and rotated the key.
+
+  Can you obtain it again?
 
   **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
 
