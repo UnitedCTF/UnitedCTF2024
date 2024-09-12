@@ -1,0 +1,32 @@
+{{define "body"}}
+<h1>Welcome {{ .Name }}!</h1>
+<img src="/static/images/profile.png" alt="profile" width="80px" height="80px">
+<div class="container">
+    <div class="card">
+        <h2>Change password</h2>
+        <form action="/changePassword" method="post" onsubmit="return validatePassword();">
+            <label for="newpassword"><b>New password</b></label>
+            <input type="password" placeholder="Enter new password" name="newpassword" required>
+            <label for="confirmpassword"><b>Confirm password</b></label>
+            <input type="password" placeholder="Confirm password" name="confirmpassword" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    {{ if .IsAdmin }}
+    <div class="card">
+        <h2>Change hashing algorithm of user</h2>
+        <form action="/changeHash" method="post">
+            <label for="userid"><b>User id</b></label>
+            <input type="number" placeholder="Enter user id" name="userid" required>
+            <label for="algoid"><b>Algorithm</b></label>
+            <select name="algoid" id="algoid" required>
+                {{range .Algorithms}}
+                <option value="{{.id}}">{{.algo}} with {{.round}} rounds</option>
+                {{end}}
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    {{ end }}
+</div>
+{{end}}
