@@ -2,7 +2,7 @@
 
 **`Auteur`** [Bonsoir](https://github.com/florentduchesne)
 
-![Cible](cible.jpg)
+<img src="cible.jpg" width="100%">  
 
 ## Description (français)
 
@@ -17,9 +17,9 @@ Le flag suit le même format qu'au niveau précédent.
 
 
 **Données d'entraînement**:  
-![Données d'entraînement](Data_challenge_2.png)  
+<img src="Data_challenge_2.png" width="100%">  
 **Données d'entraînement d'un autre point de vue**:  
-![Données d'entraînement 2](Data_challenge_2-2.png)  
+<img src="Data_challenge_2-2.png" width="100%">  
 
 ## Solution
 

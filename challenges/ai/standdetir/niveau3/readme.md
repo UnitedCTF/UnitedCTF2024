@@ -2,7 +2,7 @@
 
 **`Auteur`** [Bonsoir](https://github.com/florentduchesne)
 
-![Cible](cible.jpg)
+<img src="cible.jpg" width="100%">  
 
 ## Description (français)
 
@@ -10,8 +10,8 @@ Après avoir percé le mystère des cibles en 3D (la pognez-vous?), vous regarde
 Éventuellement, vous tombez sur des cibles pour le moins étrange. En fait, vous n'avez pas de certitude de bien voir de quoi il s'agit. Une rapide inspection vous apprend que les cibles qui sont devant vous sont en huit dimensions(!). Ce sera compliqué à visualiser, mais le principe est le même que pour les cibles en deux ou trois dimensions. Aussi, il vous semble percevoir quelque chose de différent dans le calcul des distances lorsque vous approchez des cibles. Certaines dimensions se parcourent plus rapidement que d'autres. Il faudra donc ajuster votre fonction de distance adéquatement.
 
 Le challenge est exactement le même qu'au niveau 2, à la différence que l'espace est maintenant en 8D, et que la fonction de distance à utiliser est faite sur mesure.
-Elle suit la formule suivante : 
-$$\lvert p1_{1} - p2_{1} \lvert + 2 \lvert p1_{2} - p2_{2} \lvert + (p1_{3} - p2_{3})^2 + \lvert p1_{4} - p2_{4} \lvert + (p1_{5} - p2_{5})^2 + \lvert p1_{6} - p2_{6} \lvert + 4 \lvert p1_{7} - p2_{7} \lvert + \lvert p1_{8} - p2_{8} \lvert$$
+Elle suit la formule suivante :  
+<img src="formule.png" width="100%">  
 
 **Format du flag**: `flag-{[0-9]{36,72}}`
 
