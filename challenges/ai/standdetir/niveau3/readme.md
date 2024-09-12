@@ -2,7 +2,7 @@
 
 **`Auteur`** [Bonsoir](https://github.com/florentduchesne)
 
-<img src="cible.jpg" width="100%">  
+![Cible](cible.jpg)
 
 ## Description (français)
 
@@ -11,7 +11,7 @@ Après avoir percé le mystère des cibles en 3D (la pognez-vous?), vous regarde
 
 Le challenge est exactement le même qu'au niveau 2, à la différence que l'espace est maintenant en 8D, et que la fonction de distance à utiliser est faite sur mesure.
 Elle suit la formule suivante :  
-<img src="formule.png" width="100%">  
+![formule](formule.png)  
 
 **Format du flag**: `flag-[0-9]{36,72}`
 
@@ -25,7 +25,7 @@ After unraveling the mystery of the 3D targets, you look around: not a soul in s
 Eventually, you come across some rather strange targets. In fact, you’re not sure you can *perceive* them properly. A quick inspection reveals that the targets in front of you are in eight dimensions(!). It will be complicated to visualize, but the principle is the same as for the 2D or 3D targets. Additionally, you notice something different about distance calculations when approaching the targets. Some dimensions are traversed more quickly than others. Therefore, you will need to adjust your distance function accordingly.
 
 The challenge is exactly the same as Level 2, except that the space is now 8D, and the distance function to use is custom-made. It follows the following formula:
-<img src="formule.png" width="100%"> 
+![formule](formule.png)  
 
 **Flag format**: `flag-{[0-9]{36,72}}`
 

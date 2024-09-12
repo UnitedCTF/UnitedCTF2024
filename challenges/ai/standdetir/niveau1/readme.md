@@ -21,9 +21,9 @@ Les coordonnées sont contenues entre zéro et un. Pour ce que vous en savez, l'
 Le flag est une concaténation du score de tous les points du jeu de test dans l'ordre. Par exemple, si votre jeu de test comporte trois points valant 8, 4 et 10 respectivement, votre flag sera `flag-8410`.
 
 **Données d'entraînement**:  
-<img src="Data_challenge_1.png" width="100%">  
+![Data_challenge_1](Data_challenge_1.png)  
 **Données de test**:  
-<img src="Data_challenge_1_test.png" width="100%">  
+![Data_challenge_1_test](Data_challenge_1_test.png)  
 
 ## Description (english)
 

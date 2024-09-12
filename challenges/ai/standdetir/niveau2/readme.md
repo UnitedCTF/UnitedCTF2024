@@ -17,9 +17,9 @@ Le flag suit le même format qu'au niveau précédent.
 
 
 **Données d'entraînement**:  
-<img src="Data_challenge_2.png" width="100%">  
+![Data_challenge_2](Data_challenge_2.png)  
 **Données d'entraînement d'un autre point de vue**:  
-<img src="Data_challenge_2-2.png" width="100%">  
+![Data_challenge_2-2](Data_challenge_2-2.png)  
 
 ## Description (english)
 
