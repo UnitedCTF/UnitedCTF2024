@@ -1,0 +1,30 @@
+name: "Sssslithering Venom Vaudeville"
+author: "Talgarr"
+category: web
+description: |-
+  ## Description (français)
+
+  Sssslithering Venom Vaudeville est un site troublant... ou est-ce amusant? Vous avez trouvé le code source, seriez-vous capable de retrouvé le flag?
+  Vous avez accès à une machine locale avec SSH: `user:traps-sizably-jogger-scrimmage2`
+
+  ## Description (english)
+
+  Sssslithering Venom Vaudeville is a troubling website... or is it fun? You’ve found the source code; would you be able to find the flag?
+  You have access to a local machine with SSH: `user:traps-sizably-jogger-scrimmage2`
+
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 10
+
+flags:
+  - flag-LogPoisoningIsAnIntegrationHell
+
+files:
+  - challenge/sssslithering-venom-vaudeville.7z
+
+hints:
+  - The flag to submit is the content of flag_*.txt file.
+
+tags:
+  - difficile
+  - web

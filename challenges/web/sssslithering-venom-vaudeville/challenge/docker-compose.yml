@@ -1,0 +1,18 @@
+services:
+  box:
+    build: ./box/
+    networks:
+      - sssslithering-venom-vaudeville-net
+    ports:
+      - 80
+
+  client:
+    build: ./client/
+    ports:
+      - 22
+    networks:
+      - sssslithering-venom-vaudeville-net
+
+networks:
+  sssslithering-venom-vaudeville-net:
+    driver: bridge

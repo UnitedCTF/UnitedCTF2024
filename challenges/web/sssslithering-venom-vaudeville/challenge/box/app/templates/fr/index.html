@@ -1,0 +1,146 @@
+{{define "body"}}
+<div class="container">
+  <div class="card">
+    <button id="uselessButton" onclick="changeColor()">
+      Ce bouton pourrait être inutile
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="alert('Vous avez activé la séquence de destruction. Je rigole !')">
+      Ne Pas Appuyer
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="rickRoll()">
+      Surprends-moi
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="makeItRain()">
+      Fais Pleuvoir
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="countClicks(this)">
+      Compteur de Clics
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="invertColors()">
+      Inverser les Couleurs
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="randomPosition(this)">
+      Attrape-moi si tu peux
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="rollerCoasterRide()">
+      Montée de Montagnes Russes Virtuelles
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="cottonCandy()">
+      Obtiens de la Laine de Sucre Virtuelle
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="carouselSpin(this)">
+      Tourne Comme un Manège
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="hauntedHouse()">
+      Entre dans la Maison Hantée
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="ticketBooth()">
+      Billets Gratuits !
+    </button>
+  </div>
+  <div class="card">
+    <button onclick="balloonPop(this)">
+      Éclater un Ballon
+    </button>
+  </div>
+</div>
+
+<script>
+  function changeColor() {
+    document.getElementById("uselessButton").style.backgroundColor = getRandomColor();
+  }
+
+  function rickRoll() {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+  }
+
+  function makeItRain() {
+    alert("💰💰💰 Il pleut des pièces virtuelles ! 💰💰💰");
+  }
+
+  let clickCount = 0;
+  function countClicks(button) {
+    clickCount++;
+    button.innerText = `Cliqué ${clickCount} fois`;
+  }
+
+  function invertColors() {
+    document.body.style.filter = "invert(1)";
+    setTimeout(() => {
+      document.body.style.filter = "invert(0)";
+    }, 3000);
+  }
+
+  function randomPosition(button) {
+    const x = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+    const y = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+    button.style.position = "absolute";
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+  }
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function rollerCoasterRide() {
+    alert("Accrochez-vous bien ! Les montagnes russes vont descendre... Whoosh ! 🎢");
+  }
+
+  function cottonCandy() {
+    alert("Vous avez obtenu une grosse barbe à papa rose ! 🍬");
+  }
+
+  function carouselSpin(button) {
+    button.style.transition = "transform 2s ease";
+    button.style.transform = "rotate(1080deg)";
+    setTimeout(() => {
+      button.style.transform = "rotate(0deg)";
+    }, 2000);
+  }
+
+  function hauntedHouse() {
+    alert("Boo ! 👻 Bienvenue dans la Maison Hantée. Faites attention aux fantômes !");
+  }
+
+  function ticketBooth() {
+    alert("Félicitations ! Vous avez gagné un billet gratuit pour le parc d'attractions virtuel ! 🎟️");
+  }
+
+  function balloonPop(button) {
+    button.innerText = "🎈 Éclater !";
+    setTimeout(() => {
+      alert("Pop ! Le ballon a éclaté en confettis ! 🎉");
+      button.innerText = "Éclater un Ballon";
+    }, 500);
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{{end}}
