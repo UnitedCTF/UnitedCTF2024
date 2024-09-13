@@ -1,0 +1,4 @@
+# Stand de tir 2
+## Write-up
+Dans ce défi, le jeu de données a été créé en plaçant aléatoirement 10 points "centroïdes" dans un espace 3D avec des axes restreints entre 0 et 1. Chaque point du jeu de données de test et d'entraînement tient son score du centroïde le plus près.  
+Encore une fois, ce défi se résoud bien avec un KNN utilisant une distance euclidienne. Si le défi précédent a été résolu avec KNN, il suffit d'intégrer la troisième dimension à l'algorithme et on devrait avoir la bonne réponse. Sinon, d'autres algorithmes ont été testés et donnent la bonne solution aussi, comme un [classificateur par machines à support de vecteur](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC) ou un [perceptron multicouche](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier).
