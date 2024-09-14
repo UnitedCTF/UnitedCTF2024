@@ -1,0 +1,9 @@
+compilation:
+gcc -O0 -s -m32 -no-pie -fno-pie reverseme.c -o reverseme
+
+chal 3 solution: 
+python3 scaffold_reverseme.py
+
+all solutions:
+echo -e "flag-such_crypto_much_wow\nsymbolicexecutionisop" | ./reverseme --debug-enable
+

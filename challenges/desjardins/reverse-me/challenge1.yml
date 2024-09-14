@@ -1,0 +1,44 @@
+name: Reverse Me ! 1
+Author: ???
+category: Desjardins
+
+description: |
+  ## Description (français)
+
+  L'été tirant à sa fin, c'est le dernier moment pour nous de faire de l'argent avant la dure sécheresse de l'hiver. Personne 
+  ne veut perdre cette ultime période lucrative, surtout pas à cause d'un rançongiciel...
+
+  Eh bien... Je n'aurais pas dû parler trop vite...
+
+  Un binaire mystérieux a été découvert sur le poste de l'administration. Il s'agit d'un programme de débogage oublié par 
+  l'attaquant, qui pourrait aider à récupérer les fichiers affectés.
+
+  En tant que prodige de l'informatique, tu dois trouver les clés secrètes cachées à l'intérieur.
+  Bonne chance !
+
+  ## Description (english)
+
+  With summer coming to an end, this is our last chance to make money before the harsh dryness of winter. No one wants to miss 
+  out on this final lucrative period, especially not because of ransomware...
+
+  Well... I shouldn't have spoken too soon...
+
+  A mysterious binary was discovered on the administration's computer. It's a debugging program left behind by the attacker, which 
+  might help recover the affected files.
+
+  As a tech prodigy, you must find the secret keys hidden within.
+  Good luck !
+
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 2
+
+flags:
+  - flag-undocumented_functions_are_fun
+
+tags:
+  - CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+  - A:???
+
+files:
+  - ./reverseme
+
