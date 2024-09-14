@@ -18,7 +18,7 @@ value: 2
 
 connection_info: nc c.unitedctf.ca 10010
 
-flag:
+flags:
 - flag-7h3Fu7ur31sY0ur5
 
 tags:
