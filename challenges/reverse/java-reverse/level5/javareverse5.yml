@@ -6,19 +6,17 @@ type: standard
 value: 7
 description: |-
     ## Description (français)
-    Maintenant que nous avons accès, nous pouvons enfin utiliser le logiciel. Krusty nous a indiqué que nous pouvons protéger facilement les nouvelles classes que nous créons grâce aux 'services d'obscurcissement'. Selon lui, tant que la clé reste confidentielle, l'obscurcissement restera sûr !
-
-    Utilise le fichier du challenge JavaReverse 2 pour ce challenge.
+    C'est un peu préoccupant que la clé pour l'obscurcissement de base soit si facile à retrouver. Heureusement, le logiciel l'a marquée comme obsolète ! Cela signifie qu'elle n'est plus utilisée, n'est-ce pas ?
     
-    Java 11+ requis / Rouler le programme avec launcher.bat
-
+    Utilise le fichier du challenge JavaReverse 2 pour ce challenge.
+    Java 11+ requis
+    Rouler le programme avec launcher.bat
     ## Description (english)
-    Now that we have access, we can finally use the software. Krusty tells us that we can easily protect the new classes we create with 'obfuscation services'. According to him, as long as the key remains confidential, obfuscation will remain safe!
-
+    It's a little worrying that the key for basic obfuscation is so easy to find. Fortunately, the software has marked it as obsolete! That means it's no longer in use, right?
+    
     Use the JavaReverse 2 challenge file for this challenge.
-
-    Java 11+ required / Run the program with launcher.bat
-flags:
+    Java 11+ required
+Run the program with launcher.batflags:
     - flag-WhyW0uldY0uM4keObfusc47i0nRever5able
 
 tags:
