@@ -21,6 +21,9 @@ value: 9
 flags:
   - flag-h0peUd1dntR34Dev3erything
 
+files:
+  - encrypted.txt
+
 tags:
   - reverse
   - crypto
