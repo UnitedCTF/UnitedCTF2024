@@ -1,0 +1,98 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Stand de tir 3"
+author: "Bonsoir"
+category: "IA"
+description: |-
+    ## Description (français)
+    Après avoir percé le mystère des cibles en 3D (la pognez-vous?), vous regardez un peu aux alentours: pas un chat. Vous continuez donc de fouiller dans vos affaires.
+    
+    Éventuellement, vous tombez sur des cibles pour le moins étrange. En fait, vous n'avez pas de certitude de bien voir de quoi il s'agit. Une rapide inspection vous apprend que les cibles qui sont devant vous sont en huit dimensions(!). Ce sera compliqué à visualiser, mais le principe est le même que pour les cibles en deux ou trois dimensions. Aussi, il vous semble percevoir quelque chose de différent dans le calcul des distances lorsque vous approchez des cibles. Certaines dimensions se parcourent plus rapidement que d'autres. Il faudra donc ajuster votre fonction de distance adéquatement.
+    
+    Le challenge est exactement le même qu'au niveau 2, à la différence que l'espace est maintenant en 8D, et que la fonction de distance à utiliser est faite sur mesure.
+    
+    Elle suit la formule suivante :
+
+    <img src="https://i.imgur.com/NIZnWn7.png" width="100%"><br>
+    
+    **Format du flag**: `flag-[0-9]{36,72}`
+    
+    Le flag suit le même format qu'au niveau précédent. Le jeu de test étant plus gros, le flag devrait toutefois être plus long.
+    
+    ## Description (english)
+    After unraveling the mystery of the 3D targets, you look around: not a soul in sight. So you continue rummaging through your things.
+    
+    Eventually, you come across some rather strange targets. In fact, you’re not sure you can *perceive* them properly. A quick inspection reveals that the targets in front of you are in eight dimensions(!). It will be complicated to visualize, but the principle is the same as for the 2D or 3D targets. Additionally, you notice something different about distance calculations when approaching the targets. Some dimensions are traversed more quickly than others. Therefore, you will need to adjust your distance function accordingly.
+    
+    The challenge is exactly the same as Level 2, except that the space is now 8D, and the distance function to use is custom-made. 
+    
+    It follows the following formula:
+    
+    <img src="https://i.imgur.com/NIZnWn7.png" width="100%"><br>
+
+    **Flag format**: `flag-[0-9]{36,72}`
+    
+    The flag follows the same format as in the previous level. However, since the test set is larger, the flag should be longer.
+
+value: 4 #selon moi : Beginner / Low / No
+type: standard
+
+# The extra field provides additional fields for data during the install/sync commands/
+# Fields in extra can be used to supply additional information for other challenge types
+# For example the follow extra field is for dynamic challenges. To use these following
+# extra fields, set the type to "dynamic" and uncomment the "extra" section below
+# extra:
+#     initial: 500
+#     decay: 100
+#     minimum: 50
+
+
+# Flags specify answers that your challenge use. You should generally provide at least one.
+# Can be removed if unused
+# Accepts strings or dictionaries of CTFd API data
+flags:
+    # A static case sensitive flag
+    - flag-572829879216998978438729879216989789
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+    - ai
+    - ml
+    - classification
+    - A:Bonsoir
+    - CFSS:0.1/TS:B/E:L/HSFC:N=2-4
+
+# Provide paths to files from the same directory that this file is in
+# Accepts strings
+files:
+    - dataset/dataset_test_3.csv
+    - dataset/dataset_train_3.csv
+    - formule.png
+
+# Hints are used to give players a way to buy or have suggestions. They are not
+# required but can be nice.
+# Can be removed if unused
+# Accepts dictionaries or strings
+hints:
+    - Ce ne sont que quelques dimensions de plus, et une fonction de distance magique!
+    - Si vous avez bien fais les deux premiers niveaux, le dernier devrait être relativement facile.
+
+# Requirements are used to make a challenge require another challenge to be
+# solved before being available.
+# Can be removed if unused
+# Accepts challenge names as strings or challenge IDs as integers
+requirements:
+    - "Stand de tir 2"
+
+# The state of the challenge.
+# If the field is omitted, the challenge is visible by default.
+# If provided, the field can take one of two values: hidden, visible.
+state: visible
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "1.0"

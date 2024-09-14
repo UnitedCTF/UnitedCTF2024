@@ -19,6 +19,9 @@ connection_info: https://lostandfound.c.unitedctf.ca
 flags: 
   - flag-n0th1ng1sl0st1nr3fl0g
 
+hints:
+  - Are you lost too? A file telling web crawlers what they can or cannot do might help you.
+
 tags:
   - web
   - A:KptCheeseWhiz

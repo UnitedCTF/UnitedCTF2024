@@ -18,7 +18,6 @@ flags:
   - flag-javascriptbytecodeisfun
 
 hints:
-  - You do not have to reverse the whole binary, it is a copy of the NodeJS binary with additional data that is delimited by special markers.
   - Search for ways to create a single executable application with NodeJS.
 
 # Run 'npm run build' to generate the challenge

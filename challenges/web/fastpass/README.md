@@ -33,6 +33,16 @@ Peux-tu trouver la clé qui permet de générer les fastpass?
 
 Can you find the key used to generate the fastpasses?
 
+# Fastpass Rebooted
+
+## Description (français)
+
+Le parc d'amusement a amélioré sa sécurité! Peux-tu trouver la nouvelle clé qui génère les fastpass?
+
+## Description (anglais)
+
+The amusement park has improved security! Can you find the new key that generates the fastpasses?
+
 ## Solutions
 
 Les solutions de ces challenges peuvent être trouvées [ici](solution/)

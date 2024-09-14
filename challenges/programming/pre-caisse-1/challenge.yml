@@ -18,7 +18,7 @@ connection_info: nc c.unitedctf.ca 10026
 # CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 value: 2
 
-flag:
+flags:
 - flag-Th1s1sAR3w4rdF0rY0urGr34tW0rk
 
 tags:
