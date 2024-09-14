@@ -13,7 +13,7 @@ cleanup() {
 trap cleanup ERR HUP INT TERM EXIT
 
 # Launch instance and add profile
-incus launch -p "${PROFILE}" images:debian/12/cloud "${BUILDER_NAME}"
+incus launch images:debian/12/cloud "${BUILDER_NAME}"
 
 # Push files (like Dockerfile's copy)
 incus file push -rp ./keys "${BUILDER_NAME}/opt/app/challenge"
