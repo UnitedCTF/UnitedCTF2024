@@ -17,7 +17,6 @@ RUN echo "user_role|s:4:\"user\";" > /tmp/sess_4a7d1ed4144674e4033ac29ccb8653d9b
     && echo "user_role|s:4:\"user\";" > /tmp/sess_85a1588c37430244540677c186380d9b3 \
     && echo "user_role|s:4:\"user\";" > /tmp/sess_95a1588c37430241440677c186380d9b3
 
-COPY php.ini /usr/local/etc/php/
 RUN chown www-data:www-data /tmp/*
 
 COPY gen_session.sh /gen_session.sh
