@@ -22,7 +22,7 @@ RUN chown www-data:www-data /tmp/*
 
 COPY gen_session.sh /gen_session.sh
 RUN chmod +x /gen_session.sh
-RUN echo "*/30 * * * * /gen_session.sh >> /var/log/cron.log 2>&1" > /etc/cron.d/sessions
+RUN echo "*/5 * * * * /gen_session.sh >> /var/log/cron.log 2>&1" > /etc/cron.d/sessions
 
 WORKDIR /
 COPY setup.sh .
