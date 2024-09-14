@@ -14,6 +14,7 @@ description: |
   Malchance la session de ce terminal n'a pas les accès nécessaires pour me donner un ticket. Tout ce que je sais 
   c'est que le fichier de génération de ticket est à la racine.
 
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
 
   ## Description (en)
 
@@ -23,7 +24,7 @@ description: |
   Unfortunately, this terminal session doesn’t have the necessary access to give me a ticket. All I know is that 
   the ticket generation file is at the root.
 
-connection_info: https://parkterminal.c.unitedctf.ca
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
 
 flags:
   - flag-HoHoPHPOupsiiii
