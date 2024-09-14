@@ -1,4 +1,4 @@
-﻿name: Ride Management System 6
+name: Ride Management System 6
 author: Atlantis11656
 category: Rétro-ingénierie
 type: standard
@@ -29,4 +29,4 @@ tags:
     - CFSS:0.1/TS:I/E:H/HSFC:Y=10-16
 
 requirements:
-    - Ride Management System 5
+    - Ride Management System 1
