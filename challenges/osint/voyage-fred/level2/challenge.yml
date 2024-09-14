@@ -27,12 +27,17 @@ description: |-
   
   *Here's [a video](https://www.youtube.com/watch?v=EbXSbP-wEFU) to get you in the mood.*
 
-attempts: 3
+attempts: 5
 
 flags:
   - {
     type: 'static',
     content: 'Warner LeRoy',
+    data: 'case_insensitive'
+  }
+  - {
+    type: 'static',
+    content: 'Warner Lewis LeRoy',
     data: 'case_insensitive'
   }
 
