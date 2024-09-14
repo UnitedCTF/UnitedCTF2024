@@ -22,7 +22,7 @@ def format_bytes(bts: list[int]) -> str:
     return ''.join(['\\x{:02x}'.format(b) for b in bts])
 
 def execute_shellcode(shellcode: str) -> tuple[int, str, str]:
-    proc = subprocess.Popen(['./exec_shellcode', shellcode], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    proc = subprocess.Popen(['./exec_shellcode', shellcode], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env={})
     try:
         proc.wait(timeout=EXECUTION_TIMEOUT)
     except Exception:
