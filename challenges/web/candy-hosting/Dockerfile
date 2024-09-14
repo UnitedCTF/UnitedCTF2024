@@ -10,3 +10,5 @@ RUN chmod 1777 /var/www/html/websites
 COPY --chown=root:root ./healthcheck.sh /healthcheck.sh
 HEALTHCHECK --interval=5m --timeout=30s --start-period=30s --start-interval=5s --retries=3 \
   CMD [ "/healthcheck.sh" ]
+
+RUN chmod +x /healthcheck.sh /var/www/html/scripts/*
