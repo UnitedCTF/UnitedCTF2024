@@ -1,5 +1,5 @@
 name: Reverse Me ! 1
-Author: ???
+Author: Cristian Blada
 category: Desjardins
 
 description: |
@@ -13,7 +13,7 @@ description: |
   Un binaire mystérieux a été découvert sur le poste de l'administration. Il s'agit d'un programme de débogage oublié par 
   l'attaquant, qui pourrait aider à récupérer les fichiers affectés.
 
-  En tant que prodige de l'informatique, tu dois trouver les clés secrètes cachées à l'intérieur.
+  En tant que prodige de l'informatique, tu dois trouver les clés secrètes cachées à l'intérieur. <br />
   Bonne chance !
 
   ## Description (english)
@@ -26,7 +26,7 @@ description: |
   A mysterious binary was discovered on the administration's computer. It's a debugging program left behind by the attacker, which 
   might help recover the affected files.
 
-  As a tech prodigy, you must find the secret keys hidden within.
+  As a tech prodigy, you must find the secret keys hidden within. <br />
   Good luck !
 
 # CFSS:0.1/TS:L/E:L/HSFC:N=1-2
@@ -37,7 +37,7 @@ flags:
 
 tags:
   - CFSS:0.1/TS:L/E:L/HSFC:N=1-2
-  - A:???
+  - A:Cristian Blada
 
 files:
   - ./reverseme

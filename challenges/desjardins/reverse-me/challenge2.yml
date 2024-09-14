@@ -1,13 +1,13 @@
 name: Reverse Me ! 2
-Author: ???
+Author: Critsitan Blada
 category: Desjardins
 
 
 description: |
   ## Description (français)
 
-  Le temps, c'est de l'argent, te dit l'administration du parc ! Mais toi, tu sais que rien ne sert de courir, il faut partir à point!
-  La tâche est simple : ouvrir en mode débogage et voir ce qui se passe !
+  Le temps, c'est de l'argent, te dit l'administration du parc! Mais toi, tu sais que rien ne sert de courir, il faut partir à point!
+  La tâche est simple : ouvrir en mode débogage et voir ce qui se passe!
 
   ... Malheur!
 
@@ -25,16 +25,16 @@ description: |
   Debug mode requires a password to continue :(
 
 # CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
-value: 7
+value: 5
 
 
 flags:
-  - FINCTF-such_crypto_much_wow
+  - flag-such_crypto_much_wow
 
 files:
   - ./reverseme
 
 tags:
-  - A:???
+  - A:Cristian Blada
   - CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
 
