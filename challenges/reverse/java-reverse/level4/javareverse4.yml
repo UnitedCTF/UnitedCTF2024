@@ -1,4 +1,4 @@
-﻿name: Ride Management System 4
+name: Ride Management System 4
 author: Atlantis11656
 category: Rétro-ingénierie
 type: standard
@@ -30,4 +30,4 @@ tags:
     - CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
 
 requirements:
-    - Ride Management System 3
+    - Ride Management System 1
