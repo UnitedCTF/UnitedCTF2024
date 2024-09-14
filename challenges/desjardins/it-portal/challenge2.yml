@@ -1,0 +1,36 @@
+name: "IT Portal: Compromission 🐚"
+author: CA
+category: Desjardins
+description: |-
+  ## Description (français)
+  Maintenant que vous avez un accès à la plateforme, un deuxième objectif est mis à votre portée.
+
+  Ce dernier est d'obtenir de l'exécution de code arbitraire sur la plateforme.
+
+  **Note:** le flag se trouve à la racine de l'instance.
+
+  ## Description (english)
+  Now that you have access to the platform, you now have a second objective.
+
+  You must obtain arbitrary code execution on the platform.
+
+  **Note:** the flag is at the root of the instance.
+
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 6
+
+files:
+  - dist/portal.py
+
+requirements:
+  - "IT Portal: Intrusion 🕵️"
+
+flags:
+  - flag-813aad04a59b715ffcd9abc1d76f3c
+
+tags:
+  - python
+  - ssh
+  - sql
+  - A:CA
+  - CFSS:0.1/TS:B/E:M/HSFC:N=4-7
