@@ -1,0 +1,43 @@
+name: Reverse Me ! 3
+Author: Cristian Blada
+category: Desjardins
+
+
+description: |
+  ## Desription (français)
+
+  Avant de pouvoir obtenir la clé de dechiffrement finale, il va falloir faire preuve de creativité pour résoudre l'input d'une fonction à logique complexe.<br />
+  Bonne chance !
+
+  Ce clown vous en aura fait voir de toutes les couleurs !
+
+  ## Description (english)
+
+  Before you can obtain the final decryption key, you will need to show creativity to solve the input of a function with complex logic.< br/> 
+  Good luck!
+
+  This clown will have shown you all the colors!
+
+hints:
+  - Lorsqu'une section de code est trop complexe, un outil d'exécution symbolique tel que Angr peut être utilisé pour trouver le input nécessaire pour un résultat spécifique.
+  - {
+      content: "Le repertoire git suivant peut servir de template pour ce défi. Si vous reussisez à solver les challenges 0 à 3 du angrctf vous avez tous les connaisances nécessaires pour le reverseme: https://github.com/jakespringer/angr_ctf",
+      cost: 1,
+    }
+
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 5
+
+
+flags:
+  - flag-symbolic_execution_is_op
+
+files:
+  - ./reverseme
+
+tags:
+  - A:Cristian Blada
+  - CFSS:0.1/TS:B/E:M/HSFC:Y=5-9
+
+requirements:
+  -  Reverse Me ! 2
