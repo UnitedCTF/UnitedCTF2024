@@ -1,0 +1,27 @@
+---
+name: "Dig The PCAP: 2 🔍"
+
+category: Forensique
+
+description: |
+  Vous êtes un membre de l'équipe de cyber défense d'une compagnie de consultation avec plusieurs clients.
+  Un de vos collègues a mis la main sur l'enregistrement d'un flux réseau intéressant.
+  Ce dernier a été capté lors de la compromission initiale d'un _endpoint_ chez l'un de vos clients.
+  Votre objectif est d'analyser ce flux et de comprendre ce qui s'est produit.
+
+  ---
+
+  Ceci est une _track_ de trois flags, les tuiles suivantes vont apparaître suite à la résolution !
+
+type: standard
+# CFSS:0.1/TS:B/E:L/HSFC/N=2-4
+value: 3
+
+flags:
+  - FLAG-FINCTFisONEStepClosertoNSEC
+
+requirements:
+  - "Dig The PCAP: 1 🔍"
+
+version: 0.1
+# Pour plus d'options, voir: https://github.com/CTFd/ctfcli/blob/master/ctfcli/spec/challenge-example.yml

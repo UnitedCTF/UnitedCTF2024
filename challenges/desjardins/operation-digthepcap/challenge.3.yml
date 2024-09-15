@@ -1,0 +1,35 @@
+---
+name: "Dig The PCAP: 3 🔍"
+
+category: Forensique
+
+solve: |
+  TO FILL AFTER QA2
+
+description: |
+  Vous êtes un membre de l'équipe de cyber défense d'une compagnie de consultation avec plusieurs clients.
+  Un de vos collègues a mis la main sur l'enregistrement d'un flux réseau intéressant.
+  Ce dernier a été capté lors de la compromission initiale d'un _endpoint_ chez l'un de vos clients.
+  Votre objectif est d'analyser ce flux et de comprendre ce qui s'est produit.
+
+  ---
+
+  Ceci est une _track_ de trois flags, les tuiles suivantes vont apparaître suite à la résolution !
+  **Le format de ce flag n'est pas comme les autres, il n'a pas de préfixe.**
+
+type: standard
+# CFSS:0.1/TS:I/E:M/HSFC:Y=9-12
+value: 9
+
+flags:
+  - SuperDuperSecretFlag
+
+requirements:
+  - "Dig The PCAP: 2 🔍"
+
+hints:
+  - content: Le stager est en Shellcode, il n'est donc pas un programme valide.
+      C'est pourquoi les outils de rétro-ingénieries ne sont pas en mesure de l'analyser correctement.
+    cost: 1
+
+version: 0.1
