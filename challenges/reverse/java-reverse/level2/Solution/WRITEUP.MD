@@ -1,4 +1,4 @@
-# JavaReverse 2
+# Ride Management System 2
 ## Write-up
 ### Solution (Français)
 En utilisant un outil comme 7zip, nous pouvons extraire tous les fichiers de l'archive JAR. Nous pouvons ensuite utiliser un IDE comme IntelliJ ou des outils en ligne pour ouvrir nos fichiers .class et obtenir le code source. En explorant, nous découvrons que le `SerialNumberValidator`  contient le flag en texte clair dans la constante `MASTER_SERIAL_NO`.

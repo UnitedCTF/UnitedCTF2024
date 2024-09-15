@@ -1,4 +1,4 @@
-# JavaReverse 2
+# Ride Management System 2
 **`Auteur:`** [Atlantis11656](https://github.com/MassinissaDjellouli)
 
 ## Description (français)

@@ -1,4 +1,4 @@
-# JavaReverse 5
+# Ride Management System 5
 ## Write-up
 ### Solution (Français)
 En analysant la classe `ObfuscatorService`, nous trouvons une méthode `obfuscatedClassCreationHelper()`. Nous pouvons voir que cette méthode prends une classe en paramètre et imprime les noms obfusqués pour toutes les fonctions, attributs ainsi que le nom de la classe. 

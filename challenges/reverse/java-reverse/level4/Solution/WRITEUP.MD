@@ -1,4 +1,4 @@
-# JavaReverse 4
+# Ride Management System 4
 ## Write-up
 ### Solution (Français)
 Dans les fichiers, nous remarquons les classes `ObfuscatorService`, `BasicObfuscatorService` ainsi que `ComplexObfuscatorService`. En analysant `BasicObfuscatorService`, nous remarquons que la méthode `obfuscate()` ne fait qu'un simple XOR avec une clée sous le format de `byte[]`. 

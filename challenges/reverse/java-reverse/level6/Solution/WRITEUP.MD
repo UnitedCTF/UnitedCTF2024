@@ -1,4 +1,4 @@
-# JavaReverse 6
+# Ride Management System 6
 ## Write-up
 ### Solution (Français)
 
