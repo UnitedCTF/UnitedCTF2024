@@ -12,7 +12,7 @@ description: |-
   After your previous intrusion, more robust verifications are now done to protect against unauthorized access to the development override.
 
 flags:
-- flag-null-byt3-buff35-0verfl0w-44a21c
+- flag-mult1byt3s-ftw-44a21c
 
 tags:
 - pwn

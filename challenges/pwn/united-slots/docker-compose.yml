@@ -2,11 +2,6 @@ services:
   unitedslotschall:
     build: .
     container_name: unitedslotschall
-    environment:
-      FLAG1: flag-ez-buff3r-0verfl0w-88123cb1eae
-      FLAG2: flag-null-byt3-buff35-0verfl0w-44a21c
-      PASSWORD1: t1R3dd12A
-      PASSWORD2: T1R4rw29O
     ports:
       - 12366:12366
       - 12367:12367

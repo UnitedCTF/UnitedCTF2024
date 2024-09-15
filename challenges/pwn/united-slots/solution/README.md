@@ -15,11 +15,11 @@
 ## Write-up (français)
 
 1. Voir le fichier solve2.py
-2. La différence est que maintenant la fonction strcmp est utilisée, donc le caractère \\0 doit être envoyé à la position correct pour que la comparaison fonctionne.
+2. Il faut maintenant utiliser des multibytes en deux envois différents pour prendre avantage du calcul de longueur erroné.
 
 ## Write-up (english)
 
 1. See file solve2.py
-2. The difference is that now the strcmp function is used, so the null byte \\0 must be sent and it must be at the correct position for the comparison to work.
+2. The difference is that now strlen_mb is used to count the amount of characters, counting multibytes as ones.
 
-`flag-null-byt3-buff35-0verfl0w-44a21c`
+`flag-mult1byt3s-ftw-44a21c`

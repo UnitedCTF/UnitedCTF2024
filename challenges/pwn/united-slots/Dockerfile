@@ -22,7 +22,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8     
 
 ENV FLAG1=flag-ez-buff3r-0verfl0w-88123cb1eae
-ENV FLAG2=flag-null-byt3-buff35-0verfl0w-44a21c
+ENV FLAG2=flag-mult1byt3s-ftw-44a21c
 ENV PASSWORD1=t1R3dd12A
 ENV PASSWORD2=T1R4rw29O
 
