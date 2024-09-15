@@ -1,13 +1,13 @@
 name: United Slots 1
 author: Ch0ufleur
-category: Pwn
+category: PWN
 
 description: |-
-  ## Description (fr)
+  ## Description (français)
 
   Tu as trouvé accès à la console de gestion des machines à sous de la foire! Es-tu capable d'y accéder?
 
-  ## Description (en)
+  ## Description (english)
 
   You found access to the admin console to manage the slots at the fair! Are you able to access it?
 
@@ -16,10 +16,13 @@ flags:
 
 tags:
 - pwn
+- A:Ch0ufleur
+- CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
 
 files:
 - unitedslots1.cpp
 
 type: standard
 
-value: 3 #CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
+# CFSS:0.1/TS:B/E:L/HSFC:Y=3-6
+value: 3

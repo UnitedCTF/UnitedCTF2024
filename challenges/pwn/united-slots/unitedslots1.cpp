@@ -8,6 +8,7 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 // Modified Sept 8th, 2024 by Ch0ufleur : https://ch0ufleur.dev
+// Modified Sept 15th, 2024 by Linkster78 : https://github.com/Linkster78
 
 #include <cstdlib>
 #include <iostream>
@@ -20,20 +21,23 @@
 using boost::asio::ip::tcp;
 
 const int max_length = 10;
+const int MAX_LENGTH = 16; // multiple of 4 to account for possible utf-8 characters
 
 void session(tcp::socket sock)
 {
   try
   {
-    boost::asio::write(sock, boost::asio::buffer("Bienvenue à UnitedSlots Admin. Welcome to UnitedSlots Admin.\n\nEntrer le mot de passe / Enter the password:\n"));
-    char override[2] = "n"; // UnitedSlots: change this when doing development
-    char password[max_length];
-    boost::system::error_code error;
+    char override[16] = {0};
+    char password[max_length] = {0};
+    override[0] = 'n'; // UnitedSlots: change this when doing development
     size_t length = 0;
-    bool shouldStopReading = false;
-    for (;;)
+
+    boost::asio::write(sock, boost::asio::buffer("Bienvenue à UnitedSlots Admin. Welcome to UnitedSlots Admin.\n\nEntrer le mot de passe / Enter the password:\n"));
+    boost::system::error_code error;
+
+    while(length < MAX_LENGTH)
     {
-      length += sock.read_some(boost::asio::buffer(password + length, 100), error);
+      length += sock.read_some(boost::asio::buffer(password + length, std::max(0, MAX_LENGTH - (int)length)), error);
 
       if (error == boost::asio::stream_errc::eof)
         break; // Connection closed cleanly by peer.
@@ -41,22 +45,19 @@ void session(tcp::socket sock)
         throw boost::system::system_error(error); // Some other error.
       
       for(int i=0; i<length; i++){
-        if(password[i]=='\n') {
-          shouldStopReading = true;
-        }
-      }
-      if(shouldStopReading){
-        break;
+        if(password[i]=='\n' || password[i]=='\0')
+          goto doneRead;
       }
     }
 
+doneRead:
     char* envPassword = getenv("PASSWORD1");
     if(envPassword == nullptr){
         exit(1);
     }
 
     if(strcmp(password, envPassword)==0 || override[0]=='y'){
-      boost::asio::write(sock, boost::asio::buffer("Accès autorisé! Authorized access!"));
+      boost::asio::write(sock, boost::asio::buffer("Accès autorisé! Authorized access!\n"));
       char* flag = getenv("FLAG1");
       if(flag == nullptr){
         exit(1);

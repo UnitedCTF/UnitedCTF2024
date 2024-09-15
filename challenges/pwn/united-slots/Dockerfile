@@ -14,6 +14,18 @@ RUN make
 
 FROM debian
 
+RUN apt update && apt install -y locales
+RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
+    locale-gen
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8     
+
+ENV FLAG1=flag-ez-buff3r-0verfl0w-88123cb1eae
+ENV FLAG2=flag-null-byt3-buff35-0verfl0w-44a21c
+ENV PASSWORD1=t1R3dd12A
+ENV PASSWORD2=T1R4rw29O
+
 EXPOSE 12366
 EXPOSE 12367
 

