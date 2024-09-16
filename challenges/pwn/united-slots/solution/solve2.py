@@ -2,7 +2,7 @@ from pwn import *
 import time
 import re
 
-r = remote('localhost', 12367, level='debug')
+r = remote('c.unitedctf.ca', 10033, level='debug')
 
 # Receive prompt
 r.recvuntil(b'Enter the password:\n')

@@ -11,6 +11,8 @@ description: |-
 
   After your previous intrusion, more robust verifications are now done to protect against unauthorized access to the development override.
 
+connection_info: nc c.unitedctf.ca 10033
+
 flags:
 - flag-mult1byt3s-ftw-44a21c
 

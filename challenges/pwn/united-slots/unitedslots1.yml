@@ -11,6 +11,8 @@ description: |-
 
   You found access to the admin console to manage the slots at the fair! Are you able to access it?
 
+connection_info: nc c.unitedctf.ca 10032
+
 flags:
 - flag-ez-buff3r-0verfl0w-88123cb1eae
 
