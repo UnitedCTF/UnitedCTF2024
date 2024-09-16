@@ -109,10 +109,10 @@ def main():
     centres_zones, scores = fonction_score(10, dim)
     save_to_csv(centres_zones, header=['x', 'y', 'z', 'score'], scores=scores, fichier='../dataset/centres_zones_3.csv')
     points, scores = creer_dataset_random(10000, centres_zones, scores, dim)
-    save_to_csv(points, header=['p1', 'p2', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'score'], scores=scores, fichier='../dataset/dataset_train_3.csv')
+    save_to_csv(points, header=['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'score'], scores=scores, fichier='../dataset/dataset_train_3.csv')
 
     points = creer_dataset_test()
-    save_to_csv(points, header=['p1', 'p2', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8'], fichier='../dataset/dataset_test_3.csv')
+    save_to_csv(points, header=['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8'], fichier='../dataset/dataset_test_3.csv')
 
 if __name__ == '__main__':
     main()
