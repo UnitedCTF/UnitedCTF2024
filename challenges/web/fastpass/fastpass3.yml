@@ -21,11 +21,11 @@ flags:
 tags:
 - privesc
 - A:Ch0ufleur
-- CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+- CFSS:0.1/TS:B/E:L/HSFC:N=2-4
 
 requirements:
 - "Fastpass 2"
 
 type: standard
 
-value: 4 #CFSS:0.1/TS:I/E:L/HSFC:N=4-7
+value: 3 #CFSS:0.1/TS:B/E:L/HSFC:N=2-4
