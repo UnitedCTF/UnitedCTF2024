@@ -1,0 +1,33 @@
+name: Got Phish 🎣🎣🎣
+author: Linkster78
+category: Varia
+
+# CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+value: 9
+
+description: |-
+  ## Description (français)
+
+  La compagnie ParksALot a adopté une forme rudimentaire de CI/CD.
+
+  Serez-vous d'en tirer avantage pour compromettre le serveur de production?
+
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
+  ## Description (english)
+
+  The ParksALot company adopted a rudimentary form of CI/CD.
+
+  Will you be able to take advantage of it and compromise the production server?
+
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
+flags:
+- flag-dock3r-privesc-390abf95
+
+tags:
+- A:Linkster78
+- CFSS:0.1/TS:I/E:M/HSFC:N=6-10
+
+requirements:
+- Got Phish 🎣🎣

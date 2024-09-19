@@ -1,0 +1,34 @@
+name: Got Phish 🎣
+author: Linkster78
+category: Varia
+
+# CFSS:0.1/TS:L/E:L/HSFC:N=1-2
+value: 2
+
+description: |-
+  ## Description (français)
+
+  Dans le contexte d'un exercice de red teaming, vous avez envoyé quelques courriels d'hameçonnage à une compagnie de parc d'attractions. La chance vous a souri et vous avez réussi à obtenir le mot de passe d'un développeur ainsi qu'un accès VNC à son poste de développement.
+
+  Le mot de passe en question: `QeX28Fvm`.
+
+  Pouvez-vous étendre vos accès?
+
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
+  ## Description (english)
+
+  As part of a red teaming exercise, you sent a few phishy emails to an amusement park company. As luck would have it, you've managed to obtain the password of a developer as well as a VNC access to his workstation.
+
+  The password in question: `QeX28Fvm`.
+
+  Can you extend your access?
+
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
+flags:
+- flag-credentials-discovery-0f2856ab
+
+tags:
+- A:Linkster78
+- CFSS:0.1/TS:L/E:L/HSFC:N=1-2

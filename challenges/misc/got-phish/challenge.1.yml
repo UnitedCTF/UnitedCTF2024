@@ -1,0 +1,29 @@
+name: Got Phish 🎣🎣
+author: Linkster78
+category: Varia
+
+# CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+value: 5
+
+description: |-
+  ## Description (français)
+
+  Grâce à nos investigations préliminaires, nous savons que John contribue souvent sur le serveur Git privé de l'entreprise.
+
+  **Ce challenge est dynamique, visitez le [Instancer](https://instancer.unitedctf.ca) pour obtenir votre instance personnelle.**
+
+  ## Description (english)
+
+  Thanks to our preliminary investigations, we know that John often contributes to the private Git server of the company.
+
+  **This is a dynamic challenge, visit the [Instancer](https://instancer.unitedctf.ca) to get a personal instance.**
+
+flags:
+- flag-git-over-ssh-8b0a9c0d
+
+tags:
+- A:Linkster78
+- CFSS:0.1/TS:B/E:M/HSFC:N=4-7
+
+requirements:
+- Got Phish 🎣
