@@ -41,7 +41,7 @@ Ce défi doit:
 ## Personnes responsables
 | Rôle | Nom de la personne responsable |
 | ------------- | ------------- |
-| Infrastructure | Julien Champoux @linkster78 |
+| Infrastructure | Julien Champoux, @linkster78 |
 | Commandites  | Jules Barbier, @youllou |
 | Communication  | Sebastien Beaudet, @mkuroni |
 | Assurance Qualité (QA)  | _Responsabilité partagée_ |
